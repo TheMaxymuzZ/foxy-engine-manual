@@ -1,0 +1,137 @@
+/* Foxy Engine: colores de la marca sobre los temas de mdBook.
+   Naranja #FF6B1F · fondo #171615 · crema #EDE6DC · tinta #1A1A1A */
+
+:root {
+  --foxy-naranja: #ff6b1f;
+  --foxy-naranja-oscuro: #c94a0b;
+  --foxy-fondo: #171615;
+  --foxy-crema: #ede6dc;
+  --foxy-tinta: #1a1a1a;
+  --content-max-width: 820px;
+}
+
+.light {
+  --bg: #fffdfa;
+  --fg: var(--foxy-tinta);
+  --sidebar-bg: #f6f1ea;
+  --sidebar-fg: #3b3631;
+  --sidebar-non-existant: #a39b91;
+  --sidebar-active: var(--foxy-naranja-oscuro);
+  --sidebar-spacer: #e6ddd1;
+  --links: var(--foxy-naranja-oscuro);
+  --inline-code-color: #8a3a10;
+  --theme-popup-bg: #fffdfa;
+  --theme-hover: #f3e7dc;
+  --quote-bg: #fbf3ea;
+  --quote-border: var(--foxy-naranja);
+  --table-border-color: #eadfd2;
+  --table-header-bg: #f3e9de;
+  --table-alternate-bg: #fbf7f2;
+  --searchbar-border-color: #d9cdbf;
+  --searchresults-header-fg: #6b625a;
+  --search-mark-bg: #ffd2b5;
+  --icons: #8a8078;
+  --icons-hover: var(--foxy-naranja-oscuro);
+}
+
+.coal, .navy, .ayu {
+  --bg: var(--foxy-fondo);
+  --fg: var(--foxy-crema);
+  --sidebar-bg: #11100f;
+  --sidebar-fg: #cfc6ba;
+  --sidebar-non-existant: #6d655c;
+  --sidebar-active: var(--foxy-naranja);
+  --sidebar-spacer: #2a2724;
+  --links: #ff8a4c;
+  --inline-code-color: #ffb27f;
+  --theme-popup-bg: #1f1d1b;
+  --theme-hover: #2b2825;
+  --quote-bg: #211e1b;
+  --quote-border: var(--foxy-naranja);
+  --table-border-color: #2f2b27;
+  --table-header-bg: #26221f;
+  --table-alternate-bg: #1c1a18;
+  --searchbar-border-color: #3a3530;
+  --searchbar-bg: #211e1b;
+  --searchbar-fg: var(--foxy-crema);
+  --searchresults-header-fg: #a39b91;
+  --search-mark-bg: #8a3a10;
+  --icons: #8f877d;
+  --icons-hover: var(--foxy-naranja);
+}
+
+/* Barra de arriba con el zorro delante del título. */
+.menu-title {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.menu-title::before {
+  content: "";
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.45em;
+  vertical-align: -0.3em;
+  background: url("../imagenes/marca/zorro.svg") center / contain no-repeat;
+}
+
+.content h1 {
+  border-bottom: 3px solid var(--foxy-naranja);
+  padding-bottom: 0.25em;
+}
+.content h2 { margin-top: 2.2em; }
+
+.content img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+.content table img { border-radius: 4px; }
+
+kbd {
+  display: inline-block;
+  padding: 0.1em 0.45em;
+  font-size: 0.85em;
+  line-height: 1.4;
+  border: 1px solid var(--table-border-color);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--table-alternate-bg);
+  font-family: var(--mono-font, monospace);
+  white-space: nowrap;
+}
+
+/* Avisos: > **Consejo** / > **Atención** */
+blockquote { border-inline-start: 4px solid var(--foxy-naranja); }
+
+/* Portada */
+.portada {
+  text-align: center;
+  margin: 1.5em 0 2.5em;
+}
+.portada img { width: min(420px, 90%); border-radius: 0; }
+.portada .lema {
+  font-size: 1.15em;
+  opacity: 0.85;
+  margin-top: 0.6em;
+}
+.light .logo-oscuro, .rust .logo-oscuro { display: none; }
+.coal .logo-claro, .navy .logo-claro, .ayu .logo-claro { display: none; }
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 1.5em 0;
+}
+.tarjetas a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--table-border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--fg);
+  background: var(--table-alternate-bg);
+}
+.tarjetas a:hover { border-color: var(--foxy-naranja); }
+.tarjetas strong { display: block; color: var(--links); margin-bottom: 4px; }
+.tarjetas span { font-size: 0.9em; opacity: 0.85; }
