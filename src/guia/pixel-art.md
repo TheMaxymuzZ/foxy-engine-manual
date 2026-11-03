@@ -1,7 +1,10 @@
 # Pixel art
 
-La pestaña **🎨 Pixel art** es un pequeño programa de dibujo dentro del motor.
-Sirve para hacer:
+La pestaña <i class="fx fx-pixel"></i> **Pixel art** es un pequeño programa
+de dibujo dentro del motor. Se abre desde el grupo **Pixel art** del panel
+«Proyecto» (*Biblioteca, paletas y texturas…*, o su
+<i class="fx fx-mas"></i>) o con **Crear → Imagen de pixel art…**. Sirve para
+hacer:
 
 - **Imágenes de interfaz**: botones, paneles, iconos y marcos para tus
   [interfaces](interfaces.md).
@@ -18,14 +21,17 @@ Sirve para hacer:
 La pestaña tiene tres apartados:
 
 1. **Imágenes** del proyecto, ordenadas por uso (*Interfaz*, *Textura* u
-   *Otro*). Un clic abre la imagen en su propia pestaña 🖊.
+   *Otro*). Un clic abre la imagen en su propia pestaña
+<i class="fx fx-imagen"></i>. Las imágenes también salen en el panel
+«Proyecto», para abrirlas desde cualquier pestaña.
 2. **Paletas** de colores.
 3. **Materiales del mundo**: el color de cada material y, si quieres, una
    imagen como textura.
 
 ## El lienzo
 
-Cada imagen se abre en una pestaña 🖊 con su lienzo. Las imágenes pueden
+Cada imagen se abre en una pestaña <i class="fx fx-imagen"></i> con su
+lienzo. Las imágenes pueden
 medir hasta **256 × 256** píxeles.
 
 ### Herramientas
@@ -57,7 +63,8 @@ medir hasta **256 × 256** píxeles.
 - **Simetría** izquierda/derecha y arriba/abajo: lo que pintas en un lado sale
   reflejado en el otro.
 - **Cuadrícula** de píxeles.
-- **Cambiar tamaño**, **↔ / ↕ Voltear** y **⟳ Girar**.
+- **Cambiar tamaño**, **Voltear** (en horizontal o en vertical) y
+  <i class="fx fx-girar"></i> **Girar**.
 - **Cambiar un color por otro** en todo el dibujo.
 
 ## Imágenes que se estiran (bordes)

@@ -1,26 +1,30 @@
 # Ordenar la escena
 
-Al panel de la izquierda, debajo de las herramientas, está la **escena**: la
-lista de todo lo que hay en el mundo. Cuando un mundo crece, esa lista se
+A la izquierda, debajo del panel «Proyecto», está la lista **En la escena**:
+todo lo que hay en el mundo, con su nombre y su tipo (por ejemplo
+*Tienda de Tomás · Casa*). Cuando un mundo crece, esa lista se
 ordena en **carpetas**, como los archivos de tu ordenador.
 
-![Carpetas en la escena](../imagenes/capturas/fase4-editor.png)
+![Carpetas en la escena](../imagenes/capturas/editor-proyecto.png)
 
 ## Crear carpetas
 
-- **📁+** crea una carpeta nueva.
-- **Clic derecho** en una carpeta → **📁 Subcarpeta nueva** crea una dentro.
-- En el mismo menú están **✏ Renombrar** y **🗑 Borrar carpeta**. Borrar una
+- <i class="fx fx-carpeta-nueva"></i> (a la derecha de *En la escena*) crea
+  una carpeta nueva.
+- **Clic derecho** en una carpeta → <i class="fx fx-carpeta"></i>
+  **Subcarpeta nueva** crea una dentro.
+- En el mismo menú están <i class="fx fx-editar"></i> **Renombrar** y
+  <i class="fx fx-borrar"></i> **Borrar carpeta**. Borrar una
   carpeta **no borra sus objetos**: pasan a la carpeta de arriba.
 
 ## Meter objetos en carpetas
 
 - **Arrastra** un objeto de la lista hasta una carpeta.
-- O haz **clic derecho** en el objeto → **📁 Mover a** y elige la carpeta (o
+- O haz **clic derecho** en el objeto → <i class="fx fx-carpeta"></i> **Mover a** y elige la carpeta (o
   *En una carpeta nueva*).
 
-Un clic en un objeto de la lista lo elige en el mundo. **👁 Ver** lleva la
-cámara hasta él.
+Un clic en un objeto de la lista lo elige en el mundo. <i class="fx fx-ver"></i> **Ver** (<kbd>F</kbd>)
+lleva la cámara hasta él.
 
 ## Cómo se guardan
 
@@ -37,6 +41,6 @@ objetos: [
 ],
 ```
 
-> **Consejo.** Una carpeta *Juego* para el punto de inicio, las entradas, las
+> <i class="fx fx-consejo"></i> **Consejo.** Una carpeta *Juego* para el punto de inicio, las entradas, las
 > zonas y las pelotas, y otra por cada barrio o zona del mapa, hacen que un
 > mundo grande sea fácil de recorrer.

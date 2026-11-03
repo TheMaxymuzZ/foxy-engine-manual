@@ -1,6 +1,6 @@
 # Interfaces
 
-Con **🖼 Interfaces** diseñas todo lo que va *encima* del juego: el menú
+Con las **interfaces** diseñas todo lo que va *encima* del juego: el menú
 principal, el menú de pausa, el marcador de monedas, el cartel de una tienda,
 un diálogo… Sin escribir código.
 
@@ -10,7 +10,9 @@ un diálogo… Sin escribir código.
 
 ## Crear una interfaz
 
-En el menú **🖼 Interfaces ⏷**, crea una nueva a partir de una plantilla:
+El <i class="fx fx-mas"></i> del grupo <i class="fx fx-interfaz"></i>
+**Interfaces** del panel «Proyecto» (o **Crear → Interfaz nueva…**) pide un
+nombre y una plantilla:
 
 | Plantilla | Trae |
 |---|---|
@@ -20,7 +22,9 @@ En el menú **🖼 Interfaces ⏷**, crea una nueva a partir de una plantilla:
 | **Vacía** | Nada; empiezas de cero |
 
 Cada interfaz se abre en su pestaña y se guarda en
-`interfaces/<nombre>.ron`.
+`interfaces/<nombre>.ron`. Un clic en el panel «Proyecto» vuelve a abrirla.
+Un <i class="fx fx-aviso"></i> al lado de su nombre avisa de que **nada la
+abre todavía** en el juego.
 
 ## El lienzo
 
@@ -40,17 +44,17 @@ detrás, visto desde la cámara del editor.
 La **rejilla de 8 puntos** ayuda a alinear. La lista de **elementos** va de
 delante (arriba) a atrás (abajo).
 
-**Probarla** (*Guardar y probar*) abre el juego con la interfaz a la vista,
+<i class="fx fx-jugar"></i> **Probarla** abre el juego con la interfaz a la vista,
 aunque todavía no esté guardada.
 
 ## Los elementos
 
 | Elemento | Para qué |
 |---|---|
-| ▭ **Panel** | Un rectángulo de color o con imagen: fondos, marcos |
-| **Texto** | Un texto, que puede cambiar solo (mira abajo) |
-| **Botón** | Algo que se pulsa y hace una acción |
-| **Imagen** | Una imagen del proyecto |
+| <i class="fx fx-panel"></i> **Panel** | Un rectángulo de color o con imagen: fondos, marcos |
+| <i class="fx fx-texto"></i> **Texto** | Un texto, que puede cambiar solo (mira abajo) |
+| <i class="fx fx-boton"></i> **Botón** | Algo que se pulsa y hace una acción |
+| <i class="fx fx-imagen"></i> **Imagen** | Una imagen del proyecto |
 
 Cada elemento tiene **nombre**, posición, tamaño, y su **aspecto**: relleno,
 relleno al elegirlo (en los botones), color del texto, tamaño de letra,
@@ -75,10 +79,33 @@ entera sin estirarse.
 
 | Uso | Cuándo se ve |
 |---|---|
-| **Pantalla o cartel** | Al abrirla con un botón, una zona o `motor.abrir_interfaz("tienda")`. Puede **pausar el juego** y **oscurecer el fondo**. <kbd>Esc</kbd> la cierra |
+| **Pantalla o cartel** | Al abrirla con **su tecla**, un botón, una zona, un objeto (*Al usarlo*) o `motor.abrir_interfaz("tienda")`. Puede **pausar el juego** y **oscurecer el fondo**. <kbd>Esc</kbd> la cierra |
 | **Marcador** | Siempre encima del juego: vidas, monedas… Puede **esconder el reloj del motor** |
 | **Menú principal** | Sustituye al menú principal del motor |
 | **Menú de pausa** | Sustituye a la pausa del motor |
+
+## Cómo se abre en el juego
+
+Una interfaz que nada abre no se verá nunca al jugar. Por eso, en el panel de
+la derecha, el apartado **Cómo se abre en el juego** dice qué la abre y
+ayuda a conectarla:
+
+- Un **marcador** se ve siempre; un **menú principal** sale al abrir el juego
+  (<i class="fx fx-mando"></i> *Desde el inicio* para verlo), y un **menú de
+  pausa**, al pulsar <kbd>Esc</kbd> jugando.
+- Una **pantalla o cartel** puede tener su propia **tecla**: <kbd>I</kbd>,
+  <kbd>M</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>N</kbd>,
+  <kbd>Q</kbd>, <kbd>R</kbd>, <kbd>T</kbd>, <kbd>U</kbd>, <kbd>G</kbd> o
+  <kbd>Tab</kbd>. Jugando, esa tecla la abre y la vuelve a cerrar, como un
+  inventario o un mapa.
+- Debajo salen, con <i class="fx fx-flecha"></i>, **todas las cosas que la
+  abren**: botones de otras interfaces, zonas, objetos con *Al usarlo* y
+  llamadas del guion.
+- Si nada la abre, sale el aviso <i class="fx fx-aviso"></i> *Nada la abre
+  todavía*.
+- <i class="fx fx-zona"></i> **Zona que la abre** pone en la escena, delante
+  de la cámara, una zona de cambio que la abre al entrar. Así queda conectada
+  al momento.
 
 ## Acciones de los botones
 
@@ -104,7 +131,7 @@ Un texto puede llevar valores entre llaves, que se rellenan al jugar:
 | `{proyecto}` | El nombre del proyecto |
 | `{lo_que_quieras}` | Cualquier valor que ponga el guion con `motor.poner_valor` |
 
-Por ejemplo, un marcador con el texto `🪙 {monedas}` y este guion:
+Por ejemplo, un marcador con el texto `Monedas: {monedas}` y este guion:
 
 ```lua
 -- La llama una zona o un botón con la acción «Llamar al guion».

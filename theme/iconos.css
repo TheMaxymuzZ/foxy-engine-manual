@@ -1,0 +1,88 @@
+/* Iconos del manual. Archivo generado por herramientas/generar-iconos.py:
+   no lo cambies a mano.
+   Uso: <i class="fx fx-mundo"></i>, toma el color del texto. */
+
+.fx-proyecto { --fx: url("../imagenes/iconos/proyecto.svg"); }
+.fx-mundo { --fx: url("../imagenes/iconos/mundo.svg"); }
+.fx-mapa { --fx: url("../imagenes/iconos/mapa.svg"); }
+.fx-interfaz { --fx: url("../imagenes/iconos/interfaz.svg"); }
+.fx-objeto { --fx: url("../imagenes/iconos/objeto.svg"); }
+.fx-pixel { --fx: url("../imagenes/iconos/pixel.svg"); }
+.fx-imagen { --fx: url("../imagenes/iconos/imagen.svg"); }
+.fx-guion { --fx: url("../imagenes/iconos/guion.svg"); }
+.fx-vida { --fx: url("../imagenes/iconos/vida.svg"); }
+.fx-carpeta { --fx: url("../imagenes/iconos/carpeta.svg"); }
+.fx-carpeta-nueva { --fx: url("../imagenes/iconos/carpeta-nueva.svg"); }
+.fx-abrir { --fx: url("../imagenes/iconos/abrir.svg"); }
+.fx-cursor { --fx: url("../imagenes/iconos/cursor.svg"); }
+.fx-mover { --fx: url("../imagenes/iconos/mover.svg"); }
+.fx-poner { --fx: url("../imagenes/iconos/poner.svg"); }
+.fx-quitar { --fx: url("../imagenes/iconos/quitar.svg"); }
+.fx-pintar { --fx: url("../imagenes/iconos/pintar.svg"); }
+.fx-colocar { --fx: url("../imagenes/iconos/colocar.svg"); }
+.fx-vecino { --fx: url("../imagenes/iconos/vecino.svg"); }
+.fx-zona { --fx: url("../imagenes/iconos/zona.svg"); }
+.fx-entrada { --fx: url("../imagenes/iconos/entrada.svg"); }
+.fx-inicio { --fx: url("../imagenes/iconos/inicio.svg"); }
+.fx-pelota { --fx: url("../imagenes/iconos/pelota.svg"); }
+.fx-usar { --fx: url("../imagenes/iconos/usar.svg"); }
+.fx-jugar { --fx: url("../imagenes/iconos/jugar.svg"); }
+.fx-mando { --fx: url("../imagenes/iconos/mando.svg"); }
+.fx-guardar { --fx: url("../imagenes/iconos/guardar.svg"); }
+.fx-deshacer { --fx: url("../imagenes/iconos/deshacer.svg"); }
+.fx-rehacer { --fx: url("../imagenes/iconos/rehacer.svg"); }
+.fx-editar { --fx: url("../imagenes/iconos/editar.svg"); }
+.fx-borrar { --fx: url("../imagenes/iconos/borrar.svg"); }
+.fx-ver { --fx: url("../imagenes/iconos/ver.svg"); }
+.fx-buscar { --fx: url("../imagenes/iconos/buscar.svg"); }
+.fx-girar { --fx: url("../imagenes/iconos/girar.svg"); }
+.fx-cerrar { --fx: url("../imagenes/iconos/cerrar.svg"); }
+.fx-mas { --fx: url("../imagenes/iconos/mas.svg"); }
+.fx-duplicar { --fx: url("../imagenes/iconos/duplicar.svg"); }
+.fx-suelo { --fx: url("../imagenes/iconos/suelo.svg"); }
+.fx-teclado { --fx: url("../imagenes/iconos/teclado.svg"); }
+.fx-terminal { --fx: url("../imagenes/iconos/terminal.svg"); }
+.fx-descargar { --fx: url("../imagenes/iconos/descargar.svg"); }
+.fx-estrella { --fx: url("../imagenes/iconos/estrella.svg"); }
+.fx-aviso { --fx: url("../imagenes/iconos/aviso.svg"); }
+.fx-enlace { --fx: url("../imagenes/iconos/enlace.svg"); }
+.fx-flecha { --fx: url("../imagenes/iconos/flecha.svg"); }
+.fx-registro { --fx: url("../imagenes/iconos/registro.svg"); }
+.fx-chip { --fx: url("../imagenes/iconos/chip.svg"); }
+.fx-escudo { --fx: url("../imagenes/iconos/escudo.svg"); }
+.fx-historial { --fx: url("../imagenes/iconos/historial.svg"); }
+.fx-consejo { --fx: url("../imagenes/iconos/consejo.svg"); }
+.fx-nota { --fx: url("../imagenes/iconos/nota.svg"); }
+.fx-panel { --fx: url("../imagenes/iconos/panel.svg"); }
+.fx-texto { --fx: url("../imagenes/iconos/texto.svg"); }
+.fx-boton { --fx: url("../imagenes/iconos/boton.svg"); }
+.fx-ps-cruz { --fx: url("../imagenes/iconos/ps-cruz.svg"); }
+.fx-ps-circulo { --fx: url("../imagenes/iconos/ps-circulo.svg"); }
+.fx-ps-cuadrado { --fx: url("../imagenes/iconos/ps-cuadrado.svg"); }
+.fx-marca { --fx: url("../imagenes/marca/zorro.svg"); }
+
+/* Barra lateral */
+.chapter a[href$="introduccion.html"]::before { --fx: url("../imagenes/marca/zorro.svg"); }
+.chapter a[href$="empezar/instalar.html"]::before { --fx: url("../imagenes/iconos/descargar.svg"); }
+.chapter a[href$="empezar/primer-proyecto.html"]::before { --fx: url("../imagenes/iconos/proyecto.svg"); }
+.chapter a[href$="empezar/editor.html"]::before { --fx: url("../imagenes/iconos/interfaz.svg"); }
+.chapter a[href$="guia/mundo.html"]::before { --fx: url("../imagenes/iconos/mundo.svg"); }
+.chapter a[href$="guia/carpetas.html"]::before { --fx: url("../imagenes/iconos/carpeta.svg"); }
+.chapter a[href$="guia/creador.html"]::before { --fx: url("../imagenes/iconos/objeto.svg"); }
+.chapter a[href$="guia/pixel-art.html"]::before { --fx: url("../imagenes/iconos/pixel.svg"); }
+.chapter a[href$="guia/escenas.html"]::before { --fx: url("../imagenes/iconos/mapa.svg"); }
+.chapter a[href$="guia/interfaces.html"]::before { --fx: url("../imagenes/iconos/boton.svg"); }
+.chapter a[href$="guia/vida.html"]::before { --fx: url("../imagenes/iconos/vida.svg"); }
+.chapter a[href$="guia/guiones.html"]::before { --fx: url("../imagenes/iconos/guion.svg"); }
+.chapter a[href$="guia/jugar.html"]::before { --fx: url("../imagenes/iconos/mando.svg"); }
+.chapter a[href$="referencia/atajos.html"]::before { --fx: url("../imagenes/iconos/teclado.svg"); }
+.chapter a[href$="referencia/lua.html"]::before { --fx: url("../imagenes/iconos/guion.svg"); }
+.chapter a[href$="referencia/acciones.html"]::before { --fx: url("../imagenes/iconos/usar.svg"); }
+.chapter a[href$="referencia/objetos.html"]::before { --fx: url("../imagenes/iconos/colocar.svg"); }
+.chapter a[href$="referencia/materiales.html"]::before { --fx: url("../imagenes/iconos/pintar.svg"); }
+.chapter a[href$="referencia/archivos.html"]::before { --fx: url("../imagenes/iconos/registro.svg"); }
+.chapter a[href$="referencia/linea-de-comandos.html"]::before { --fx: url("../imagenes/iconos/terminal.svg"); }
+.chapter a[href$="apendices/problemas.html"]::before { --fx: url("../imagenes/iconos/aviso.svg"); }
+.chapter a[href$="apendices/glosario.html"]::before { --fx: url("../imagenes/iconos/buscar.svg"); }
+.chapter a[href$="apendices/marca.html"]::before { --fx: url("../imagenes/marca/zorro.svg"); }
+.chapter a[href$="apendices/historial.html"]::before { --fx: url("../imagenes/iconos/historial.svg"); }

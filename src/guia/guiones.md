@@ -11,15 +11,21 @@ lenguaje pequeño y fácil que se usa en muchísimos juegos.
 
 ## Dónde está el guion
 
-Cada proyecto tiene su guion en `guiones/mundo.lua`. Se edita en la pestaña
-**📜 Guion**, que tiene:
+Cada proyecto tiene su guion en `guiones/mundo.lua`. Se abre con un clic en
+<i class="fx fx-guion"></i> **mundo.lua**, en el grupo *Guion* del panel
+«Proyecto», y se edita en su pestaña, que tiene:
 
 - **Comprobar**: busca errores sin jugar.
 - Una **consola**, donde salen los errores al jugar y lo que escribas con
   `print()`.
 
-Los proyectos nuevos empiezan con un guion de ejemplo que lista todo lo que
-se puede usar.
+Un **proyecto vacío** empieza con las funciones `al_empezar`, `al_hablar`,
+`al_entrar_escena` y `al_nuevo_dia` vacías, y una lista al principio con todo
+lo que se puede usar. La *Isla sin objetos* y la *Plaza de prueba* traen un
+guion de ejemplo que ya hace cosas.
+
+Si el guion tiene errores, su nombre lleva un <i class="fx fx-aviso"></i> en
+el panel «Proyecto».
 
 ## Cómo funciona
 
@@ -93,9 +99,10 @@ end
 
 ### Botones y zonas que llaman al guion
 
-Un botón de una interfaz o una zona del mundo con la acción **Llamar al
-guion** llaman a la función que digas. La función recibe el **nombre** del
-botón o la zona que la llamó:
+Un botón de una interfaz, una zona del mundo o un objeto (con
+[*Al usarlo*](mundo.md#al-usarlo-e)) con la acción **Llamar al guion**
+llaman a la función que digas. La función recibe el **nombre** del botón, la
+zona o el objeto que la llamó:
 
 ```lua
 function abrir_cofre(quien)
@@ -111,7 +118,7 @@ Un error en el guion **no cierra el juego**: sale en pantalla y en la consola
 del editor, con la línea donde está. El motor también para los bucles que no
 terminan nunca («el guion tarda demasiado»).
 
-> **Consejo.** Pulsa **Comprobar** antes de jugar: encuentra las faltas de
+> <i class="fx fx-consejo"></i> **Consejo.** Pulsa **Comprobar** antes de jugar: encuentra las faltas de
 > escritura, como un `end` olvidado.
 
 ## Buenas prácticas
