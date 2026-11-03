@@ -16,17 +16,17 @@ copiar y subir a GitHub.
 Este manual explica cómo usarlo, desde la instalación hasta el último detalle
 de los archivos.
 
-![El editor de Foxy Engine](imagenes/capturas/fase4-editor.png)
+![El editor de Foxy Engine](imagenes/capturas/editor-proyecto.png)
 
 ## Qué puedes hacer
 
 <div class="tarjetas">
-  <a href="guia/mundo.html"><strong>🌍 Construir</strong><span>Pinta el terreno con pinceles de bloques y coloca casas, árboles y vecinos.</span></a>
-  <a href="guia/creador.html"><strong>📦 Crear objetos</strong><span>Modela tus propios objetos de bloques y úsalos en cualquier mundo.</span></a>
-  <a href="guia/pixel-art.html"><strong>🎨 Dibujar</strong><span>Haz botones, iconos y texturas para los materiales del mundo.</span></a>
-  <a href="guia/interfaces.html"><strong>🖼 Diseñar interfaces</strong><span>Menús, marcadores y carteles que funcionan con ratón, teclado y mando.</span></a>
-  <a href="guia/escenas.html"><strong>🗺 Unir escenas</strong><span>Una isla, una cueva, el interior de una casa… y puertas entre ellas.</span></a>
-  <a href="guia/guiones.html"><strong>📜 Programar</strong><span>Guiones en Lua para que el mundo reaccione a lo que pasa.</span></a>
+  <a href="guia/mundo.html"><strong><i class="fx fx-mundo"></i>Construir</strong><span>Pinta el terreno con pinceles de bloques y coloca casas, árboles y vecinos.</span></a>
+  <a href="guia/creador.html"><strong><i class="fx fx-objeto"></i>Crear objetos</strong><span>Modela tus propios objetos de bloques y úsalos en cualquier escena.</span></a>
+  <a href="guia/pixel-art.html"><strong><i class="fx fx-pixel"></i>Dibujar</strong><span>Haz botones, iconos y texturas para los materiales del mundo.</span></a>
+  <a href="guia/interfaces.html"><strong><i class="fx fx-interfaz"></i>Diseñar interfaces</strong><span>Menús, marcadores y carteles que funcionan con ratón, teclado y mando.</span></a>
+  <a href="guia/escenas.html"><strong><i class="fx fx-mapa"></i>Unir escenas</strong><span>Una isla, una cueva, el interior de una casa… conectadas sin código.</span></a>
+  <a href="guia/guiones.html"><strong><i class="fx fx-guion"></i>Programar</strong><span>Guiones en Lua para que el mundo reaccione a lo que pasa.</span></a>
 </div>
 
 ## Cómo leer este manual
@@ -54,7 +54,9 @@ cualquier palabra.
 | `mundos/principal.ron` | Un archivo o una carpeta, dentro de la carpeta del proyecto |
 | `motor.decir(texto)` | Código que se escribe tal cual |
 
-> **Consejo.** Los recuadros como este dan trucos que ahorran tiempo.
+| <i class="fx fx-jugar"></i> **Jugar aquí** | Un botón del editor, con el icono que lo acompaña en este manual |
+
+> <i class="fx fx-consejo"></i> **Consejo.** Los recuadros como este dan trucos que ahorran tiempo.
 
 ## Medidas del mundo
 
@@ -65,6 +67,12 @@ los archivos van en cubitos (lo verás indicado en cada caso). El mar está a
 
 ## Estado del motor
 
-Este manual describe Foxy Engine hasta las **escenas e interfaces**, después
-de la Fase 4 (*vida*). La Fase 5 traerá Maxycraft al motor y la Fase 6 servirá
-para exportar y publicar juegos. Mira el [historial de versiones](apendices/historial.md).
+Este manual describe Foxy Engine **0.0.1-PR15**: después de la Fase 4
+(*vida*), con escenas, interfaces y pixel art, el editor reorganizado (barra de
+menús, panel «Proyecto» e inspector) y el arreglo de Windows con DirectX 12.
+La Fase 5 traerá Maxycraft al motor y la Fase 6 servirá para exportar y
+publicar juegos. Mira el [historial de versiones](apendices/historial.md).
+
+> <i class="fx fx-nota"></i> **Nota.** Los iconos de este manual ayudan a
+> encontrar cada cosa de un vistazo. En el editor, los botones llevan su
+> propio dibujo, pero siempre el **mismo nombre** que ves aquí.

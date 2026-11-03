@@ -46,6 +46,7 @@ Archivo: `mundos/<escena>.ron`
 ```ron
 (
     isla: (
+        terreno: Isla,        // Isla o Llano
         semilla: 7,           // otra semilla, otra isla
         lado: 192.0,          // tamaño del mundo (la isla está en el centro)
         radio: 66.0,          // tamaño de la isla
@@ -54,6 +55,8 @@ Archivo: `mundos/<escena>.ron`
         arboles: 0.2,         // de 0 (ninguno) a 1 (bosque)
         muelle: true,         // muelle de madera en la playa del sur
     ),
+    // Con terreno: Llano solo cuentan `lado` (el suelo de hierba) y
+    // `nivel_del_mar`. Un proyecto vacío empieza con un llano de 96 m.
     vida: (
         minutos_por_dia: 24.0,   // 0 = la hora no avanza
         dias_por_estacion: 7,
@@ -68,6 +71,8 @@ Archivo: `mundos/<escena>.ron`
          frases: ["¡Hola! Vivo en la casa del tejado rojo.", "¿Has visto el pozo?"]),
         (tipo: "zona", nombre: "Cueva", pos: (120.0, 14.0, 90.0), giro: 0,
          accion: IrAEscena(escena: "cueva", entrada: "boca")),
+        (tipo: "casa", nombre: "Tienda de Tomás", pos: (108.0, 18.0, 121.0), giro: 3,
+         accion: AbrirInterfaz("tienda")),
     ],
     cambios: [
         (196, 29, 254, 4, Grava),
@@ -77,16 +82,16 @@ Archivo: `mundos/<escena>.ron`
 
 | Campo | Qué es |
 |---|---|
-| `isla` | Cómo se genera el terreno. Ver [Construir el mundo](../guia/mundo.md#la-isla) |
+| `isla` | Cómo se genera el terreno: `terreno` (`Isla` o `Llano`) y sus medidas. Ver [Construir el mundo](../guia/mundo.md#el-terreno) |
 | `vida` | Cómo pasa el tiempo. Ver [La vida del mundo](../guia/vida.md#ajustes-de-la-vida) |
 | `carpetas` | Carpetas de la escena; las subcarpetas con `/` |
-| `objetos` | Objetos colocados: `tipo`, `nombre`, `pos` (centro de la base, en metros) y `giro` (cuartos de vuelta, 0 = mira al sur). Opcionales: `carpeta`, `frases` (vecinos) y `accion` (zonas) |
+| `objetos` | Objetos colocados: `tipo`, `nombre`, `pos` (centro de la base, en metros) y `giro` (cuartos de vuelta, 0 = mira al sur). Opcionales: `carpeta`, `frases` (vecinos) y `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>) |
 | `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos de medio metro** |
 
 El motor construye el mundo en tres pasos: genera la isla a partir de `isla`,
 aplica encima los `cambios` y coloca los `objetos`.
 
-> **Compatibilidad.** Los archivos de la Fase 1, que solo describían la isla
+> <i class="fx fx-nota"></i> **Compatibilidad.** Los archivos de la Fase 1, que solo describían la isla
 > (sin `isla:` alrededor), se siguen abriendo.
 
 ## Objetos propios
@@ -117,6 +122,7 @@ Las medidas van en puntos de una pantalla de diseño de **1280 × 720**.
     pausa: true,            // pausa el juego mientras está abierta
     oscurecer: 140,         // 0 = nada, 255 = negro
     ocultar_reloj: false,   // (marcadores) esconde el reloj del motor
+    tecla: "I",             // (pantallas) la abre y la cierra al jugar; "" = ninguna
     elementos: [            // de atrás hacia delante
         (
             tipo: Panel,

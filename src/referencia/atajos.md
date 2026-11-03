@@ -11,6 +11,9 @@ En Mac se usa <kbd>Cmd</kbd>; en Windows y Linux, <kbd>Ctrl</kbd>.
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>Z</kbd> | Rehacer |
 | <kbd>F5</kbd> | Jugar aquí / volver al editor |
 
+**Ayuda → <i class="fx fx-teclado"></i> Teclas y ratón…** enseña dentro del
+editor las teclas principales.
+
 ## Mundo: herramientas
 
 | Tecla | Herramienta |
@@ -29,8 +32,9 @@ En Mac se usa <kbd>Cmd</kbd>; en Windows y Linux, <kbd>Ctrl</kbd>.
 |---|---|
 | <kbd>R</kbd> | Girar el objeto elegido o el que vas a colocar |
 | <kbd>F</kbd> | Llevar la cámara al objeto elegido |
-| <kbd>Supr</kbd> o <kbd>⌫</kbd> | Borrar el objeto elegido |
+| <kbd>Supr</kbd> o <kbd>Retroceso</kbd> | Borrar el objeto elegido |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>D</kbd> | Duplicar el objeto elegido |
+| <kbd>Esc</kbd> | Dejar de elegirlo |
 
 ## Mundo: cámara
 
@@ -77,8 +81,9 @@ En Mac se usa <kbd>Cmd</kbd>; en Windows y Linux, <kbd>Ctrl</kbd>.
 | <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> o flechas | Stick izquierdo | Andar |
 | Ratón | Stick derecho | Mirar |
 | <kbd>Mayús</kbd> | Stick a fondo, L3 o gatillo izquierdo | Correr |
-| <kbd>Espacio</kbd> | A / ✕ | Saltar, nadar hacia arriba |
-| <kbd>C</kbd> o <kbd>Ctrl</kbd> | B / ○ o R3 | Agacharse |
-| <kbd>E</kbd> o clic | X / □ o gatillo derecho | Patear, hablar |
+| <kbd>Espacio</kbd> | <span class="mando">A / <i class="fx fx-ps-cruz" title="Cruz"></i></span> | Saltar, nadar hacia arriba |
+| <kbd>C</kbd> o <kbd>Ctrl</kbd> | <span class="mando">B / <i class="fx fx-ps-circulo" title="Círculo"></i></span> o R3 | Agacharse |
+| <kbd>E</kbd> o clic | <span class="mando">X / <i class="fx fx-ps-cuadrado" title="Cuadrado"></i></span> o gatillo derecho | Usar un objeto, hablar, patear |
+| La tecla de una pantalla (<kbd>I</kbd>, <kbd>M</kbd>, <kbd>Tab</kbd>…) | | Abrirla y cerrarla |
 | <kbd>Esc</kbd> | Start | Pausa, cerrar una interfaz |
 | <kbd>F5</kbd> | | Volver al editor (con *Jugar aquí*) |

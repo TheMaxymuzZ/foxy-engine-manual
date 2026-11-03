@@ -26,7 +26,11 @@ para Mac, Windows y Linux.
 El manual es un libro de [mdBook](https://rust-lang.github.io/mdBook/). Cada
 página es un archivo Markdown en `src/`, y el índice está en
 [`src/SUMMARY.md`](src/SUMMARY.md). Los colores de la marca están en
-[`theme/foxy.css`](theme/foxy.css).
+[`theme/foxy.css`](theme/foxy.css), y los iconos (SVG de línea, en
+`src/imagenes/iconos/`) se generan con
+[`herramientas/generar-iconos.py`](herramientas/generar-iconos.py), que
+también escribe `theme/iconos.css`. En una página se usan con
+`<i class="fx fx-mundo"></i>`.
 
 Para verlo en tu ordenador:
 

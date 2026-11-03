@@ -1,9 +1,15 @@
 # Acciones
 
-Una **acción** es lo que pasa al pulsar un botón de una
-[interfaz](../guia/interfaces.md) o al entrar en una
-[zona de cambio](../guia/escenas.md#zonas-de-cambio). Se eligen de una lista,
-sin código.
+Una **acción** es lo que pasa:
+
+- al pulsar un <i class="fx fx-boton"></i> **botón** de una
+  [interfaz](../guia/interfaces.md),
+- al entrar en una <i class="fx fx-zona"></i>
+  [**zona de cambio**](../guia/escenas.md#zonas-de-cambio),
+- o al **usar un objeto** con <kbd>E</kbd>
+  (<i class="fx fx-usar"></i> [*Al usarlo*](../guia/mundo.md#al-usarlo-e)).
+
+Se eligen de una lista, sin código.
 
 | En el editor | En el archivo | Qué hace |
 |---|---|---|
@@ -26,4 +32,11 @@ En los archivos, la acción va en el campo `accion` del objeto o del elemento:
 ```ron
 (tipo: "zona", nombre: "Puerta de la cueva", pos: (120.0, 14.0, 90.0), giro: 0,
  accion: IrAEscena(escena: "cueva", entrada: "boca")),
+(tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), giro: 0,
+ accion: IrAEscena(escena: "interior", entrada: "puerta")),
+(tipo: "puesto", nombre: "Puesto", pos: (96.0, 16.0, 112.0), giro: 1,
+ accion: AbrirInterfaz("tienda")),
 ```
+
+Jugando, al mirar de cerca un objeto con acción sale una pista con su nombre
+y lo que hace: <kbd>E</kbd> *Casa de Plumas: ir a «interior»*.

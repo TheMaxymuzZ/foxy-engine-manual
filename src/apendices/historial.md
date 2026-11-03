@@ -2,6 +2,46 @@
 
 Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 
+La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
+del motor con el número del último cambio (*pull request*) incorporado.
+
+## 0.0.1-PR15: Windows
+
+- En Windows, los gráficos se prueban uno a uno: primero **DirectX 12**,
+  después Vulkan y por último OpenGL. Arregla el motor que se cerraba sin
+  avisar al abrirse en algunos ordenadores.
+- [Registro](problemas.md#el-registro-registrotxt) en
+  `Documentos/Foxy Engine/registro.txt` y una ventana de aviso si el motor
+  se cierra por un error.
+- El `.exe` de Windows ya no abre la ventana negra de consola.
+
+## 0.0.1-PR14: el editor, ordenado
+
+- **Barra de menús** (*Archivo*, *Editar*, *Crear*, *Ver* y *Ayuda*), panel
+  **«Proyecto»** a la izquierda con todo el proyecto, **tira de
+  herramientas** dentro de la vista e **inspector** a la derecha. Las
+  pestañas son solo de lo que está abierto.
+- **Ayuda → Teclas y ratón…**, con todas las teclas.
+- **Proyecto vacío**: un llano de hierba, el punto de inicio y un guion con
+  las funciones vacías. Nuevo terreno **Llano vacío**, también para escenas.
+- **Al usarlo (E)**: cualquier casa u objeto propio puede llevar a otra
+  escena, abrir una interfaz o llamar al guion.
+- Las escenas nuevas pueden quedar **ya conectadas**, con zonas de ida y
+  vuelta.
+- Las pantallas pueden abrirse con **su propia tecla**, y cada interfaz dice
+  **cómo se abre en el juego**.
+- Avisos <i class="fx fx-aviso"></i> de escenas a las que no se llega y de
+  interfaces que nada abre.
+- El editor gasta menos: las sombras solo se redibujan si cambia algo, y
+  dibuja más despacio cuando nadie lo toca.
+
+## 0.0.1-PR13: la marca
+
+- El editor se abre con el logo horizontal y la versión; los juegos enseñan
+  *Powered by Foxy Engine*.
+- Identidad visual: el zorro, los iconos de la app y la pantalla *Powered by
+  Foxy Engine*.
+
 ## Escenas e interfaces
 
 - Varias escenas por proyecto, mapa de escenas, puntos de entrada y zonas de
@@ -11,7 +51,6 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
   partida.
 - Editor de pixel art: imágenes, paletas, texturas para los materiales e
   imágenes que se estiran en nueve partes.
-- Identidad visual: el zorro, los iconos y la pantalla *Powered by Foxy Engine*.
 
 ## Extras del editor
 

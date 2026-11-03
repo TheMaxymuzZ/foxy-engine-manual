@@ -8,8 +8,8 @@ src = "src"
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "coal"
-additional-css = ["theme/foxy.css"]
-no-section-label = false
+additional-css = ["theme/foxy.css", "theme/iconos.css"]
+no-section-label = true
 git-repository-url = "https://github.com/TheMaxymuzZ/foxy-engine-manual"
 git-repository-icon = "fa-github"
 edit-url-template = "https://github.com/TheMaxymuzZ/foxy-engine-manual/edit/main/{path}"

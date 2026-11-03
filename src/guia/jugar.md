@@ -5,8 +5,8 @@ juego.
 
 | | Qué hace | Para qué |
 |---|---|---|
-| **▶ Jugar aquí** (<kbd>F5</kbd>) | Te pone de pie donde mira la cámara. <kbd>F5</kbd> vuelve al editor, justo donde estabas | Probar algo al momento |
-| **🎮 Desde el inicio** | Abre el juego completo, con su menú principal, en el punto de inicio de la escena inicial | Probar el juego como lo verá quien lo juegue |
+| <i class="fx fx-jugar"></i> **Jugar aquí** (<kbd>F5</kbd>) | Te pone de pie donde mira la cámara. <kbd>F5</kbd> vuelve al editor, justo donde estabas | Probar algo al momento |
+| <i class="fx fx-mando"></i> **Desde el inicio** | Abre el juego completo, con su menú principal, en el punto de inicio de la escena inicial | Probar el juego como lo verá quien lo juegue |
 | `foxy-engine --juego` | Solo el juego, sin editor | Así será el juego exportado (Fase 6) |
 
 | Menú principal | Jugando | Pausa |
@@ -20,11 +20,25 @@ juego.
 | Andar | <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> o flechas | Stick izquierdo |
 | Mirar | Ratón | Stick derecho |
 | Correr | <kbd>Mayús</kbd> | Stick a fondo, L3 o gatillo izquierdo |
-| Saltar (y nadar hacia arriba) | <kbd>Espacio</kbd> | A / ✕ |
-| Agacharse | <kbd>C</kbd> o <kbd>Ctrl</kbd> | B / ○ o R3 |
-| Patear una pelota, hablar | <kbd>E</kbd> o clic | X / □ o gatillo derecho |
+| Saltar (y nadar hacia arriba) | <kbd>Espacio</kbd> | <span class="mando">A / <i class="fx fx-ps-cruz" title="Cruz"></i></span> |
+| Agacharse | <kbd>C</kbd> o <kbd>Ctrl</kbd> | <span class="mando">B / <i class="fx fx-ps-circulo" title="Círculo"></i></span> o R3 |
+| Usar un objeto, hablar o patear una pelota | <kbd>E</kbd> o clic | <span class="mando">X / <i class="fx fx-ps-cuadrado" title="Cuadrado"></i></span> o gatillo derecho |
+| Abrir o cerrar una pantalla con tecla propia | La suya (<kbd>I</kbd>, <kbd>M</kbd>, <kbd>Tab</kbd>…) | |
 | Menú de pausa | <kbd>Esc</kbd> | Start |
 | Moverse por los menús | Flechas, <kbd>Intro</kbd>, <kbd>Esc</kbd> o el ratón | Cruceta o stick, A, B |
+
+En el mando, A y B son los botones de Xbox; los símbolos son los de
+PlayStation (<i class="fx fx-ps-cruz"></i> cruz, <i class="fx fx-ps-circulo"></i>
+círculo y <i class="fx fx-ps-cuadrado"></i> cuadrado).
+
+## Usar objetos
+
+Al mirar de cerca (a menos de 4 m) un objeto que hace algo
+[al usarlo](mundo.md#al-usarlo-e), abajo aparece una pista, como
+<kbd>E</kbd> *Casa: ir a «interior»* o <kbd>E</kbd> *Puesto: abrir
+«tienda»*. Pulsa <kbd>E</kbd> (o haz clic) para usarlo. Si a la vez tienes
+delante un vecino o una pelota, <kbd>E</kbd> habla con el vecino o patea la
+pelota primero.
 
 ## Física
 

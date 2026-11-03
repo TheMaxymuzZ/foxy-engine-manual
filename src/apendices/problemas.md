@@ -15,6 +15,44 @@ Seguramente sigue abierta la versión anterior. En Mac:
 3. Abre **Foxy Engine.app** desde `Documentos/Foxy Engine`, no desde una copia
    antigua del Dock o de *Descargas*.
 
+## Windows: el motor no se abre o se cierra solo
+
+Desde la versión 0.0.1-PR15, si el motor se cierra por un error, sale una
+ventana **«Foxy Engine se ha cerrado por un error»** con el motivo y la ruta
+del registro. Qué hacer:
+
+1. Comprueba que tienes el `foxy-engine.exe` **más reciente** (ver
+   [Instalar](../empezar/instalar.md#en-windows)). Las versiones anteriores
+   abrían todos los gráficos a la vez y, con algunos controladores, se
+   cerraban sin avisar.
+2. Actualiza el **controlador de la tarjeta gráfica** desde la web del
+   fabricante (Intel, AMD o NVIDIA) o desde *Windows Update*.
+3. Prueba a forzar unos gráficos concretos desde *PowerShell*, en la carpeta
+   del `.exe`:
+
+   ```powershell
+   $env:WGPU_BACKEND = "dx12"; .\foxy-engine.exe
+   ```
+
+   Si con `dx12` no va, prueba `vulkan` y después `gl`.
+4. Mira el [registro](#el-registro-registrotxt): dice qué gráficos ha probado
+   y por qué ha fallado cada uno.
+
+## Windows: «Windows protegió su PC»
+
+Sale la primera vez porque el programa todavía no está firmado. Pulsa
+**Más información → Ejecutar de todas formas**. Solo hay que hacerlo una vez
+por cada `.exe` nuevo.
+
+## <i class="fx fx-registro"></i> El registro (`registro.txt`)
+
+Cada vez que se abre, el motor apunta lo que hace en
+`Documentos/Foxy Engine/registro.txt` (en Windows,
+`C:\Users\<tu usuario>\Documents\Foxy Engine\registro.txt`): la versión,
+el sistema, los gráficos que prueba y cualquier error. Se sobrescribe cada
+vez que abres el motor, así que **cópialo justo después del fallo** si
+quieres enseñárselo a alguien.
+
 ## `cargo: command not found`
 
 Rust no está instalado, o la Terminal se abrió antes de instalarlo. Instálalo
@@ -28,16 +66,26 @@ mundo.
 
 ## Un botón o una zona no lleva a ningún sitio
 
-Abre **🗺 Escenas → Mapa de escenas**: marca con ⚠ las zonas y botones que
-llevan a una escena que no existe. Revisa también que el **punto de entrada**
+En el panel «Proyecto», abre <i class="fx fx-mapa"></i> **Cómo se
+conectan…** (en el grupo *Escenas*): marca con <i class="fx fx-aviso"></i>
+las zonas y botones que llevan a una escena que no existe. Revisa también que el **punto de entrada**
 tenga exactamente el nombre que pide la acción.
 
 ## Mi guion no hace nada
 
-- Pulsa **Comprobar** en la pestaña 📜 Guion para ver si hay errores.
+- Si el guion tiene errores, `mundo.lua` lleva un <i class="fx fx-aviso"></i>
+  en el panel «Proyecto». Ábrelo y pulsa **Comprobar** para verlos.
 - Mira la **consola**: ahí salen los errores al jugar.
 - Revisa el nombre de la función: `al_hablar`, no `alHablar` ni `al_Hablar`.
 - Añade un `print("aquí llego")` para ver si la función se llama.
+
+## Una escena o una interfaz tiene un <i class="fx fx-aviso"></i>
+
+No es un error: avisa de que **nada lleva todavía** a esa escena, o de que
+**nada abre** esa interfaz, así que no se verá al jugar. Para una escena,
+crea una salida desde el [mapa de escenas](../guia/escenas.md#el-mapa-de-escenas)
+o un objeto con [*Al usarlo*](../guia/mundo.md#al-usarlo-e). Para una
+interfaz, mira [Cómo se abre en el juego](../guia/interfaces.md#cómo-se-abre-en-el-juego).
 
 ## «El guion tarda demasiado»
 
@@ -65,5 +113,5 @@ Si el motor no puede leer un `.ron`, dice en qué línea está el fallo. Los
 errores típicos: una coma que falta entre dos elementos, unas comillas sin
 cerrar, o un material mal escrito (`Flor_Roja` en vez de `FlorRoja`).
 
-> **Consejo.** Guarda tus proyectos en Git o en GitHub: como todo es texto,
+> <i class="fx fx-consejo"></i> **Consejo.** Guarda tus proyectos en Git o en GitHub: como todo es texto,
 > verás exactamente qué cambió y podrás volver atrás.

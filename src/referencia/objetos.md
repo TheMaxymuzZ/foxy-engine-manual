@@ -6,7 +6,9 @@ nombre que se usa en los archivos de los mundos.
 ## Para construir
 
 Se funden con los bloques del mundo: puedes cavar, poner o pintar encima de
-ellos.
+ellos. Todos pueden hacer una [acción](acciones.md) cuando el jugador los usa
+con <kbd>E</kbd> (<i class="fx fx-usar"></i>
+[*Al usarlo*](../guia/mundo.md#al-usarlo-e)).
 
 | Objeto | Tipo | Notas |
 |---|---|---|
@@ -25,16 +27,17 @@ Se dibujan aparte, con su propio modelo.
 
 | Objeto | Tipo | Se ve al jugar | Qué hace |
 |---|---|---|---|
-| Pelota | `pelota` | Sí | Se mueve con la física: cae, bota, rueda y flota. Se patea con <kbd>E</kbd> |
-| Vecino | `vecino` | Sí | Un habitante con nombre y frases. Ver [La vida del mundo](../guia/vida.md#vecinos) |
-| Punto de inicio | `inicio` | No | Donde empieza una partida nueva, mirando hacia su flecha |
-| Punto de entrada | `entrada` | No | Un punto con nombre por donde se llega desde otra escena |
-| Zona de cambio | `zona` | No | Un marco de 2 × 2,5 m que hace una [acción](acciones.md) al entrar |
+| <i class="fx fx-pelota"></i> Pelota | `pelota` | Sí | Se mueve con la física: cae, bota, rueda y flota. Se patea con <kbd>E</kbd> |
+| <i class="fx fx-vecino"></i> Vecino | `vecino` | Sí | Un habitante con nombre y frases. Ver [La vida del mundo](../guia/vida.md#vecinos) |
+| <i class="fx fx-inicio"></i> Punto de inicio | `inicio` | No | Donde empieza una partida nueva, mirando hacia su flecha |
+| <i class="fx fx-entrada"></i> Punto de entrada | `entrada` | No | Un punto con nombre por donde se llega desde otra escena |
+| <i class="fx fx-zona"></i> Zona de cambio | `zona` | No | Un marco de 2 × 2,5 m que hace una [acción](acciones.md) al entrar |
 
 ## Objetos propios
 
 Los que haces con el [creador de objetos](../guia/creador.md) usan como tipo
-el nombre de su archivo en `objetos/` (sin `.ron`).
+el nombre de su archivo en `objetos/` (sin `.ron`). Como los de construir,
+pueden hacer una acción al usarlos.
 
 ## Posición y giro
 

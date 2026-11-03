@@ -47,7 +47,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `objeto`, `pixel`, `imagen`, `texturas` o `interfaz` |
+| `--pestana <nombre>` | `mundo`, `guion`, `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces) o `vacio` (un proyecto vacío recién creado) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar` u `objeto` |
 | `--raton x,y` | Dónde está el ratón, en píxeles |
 | `--elegir <n>` | Elige el objeto número `n` (desde 1) |
@@ -63,6 +63,22 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 
 `--editor`, `--raton`, `--elegir`, `--jugar` y `--menu` solo valen con
 `--captura`.
+
+## Gráficos
+
+En Windows el motor prueba **DirectX 12**, luego **Vulkan** y por último
+**OpenGL**, y se queda con el primero que funcione. En Mac usa Metal y en
+Linux, Vulkan. Para obligarlo a usar uno, pon la variable `WGPU_BACKEND`
+antes de abrirlo:
+
+```powershell
+$env:WGPU_BACKEND = "dx12"     # dx12, vulkan o gl
+.\foxy-engine.exe
+```
+
+En Windows, el `.exe` abre sin consola. Si lo lanzas desde *cmd* o
+*PowerShell*, los mensajes salen ahí; además, siempre se guardan en
+[`registro.txt`](../apendices/problemas.md#el-registro-registrotxt).
 
 ## Pruebas
 

@@ -2,22 +2,27 @@
 
 | Término | Qué significa |
 |---|---|
-| **Acción** | Lo que pasa al pulsar un botón o entrar en una zona. Ver [Acciones](../referencia/acciones.md). |
+| **Acción** | Lo que pasa al pulsar un botón, entrar en una zona o usar un objeto con <kbd>E</kbd>. Ver [Acciones](../referencia/acciones.md). |
+| **Al usarlo (E)** | La acción de un objeto que el jugador usa mirándolo de cerca y pulsando <kbd>E</kbd>. |
 | **Ancla** | El punto de la pantalla al que está pegado un elemento de una interfaz. |
 | **Bloque** | Un cubo de 1 m, hecho de 2 × 2 × 2 cubitos. |
 | **Cubito** | La pieza más pequeña del mundo: un cubo de medio metro. |
 | **Entrada (punto de)** | Un punto con nombre por donde se llega a una escena desde otra. |
 | **Escena** | Un mundo dentro de un proyecto (la isla, una cueva…). Se guarda en `mundos/`. |
-| **Escena inicial** | La escena donde empiezan las partidas nuevas (⭐). |
+| **Escena inicial** | La escena donde empiezan las partidas nuevas (<i class="fx fx-estrella"></i>). |
+| **Inspector** | El panel de la derecha del editor: las opciones de la herramienta y de lo que tengas elegido. |
 | **Guion** | El código Lua del proyecto, en `guiones/mundo.lua`. |
 | **Interfaz** | Algo que se dibuja encima del juego: un menú, un marcador, un cartel. |
+| **Llano** | Un terreno de hierba completamente plano, sin isla ni mar a la vista. Es el de un proyecto vacío. |
 | **Marcador** | Una interfaz que está siempre a la vista mientras se juega. |
 | **Material** | De qué está hecho un cubito: hierba, piedra, madera… |
 | **Nine-slice (estirar en nueve partes)** | Forma de estirar una imagen sin deformar sus esquinas. |
 | **Objeto propio** | Un objeto hecho con el creador de objetos, guardado en `objetos/`. |
+| **Panel «Proyecto»** | El panel de la izquierda del editor, con las escenas, interfaces, objetos, imágenes y el guion del proyecto. |
 | **Paleta** | Una lista de colores para dibujar en pixel art. |
 | **Pincel** | La forma (cubo o esfera) y el tamaño con los que se ponen, quitan o pintan bloques. |
 | **Proyecto** | La carpeta de un juego, con todas sus escenas, objetos, imágenes e interfaces. |
+| **Registro** | El archivo `registro.txt` donde el motor apunta lo que hace al abrirse y los errores. |
 | **RON** | El formato de texto de los archivos `.ron` de Foxy Engine. |
 | **Trozo** | Un pedazo del mundo de 32 × 32 × 32 cubitos. El motor dibuja y actualiza el mundo por trozos. |
 | **Valor** | Un dato con nombre que pone el guion (`motor.poner_valor`) y que se guarda con la partida. |

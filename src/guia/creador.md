@@ -9,12 +9,16 @@ como quieras.
 
 ## Abrir el creador
 
-- **+ Objeto nuevo** abre una pestaña 📦 con un objeto vacío (empieza con
-  una peana de madera de 3 × 3 m para tener algo que tocar).
-- En *Colocar objetos → Mis objetos*, el **✏** de un objeto lo abre para
-  editarlo.
-- Con un objeto del motor elegido en el mundo, **Hacer una versión propia**
-  lo copia al creador para cambiarlo.
+- El <i class="fx fx-mas"></i> de <i class="fx fx-objeto"></i> **Objetos
+  propios**, en el panel «Proyecto», o **Crear → Objeto nuevo**, abren una
+  pestaña con un objeto vacío (empieza con una peana de madera de 3 × 3 m para
+  tener algo que tocar).
+- Un clic en un objeto de la lista **Objetos propios** lo abre para editarlo.
+- Con uno de tus objetos elegido en la escena,
+  <i class="fx fx-editar"></i> **Editar este objeto** lo abre en el creador.
+- Con un objeto del motor elegido en la escena,
+  <i class="fx fx-editar"></i> **Hacer una versión propia** lo copia al
+  creador para cambiarlo.
 
 Cada objeto abierto tiene su propia pestaña, así que puedes tener varios a la
 vez.
@@ -30,9 +34,9 @@ peana no es parte del objeto), y sus opciones:
 | **Tamaño** | Ancho, alto y fondo de la caja del objeto, hasta 16 m por lado |
 | **Pincel** | Poner, quitar o pintar, igual que en el mundo |
 | **Material** | Cualquier material del motor |
-| **Guardar objeto** | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> |
-| **Colocarlo en el mundo** | Vuelve al mundo con este objeto listo para colocar |
-| **Hacer una copia** | Abre un objeto nuevo igual, para hacer variantes |
+| <i class="fx fx-guardar"></i> **Guardar objeto** | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> |
+| <i class="fx fx-colocar"></i> **Colocarlo en el mundo** | Vuelve a la escena con este objeto listo para colocar |
+| <i class="fx fx-duplicar"></i> **Hacer una copia** | Abre un objeto nuevo igual, para hacer variantes |
 
 La vista se gira con el **botón derecho** o con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>
 + ratón, y la rueda acerca y aleja. <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd>
@@ -44,6 +48,10 @@ Cuando guardas un objeto, **todas las copias que ya estaban colocadas en el
 mundo se actualizan** solas. Si mejoras tu farolillo, se mejoran todos los
 farolillos de la isla.
 
+Los objetos guardados salen en el panel «Proyecto» y en el inspector de
+*Colocar objetos → Mis objetos*. Una vez colocados, pueden hacer algo
+[al usarlos](mundo.md#al-usarlo-e): abrir una tienda, llevar a otra escena…
+
 ## Cómo se guarda
 
 Cada objeto es un archivo en `objetos/`, por ejemplo `objetos/farolillo.ron`.
@@ -54,5 +62,5 @@ En el mundo se colocan con su nombre de archivo como `tipo`:
 (tipo: "farolillo", nombre: "", pos: (98.0, 16.0, 120.0), giro: 0),
 ```
 
-> **Atención.** Si borras el archivo de un objeto que está colocado en un
+> <i class="fx fx-aviso"></i> **Atención.** Si borras el archivo de un objeto que está colocado en un
 > mundo, el editor avisa abajo: «el motor no conoce estos objetos».
