@@ -1,4 +1,8 @@
-# Guiones en Lua
+# Guion del mundo
+
+El **guion del mundo** (`guiones/mundo.lua`) controla lo que afecta a todo el
+juego. Para el comportamiento de una sola entidad, usa un
+[guion de entidad](guiones-entidad.md).
 
 Casi todo se hace con el ratón, pero cuando quieras que el mundo **reaccione**
 (que un vecino diga algo distinto cuando llueve, que suene una campana cada
@@ -17,8 +21,8 @@ Cada proyecto tiene su guion en `guiones/mundo.lua`. Se abre con un clic en
 «Proyecto», y se edita en el panel **Código**, que tiene:
 
 - **Comprobar**: busca errores sin jugar.
-- Una **consola**, donde salen los errores al jugar y lo que escribas con
-  `print()`.
+- La **[Consola](../interfaz/consola.md)**, donde salen los errores al jugar
+  y lo que escribas con `print()`, y donde se ejecuta Lua contra el juego.
 
 Un **proyecto vacío** empieza con las funciones `al_empezar`, `al_hablar`,
 `al_entrar_escena` y `al_nuevo_dia` vacías, y una lista al principio con todo
@@ -146,16 +150,9 @@ entre ellos:
 
 ## Autocompletado
 
-Si escribes los guiones en un editor externo con LuaLS (por ejemplo,
-Visual Studio Code con la extensión *Lua*), genera las definiciones de la
-tabla `motor` y guárdalas en la carpeta del proyecto:
-
-```sh
-foxy-engine --definiciones-lua guiones/motor.lua
-```
-
-El editor reconocerá todas las funciones de `motor`, con sus parámetros y
-su ayuda. El motor no ejecuta ese archivo: solo lo lee tu editor.
+El panel **Código** completa todo lo de `motor` mientras escribes y enseña la
+ayuda de cada función. Para usar VS Code o Zed, mira
+[Editores externos](lua-editor-externo.md).
 
 ## Errores
 

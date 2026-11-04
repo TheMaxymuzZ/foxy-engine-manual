@@ -162,5 +162,5 @@ pulses **Guardar**.
 ## Véase también
 
 - [Panel Nodos](../interfaz/nodos.md)
-- [Guiones en Lua](guiones.md)
+- [Programar en Lua](programar-lua.md)
 - [Referencia de nodos](../referencia/nodos.md)

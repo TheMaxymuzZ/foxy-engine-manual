@@ -23,7 +23,7 @@ un clic arriba en el centro:
 | Espacio | Para qué | Paneles |
 |---|---|---|
 | **Construir** | Hacer el mundo: bloques, objetos, terreno | Proyecto, En la escena, Vista e Inspector |
-| **Programar** | Escribir el guion o los nodos y probarlos | Proyecto, Código y Nodos, Vista, Registro e Inspector |
+| **Programar** | Escribir guiones o nodos, probarlos y depurarlos | Proyecto, Código y Nodos, Vista, Consola, Depurador, Inspector y Registro |
 | **Pixel art** | Dibujar imágenes y texturas | Proyecto, Pixel art, Vista y Materiales |
 
 | Programar | Pixel art |

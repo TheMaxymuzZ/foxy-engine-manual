@@ -32,7 +32,7 @@ se guardan en su propia carpeta:
 | Materiales | `materiales.ron` | [Materiales](../guia/materiales.md) |
 | Imágenes y paletas | `imagenes/`, `paletas/` | [Pixel art](../guia/pixel-art.md) |
 | Interfaces | `interfaces/` | [Interfaces](../guia/interfaces.md) |
-| Guiones y nodos | `guiones/`, `grafos/`, `funciones/`, `nodos/` | [Nodos](../guia/nodos.md) y [Guiones en Lua](../guia/guiones.md) |
+| Guiones y nodos | `guiones/`, `grafos/`, `funciones/`, `nodos/` | [Nodos](../guia/nodos.md) y [Programar en Lua](../guia/programar-lua.md) |
 | Prefabricados | `prefabricados/` | [Inspector](../guia/entidades.md#prefabricados) |
 | Sonidos | `sonidos/` | Arrastrando archivos WAV u OGG ([Sonidos](../guia/sonidos.md)) |
 

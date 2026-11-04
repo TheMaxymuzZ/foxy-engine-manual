@@ -1,7 +1,9 @@
 # API de Lua
 
-Todo lo que un guion puede usar. Los guiones usan **Lua 5.4**. Mira
-[Guiones en Lua](../guia/guiones.md) para empezar.
+Todo lo que un guion puede usar, con ejemplos. Los guiones usan **Lua 5.4**.
+Mira [Programar en Lua](../guia/programar-lua.md) para empezar. La lista
+completa, generada a partir del motor, está en la
+[referencia de la API de Lua](api-lua.md).
 
 ## Funciones que llama el motor
 
@@ -169,7 +171,7 @@ también son valores.
 
 Para el autocompletado en un editor externo, genera las definiciones con
 `foxy-engine --definiciones-lua`. Ver
-[Guiones en Lua](../guia/guiones.md#autocompletado).
+[Editores externos](../guia/lua-editor-externo.md).
 
 ## Cómo se ejecuta
 

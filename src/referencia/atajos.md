@@ -112,3 +112,21 @@ editor las teclas principales.
 | <kbd>F5</kbd> | | Volver al editor (con *Jugar aquí*) |
 | <kbd>F8</kbd> | | Enseñar u ocultar el grafo abierto en el panel Nodos, con sus cables encendidos |
 | <kbd>F6</kbd> | | Seguir después de un punto de parada |
+| <kbd>F7</kbd> | | Abrir y cerrar la ventana **Código** (guiones, consola y depurador) |
+| <kbd>F10</kbd> | | Parado en un guion: la siguiente línea de la función |
+| <kbd>F11</kbd> | | Parado en un guion: la siguiente línea, entrando en las funciones |
+| <kbd>Mayús</kbd>+<kbd>F11</kbd> | | Parado en un guion: salir de la función |
+
+## Panel Código
+
+| Tecla | Qué hace |
+|---|---|
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> | Guardar el guion (jugando, se recarga en el juego) |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>F</kbd> | Buscar y reemplazar |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>\\</kbd> | Dividir la vista en dos |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>/</kbd> | Comentar o descomentar las líneas elegidas |
+| <kbd>Tab</kbd>, <kbd>Mayús</kbd>+<kbd>Tab</kbd> | Sangrar o quitar la sangría |
+| <kbd>↑</kbd> <kbd>↓</kbd> y <kbd>Intro</kbd> o <kbd>Tab</kbd> | Elegir en el autocompletado |
+| <kbd>Esc</kbd> | Cerrar el autocompletado |
+| <kbd>F12</kbd> o <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+clic | Ir a la definición |
+| Clic junto al número de línea | Poner o quitar un punto de parada |
