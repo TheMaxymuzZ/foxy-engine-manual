@@ -13,12 +13,18 @@
 - [Construir el mundo](guia/mundo.md)
 - [Ordenar la escena](guia/carpetas.md)
 - [Crear objetos propios](guia/creador.md)
+- [Importar modelos](guia/importar.md)
+- [Materiales](guia/materiales.md)
 - [Pixel art](guia/pixel-art.md)
+- [Archivos del proyecto](guia/archivos.md)
 - [Escenas](guia/escenas.md)
 - [Interfaces](guia/interfaces.md)
 - [La vida del mundo](guia/vida.md)
+- [Nodos (sin código)](guia/nodos.md)
 - [Guiones en Lua](guia/guiones.md)
 - [Probar el juego](guia/jugar.md)
+- [Rendimiento](guia/rendimiento.md)
+- [Preferencias y teclas](guia/preferencias.md)
 
 # Referencia
 

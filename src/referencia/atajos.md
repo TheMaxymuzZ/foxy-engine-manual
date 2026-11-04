@@ -9,7 +9,12 @@ En Mac se usa <kbd>Cmd</kbd>; en Windows y Linux, <kbd>Ctrl</kbd>.
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> | Guardar lo que tienes delante |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> | Deshacer |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>Z</kbd> | Rehacer |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>,</kbd> | Preferencias (y cambiar las teclas) |
 | <kbd>F5</kbd> | Jugar aquí / volver al editor |
+
+Las teclas de moverse, de las herramientas y de jugar se pueden cambiar en
+[Preferencias → Teclas](../guia/preferencias.md#teclas). Las de esta página
+son las que vienen.
 
 **Ayuda → <i class="fx fx-teclado"></i> Teclas y ratón…** enseña dentro del
 editor las teclas principales.
@@ -23,6 +28,7 @@ editor las teclas principales.
 | <kbd>B</kbd> | Poner bloques |
 | <kbd>E</kbd> | Quitar bloques |
 | <kbd>P</kbd> | Pintar |
+| <kbd>X</kbd> | Extruir |
 | <kbd>O</kbd> | Colocar objetos |
 | <kbd>[</kbd> / <kbd>]</kbd> | Pincel más pequeño / más grande |
 

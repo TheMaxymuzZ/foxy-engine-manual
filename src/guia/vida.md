@@ -39,6 +39,7 @@ Sin nada elegido en el editor, el inspector de la derecha tiene el apartado
 | **Estación** | Con cuál empieza una partida nueva | Primavera |
 | **Clima** | Con cuál empieza una partida nueva | Despejado |
 | **Cambia solo** | Si el clima cambia por su cuenta | Sí |
+| **Romper bloques** | Si jugando se pueden [romper bloques](jugar.md#romper-bloques) (con derrumbes y agua que corre) | Sí |
 
 ## Vecinos
 

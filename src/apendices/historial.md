@@ -5,6 +5,69 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR21: rendimiento
+
+- **[Detalle de lejos](../guia/rendimiento.md#detalle-de-lejos)**: los
+  trozos lejanos se dibujan con menos detalle (la isla de prueba, vista desde
+  fuera, pasa de 304 000 a unos 77 000 triángulos).
+- Las texturas de los bloques llevan **mipmaps**: de lejos ya no parpadean.
+- Ventana **[Rendimiento](../guia/rendimiento.md)** (*Ver → Rendimiento*),
+  con una gráfica de los fotogramas, lo que se dibuja y cómo iría en otros
+  ordenadores. Con **Notar cómo va**, el editor se pone a su ritmo.
+
+## 0.0.1-PR20: nodos
+
+- **[Nodos](../guia/nodos.md)**: guiones sin código, con cajas *Cuándo*,
+  *Si* y *Hacer* unidas por cables. Se convierten en Lua y se cargan junto
+  a `mundo.lua`.
+
+## 0.0.1-PR19: romper bloques, derrumbes y agua
+
+- **[Romper bloques](../guia/jugar.md#romper-bloques)** jugando, según los
+  golpes de cada material.
+- Lo que se queda sin apoyo **se derrumba** y cae con física (Rapier); al
+  pararse, deja ruinas.
+- El **agua corre** por los huecos que se abren y se retira si se tapan.
+- Ajuste **Romper bloques** en la vida de la escena.
+
+## 0.0.1-PR18: mundos más ligeros
+
+- Las caras iguales que están juntas se dibujan como un solo rectángulo: la
+  isla de prueba pasa de 746 000 a 304 000 triángulos y se ve igual.
+- Al abrir otra escena, regenerar el terreno o cambiar los materiales, el
+  mundo nuevo se prepara en segundo plano (los trozos más cercanos primero)
+  mientras se sigue viendo el de antes. Abajo a la derecha sale
+  **Preparando el mundo…** con su barra.
+
+## 0.0.1-PR17: importar modelos, extruir y simetría
+
+- **[Importar modelos](../guia/importar.md)** de MagicaVoxel (`.vox`) y
+  Qubicle (`.qb`), como objeto propio o directamente en la escena, con un
+  material propio para cada color.
+- Herramienta **[Extruir](../guia/mundo.md#extruir)** (<kbd>X</kbd>): saca o
+  mete una capa de toda una cara.
+- **[Simetría](../guia/mundo.md#simetría)** en X, Y y Z al poner, quitar,
+  pintar y extruir, en el mundo y en el creador de objetos.
+- Los objetos propios pueden medir hasta 64 cubitos (32 m) de lado.
+
+## 0.0.1-PR16: materiales, luces y archivos
+
+- **[Paleta de materiales](../guia/materiales.md)**: materiales propios con
+  color, textura y atributos (luz propia, metálico, pulido, transparencia,
+  atravesable, golpes y peso). Plantillas de oro, hierro, lava, neón, hielo y
+  mármol.
+- **Usar como textura** desde cualquier imagen de pixel art, y **Dibujar…**
+  desde un material.
+- Los materiales que brillan **iluminan alrededor**; sombras más finas cerca
+  de la cámara; el cristal es transparente.
+- **[Gestor de archivos](../guia/archivos.md)**: carpetas, mover, renombrar,
+  papelera e importar (también arrastrando archivos sobre la ventana).
+- **[Preferencias](../guia/preferencias.md)** con sincronía vertical (adiós a
+  los tirones de la cámara) y asignación de teclas.
+- **Ayuda → Manual de Foxy Engine** abre este manual.
+
+![Farolas de noche](../imagenes/capturas/farolas-de-noche.png)
+
 ## 0.0.1-PR15: Windows
 
 - En Windows, los gráficos se prueban uno a uno: primero **DirectX 12**,
