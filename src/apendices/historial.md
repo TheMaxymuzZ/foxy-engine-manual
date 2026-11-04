@@ -5,6 +5,24 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR16: materiales, luces y archivos
+
+- **[Paleta de materiales](../guia/materiales.md)**: materiales propios con
+  color, textura y atributos (luz propia, metálico, pulido, transparencia,
+  atravesable, golpes y peso). Plantillas de oro, hierro, lava, neón, hielo y
+  mármol.
+- **Usar como textura** desde cualquier imagen de pixel art, y **Dibujar…**
+  desde un material.
+- Los materiales que brillan **iluminan alrededor**; sombras más finas cerca
+  de la cámara; el cristal es transparente.
+- **[Gestor de archivos](../guia/archivos.md)**: carpetas, mover, renombrar,
+  papelera e importar (también arrastrando archivos sobre la ventana).
+- **[Preferencias](../guia/preferencias.md)** con sincronía vertical (adiós a
+  los tirones de la cámara) y asignación de teclas.
+- **Ayuda → Manual de Foxy Engine** abre este manual.
+
+![Farolas de noche](../imagenes/capturas/farolas-de-noche.png)
+
 ## 0.0.1-PR15: Windows
 
 - En Windows, los gráficos se prueban uno a uno: primero **DirectX 12**,

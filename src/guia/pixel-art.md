@@ -25,8 +25,8 @@ La pestaña tiene tres apartados:
 <i class="fx fx-imagen"></i>. Las imágenes también salen en el panel
 «Proyecto», para abrirlas desde cualquier pestaña.
 2. **Paletas** de colores.
-3. **Materiales del mundo**: el color de cada material y, si quieres, una
-   imagen como textura.
+3. **Materiales del mundo**: un botón que abre la
+   [paleta de materiales](materiales.md).
 
 ## El lienzo
 
@@ -99,16 +99,17 @@ Además de las del proyecto, siempre tienes tres:
 
 ## Texturas para los materiales
 
-En *Materiales del mundo* elige un material y pon una imagen como **textura**
-(para las caras de arriba) y otra como **textura de lado** si quieres. También
-puedes cambiar su **color**.
+Con una imagen abierta, en su panel derecho, **Usar como textura**: elige el
+material y pulsa **Arriba y lados** o **Solo los lados**. La imagen se guarda
+y el mundo se ve ya con ella. También se puede hacer al revés, desde la
+[paleta de materiales](materiales.md#color-y-textura).
 
 - Una textura cubre cada cara de un **bloque de 1 m** y se repite. Se puede
   dibujar de cualquier tamaño, pero **16 × 16** queda muy bien.
 - Donde la textura es transparente se ve el color del material: una textura
   con huecos sirve de «adorno» sobre el color.
 - Vale para el terreno y para los objetos (casas, objetos propios…).
-- Caben hasta **120 texturas** distintas.
+- Caben hasta **250 texturas** distintas.
 
 ## Imágenes hechas fuera
 

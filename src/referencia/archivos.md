@@ -18,11 +18,12 @@ Documentos/Foxy Engine/proyectos/Mi isla/
     interfaces/*.ron      menús, marcadores y carteles
     imagenes/*.png        imágenes de pixel art (y su .ron con datos)
     paletas/*.ron         paletas de colores
-    materiales.ron        color y textura de los materiales
+    materiales.ron        materiales propios y cómo es cada material
     objetos/*.ron         objetos propios
     guiones/mundo.lua     el guion del mundo
     partidas/             partidas guardadas al jugar
     papelera/             escenas quitadas desde el mapa de escenas
+    .papelera/            archivos quitados desde Archivos del proyecto
 ```
 
 Los nombres de archivo (los *id*) van en minúsculas y sin tildes:
@@ -205,26 +206,21 @@ Cada color es `"#rrggbb"` o, si es semitransparente, `"#rrggbbaa"`.
 Archivo: `materiales.ron`
 
 Solo hace falta escribir lo que cambia; el resto se queda como viene en el
-motor.
+motor. Aquí viven también los materiales propios (`Propio(16)` en adelante).
 
 ```ron
 (
     materiales: {
         Hierba: (textura_lado: Some("hierba_lado")),
-        Yeso: (textura: Some("ladrillos")),
         Teja: (color: Some("#3f8ad6")),
+        Propio(16): (nombre: Some("Oro"), color: Some("#e8b43c"), metalico: Some(1.0), pulido: Some(0.8)),
     },
 )
 ```
 
-| Campo | Qué es |
-|---|---|
-| `color` | Color de arriba (y de los lados, si no se pone `lado`) |
-| `lado` | Color de los lados |
-| `textura` | Imagen de `imagenes/` (por su id) para las caras de arriba, y las de los lados si no hay `textura_lado` |
-| `textura_lado` | Imagen para los lados |
-
-Los nombres de los materiales están en [Materiales](materiales.md).
+Todos los campos (color, texturas, luz, metálico, pulido, transparencia,
+atravesable, golpes y peso) están en
+[Materiales › `materiales.ron`](materiales.md#materialesron).
 
 ## Guion
 
