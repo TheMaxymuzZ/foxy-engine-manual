@@ -12,7 +12,8 @@ final y nombres sin comillas.
 
 ```text
 Documentos/Foxy Engine/proyectos/Mi isla/
-    proyecto.ron          nombre del proyecto y escena inicial
+    proyecto.ron          nombre, tipo, autor, versión, icono y escena inicial
+    .foxy/miniatura.png   miniatura para la pantalla de inicio (la hace el editor)
     mundos/principal.ron  la escena con la que empieza el juego
     mundos/*.ron          las demás escenas
     interfaces/*.ron      menús, marcadores y carteles
@@ -37,8 +38,24 @@ Archivo: `proyecto.ron`
 (
     nombre: "Mi isla",
     mundo: "mundos/principal.ron",   // escena inicial
+    tipo: Voxel3D,                   // Voxel3D, Pixel2D o Voxel2D
+    autor: "Andrés",
+    version: "0.1.0",
+    descripcion: "Un pueblo con mercado y vecinos.",
+    icono: "",                       // imagen de imagenes/ sin .png; vacío = el del motor
+    formato: 2,                      // versión del formato del proyecto
 )
 ```
+
+Todos los campos menos `nombre` son opcionales: un proyecto creado con una
+versión anterior del motor se abre igual. Se editan desde
+[Ajustes del proyecto](../editor/ajustes-proyecto.md).
+
+### Lista de proyectos
+
+`Documentos/Foxy Engine/editor.ron` guarda los proyectos recientes de la
+pantalla de inicio (`recientes`, con su carpeta, si está fijado y cuándo se
+abrió) y los que se quitaron de la lista (`ocultos`).
 
 ## Mundos
 

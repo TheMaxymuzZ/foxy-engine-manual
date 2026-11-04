@@ -11,7 +11,7 @@ cargo run --release -- --juego
 
 | Opción | Qué hace |
 |---|---|
-| *(ninguna)* | Abre el editor con el último proyecto |
+| *(ninguna)* | Abre el editor en la [pantalla de inicio](../empezar/pantalla-de-inicio.md) |
 | `--juego` | Abre solo el juego, sin editor |
 | `--mundo <archivo.ron>` | Abre ese mundo |
 | `--ayuda`, `-h` | Enseña la ayuda |
@@ -47,7 +47,8 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `nodos`, `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar` o `importado` |
+| `--pestana <nombre>` | `mundo`, `guion`, `nodos`, `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo) o `ajustes` (los ajustes del proyecto) |
+| `--plantilla <nombre>` | Sin `--editor`: dibuja el mundo de una plantilla (`vacio-3d`, `isla-voxel` o `isla-de-ejemplo`) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto` |
 | `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |
 | `--modelo <archivo>` | Un `.vox` o `.qb` para `--pestana importar` (la ventana) o `importado` (ya importado) |

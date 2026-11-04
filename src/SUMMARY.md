@@ -1,15 +1,18 @@
 # Resumen
 
-[Bienvenida](introduccion.md)
+[Introducción](introduccion.md)
 
-# Primeros pasos
+# Empezar
 
 - [Instalar Foxy Engine](empezar/instalar.md)
-- [Tu primer proyecto](empezar/primer-proyecto.md)
-- [Un vistazo al editor](empezar/editor.md)
+- [La pantalla de inicio](empezar/pantalla-de-inicio.md)
+- [Crear un proyecto](empezar/crear-proyecto.md)
+- [Primeros pasos en el editor](empezar/primer-proyecto.md)
 
-# Guía del editor
+# Manual del editor
 
+- [La interfaz del editor](empezar/editor.md)
+- [Ajustes del proyecto](editor/ajustes-proyecto.md)
 - [Construir el mundo](guia/mundo.md)
 - [Ordenar la escena](guia/carpetas.md)
 - [Crear objetos propios](guia/creador.md)
@@ -25,6 +28,10 @@
 - [Probar el juego](guia/jugar.md)
 - [Rendimiento](guia/rendimiento.md)
 - [Preferencias y teclas](guia/preferencias.md)
+
+# Conceptos
+
+- [Proyectos, escenas y recursos](conceptos/proyectos.md)
 
 # Referencia
 

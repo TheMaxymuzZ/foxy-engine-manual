@@ -1,78 +1,70 @@
 <div class="portada">
   <img class="logo-claro" src="imagenes/marca/logo-horizontal-claro.svg" alt="Foxy Engine">
   <img class="logo-oscuro" src="imagenes/marca/logo-horizontal-oscuro.svg" alt="Foxy Engine">
-  <p class="lema">El motor para construir mundos de bloques vivos, sin pelearte con el código.</p>
+  <p class="lema">Motor de juegos vóxel y pixel art para Mac, Windows y Linux.</p>
 </div>
 
-# Bienvenida
+# Introducción
 
-**Foxy Engine** es un motor de juegos de escritorio para **Mac, Windows y
-Linux**. Con él construyes una isla de bloques, la llenas de casas, árboles,
-vecinos y pelotas, diseñas menús y carteles, dibujas tus propias texturas en
-pixel art y, cuando quieras, le das vida con pequeños guiones en Lua. Todo
-desde un mismo editor, y todo se guarda en archivos de texto que puedes leer,
-copiar y subir a GitHub.
+**Foxy Engine** es un motor de juegos de escritorio para crear mundos de
+cubitos (vóxeles) y juegos de pixel art. Reúne en un solo editor todo lo
+necesario para hacer un juego: construir escenas, modelar objetos, dibujar
+texturas, diseñar menús y dar comportamiento con nodos sin código o con
+guiones en Lua. Cada proyecto se guarda como archivos de texto legibles que
+se pueden copiar, comparar y versionar con Git.
 
-Este manual explica cómo usarlo, desde la instalación hasta el último detalle
-de los archivos.
+![La pantalla de inicio de Foxy Engine](imagenes/capturas/inicio.png)
 
-![El editor de Foxy Engine](imagenes/capturas/editor-proyecto.png)
-
-## Qué puedes hacer
+## Qué se puede hacer
 
 <div class="tarjetas">
-  <a href="guia/mundo.html"><strong><i class="fx fx-mundo"></i>Construir</strong><span>Pinta el terreno con pinceles de bloques y coloca casas, árboles y vecinos.</span></a>
-  <a href="guia/creador.html"><strong><i class="fx fx-objeto"></i>Crear objetos</strong><span>Modela tus propios objetos de bloques y úsalos en cualquier escena.</span></a>
-  <a href="guia/pixel-art.html"><strong><i class="fx fx-pixel"></i>Dibujar</strong><span>Haz botones, iconos y texturas para los materiales del mundo.</span></a>
+  <a href="guia/mundo.html"><strong><i class="fx fx-mundo"></i>Construir</strong><span>Esculpir el terreno con pinceles de bloques y colocar objetos en la escena.</span></a>
+  <a href="guia/creador.html"><strong><i class="fx fx-objeto"></i>Modelar</strong><span>Crear objetos de cubitos propios o importarlos de MagicaVoxel y Qubicle.</span></a>
+  <a href="guia/pixel-art.html"><strong><i class="fx fx-pixel"></i>Dibujar</strong><span>Pixel art para botones, iconos y texturas de los materiales.</span></a>
   <a href="guia/interfaces.html"><strong><i class="fx fx-interfaz"></i>Diseñar interfaces</strong><span>Menús, marcadores y carteles que funcionan con ratón, teclado y mando.</span></a>
-  <a href="guia/escenas.html"><strong><i class="fx fx-mapa"></i>Unir escenas</strong><span>Una isla, una cueva, el interior de una casa… conectadas sin código.</span></a>
-  <a href="guia/guiones.html"><strong><i class="fx fx-guion"></i>Programar</strong><span>Guiones en Lua para que el mundo reaccione a lo que pasa.</span></a>
+  <a href="guia/nodos.html"><strong><i class="fx fx-mapa"></i>Programar sin código</strong><span>Comportamientos con nodos unidos por cables.</span></a>
+  <a href="guia/guiones.html"><strong><i class="fx fx-guion"></i>Programar en Lua</strong><span>Guiones para quien prefiere escribir código.</span></a>
 </div>
 
-## Cómo leer este manual
+## Organización del manual
 
-- **Primeros pasos** es para empezar: instalar el motor, crear tu primer
-  proyecto y conocer el editor. Si es tu primera vez, empieza aquí y léelo en
-  orden.
-- **Guía del editor** explica cada parte del editor con ejemplos. Se puede leer
-  en cualquier orden.
-- **Referencia** es para consultar: todas las teclas, todas las funciones de
-  Lua, todas las acciones, objetos y materiales, y el formato de cada archivo.
-- **Apéndices** recoge la solución a los problemas más comunes, un glosario y
-  el historial de versiones.
+| Parte | Contenido |
+|---|---|
+| **Empezar** | Instalación, la pantalla de inicio, la creación de un proyecto y los primeros pasos en el editor. Se recomienda leerla en orden. |
+| **Manual del editor** | Una página por cada panel y herramienta, con capturas. Se puede consultar en cualquier orden. |
+| **Conceptos** | Las ideas en las que se basa el motor: proyectos, escenas y recursos. |
+| **Referencia** | Teclas, funciones de Lua, acciones, objetos, materiales, formatos de archivo y línea de comandos. |
+| **Apéndices** | Solución de problemas, glosario, marca e historial de versiones. |
 
-Usa el buscador (la lupa de arriba, o la tecla <kbd>S</kbd>) para encontrar
-cualquier palabra.
+El buscador (la lupa de la parte superior o la tecla <kbd>S</kbd>) encuentra
+cualquier término en todo el manual.
 
 ## Convenciones
 
-| Así se escribe | Significa |
+| Formato | Significado |
 |---|---|
-| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> | <kbd>Cmd</kbd> en Mac, <kbd>Ctrl</kbd> en Windows y Linux |
-| **Guardar** | Un botón, una pestaña o una opción del editor |
-| *Colocar objetos → Mis objetos* | Un camino dentro del editor |
-| `mundos/principal.ron` | Un archivo o una carpeta, dentro de la carpeta del proyecto |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> | <kbd>Cmd</kbd> en Mac; <kbd>Ctrl</kbd> en Windows y Linux |
+| **Guardar** | Un botón, una pestaña, un menú o una opción del editor, con su nombre exacto |
+| **Archivo → Ajustes del proyecto** | Una opción dentro de un menú |
+| `mundos/principal.ron` | Un archivo o una carpeta, relativos a la carpeta del proyecto |
 | `motor.decir(texto)` | Código que se escribe tal cual |
 
-| <i class="fx fx-jugar"></i> **Jugar aquí** | Un botón del editor, con el icono que lo acompaña en este manual |
+> <i class="fx fx-nota"></i> **Nota.** Información adicional sobre lo que se
+> está explicando.
 
-> <i class="fx fx-consejo"></i> **Consejo.** Los recuadros como este dan trucos que ahorran tiempo.
+> <i class="fx fx-consejo"></i> **Consejo.** Un atajo o una práctica
+> recomendada.
 
-## Medidas del mundo
+> <i class="fx fx-aviso"></i> **Importante.** Algo que puede hacer perder
+> trabajo si no se tiene en cuenta.
 
-Foxy Engine mide en **metros**. El terreno está hecho de **cubitos de medio
-metro**, y dos por dos cubitos forman un **bloque** de 1 m. Algunos números de
-los archivos van en cubitos (lo verás indicado en cada caso). El mar está a
-10 m de altura y la isla de prueba ocupa de 0 a 192 m en los ejes x y z.
+## Unidades
 
-## Estado del motor
+Foxy Engine mide en **metros**. El terreno está formado por **cubitos** de
+0,5 m; dos por dos por dos cubitos forman un **bloque** de 1 m. Los archivos
+indican en cada caso si un valor está en metros o en cubitos.
 
-Este manual describe Foxy Engine **0.0.1-PR15**: después de la Fase 4
-(*vida*), con escenas, interfaces y pixel art, el editor reorganizado (barra de
-menús, panel «Proyecto» e inspector) y el arreglo de Windows con DirectX 12.
-La Fase 5 traerá Maxycraft al motor y la Fase 6 servirá para exportar y
-publicar juegos. Mira el [historial de versiones](apendices/historial.md).
+## Versión
 
-> <i class="fx fx-nota"></i> **Nota.** Los iconos de este manual ayudan a
-> encontrar cada cosa de un vistazo. En el editor, los botones llevan su
-> propio dibujo, pero siempre el **mismo nombre** que ves aquí.
+Este manual corresponde a Foxy Engine **0.0.1-PR22**. Los cambios de cada
+versión están en el [historial de versiones](apendices/historial.md).
