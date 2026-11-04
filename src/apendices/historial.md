@@ -5,6 +5,22 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR22: pantalla de inicio
+
+- **[Pantalla de inicio](../empezar/pantalla-de-inicio.md)** al abrir el
+  motor: proyectos recientes con miniatura, búsqueda, orden, proyectos
+  fijados, renombrar, duplicar y quitar de la lista; plantillas; accesos al
+  manual y novedades.
+- **[Asistente de proyecto nuevo](../empezar/crear-proyecto.md)** con tipo,
+  plantilla (Vacío 3D, Isla vóxel e Isla de ejemplo), nombre y carpeta.
+- Los proyectos pueden estar **en cualquier carpeta**: se abren con
+  **Abrir…** o soltando la carpeta sobre la ventana.
+- **[Ajustes del proyecto](../editor/ajustes-proyecto.md)** y
+  **Archivo → Cerrar proyecto**.
+- La miniatura del proyecto se actualiza al guardar.
+- El manual adopta su nueva estructura (Empezar, Manual del editor,
+  Conceptos, Referencia y Apéndices) y un tono de documentación oficial.
+
 ## 0.0.1-PR21: rendimiento
 
 - **[Detalle de lejos](../guia/rendimiento.md#detalle-de-lejos)**: los

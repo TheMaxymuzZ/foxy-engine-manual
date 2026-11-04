@@ -1,4 +1,4 @@
-# Un vistazo al editor
+# La interfaz del editor
 
 ![El editor con un proyecto abierto](../imagenes/capturas/editor-proyecto.png)
 
@@ -17,7 +17,7 @@ Cada cosa tiene su sitio fijo:
 
 | Menú | Qué tiene |
 |---|---|
-| **Archivo** | *Proyecto nuevo…*, *Abrir proyecto…*, *Ver la carpeta del proyecto*, *Guardar*, *Guardar todo*, *Volver a abrir lo guardado* y *Salir* |
+| **Archivo** | *Proyecto nuevo…* y *Abrir proyecto…* (en la [pantalla de inicio](pantalla-de-inicio.md)), *Ajustes del proyecto…*, *Cerrar proyecto*, *Archivos del proyecto…*, *Importar al proyecto…*, *Ver la carpeta del proyecto*, *Guardar*, *Guardar todo*, *Volver a abrir lo guardado* y *Salir* |
 | **Editar** | *Deshacer*, *Rehacer* y, con un objeto elegido, *Duplicar*, *Ir a verlo* y *Borrar* |
 | **Crear** | *Escena nueva…*, *Interfaz nueva…*, *Objeto nuevo* e *Imagen de pixel art…*; y, en la escena abierta, *Zona de cambio*, *Punto de entrada* y *Vecino* |
 | **Ver** | Enseñar o esconder el panel «Proyecto», y la hora y la velocidad de la cámara |

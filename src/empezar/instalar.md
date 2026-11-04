@@ -151,8 +151,8 @@ incorporado). Un clic o cualquier tecla la salta.
 
 ![Al abrir el motor](../imagenes/capturas/marca-carga-editor.png)
 
-Después se abre el editor con tu último proyecto. La primera vez crea uno
-llamado **Mi isla**. Sigue en [Tu primer proyecto](primer-proyecto.md).
+Después aparece la [pantalla de inicio](pantalla-de-inicio.md), desde la
+que se abre un proyecto o se crea uno nuevo.
 
 > <i class="fx fx-nota"></i> **Nota.** Los juegos hechos con el motor
 > (`foxy-engine --juego`) enseñan en cambio la pantalla
