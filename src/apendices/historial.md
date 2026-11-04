@@ -5,6 +5,15 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR18: mundos más ligeros
+
+- Las caras iguales que están juntas se dibujan como un solo rectángulo: la
+  isla de prueba pasa de 746 000 a 304 000 triángulos y se ve igual.
+- Al abrir otra escena, regenerar el terreno o cambiar los materiales, el
+  mundo nuevo se prepara en segundo plano (los trozos más cercanos primero)
+  mientras se sigue viendo el de antes. Abajo a la derecha sale
+  **Preparando el mundo…** con su barra.
+
 ## 0.0.1-PR17: importar modelos, extruir y simetría
 
 - **[Importar modelos](../guia/importar.md)** de MagicaVoxel (`.vox`) y
