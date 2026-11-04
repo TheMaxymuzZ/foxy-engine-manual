@@ -59,6 +59,17 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | `--esperar <s>` | Jugando, segundos que pasan antes de la captura (de 0 a 60) |
 | `--rendimiento` | Con la ventana [Rendimiento](../guia/rendimiento.md) abierta (mide unos fotogramas de verdad) |
 | `--sin-lejos` | Dibuja todo con todo el detalle, sin el [detalle de lejos](../guia/rendimiento.md#detalle-de-lejos) |
+| `--espacio <nombre>` | El espacio de trabajo: `construir`, `programar` o `pixel-art` |
+| `--abrir <panel>` | Abre también ese panel. Se puede repetir |
+| `--flotante <panel>` | Ese panel en una ventana separada. Se puede repetir |
+| `--maximizar <panel>` | Ese panel maximizado |
+| `--recortar <panel>` | Guarda solo ese panel, con su pestaña |
+| `--paleta <texto>` | Con la paleta de comandos abierta y eso escrito |
+| `--tema-claro` | Con el tema claro |
+
+Los paneles son `vista`, `proyecto`, `escena`, `inspector`, `codigo`,
+`nodos`, `archivos`, `materiales`, `pixel` y `registro`. Las capturas
+empiezan siempre por los espacios de serie y no cambian los que guardaste.
 
 ### Capturas del juego
 

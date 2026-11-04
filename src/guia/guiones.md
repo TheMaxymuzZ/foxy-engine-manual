@@ -14,7 +14,7 @@ escribir, lo mismo se puede hacer con [nodos](nodos.md).
 
 Cada proyecto tiene su guion en `guiones/mundo.lua`. Se abre con un clic en
 <i class="fx fx-guion"></i> **mundo.lua**, en el grupo *Guion* del panel
-«Proyecto», y se edita en su pestaña, que tiene:
+«Proyecto», y se edita en el panel **Código**, que tiene:
 
 - **Comprobar**: busca errores sin jugar.
 - Una **consola**, donde salen los errores al jugar y lo que escribas con

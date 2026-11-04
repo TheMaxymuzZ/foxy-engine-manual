@@ -12,6 +12,17 @@
 # Manual del editor
 
 - [La interfaz del editor](empezar/editor.md)
+    - [Vista](interfaz/vista.md)
+    - [Proyecto](interfaz/proyecto.md)
+    - [En la escena](interfaz/escena.md)
+    - [Inspector](interfaz/inspector.md)
+    - [Código](interfaz/codigo.md)
+    - [Nodos](interfaz/nodos.md)
+    - [Archivos](interfaz/archivos.md)
+    - [Materiales](interfaz/materiales.md)
+    - [Pixel art](interfaz/pixel-art.md)
+    - [Registro](interfaz/registro.md)
+- [Personalizar el espacio de trabajo](editor/espacio-de-trabajo.md)
 - [Ajustes del proyecto](editor/ajustes-proyecto.md)
 - [Construir el mundo](guia/mundo.md)
 - [Ordenar la escena](guia/carpetas.md)

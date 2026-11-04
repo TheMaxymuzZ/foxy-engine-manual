@@ -10,6 +10,8 @@ En Mac se usa <kbd>Cmd</kbd>; en Windows y Linux, <kbd>Ctrl</kbd>.
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> | Deshacer |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>Z</kbd> | Rehacer |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>,</kbd> | Preferencias (y cambiar las teclas) |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd> | [Paleta de comandos](../editor/espacio-de-trabajo.md#la-paleta-de-comandos): buscar una acción, un panel o algo del proyecto |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>M</kbd> | Maximizar el panel que tiene el teclado (y devolverlo) |
 | <kbd>F5</kbd> | Jugar aquí / volver al editor |
 
 Las teclas de moverse, de las herramientas y de jugar se pueden cambiar en

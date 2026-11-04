@@ -1,6 +1,6 @@
 # Pixel art
 
-La pestaña <i class="fx fx-pixel"></i> **Pixel art** es un pequeño programa
+El panel <i class="fx fx-pixel"></i> **Pixel art** es un pequeño programa
 de dibujo dentro del motor. Se abre desde el grupo **Pixel art** del panel
 «Proyecto» (*Biblioteca, paletas y texturas…*, o su
 <i class="fx fx-mas"></i>) o con **Crear → Imagen de pixel art…**. Sirve para
@@ -18,7 +18,7 @@ hacer:
 
 ## La biblioteca
 
-La pestaña tiene tres apartados:
+El panel tiene tres apartados:
 
 1. **Imágenes** del proyecto, ordenadas por uso (*Interfaz*, *Textura* u
    *Otro*). Un clic abre la imagen en su propia pestaña

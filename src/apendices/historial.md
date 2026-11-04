@@ -5,6 +5,22 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR23: espacio de trabajo
+
+- El editor es ahora un **espacio de trabajo con paneles** que se mueven,
+  se juntan en pestañas, se maximizan y se separan en **ventanas propias**,
+  también en otro monitor (la Vista incluida). Ver
+  [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md).
+- **Espacios** *Construir*, *Programar* y *Pixel art*, que recuerdan cómo
+  los dejaste en cada proyecto, y espacios propios.
+- **Paleta de comandos** (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd>).
+- **Tema claro u oscuro** y **color de acento** en las preferencias.
+- **Barra de estado** con el último aviso y el panel
+  [Registro](../interfaz/registro.md) con todos.
+- Menús nuevos: *Ventana*, *Proyecto* y *Herramientas*, con las teclas al
+  lado de cada cosa.
+- El manual tiene [una página por panel](../empezar/editor.md#los-paneles).
+
 ## 0.0.1-PR22: pantalla de inicio
 
 - **[Pantalla de inicio](../empezar/pantalla-de-inicio.md)** al abrir el

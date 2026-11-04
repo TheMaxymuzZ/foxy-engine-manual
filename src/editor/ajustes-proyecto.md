@@ -2,7 +2,7 @@
 
 La ventana **Ajustes del proyecto** reúne los datos generales del juego:
 su nombre, quién lo hace, su versión, su descripción, la escena con la que
-empieza y su icono. Se abre con **Archivo → Ajustes del proyecto…**.
+empieza y su icono. Se abre con **Proyecto → Ajustes del proyecto…**.
 
 ![La ventana Ajustes del proyecto sobre el editor](../imagenes/capturas/ajustes-proyecto.png)
 

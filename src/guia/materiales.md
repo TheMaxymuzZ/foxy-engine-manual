@@ -5,11 +5,11 @@ piedra, cristal… Cada proyecto tiene su **paleta de materiales**: los 15 que
 trae el motor, que puedes cambiar, y los **materiales propios** que crees tú,
 con el color, la textura y los atributos que quieras.
 
-![La pestaña Materiales](../imagenes/capturas/materiales.png)
+![El panel Materiales](../imagenes/capturas/materiales.png)
 
 ## Abrir la paleta
 
-Cualquiera de estas lleva a la pestaña **Materiales**:
+Cualquiera de estas abre el panel **Materiales**:
 
 - **Crear → Material…**
 - El grupo **Materiales** del panel «Proyecto» (su <i class="fx fx-mas"></i>

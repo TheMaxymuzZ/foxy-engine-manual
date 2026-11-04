@@ -1,125 +1,90 @@
 # La interfaz del editor
 
-![El editor con un proyecto abierto](../imagenes/capturas/editor-proyecto.png)
+![El espacio «Construir»](../imagenes/capturas/espacio-construir.png)
 
-Cada cosa tiene su sitio fijo:
+El editor es un **espacio de trabajo hecho de paneles**. Cada panel hace una
+cosa (ver la escena, listar el proyecto, editar el código…) y se pueden
+mover, juntar en pestañas, maximizar o sacar a otra ventana. Cómo hacerlo lo
+explica [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md).
 
 | Dónde | Qué hay |
 |---|---|
-| **Arriba** | La **barra de menús** (*Archivo*, *Editar*, *Crear*, *Ver* y *Ayuda*), el nombre del proyecto y, a la derecha, deshacer, rehacer, guardar, <i class="fx fx-jugar"></i> **Jugar aquí** y <i class="fx fx-mando"></i> **Desde el inicio** |
-| **Debajo** | Las **pestañas** de lo que tienes abierto |
-| **A la izquierda** | El panel **«Proyecto»**, con todo lo que tiene el proyecto, y debajo la lista **En la escena** |
-| **En el centro** | La **vista** del mundo, con la tira de herramientas a la izquierda y la hora y la velocidad de la cámara arriba a la derecha |
-| **A la derecha** | El **inspector**: las opciones de la herramienta y de lo que tengas elegido |
-| **Abajo** | La **barra de estado**: avisos y dónde está la cámara |
+| **Arriba a la izquierda** | La **barra de menús** |
+| **Arriba en el centro** | Los **espacios**: *Construir*, *Programar* y *Pixel art* |
+| **Arriba a la derecha** | Deshacer, rehacer, guardar, <i class="fx fx-jugar"></i> **Jugar aquí** y <i class="fx fx-mando"></i> **Desde el inicio** |
+| **En medio** | Los **paneles** |
+| **Abajo** | La **barra de estado** |
+
+## Los espacios
+
+Un espacio es un reparto de paneles pensado para un trabajo. Se cambia con
+un clic arriba en el centro:
+
+| Espacio | Para qué | Paneles |
+|---|---|---|
+| **Construir** | Hacer el mundo: bloques, objetos, terreno | Proyecto, En la escena, Vista e Inspector |
+| **Programar** | Escribir el guion o los nodos y probarlos | Proyecto, Código y Nodos, Vista, Registro e Inspector |
+| **Pixel art** | Dibujar imágenes y texturas | Proyecto, Pixel art, Vista y Materiales |
+
+| Programar | Pixel art |
+|---|---|
+| ![Programar](../imagenes/capturas/espacio-programar.png) | ![Pixel art](../imagenes/capturas/espacio-pixel-art.png) |
+
+Cada espacio **recuerda cómo lo dejaste** en cada proyecto. Más espacios
+(Animar, 2D) llegarán con sus fases.
+
+## Los paneles
+
+| Panel | Qué hace |
+|---|---|
+| [Vista](../interfaz/vista.md) | La escena en 3D, y los objetos, imágenes e interfaces que abras |
+| [Proyecto](../interfaz/proyecto.md) | Todo lo que tiene el proyecto: escenas, interfaces, objetos, imágenes y guion |
+| [En la escena](../interfaz/escena.md) | Lo que hay en la escena abierta, en carpetas |
+| [Inspector](../interfaz/inspector.md) | Las opciones de la herramienta y de lo que tengas elegido |
+| [Código](../interfaz/codigo.md) | El guion en Lua |
+| [Nodos](../interfaz/nodos.md) | Guiones sin código, con cajas y cables |
+| [Archivos](../interfaz/archivos.md) | Las carpetas y archivos del proyecto |
+| [Materiales](../interfaz/materiales.md) | La paleta de materiales del mundo |
+| [Pixel art](../interfaz/pixel-art.md) | Las imágenes, paletas y texturas del proyecto |
+| [Registro](../interfaz/registro.md) | Todos los avisos y errores |
+
+Los paneles que no estén en el espacio se abren desde el menú **Ventana**,
+desde el panel «Proyecto» o con la [paleta](../editor/espacio-de-trabajo.md#la-paleta-de-comandos)
+(<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd>).
 
 ## La barra de menús
 
+Al lado de cada cosa está su tecla.
+
 | Menú | Qué tiene |
 |---|---|
-| **Archivo** | *Proyecto nuevo…* y *Abrir proyecto…* (en la [pantalla de inicio](pantalla-de-inicio.md)), *Ajustes del proyecto…*, *Cerrar proyecto*, *Archivos del proyecto…*, *Importar al proyecto…*, *Ver la carpeta del proyecto*, *Guardar*, *Guardar todo*, *Volver a abrir lo guardado* y *Salir* |
-| **Editar** | *Deshacer*, *Rehacer* y, con un objeto elegido, *Duplicar*, *Ir a verlo* y *Borrar* |
-| **Crear** | *Escena nueva…*, *Interfaz nueva…*, *Objeto nuevo* e *Imagen de pixel art…*; y, en la escena abierta, *Zona de cambio*, *Punto de entrada* y *Vecino* |
-| **Ver** | Enseñar o esconder el panel «Proyecto», y la hora y la velocidad de la cámara |
-| **Ayuda** | <i class="fx fx-teclado"></i> *Teclas y ratón…*, con todas las teclas del editor, y la versión del motor |
+| **Archivo** | *Proyecto nuevo…*, *Abrir proyecto…*, *Cerrar proyecto*, *Guardar* (<kbd>Cmd</kbd>+<kbd>S</kbd>), *Guardar todo*, *Volver a abrir lo guardado*, *Importar al proyecto…*, *Importar modelo (.vox, .qb)…* y *Salir* |
+| **Editar** | *Deshacer*, *Rehacer*, *Duplicar*, *Ir a verlo*, *Borrar*, *Buscar una acción…* (<kbd>Cmd</kbd>+<kbd>K</kbd>) y *Preferencias…* |
+| **Crear** | *Escena nueva…*, *Interfaz nueva…*, *Objeto nuevo*, *Imagen de pixel art…*, *Material…*, *Importar modelo…*; y en la escena abierta *Zona de cambio*, *Punto de entrada* y *Vecino* |
+| **Ver** | La hora y la velocidad de la cámara, *Rendimiento* y los fotogramas por segundo |
+| **Ventana** | Abrir cada panel, *Maximizar el panel*, los espacios, *Guardar como espacio nuevo…*, *Restablecer este espacio* y borrar los espacios propios |
+| **Proyecto** | *Ajustes del proyecto…*, *Mapa de escenas…*, *Archivos del proyecto* y *Mostrar la carpeta del proyecto* |
+| **Herramientas** | Las herramientas de la escena, y *Materiales*, *Pixel art*, *Nodos*, *Código* y *Rendimiento* |
+| **Ayuda** | El manual, *Teclas y ratón…*, *Cambiar las teclas…* y la versión del motor |
 
-## El panel «Proyecto»
+## La barra de estado
 
-A la izquierda está **todo lo que tiene el proyecto** en un solo sitio. Un
-clic abre cualquier cosa, y el <i class="fx fx-mas"></i> de cada grupo crea
-una nueva:
-
-| Grupo | Qué lista | Capítulo |
-|---|---|---|
-| <i class="fx fx-mundo"></i> **Escenas** | Las escenas del proyecto. La <i class="fx fx-estrella"></i> marca la inicial. Debajo, *Cómo se conectan…* abre el mapa de escenas | [Escenas](../guia/escenas.md) |
-| <i class="fx fx-interfaz"></i> **Interfaces** | Menús, marcadores y carteles | [Interfaces](../guia/interfaces.md) |
-| <i class="fx fx-objeto"></i> **Objetos propios** | Los objetos que has hecho con cubitos | [Crear objetos propios](../guia/creador.md) |
-| <i class="fx fx-pixel"></i> **Pixel art** | Las imágenes, y *Biblioteca, paletas y texturas…* | [Pixel art](../guia/pixel-art.md) |
-| <i class="fx fx-guion"></i> **Guion** | `mundo.lua`, el guion del mundo | [Guiones en Lua](../guia/guiones.md) |
-
-Arriba del todo están el nombre del proyecto y una <i class="fx fx-buscar"></i>
-lupa que abre su carpeta.
-
-### Los avisos <i class="fx fx-aviso"></i>
-
-Un <i class="fx fx-aviso"></i> al lado de algo avisa de que **todavía no se
-podrá ver al jugar**:
-
-- Una **escena** a la que no lleva nada (ninguna zona, objeto, botón ni guion).
-- Una **interfaz** que nada abre (ni una tecla, ni un botón, ni una zona, ni
-  un objeto, ni el guion).
-- El **guion**, si tiene errores.
-
-Pasa el ratón por encima para ver qué falta. No es un error: solo una
-pista de lo que queda por conectar.
-
-### En la escena
-
-Debajo del panel «Proyecto», en la pestaña de la escena, está la lista
-**En la escena**: todo lo que hay en el mundo, ordenado en carpetas. Lo
-explica [Ordenar la escena](../guia/carpetas.md).
-
-*Ver → Panel «Proyecto»* esconde el panel entero para tener más sitio.
-
-## Las pestañas
-
-Debajo de la barra de menús hay pestañas, como en un navegador, pero solo de
-**lo que tienes abierto**: la escena siempre está, y el resto aparece cuando
-lo abres desde el panel «Proyecto».
-
-| Pestaña | Para qué |
-|---|---|
-| <i class="fx fx-mundo"></i> **La escena** (con su nombre) | El mundo que estás editando |
-| <i class="fx fx-guion"></i> **Guion** | El guion Lua, con *Comprobar* y una consola |
-| <i class="fx fx-objeto"></i> **Un objeto** | Un objeto propio en el creador (una pestaña por objeto) |
-| <i class="fx fx-pixel"></i> **Pixel art** | La biblioteca: imágenes, paletas y materiales |
-| <i class="fx fx-imagen"></i> **Una imagen** | Una imagen abierta en el lienzo de pixel art |
-| <i class="fx fx-interfaz"></i> **Una interfaz** | Un menú, un marcador o un cartel (una pestaña por interfaz) |
-
-Las pestañas con cambios sin guardar llevan un punto (•). La
-<i class="fx fx-cerrar"></i> las cierra.
-
-## La vista y sus herramientas
-
-En el borde izquierdo de la vista está la **tira de herramientas**. Cada
-botón dice su nombre y su tecla al pasar el ratón:
-
-| | Herramienta | Tecla |
-|---|---|---|
-| <i class="fx fx-cursor"></i> | Cursor (solo elegir) | <kbd>C</kbd> |
-| <i class="fx fx-mover"></i> | Elegir y mover | <kbd>V</kbd> |
-| <i class="fx fx-poner"></i> | Poner bloques | <kbd>B</kbd> |
-| <i class="fx fx-quitar"></i> | Quitar bloques | <kbd>E</kbd> |
-| <i class="fx fx-pintar"></i> | Pintar | <kbd>P</kbd> |
-| <i class="fx fx-colocar"></i> | Colocar objetos | <kbd>O</kbd> |
-
-Arriba a la izquierda, una línea recuerda qué hace la herramienta elegida.
-Arriba a la derecha están la **hora** del editor (para ver el mundo de día o
-de noche) y la **velocidad** de la cámara. Todo se explica en
-[Construir el mundo](../guia/mundo.md).
-
-## El inspector
-
-A la derecha, el inspector cambia según lo que estés haciendo:
-
-- Con una herramienta de bloques: el **pincel** y los **materiales**.
-- Con *Colocar objetos*: la **lista de objetos** para colocar.
-- Con un objeto elegido: su **nombre**, posición, giro, botones, y
-  <i class="fx fx-usar"></i> **Al usarlo (E)**, lo que pasa cuando el jugador
-  lo usa.
-- Sin nada elegido: el **terreno** de la escena y cómo pasa el **tiempo**.
+Abajo del todo sale **el último aviso** (guardado, un error en el guion…),
+con su color: gris si es normal, amarillo si es un aviso y rojo si es un
+error. Un clic abre el panel [Registro](../interfaz/registro.md) con todos.
+A la derecha, dónde está la cámara, los fotogramas por segundo si los
+enseñas, y **⛔ N** si hay errores.
 
 ## Deshacer y guardar
 
 Casi todo se puede deshacer con <i class="fx fx-deshacer"></i>
 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> y rehacer con
 <i class="fx fx-rehacer"></i> <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>Z</kbd>.
-Cada pestaña tiene su propio historial: deshacer en un objeto no toca la
-escena.
+Deshacer y guardar actúan sobre **el panel en el que hiciste clic por
+última vez**: deshacer en el código no toca la escena.
 
 <i class="fx fx-guardar"></i> <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>
-guarda lo que tengas delante; *Archivo → Guardar todo* guarda todas las
-pestañas a la vez.
+guarda lo que tengas delante; *Archivo → Guardar todo* lo guarda todo.
 
 ## Probar
 
@@ -127,8 +92,7 @@ pestañas a la vez.
   momento desde el punto al que mira la cámara. <kbd>F5</kbd> vuelve al
   editor.
 - <i class="fx fx-mando"></i> **Desde el inicio**: abre el juego completo,
-  con su menú principal, y empiezas en el punto de inicio de la escena
-  inicial.
+  con su menú principal.
 
 Más en [Probar el juego](../guia/jugar.md).
 

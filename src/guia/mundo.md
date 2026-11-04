@@ -1,6 +1,6 @@
 # Construir el mundo
 
-La pestaña de la **escena** es donde das forma al mundo: añades y quitas
+La **Vista**, con la escena, es donde das forma al mundo: añades y quitas
 terreno, lo pintas y colocas objetos.
 
 ## Las herramientas
