@@ -5,6 +5,33 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR24: núcleo general
+
+- **Entidades y componentes**: cualquier cosa de una escena puede llevar
+  [componentes](../referencia/componentes/index.md) (Colisión, Cuerpo
+  físico, Controlador de jugador, Cámara, Luz, Sonido, Zona y Guion) que se
+  añaden y se quitan en el [Inspector](../interfaz/inspector.md). Nuevo
+  objeto *Entidad vacía*.
+- **[Prefabricados](../guia/entidades.md#prefabricados)** cuyas copias
+  siguen al original, con cambios propios por copia.
+- **[Generadores de terreno](../guia/generadores.md)**: vacío, plano, isla,
+  colinas y cuevas, con sus parámetros y materiales a la vista.
+- **Rejilla y materiales por proyecto**: cubito de 1 m, 50 cm o 25 cm. Los
+  proyectos vacíos empiezan con materiales propios.
+- Los objetos de ejemplo (casa, árbol, farola…) son ahora **archivos
+  `.ron`** que se pueden editar, y hay una **puerta** nueva.
+- **Controladores**: primera y tercera persona, cenital, isométrico,
+  plataformas 2D y cámara libre.
+- **[Acciones de entrada](../guia/acciones-entrada.md)** por proyecto, con
+  teclado, ratón y mando, y acciones propias para los guiones.
+- **[Módulos](../referencia/modulos/index.md)** por proyecto y por escena.
+- **[Sonidos](../guia/sonidos.md)** WAV y OGG, con el componente Sonido.
+- Acciones nuevas: **Mover**, **Ocultar**, **Mostrar** y **Tocar un sonido**.
+- **Formato 3**: los proyectos anteriores se actualizan solos, con una
+  [copia de seguridad](../referencia/archivos.md#actualizar-el-formato).
+- El manual estrena [Conceptos básicos](../conceptos/basicos.md) y una
+  página de referencia por componente y por módulo.
+
 ## 0.0.1-PR23: espacio de trabajo
 
 - El editor es ahora un **espacio de trabajo con paneles** que se mueven,

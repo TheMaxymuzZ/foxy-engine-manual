@@ -5,7 +5,8 @@ Una **acción** es lo que pasa:
 - al pulsar un <i class="fx fx-boton"></i> **botón** de una
   [interfaz](../guia/interfaces.md),
 - al entrar en una <i class="fx fx-zona"></i>
-  [**zona de cambio**](../guia/escenas.md#zonas-de-cambio),
+  [**zona de cambio**](../guia/escenas.md#zonas-de-cambio) o al entrar o
+  salir de una entidad con el componente [Zona](componentes/zona.md),
 - o al **usar un objeto** con <kbd>E</kbd>
   (<i class="fx fx-usar"></i> [*Al usarlo*](../guia/mundo.md#al-usarlo-e)).
 
@@ -26,6 +27,13 @@ Se eligen de una lista, sin código.
 | Menú principal | `MenuPrincipal` | Vuelve al menú principal |
 | Salir del juego | `Salir` | Sale del juego (o vuelve al editor si estabas probando) |
 | Llamar al guion | `Guion("abrir_cofre")` | Llama a esa función del guion con el nombre del botón o la zona: `function abrir_cofre(quien) ... end` |
+| Mover una entidad | `Mover(entidad: "Puerta", desplazamiento: (1.0, 0.0, 0.0), segundos: 0.5)` | Desplaza la entidad desde su sitio del editor, en metros, durante esos segundos. Con `(0, 0, 0)` vuelve a su sitio. `entidad` vacía = la que tiene la acción |
+| Ocultar una entidad | `Ocultar("Cofre")` | La entidad deja de verse y de chocar. Vacío = la que tiene la acción |
+| Mostrar una entidad | `Mostrar("Cofre")` | Vuelve a enseñar una entidad oculta |
+| Tocar un sonido | `Sonar("campana")` | Toca un sonido del proyecto o de ejemplo. Si es el de una entidad con [Sonido](componentes/sonido.md), suena desde ella |
+
+Las acciones sobre entidades buscan la entidad **por su nombre** en la
+escena y solo duran la partida: al volver al editor, todo está como estaba.
 
 En los archivos, la acción va en el campo `accion` del objeto o del elemento:
 

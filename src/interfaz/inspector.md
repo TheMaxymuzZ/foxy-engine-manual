@@ -7,10 +7,28 @@ El inspector **cambia según lo que estés haciendo**:
 - Con una herramienta de bloques: el **pincel** (forma, tamaño, simetría) y
   los **materiales**.
 - Con *Colocar objetos*: la **lista de objetos** para colocar.
-- Con un objeto elegido: su **nombre**, posición, giro, y
-  <i class="fx fx-usar"></i> **Al usarlo (E)**, lo que pasa cuando el jugador
-  lo usa. Abajo, *Duplicar*, *Ver* y *Borrar*.
-- Sin nada elegido: el **terreno** de la escena y cómo pasa el **tiempo**
-  (duración del día, estación, clima).
+- Con una entidad elegida: su **nombre**, su posición, **Crear
+  prefabricado** (o, en una copia, los botones de su prefabricado), sus
+  **componentes** con <i class="fx fx-mas"></i> **Añadir componente**, y
+  <i class="fx fx-usar"></i> **Al usarlo (E)**, lo que pasa cuando el
+  jugador la usa. Abajo, el giro, *Al suelo*, *Ver*, *Duplicar* y *Borrar*.
+- Sin nada elegido: el **terreno** de la escena (su
+  [generador](../guia/generadores.md)), cómo pasa el **tiempo** y los
+  **módulos de la escena**.
 
-Ver [Construir el mundo](../guia/mundo.md) y [La vida del mundo](../guia/vida.md).
+![Componentes de una entidad en el inspector](../imagenes/capturas/panel-componentes.png)
+
+## Componentes
+
+Cada componente se muestra en un apartado plegable con su descripción y sus
+valores. En una copia de un prefabricado, los componentes heredados indican
+*del prefabricado* y los cambiados *cambiado aquí*. Ver
+[Entidades y componentes](../guia/entidades.md).
+
+## Módulos de la escena
+
+Cada [módulo](../referencia/modulos/index.md) puede estar *Como el
+proyecto*, *Sí, aquí* o *No, aquí*.
+
+Ver [Construir el mundo](../guia/mundo.md), [Generadores de terreno](../guia/generadores.md)
+y [La vida del mundo](../guia/vida.md).
