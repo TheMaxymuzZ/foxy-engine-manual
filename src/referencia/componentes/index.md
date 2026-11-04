@@ -17,7 +17,7 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Guion](guion.md) | `Guion` | Disponible |
 | [Sprite](sprite.md) | `Sprite` | Llega con el 2D |
 | [Animador](animador.md) | `Animador` | Llega con la animación |
-| [Grafo de nodos](grafo-de-nodos.md) | `GrafoNodos` | Llega con Nodos 2.0 |
+| [Grafo de nodos](grafo-de-nodos.md) | `GrafoNodos` | Disponible |
 
 ## En el archivo de la escena
 

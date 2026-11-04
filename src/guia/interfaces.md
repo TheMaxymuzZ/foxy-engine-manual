@@ -55,6 +55,7 @@ aunque todavía no esté guardada.
 | <i class="fx fx-texto"></i> **Texto** | Un texto, que puede cambiar solo (mira abajo) |
 | <i class="fx fx-boton"></i> **Botón** | Algo que se pulsa y hace una acción |
 | <i class="fx fx-imagen"></i> **Imagen** | Una imagen del proyecto |
+| <i class="fx fx-vida"></i> **Barra** | Una barra que se llena según un valor: vida, energía, progreso |
 
 Cada elemento tiene **nombre**, posición, tamaño, y su **aspecto**: relleno,
 relleno al elegirlo (en los botones), color del texto, tamaño de letra,
@@ -66,6 +67,21 @@ escondido.
 Cada elemento está **pegado** a una esquina, a un borde o al centro de la
 pantalla. Así no se sale en pantallas de otro tamaño: un marcador pegado
 *arriba a la derecha* se queda siempre en esa esquina.
+
+### Barras
+
+Una **barra** se dibuja con su **relleno** de fondo y, encima, una parte
+llena con el **color de la barra**. En el grupo *Valor*:
+
+- **Valor** es lo que la llena: un valor del juego entre llaves, como
+  `{vida}`, o un número.
+- **Máximo** es el valor con el que está llena del todo.
+
+Con *Valor* `{vida}` y *Máximo* `100`, la barra está llena a la mitad
+cuando la vida vale 50. La vida puede ser una variable **del juego** de los
+[nodos](nodos.md#variables) o un valor que pone el guion con
+`motor.poner_valor`. La barra puede llevar además un texto encima, como
+`{vida} / 100`.
 
 ### Imágenes
 
@@ -129,7 +145,7 @@ Un texto puede llevar valores entre llaves, que se rellenan al jugar:
 | `{clima}` | El tiempo que hace |
 | `{escena}` | La escena actual |
 | `{proyecto}` | El nombre del proyecto |
-| `{lo_que_quieras}` | Cualquier valor que ponga el guion con `motor.poner_valor` |
+| `{lo_que_quieras}` | Cualquier valor que ponga el guion con `motor.poner_valor`, o una variable del juego de los nodos |
 
 Por ejemplo, un marcador con el texto `Monedas: {monedas}` y este guion:
 

@@ -73,6 +73,21 @@ editor las teclas principales.
 | <kbd>Espacio</kbd> + arrastrar, o botón del medio | Mover el lienzo |
 | Rueda | Acercar y alejar |
 
+## Nodos
+
+| Tecla | Qué hace |
+|---|---|
+| Clic derecho, <kbd>Espacio</kbd> o <kbd>Tab</kbd> | Buscar y añadir un nodo |
+| <kbd>Mayús</kbd>+clic | Añadir a la selección |
+| <kbd>Espacio</kbd>+arrastrar, botón central | Mover el lienzo |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+rueda o pellizcar | Acercar y alejar |
+| <kbd>F</kbd> o <kbd>Inicio</kbd> | Ver todo el grafo |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>X</kbd>, <kbd>V</kbd> | Copiar, cortar y pegar nodos |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>D</kbd> | Duplicar |
+| <kbd>Supr</kbd> o <kbd>Retroceso</kbd> | Borrar lo elegido |
+| <kbd>F9</kbd> | Poner o quitar un punto de parada |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> | Guardar el grafo |
+
 ## Interfaces
 
 | Tecla | Qué hace |
@@ -95,3 +110,5 @@ editor las teclas principales.
 | La tecla de una pantalla (<kbd>I</kbd>, <kbd>M</kbd>, <kbd>Tab</kbd>…) | | Abrirla y cerrarla |
 | <kbd>Esc</kbd> | Start | Pausa, cerrar una interfaz |
 | <kbd>F5</kbd> | | Volver al editor (con *Jugar aquí*) |
+| <kbd>F8</kbd> | | Enseñar u ocultar el grafo abierto en el panel Nodos, con sus cables encendidos |
+| <kbd>F6</kbd> | | Seguir después de un punto de parada |

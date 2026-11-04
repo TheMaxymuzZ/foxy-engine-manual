@@ -1,99 +1,166 @@
-# Nodos (guiones sin código)
+# Nodos
 
-Los **nodos** hacen lo mismo que un [guion en Lua](guiones.md), pero sin
-escribir: se ponen cajas y se unen con cables. Sirven para lo de cada día,
-como que un vecino conteste según el tiempo, que suene una campana por la
-mañana o que un cofre dé monedas.
+Los **nodos** permiten programar el juego sin escribir código. Cada nodo es
+una caja que hace una sola cosa (esperar un evento, calcular un valor,
+mover una entidad) y los **cables** que los unen deciden el orden y llevan
+los datos de un nodo a otro. Al jugar, el motor convierte cada grafo en Lua,
+así que los nodos pueden hacer lo mismo que un [guion](guiones.md).
 
-![El panel Nodos](../imagenes/capturas/nodos.png)
+Esta guía explica los conceptos y el editor. Las demás páginas de la
+sección profundizan en cada parte:
 
-## Abrir los nodos
+- [Eventos y flujo](nodos-flujo.md): cuándo empieza una cadena y cómo se
+  decide por dónde sigue.
+- [Funciones, bibliotecas y nodos en Lua](nodos-funciones.md): reutilizar
+  grupos de nodos y ampliar la paleta.
+- [Depurar y pasar a código](nodos-depurar.md): ver los cables encendidos
+  mientras juegas, detener el juego en un nodo y leer el Lua que sale.
+- [Tutorial: un enemigo que persigue](tutorial-enemigo.md): un juego
+  completo con vida, barra de vida y pantalla de derrota, sin código.
+- [Referencia de nodos](../referencia/nodos.md): todos los nodos del motor.
 
-En el panel «Proyecto», grupo *Guion*, haz clic en **Nodos (sin código)**.
-Se abre el panel 🔌 **Nodos**:
+![El panel Nodos con el grafo de un enemigo](../imagenes/capturas/nodos.png)
 
-- A la **izquierda**, todos los nodos que se pueden añadir, por colores.
-- En el **centro**, el lienzo donde se colocan y se unen.
-- A la **derecha**, el Lua que sale de tus nodos. No hace falta mirarlo,
-  pero enseña cómo se escribiría a mano.
+## Tipos de grafo
 
-## Cómo se leen
+Un proyecto puede tener tantos grafos como necesite. Hay tres tipos, según
+lo que abarcan:
 
-Cada cadena va de izquierda a derecha y tiene tres tipos de nodos:
-
-| Color | Tipo | Qué hace |
+| Grafo | Archivo | Cuándo funciona |
 |---|---|---|
-| Naranja | **Cuándo** | Empieza la cadena: dice cuándo pasa |
-| Azul | **Si** | Pregunta algo. Tiene dos salidas: **sí** y **no** |
-| Verde | **Hacer** | Hace algo y sigue con el siguiente |
+| **Del juego** | `guiones/mundo.nodos.ron` | Durante toda la partida, en todas las escenas |
+| **De escena** | `mundos/<escena>.nodos.ron` | Solo mientras se juega en esa escena |
+| **De entidad** | `grafos/<nombre>.nodos.ron` | Una copia por cada entidad que lo lleva, con el componente [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md) |
 
-Por ejemplo: *Al hablar con Plumas* → *Sumar a un valor (monedas, +1)* →
-*Si el clima es Lluvia* → **sí**: *Responder «¡Qué día más feo!»*, **no**:
-*Responder «¡Toma una moneda!»*.
+Los grafos de entidad son los más útiles para dar comportamiento: el mismo
+grafo *enemigo* puede ir en diez entidades y cada una patrulla por su
+cuenta, con sus propias variables. Dentro de ellos, **Esta entidad** es la
+entidad que lleva el grafo.
 
-## Trabajar con nodos
+## El panel Nodos
+
+Ábrelo desde el panel **Proyecto** (*Guion → Nodos*), desde
+*Herramientas → Nodos* o con el espacio de trabajo **Programar**.
+
+![El panel Nodos](../imagenes/capturas/panel-nodos.png)
+
+- **Izquierda.** La lista de **Grafos** del proyecto (el del juego, los de
+  escena, los de entidad, las funciones y los nodos en Lua), las
+  **Variables** del grafo abierto y **Todos los nodos**, la paleta por
+  categorías.
+- **Centro.** El lienzo, con un minimapa abajo a la derecha.
+- **Derecha.** Los ajustes del nodo elegido y su ayuda. Con **Ver el Lua**
+  activado, el código que sale del grafo.
+- **Arriba.** Guardar, deshacer y rehacer, alinear y repartir lo elegido,
+  **Comentario**, **Pasar a función**, el zoom y **Pasar a código**.
+
+Para crear un grafo de entidad, pulsa <i class="fx fx-mas"></i>
+**Grafo de entidad** en la lista, o en el [Inspector](../interfaz/inspector.md)
+de una entidad con el componente *Grafo de nodos*, pulsa **Grafo nuevo**.
+
+## Cables y tipos
+
+Cada nodo tiene **pines**: los de la izquierda son entradas y los de la
+derecha, salidas. Hay dos clases de cable:
+
+- **Ejecución** (blanco, con forma de flecha). Marca el orden: cuando un
+  nodo termina, sigue el que está conectado a su salida de ejecución. Una
+  cadena siempre empieza en un **evento**.
+- **Datos** (de color). Lleva un valor de un nodo a otro. El color indica el
+  tipo de dato.
+
+| Tipo | Qué guarda | Ejemplo |
+|---|---|---|
+| **número** | Un número, con decimales | `3`, `0,5` |
+| **texto** | Letras y palabras | `"Hola"` |
+| **sí/no** | Verdadero o falso | la salida de *Comparar* |
+| **vector** | Tres números: x, y, z, en metros | una posición |
+| **color** | Un color | `#d65c26` |
+| **entidad** | Una entidad de la escena o el jugador | *Esta entidad* |
+| **recurso** | El nombre de un sonido, una interfaz o una escena | `has_perdido` |
+| **lista** | Varios valores seguidos | las entidades que se llaman «Moneda» |
+| **cualquiera** | Acepta cualquier tipo | la entrada de *Decir* |
+
+Un cable solo se conecta si los tipos encajan. Algunas conversiones se hacen
+solas porque tienen sentido: un número, un sí/no, un vector o una entidad se
+pueden llevar a una entrada de **texto** (una entidad se convierte en su
+nombre), y una **entidad** se puede llevar a una entrada de **vector** (se
+usa su posición).
+
+Una entrada de datos sin cable usa el valor escrito en el propio nodo. Por
+eso *Decir* puede llevar su texto escrito o recibirlo por un cable.
+
+> <i class="fx fx-consejo"></i> **Consejo.** Los nodos de valor, como
+> *Sumar* o *Distancia*, no tienen pines de ejecución: se calculan cada vez
+> que otro nodo usa su resultado. Si un valor cambia (la posición del
+> jugador), siempre se lee el actual.
+
+## Trabajar en el lienzo
 
 | Para | Haz |
 |---|---|
-| Añadir un nodo | Un botón de la izquierda, o clic derecho en el lienzo |
-| Moverlo | Arrastra su cabecera (el título) |
-| Unir dos nodos | Arrastra desde la bolita de la **derecha** de uno hasta la bolita de la **izquierda** del otro |
-| Quitar un cable | Arrastra desde su bolita de salida y suéltalo en el vacío |
-| Borrar un nodo | Clic derecho en su cabecera → *Borrar el nodo*, o elígelo y pulsa <kbd>Supr</kbd> |
-| Mover el lienzo | Arrastra el fondo |
+| Añadir un nodo | Clic derecho, <kbd>Espacio</kbd> o <kbd>Tab</kbd> en el lienzo, y escribe parte de su nombre. También puedes pulsarlo en la paleta |
+| Añadir un nodo ya conectado | Tira un cable desde un pin y suéltalo en el vacío: el buscador solo enseña los nodos que encajan |
+| Unir dos pines | Arrastra desde un pin hasta otro que encaje |
+| Despegar un cable | Arrastra desde la entrada que lo recibe y suéltalo en el vacío |
+| Mover nodos | Arrastra su cabecera. Se mueven todos los elegidos |
+| Elegir varios | Arrastra un recuadro sobre el fondo, o <kbd>Mayús</kbd>+clic |
+| Mover el lienzo | La rueda o dos dedos; también el botón central, o el derecho arrastrando, o <kbd>Espacio</kbd>+arrastrar |
+| Acercar y alejar | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+rueda, pellizcar, o los botones **−** y **+** |
+| Ver todo el grafo | <kbd>F</kbd> o <kbd>Inicio</kbd> |
+| Copiar, cortar, pegar | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>C</kbd>, <kbd>X</kbd>, <kbd>V</kbd>. Funciona también entre grafos distintos |
+| Duplicar | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>D</kbd> |
+| Borrar | <kbd>Supr</kbd> o <kbd>Retroceso</kbd>, o clic derecho en el nodo → **Borrar** |
+| Deshacer y rehacer | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> y <kbd>Mayús</kbd>+<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> |
 | Guardar | **Guardar** o <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> |
 
-Cada salida va a un solo sitio. Si unes una salida que ya tenía cable, el
-cable viejo se cambia por el nuevo.
+Para que un grafo grande se lea bien:
 
-## Los nodos
+- **Comentario** dibuja un marco con título alrededor de lo elegido. Al
+  mover el marco se mueve todo lo que tiene dentro. Cambia el título y el
+  color en los ajustes, y el tamaño arrastrando su esquina.
+- **Punto de paso** (en *Flujo*, o *Punto de paso (datos)* en *Otros*) es
+  un nodo diminuto que solo deja pasar el cable. Sirve para llevar un cable
+  largo por donde no estorbe.
+- Los botones de **alinear** ponen lo elegido a la misma altura o en la
+  misma columna, y los de **repartir** lo separan por igual.
 
-### Cuándo
+## Variables
 
-| Nodo | Cuándo pasa |
-|---|---|
-| **Al empezar** | Al empezar la partida |
-| **Al hablar con** | Al hablar con ese vecino (vacío: con cualquiera) |
-| **Cada día nuevo** | Cada vez que empieza un día |
-| **Al llegar la hora** | Cuando el reloj llega a esa hora en punto |
-| **Cada segundo** | Una vez por segundo mientras se juega |
-| **Al entrar en la escena** | Al llegar a esa escena (vacío: a cualquiera) |
-| **Al usar un objeto** | Cuando se usa un objeto cuya acción es [llamar a esa función del guion](mundo.md#al-usarlo-e). Escribe el mismo nombre en los dos sitios, como `al_abrir_cofre` |
+Una **variable** guarda un valor con nombre que se puede leer y cambiar.
+Créala con <i class="fx fx-mas"></i> **Variable** en el grupo *Variables*:
+elige su nombre, su tipo, su valor inicial y su ámbito.
 
-### Si
+| Ámbito | Dónde vive | Para qué sirve |
+|---|---|---|
+| **Del grafo** | En cada copia del grafo, solo para él | Datos internos: «voy de ida» |
+| **De la entidad** | En la entidad; otros grafos pueden leerla con *Variable de una entidad* | Datos que se ajustan por entidad: la velocidad, el alcance de visión |
+| **Del juego** | En la partida; se guarda con ella | La vida del jugador, las monedas, la puntuación |
 
-| Nodo | Pregunta |
-|---|---|
-| **Si el clima es** | Despejado, nublado, lluvia o tormenta |
-| **Si la estación es** | Primavera, verano, otoño o invierno |
-| **Si la hora está entre** | Entre dos horas. Si la primera es mayor (de 20 a 6), pasa por la medianoche |
-| **Si un valor** | Compara un valor del guion (como `monedas`) con un número: *es*, *no es*, *es más de*, *es menos de* o *es al menos* |
-| **Si sale al azar** | Sale «sí» ese tanto por ciento de las veces |
+Una variable del juego conserva su valor al cargar una partida y vuelve a
+su valor inicial al empezar una partida nueva.
 
-### Hacer
+Los botones **Leer** y **Poner** de cada variable añaden al lienzo el nodo
+que la lee o la cambia.
 
-| Nodo | Qué hace |
-|---|---|
-| **Decir** | Enseña un mensaje abajo |
-| **Responder** | Lo que contesta el vecino. Solo vale después de *Al hablar con* y acaba la cadena |
-| **Poner el clima** / **la estación** / **la hora** | Los cambia al momento |
-| **Sonar** | Un sonido del motor (campana, pájaro, trueno…) |
-| **Llevar a un vecino** | El vecino camina hasta ese punto (en metros) |
-| **Ir a la escena** | Cambia de escena, entrando por la entrada que digas |
-| **Abrir la interfaz** / **Cerrar la interfaz** | Abre una [interfaz](interfaces.md) o cierra la de arriba |
-| **Poner un valor** | Guarda un número o un texto con nombre. Las interfaces lo enseñan con `{nombre}` y se guarda con la partida |
-| **Sumar a un valor** | Le suma (o resta, con un número negativo) |
+Las variables **de la entidad** de un grafo aparecen en el Inspector de cada
+entidad que lo lleva, para darle a cada una su valor. Así, dos enemigos con
+el mismo grafo pueden tener distinta visión.
 
-## Nodos y Lua juntos
+Las variables **del juego** son también [valores del juego](interfaces.md#textos-que-cambian):
+una interfaz enseña la variable `vida` escribiendo `{vida}`, y una
+[barra](interfaces.md#barras) se llena con ella.
 
-Los nodos se guardan en `guiones/mundo.nodos.ron`, al lado de `mundo.lua`.
-Al jugar, el motor los convierte en Lua y los carga **con** tu guion: si los
-dos tienen, por ejemplo, *Al empezar*, se hacen los dos (primero el del
-guion escrito). Si los dos responden a un vecino, vale la respuesta del
-guion escrito.
+## Los nodos de antes
 
-> **Consejo:** si un día una cadena se te queda corta, copia el Lua de la
-> derecha a `mundo.lua` y sigue desde ahí.
+Los proyectos hechos con la primera versión de los nodos (con nodos
+*Cuándo*, *Si* y *Hacer*) se convierten solos al abrirlos: cada nodo pasa a
+su equivalente y las condiciones se vuelven un nodo **Si** con su
+pregunta. El archivo se guarda en el formato nuevo la próxima vez que
+pulses **Guardar**.
 
-Los nodos se usan al jugar cuando están **guardados**. Un panel con
-cambios sin guardar lleva un punto en su nombre (🔌 Nodos •).
+## Véase también
+
+- [Panel Nodos](../interfaz/nodos.md)
+- [Guiones en Lua](guiones.md)
+- [Referencia de nodos](../referencia/nodos.md)

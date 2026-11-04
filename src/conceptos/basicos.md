@@ -49,7 +49,8 @@ o ser el propio jugador.
 | [Sonido](../referencia/componentes/sonido.md) | Un sonido que sale de la entidad |
 | [Zona](../referencia/componentes/zona.md) | Hace algo al entrar o salir el jugador |
 | [Guion](../referencia/componentes/guion.md) | Llama a funciones del guion |
-| [Sprite](../referencia/componentes/sprite.md), [Animador](../referencia/componentes/animador.md), [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md) | Preparados para próximas versiones |
+| [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md) | Le da comportamiento con un grafo de [nodos](../guia/nodos.md) |
+| [Sprite](../referencia/componentes/sprite.md), [Animador](../referencia/componentes/animador.md) | Preparados para próximas versiones |
 
 Cada entidad puede tener **un componente de cada clase**. Se añaden y se
 quitan en el [Inspector](../interfaz/inspector.md). Ver
