@@ -82,6 +82,20 @@ Cuando el jugador toca la entidad. Vacío = esta entidad (o cualquiera en el gra
 
 En Lua: `function al_chocar(entidad, otro) ... end`
 
+### Al recoger algo {#evento-al_recoger}
+
+*Evento* · `evento.al_recoger`
+
+Cuando el jugador recoge una entidad con el componente Recogible (vacío = cualquiera).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
+| Salida | lo recogido | entidad | — |
+| Salida | valor que sube | texto | — |
+
+En Lua: `function al_recoger(entidad, valor) ... end`
+
 ### Al entrar en una zona {#evento-al_entrar_zona}
 
 *Evento* · `evento.al_entrar_zona`
@@ -1561,6 +1575,105 @@ El vecino camina hasta allí.
 | Entrada | z | número | 0 |
 
 En Lua: `motor.llevar(nombre, x, y, z)`
+
+## 2D
+
+### Animar {#motor-animar}
+
+*Acción* · `motor.animar`
+
+Pone una animación de su hoja de sprites (vacío = la de siempre). En el jugador, hasta que acaba.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+| Entrada | animación | texto | «andar» |
+
+En Lua: `motor.animar(entidad, animacion)`
+
+### Dar la vuelta al sprite {#motor-voltear}
+
+*Acción* · `motor.voltear`
+
+Da la vuelta al sprite de la entidad (como en un espejo).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+| Entrada | mirando a la izquierda | sí/no | sí |
+
+En Lua: `motor.voltear(entidad, espejo)`
+
+### Impulsar {#motor-impulsar}
+
+*Acción* · `motor.impulsar`
+
+Empuja un cuerpo físico (o al jugador) con esa velocidad, en casillas por segundo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+| Entrada | x | número | 0 |
+| Entrada | y | número | 8 |
+
+En Lua: `motor.impulsar(entidad, x, y)`
+
+### Casilla en {#motor-casilla}
+
+*Valor* · `motor.casilla`
+
+El número de la casilla que hay en ese sitio de la capa (nada si está vacía). Capa vacía = la primera que choca.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | x | número | 0 |
+| Entrada | y | número | 0 |
+| Entrada | capa | texto | — |
+| Salida | casilla | número | — |
+
+En Lua: `local casilla = motor.casilla(x, y, capa)`
+
+### Poner una casilla {#motor-poner_casilla}
+
+*Acción* · `motor.poner_casilla`
+
+Cambia una casilla del mapa mientras se juega (para romper bloques, abrir pasos...).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | x | número | 0 |
+| Entrada | y | número | 0 |
+| Entrada | casilla | número | 0 |
+| Entrada | capa | texto | — |
+
+En Lua: `motor.poner_casilla(x, y, casilla, capa)`
+
+### Encender partículas {#motor-particulas}
+
+*Acción* · `motor.particulas`
+
+Enciende o apaga el componente Partículas de la entidad (también en 3D).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+| Entrada | encendidas | sí/no | sí |
+
+En Lua: `motor.particulas(entidad, encendidas)`
+
+### Soltar partículas {#motor-soltar_particulas}
+
+*Acción* · `motor.soltar_particulas`
+
+Suelta de golpe partículas de un tipo: polvo, chispas, lluvia, nieve, humo u hojas.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | tipo | texto | «chispas» |
+| Entrada | dónde | vector | (0, 0, 0) |
+| Entrada | cuántas | número | 12 |
+
+En Lua: `motor.soltar_particulas(tipo, punto.x, punto.y, punto.z, cantidad)`
 
 ## Otros
 

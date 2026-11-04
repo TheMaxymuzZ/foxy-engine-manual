@@ -25,13 +25,14 @@ un clic arriba en el centro:
 | **Construir** | Hacer el mundo: bloques, objetos, terreno | Proyecto, En la escena, Vista e Inspector |
 | **Programar** | Escribir guiones o nodos, probarlos y depurarlos | Proyecto, Código y Nodos, Vista, Consola, Depurador, Inspector y Registro |
 | **Pixel art** | Dibujar imágenes y texturas | Proyecto, Pixel art, Vista y Materiales |
+| **2D** | Hacer escenas 2D: pintar casillas, ordenar capas y animar sprites | Proyecto, En la escena, Vista, Casillas, Capas, Sprites e Inspector |
 
 | Programar | Pixel art |
 |---|---|
 | ![Programar](../imagenes/capturas/espacio-programar.png) | ![Pixel art](../imagenes/capturas/espacio-pixel-art.png) |
 
-Cada espacio **recuerda cómo lo dejaste** en cada proyecto. Más espacios
-(Animar, 2D) llegarán con sus fases.
+Cada espacio **recuerda cómo lo dejaste** en cada proyecto. Los proyectos 2D
+se abren en el espacio **2D**.
 
 ## Los paneles
 
@@ -48,6 +49,9 @@ Cada espacio **recuerda cómo lo dejaste** en cada proyecto. Más espacios
 | [Archivos](../interfaz/archivos.md) | Las carpetas y archivos del proyecto |
 | [Materiales](../interfaz/materiales.md) | La paleta de materiales del mundo |
 | [Pixel art](../interfaz/pixel-art.md) | Las imágenes, paletas y texturas del proyecto |
+| [Casillas](../guia/casillas.md) | En 2D: el juego de casillas para pintar, sus choques y sus autocasillas |
+| [Capas](../guia/casillas.md#capas) | En 2D: las capas de la escena y sus ajustes |
+| [Sprites](../guia/sprites.md) | En 2D: cortar hojas de sprites, el punto de anclaje y las animaciones |
 | [Registro](../interfaz/registro.md) | Todos los avisos y errores |
 
 Los paneles que no estén en el espacio se abren desde el menú **Ventana**,

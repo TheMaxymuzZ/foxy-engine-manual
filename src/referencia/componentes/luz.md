@@ -9,7 +9,9 @@ Ilumina alrededor de la entidad, de día y de noche.
 | Alcance | `alcance` | 8 m | Hasta dónde llega |
 | Altura | `altura` | 1 m | Altura de la luz sobre la base de la entidad |
 
-Las luces se ven en el editor y al jugar. Los materiales con luz propia,
+Las luces se ven en el editor y al jugar. En una
+[escena 2D](../../guia/juegos-2d.md#partículas-y-luces) se notan cuando la
+luz ambiente está por debajo de 1, y el alcance va en casillas. Los materiales con luz propia,
 como el farol, siguen iluminando sin necesidad de este componente.
 
 ```ron

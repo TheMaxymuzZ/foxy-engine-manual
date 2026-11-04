@@ -70,4 +70,4 @@ pasos, saltos, caídas, patadas, lluvia, truenos y pájaros. El volumen de la
 música y de los efectos se cambia en *Opciones*.
 
 > <i class="fx fx-nota"></i> **Nota.** Por ahora los sonidos se fabrican con código dentro del motor.
-> Los sonidos grabados llegarán en la Fase 5.
+> Los sonidos grabados del proyecto se ponen con [Sonidos](sonidos.md).
