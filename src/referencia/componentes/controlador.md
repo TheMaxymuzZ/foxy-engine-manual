@@ -10,6 +10,11 @@ el *Punto de inicio*.
 | Corriendo | `carrera` | 8 m/s | Velocidad con *Correr* |
 | Salto | `salto` | 1,33 m | Altura del salto. 0 = no salta |
 | Gravedad | `gravedad` | 24 m/s² | La de la Tierra es 9,8 |
+| Coyote time | `coyote` | 0,1 s | En 2D: tiempo para saltar después de salir de un borde |
+| Salto variable | `salto_variable` | Sí | En 2D: soltar **Saltar** pronto hace el salto más bajo |
+
+En una [escena 2D](../../guia/juegos-2d.md) las medidas van en casillas
+(casillas por segundo, casillas de salto).
 
 ## Tipos
 
@@ -17,9 +22,9 @@ el *Punto de inicio*.
 |---|---|---|
 | Primera persona | `PrimeraPersona` | Se ve con los ojos del personaje. El ratón mueve la mirada |
 | Tercera persona | `TerceraPersona` | La cámara va detrás del personaje, que se ve entero. Si una pared se interpone, la cámara se acerca |
-| Cenital | `Cenital` | Desde arriba. La cámara no gira; *Adelante* es hacia el norte |
+| Cenital | `Cenital` | Desde arriba. La cámara no gira; *Adelante* es hacia el norte. En 2D, anda en las cuatro direcciones sin gravedad |
 | Isométrico | `Isometrico` | En diagonal desde arriba, como un diorama |
-| Plataformas 2D | `Plataformas2D` | De lado. El personaje solo se mueve a izquierda y derecha y salta |
+| Plataformas 2D | `Plataformas2D` | De lado. El personaje solo se mueve a izquierda y derecha, salta, trepa y nada |
 | Cámara libre | `CamaraLibre` | Vuela y atraviesa todo. Útil para recorrer la escena |
 
 En los tipos en los que se ve el personaje, se usa el modelo de la entidad;

@@ -148,6 +148,7 @@ Archivo: `mundos/<escena>.ron`
 | `carpetas` | Carpetas de la escena; las subcarpetas con `/` |
 | `objetos` | Objetos colocados: `tipo`, `nombre`, `pos` (centro de la base, en metros) y `giro` (cuartos de vuelta, 0 = mira al sur). Opcionales: `carpeta`, `frases` (vecinos), `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>), `componentes` (ver [Componentes](componentes/index.md)) y `prefabricado` (el id del prefabricado del que es copia) |
 | `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos** de la rejilla del proyecto |
+| `plano` | Solo en las escenas 2D: casilla, resolución, fondo, luz ambiente y las capas con sus mapas. Las posiciones de los `objetos` van entonces en casillas. Ver [Mapas de casillas](../guia/casillas.md#en-el-archivo-de-la-escena) |
 
 El motor construye el mundo en tres pasos: genera el terreno a partir de `generador`,
 aplica encima los `cambios` y coloca los `objetos`.
@@ -267,10 +268,31 @@ El `.ron` de al lado es opcional (sin él: el nombre del archivo, uso
 ```ron
 (
     nombre: "Botón verde",
-    uso: Interfaz,          // Interfaz, Textura u Otro
+    uso: Interfaz,          // Interfaz, Textura, Sprite, Casillas u Otro
     bordes: (4, 4, 4, 4),   // izquierda, arriba, derecha, abajo (en píxeles)
 )
 ```
+
+Las hojas de sprites (`uso: Sprite`) añaden `hoja` y los juegos de casillas
+(`uso: Casillas`) añaden `casillas`:
+
+```ron
+hoja: Some((
+    corte: Rejilla(ancho: 16, alto: 16, margen: 0, separacion: 0),
+    ancla: (0.5, 1.0),
+    animaciones: {
+        "correr": (fotogramas: [2, 3, 4, 5], fps: 15.0, bucle: true, ida_y_vuelta: false),
+    },
+)),
+casillas: Some((
+    lado: 16, margen: 0, separacion: 0,
+    choques: { 32: Plataforma, 33: Escalera, 34: Peligro, 35: Agua },
+    autocasillas: [(nombre: "Hierba", casillas: [ /* 16 casillas */ ])],
+)),
+```
+
+`corte` puede ser `Entera`, `Rejilla(...)` o `AMano([(x, y, ancho, alto), ...])`.
+Ver [Sprites](../guia/sprites.md) y [Mapas de casillas](../guia/casillas.md).
 
 `bordes` sirve para estirar en nueve partes. Ver
 [Pixel art](../guia/pixel-art.md#imágenes-que-se-estiran-bordes).

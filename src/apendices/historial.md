@@ -5,6 +5,26 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR27: Juegos 2D
+
+- **[Juegos 2D](../guia/juegos-2d.md)**: escenas 2D en casillas con cámara
+  *pixel perfect*, capas de casillas y de imagen con paralaje, luces 2D y
+  física 2D con salto variable, *coyote time*, escaleras, plataformas de un
+  sentido y agua. Se juega también con mando.
+- **[Mapas de casillas](../guia/casillas.md)**: paneles **Casillas** y
+  **Capas**, con pincel, relleno, rectángulo, goma y cuentagotas, choques
+  por casilla y autocasillas que ponen solas sus bordes.
+- **[Sprites](../guia/sprites.md)**: panel para cortar hojas en rejilla o a
+  mano, poner el punto de anclaje y montar animaciones. **Retocar** abre la
+  imagen en Pixel art. El jugador elige solo su animación.
+- Componentes nuevos [Recogible](../referencia/componentes/recogible.md) y
+  [Partículas](../referencia/componentes/particulas.md) (también en 3D), y
+  cámara **Ortográfica** para cubitos vistos de lado.
+- Espacio de trabajo **2D**, nodos de la categoría **2D**, evento **Al
+  recoger** y funciones nuevas de Lua.
+- Plantillas **Vacío 2D**, **Plataformas 2D**, **Aventura cenital** y
+  **Plataformas vóxel**.
+
 ## 0.0.1-PR26: Código
 
 - **[Panel Código](../interfaz/codigo.md)** nuevo: pestañas, vista dividida,

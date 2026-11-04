@@ -1,7 +1,7 @@
 # Instalar Foxy Engine
 
 Foxy Engine funciona en **macOS**, **Windows** y **Linux**. Todavía no hay
-instaladores públicos (llegarán con la Fase 6), así que hay dos caminos:
+instaladores públicos (llegarán más adelante), así que hay dos caminos:
 
 | Sistema | Cómo se consigue |
 |---|---|

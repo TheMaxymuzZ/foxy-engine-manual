@@ -50,8 +50,8 @@ distribución.
 
 ## Espacios
 
-Arriba en el centro están los espacios: **Construir**, **Programar** y
-**Pixel art** (ver [La interfaz del editor](../empezar/editor.md#los-espacios)).
+Arriba en el centro están los espacios: **Construir**, **Programar**,
+**Pixel art** y **2D** (ver [La interfaz del editor](../empezar/editor.md#los-espacios)).
 Cada uno recuerda cómo lo dejaste, así que puedes ajustar *Programar* a tu
 gusto y volver a *Construir* sin perder nada.
 

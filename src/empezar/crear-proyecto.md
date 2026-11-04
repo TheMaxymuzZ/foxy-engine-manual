@@ -28,8 +28,8 @@ El editor abre el proyecto nuevo y lo añade a la lista de proyectos.
 | Tipo | Para qué sirve | Disponible |
 |---|---|---|
 | **3D vóxel** | Mundos de cubitos en tres dimensiones: construir, explorar y jugar | Sí |
-| **2D pixel art** | Juegos 2D con sprites, mapas de casillas y cámara *pixel perfect* | Próximamente |
-| **2D con vóxeles** | La estética de cubitos vista de lado o desde arriba | Próximamente |
+| **2D pixel art** | Juegos 2D con sprites, mapas de casillas y cámara *pixel perfect* | Sí |
+| **2D con vóxeles** | La estética de cubitos vista de lado o desde arriba | Sí |
 
 ## Plantillas
 
@@ -40,6 +40,12 @@ El editor abre el proyecto nuevo y lo añade a la lista de proyectos.
 | **Vacío 3D** | Un llano de 96 × 96 m, el punto de inicio y un guion con las funciones vacías | Empezar un juego desde cero |
 | **Isla vóxel** | Una isla generada con colinas, playa, árboles y muelle, sin construcciones | Construir sobre un terreno natural |
 | **Isla de ejemplo** | Una isla con pueblo, mercado, vecinos, pelotas y un guion de ejemplo | Aprender viendo un proyecto completo |
+| **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta | Empezar un juego 2D desde cero |
+| **Plataformas 2D** | Un nivel de pixel art con monedas, escaleras, pinchos, agua y una bandera de meta | Aprender a hacer un juego de plataformas |
+| **Aventura cenital** | Un prado visto desde arriba con camino, lago, una vecina y gemas que buscar | Juegos de aventura y exploración |
+| **Plataformas vóxel** | Un nivel de cubitos visto de lado, con cámara fija y monedas | Plataformas con la estética de cubitos |
+
+Los juegos 2D se explican en [Juegos 2D](../guia/juegos-2d.md).
 
 Todo lo que trae una plantilla forma parte del proyecto y se puede cambiar o
 borrar.

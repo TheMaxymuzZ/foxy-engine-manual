@@ -16,6 +16,7 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `cada_fotograma(segundos)` | Unas 60 veces por segundo, con los segundos desde la anterior. |
 | `cada_segundo()` | Una vez por segundo. |
 | `al_chocar(otro)` | Cuando el jugador toca la entidad (en el guion del mundo: entidad, otro). |
+| `al_recoger(entidad, valor)` | Cuando el jugador recoge una entidad con el componente Recogible (con el valor que sube). |
 | `al_entrar_zona(quien)` | Cuando el jugador entra en la zona de la entidad (en el guion del mundo: entidad, quien). |
 | `al_salir_zona(quien)` | Cuando el jugador sale de la zona de la entidad (en el guion del mundo: entidad, quien). |
 | `al_recibir_dano(cantidad, de)` | Cuando algo le hace daño con motor.danar (en el guion del mundo: entidad, cantidad, de). |
@@ -141,10 +142,22 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.vecino(nombre: texto)` | x (número), y (número), z (número) | La posición de un vecino. |
 | `motor.llevar(nombre: texto, x: número, y: número, z: número)` | — | El vecino camina hasta allí. |
 
+## 2D
+
+| Función | Devuelve | Qué hace |
+|---|---|---|
+| `motor.animar(entidad: entidad, animacion: texto)` | — | Pone una animación de su hoja de sprites (vacío = la de siempre). En el jugador, hasta que acaba. |
+| `motor.voltear(entidad: entidad, espejo: sí/no)` | — | Da la vuelta al sprite de la entidad (como en un espejo). |
+| `motor.impulsar(entidad: entidad, x: número, y: número)` | — | Empuja un cuerpo físico (o al jugador) con esa velocidad, en casillas por segundo. |
+| `motor.casilla(x: número, y: número, capa: texto)` | casilla (número) | El número de la casilla que hay en ese sitio de la capa (nada si está vacía). Capa vacía = la primera que choca. |
+| `motor.poner_casilla(x: número, y: número, casilla: número, capa: texto)` | — | Cambia una casilla del mapa mientras se juega (para romper bloques, abrir pasos...). |
+| `motor.particulas(entidad: entidad, encendidas: sí/no)` | — | Enciende o apaga el componente Partículas de la entidad (también en 3D). |
+
 ## Otros
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
+| `motor.soltar_particulas(tipo, x, y, z, cantidad)` | — | Suelta de golpe partículas de un tipo (polvo, chispas, lluvia, nieve, humo u hojas) en ese sitio. |
 | `motor.danar(entidad, cantidad, de)` | — | Pone en marcha «Al recibir daño» de esa entidad. |
 | `motor.emitir(evento, valor, de)` | — | Emite un evento propio: lo reciben los nodos «Al recibir un evento» y la función al_recibir de los guiones de entidad. |
 | `motor.emitir_a(entidad, evento, valor, de)` | — | Como motor.emitir, pero solo para el grafo o el guion de esa entidad. |

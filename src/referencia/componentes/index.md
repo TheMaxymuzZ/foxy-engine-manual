@@ -15,9 +15,11 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Sonido](sonido.md) | `Sonido` | Disponible |
 | [Zona](zona.md) | `Zona` | Disponible |
 | [Guion](guion.md) | `Guion` | Disponible |
-| [Sprite](sprite.md) | `Sprite` | Llega con el 2D |
+| [Sprite](sprite.md) | `Sprite` | Disponible |
 | [Animador](animador.md) | `Animador` | Llega con la animación |
 | [Grafo de nodos](grafo-de-nodos.md) | `GrafoNodos` | Disponible |
+| [Recogible](recogible.md) | `Recogible` | Disponible |
+| [Partículas](particulas.md) | `Particulas` | Disponible |
 
 ## En el archivo de la escena
 
