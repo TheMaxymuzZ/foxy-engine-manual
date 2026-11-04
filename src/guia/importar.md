@@ -50,7 +50,7 @@ importar se elige cómo pasar de unos a otros:
   [material propio](materiales.md) por cada color del modelo, llamados como
   el modelo y un número («zorro 1», «zorro 2»…). Si un color ya está en la
   paleta, se usa ese y no se repite. Después puedes darles luz propia, brillo
-  metálico o transparencia en la pestaña de Materiales: por ejemplo, que las
+  metálico o transparencia en el panel Materiales: por ejemplo, que las
   ventanas de un castillo brillen de noche.
 - **Usar el material más parecido de la paleta**: no crea nada; cada color
   usa el material de la paleta que más se le parece.

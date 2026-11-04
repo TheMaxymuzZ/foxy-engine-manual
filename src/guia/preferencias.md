@@ -15,6 +15,9 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
   con menos detalle, para que todo vaya más rápido. Ver
   [Rendimiento](rendimiento.md#detalle-de-lejos).
 - **Tamaño de los paneles**: más grande si los textos se ven pequeños.
+- **Tema**: *Oscuro* o *Claro*, y el **color de acento** (naranja, azul,
+  verde, morado, rosa o amarillo). Ver
+  [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md#tema-color-y-tamaño).
 
 > <i class="fx fx-nota"></i> En Mac la sincronía se usa solo con la ventana
 > delante: al cambiar a otra ventana, el motor la quita para no quedarse

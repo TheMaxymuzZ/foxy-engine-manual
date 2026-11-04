@@ -5,12 +5,12 @@ escribir: se ponen cajas y se unen con cables. Sirven para lo de cada día,
 como que un vecino conteste según el tiempo, que suene una campana por la
 mañana o que un cofre dé monedas.
 
-![La pestaña Nodos](../imagenes/capturas/nodos.png)
+![El panel Nodos](../imagenes/capturas/nodos.png)
 
 ## Abrir los nodos
 
 En el panel «Proyecto», grupo *Guion*, haz clic en **Nodos (sin código)**.
-Se abre la pestaña 🔌 **Nodos**:
+Se abre el panel 🔌 **Nodos**:
 
 - A la **izquierda**, todos los nodos que se pueden añadir, por colores.
 - En el **centro**, el lienzo donde se colocan y se unen.
@@ -95,5 +95,5 @@ guion escrito.
 > **Consejo:** si un día una cadena se te queda corta, copia el Lua de la
 > derecha a `mundo.lua` y sigue desde ahí.
 
-Los nodos se usan al jugar cuando están **guardados**. Una pestaña con
+Los nodos se usan al jugar cuando están **guardados**. Un panel con
 cambios sin guardar lleva un punto en su nombre (🔌 Nodos •).

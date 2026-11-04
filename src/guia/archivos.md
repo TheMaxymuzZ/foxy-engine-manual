@@ -1,10 +1,10 @@
 # Archivos del proyecto
 
-La pestaña <i class="fx fx-carpeta"></i> **Archivos** es un gestor de archivos
+El panel <i class="fx fx-carpeta"></i> **Archivos** es un gestor de archivos
 dentro del motor: ves las carpetas del proyecto, creas las tuyas, mueves
 cosas e **importas** archivos de tu ordenador.
 
-Se abre con **Archivo → Archivos del proyecto…** o con el icono
+Se abre con **Proyecto → Archivos del proyecto** o con el icono
 <i class="fx fx-carpeta"></i> de arriba del panel «Proyecto».
 
 ![El gestor de archivos](../imagenes/capturas/archivos.png)
@@ -42,7 +42,7 @@ Dos maneras de traer archivos de tu ordenador a la carpeta abierta:
 1. **Importar…**: abre la ventana del sistema para elegir uno o varios
    archivos (también desde **Archivo → Importar al proyecto…**).
 2. **Arrastrar**: suelta archivos del Finder o del Explorador de Windows
-   **encima de la ventana del motor**. Si no estás en la pestaña Archivos y
+   **encima de la ventana del motor**. Si no está abierto el panel Archivos y
    son PNG, van directos a `imagenes/` y ya salen en el pixel art.
 
 Importar **copia** los archivos: el original se queda donde estaba. Si ya hay

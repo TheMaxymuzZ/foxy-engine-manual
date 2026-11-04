@@ -45,7 +45,7 @@ cualquier término en todo el manual.
 |---|---|
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> | <kbd>Cmd</kbd> en Mac; <kbd>Ctrl</kbd> en Windows y Linux |
 | **Guardar** | Un botón, una pestaña, un menú o una opción del editor, con su nombre exacto |
-| **Archivo → Ajustes del proyecto** | Una opción dentro de un menú |
+| **Proyecto → Ajustes del proyecto** | Una opción dentro de un menú |
 | `mundos/principal.ron` | Un archivo o una carpeta, relativos a la carpeta del proyecto |
 | `motor.decir(texto)` | Código que se escribe tal cual |
 

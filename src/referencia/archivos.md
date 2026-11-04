@@ -14,6 +14,7 @@ final y nombres sin comillas.
 Documentos/Foxy Engine/proyectos/Mi isla/
     proyecto.ron          nombre, tipo, autor, versión, icono y escena inicial
     .foxy/miniatura.png   miniatura para la pantalla de inicio (la hace el editor)
+    .foxy/espacio.ron     cómo quedaron los paneles de cada espacio
     mundos/principal.ron  la escena con la que empieza el juego
     mundos/*.ron          las demás escenas
     interfaces/*.ron      menús, marcadores y carteles
@@ -56,6 +57,15 @@ versión anterior del motor se abre igual. Se editan desde
 `Documentos/Foxy Engine/editor.ron` guarda los proyectos recientes de la
 pantalla de inicio (`recientes`, con su carpeta, si está fijado y cuándo se
 abrió) y los que se quitaron de la lista (`ocultos`).
+
+### Espacios de trabajo
+
+`.foxy/espacio.ron` guarda el espacio que se estaba usando (`actual`) y, en
+`espacios`, cómo quedó cada uno: el árbol de paneles (`arbol`) y las
+ventanas separadas (`flotantes`, con su panel, posición y tamaño). Si se
+borra, el proyecto se abre con los espacios de serie. Los espacios propios
+están en `Documentos/Foxy Engine/espacios/<nombre>.ron`, con un árbol y sus
+ventanas. Ver [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md).
 
 ## Mundos
 
