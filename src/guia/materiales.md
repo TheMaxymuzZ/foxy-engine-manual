@@ -58,8 +58,9 @@ proyecto. **Pintar con él** vuelve a la escena con el pincel y ese material.
 | **Golpes** | Cuántos golpes aguanta antes de romperse (0 = no se rompe) |
 | **Peso** | Cuánto pesa un metro cúbico, en kg (madera ~650, piedra ~2600) |
 
-Los **golpes** y el **peso** son para los bloques que se rompen y los
-derrumbes de las próximas fases.
+Jugando, los **golpes** dicen cuántos clics hacen falta para
+[romper](jugar.md#romper-bloques) un bloque, y el **peso** cómo cae cuando
+se derrumba.
 
 En la paleta, un **punto amarillo** marca los materiales que brillan, una
 **raya** los metálicos y unos **cuadros** los transparentes.

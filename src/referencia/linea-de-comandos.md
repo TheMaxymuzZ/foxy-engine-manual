@@ -54,6 +54,8 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | `--raton x,y` | Dónde está el ratón, en píxeles |
 | `--elegir <n>` | Elige el objeto número `n` (desde 1) |
 | `--jugar` | Como *Jugar aquí* |
+| `--romper <x,y,z>` | Jugando, rompe el bloque de ese punto, en metros. Se puede repetir |
+| `--esperar <s>` | Jugando, segundos que pasan antes de la captura (de 0 a 60) |
 
 ### Capturas del juego
 

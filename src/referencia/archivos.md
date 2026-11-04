@@ -64,6 +64,7 @@ Archivo: `mundos/<escena>.ron`
         estacion: Primavera,     // Primavera, Verano, Otono o Invierno
         clima: Despejado,        // Despejado, Nublado, Lluvia o Tormenta
         clima_cambia: true,
+        romper_bloques: true,    // jugando se rompen bloques, derrumbes y agua
     ),
     carpetas: ["Pueblo", "Pueblo/Casas", "Vecinos"],
     objetos: [

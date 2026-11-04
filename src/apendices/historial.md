@@ -5,6 +5,15 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR19: romper bloques, derrumbes y agua
+
+- **[Romper bloques](../guia/jugar.md#romper-bloques)** jugando, según los
+  golpes de cada material.
+- Lo que se queda sin apoyo **se derrumba** y cae con física (Rapier); al
+  pararse, deja ruinas.
+- El **agua corre** por los huecos que se abren y se retira si se tapan.
+- Ajuste **Romper bloques** en la vida de la escena.
+
 ## 0.0.1-PR18: mundos más ligeros
 
 - Las caras iguales que están juntas se dibujan como un solo rectángulo: la
