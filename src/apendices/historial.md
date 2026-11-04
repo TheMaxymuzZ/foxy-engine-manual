@@ -5,6 +5,12 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR20: nodos
+
+- **[Nodos](../guia/nodos.md)**: guiones sin código, con cajas *Cuándo*,
+  *Si* y *Hacer* unidas por cables. Se convierten en Lua y se cargan junto
+  a `mundo.lua`.
+
 ## 0.0.1-PR19: romper bloques, derrumbes y agua
 
 - **[Romper bloques](../guia/jugar.md#romper-bloques)** jugando, según los

@@ -20,6 +20,7 @@
 - [Escenas](guia/escenas.md)
 - [Interfaces](guia/interfaces.md)
 - [La vida del mundo](guia/vida.md)
+- [Nodos (sin código)](guia/nodos.md)
 - [Guiones en Lua](guia/guiones.md)
 - [Probar el juego](guia/jugar.md)
 - [Preferencias y teclas](guia/preferencias.md)
