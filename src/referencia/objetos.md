@@ -5,6 +5,12 @@ nombre que se usa en los archivos de los mundos.
 
 ## Para construir
 
+Son los **objetos de ejemplo** del motor. Desde esta versión son archivos
+`.ron` como los [objetos propios](#objetos-propios): las plantillas de isla
+los copian en `objetos/` y un proyecto vacío los añade con **Añadir los
+objetos de ejemplo** en la paleta de objetos. Se pueden cambiar en el
+[creador de objetos](../guia/creador.md).
+
 Se funden con los bloques del mundo: puedes cavar, poner o pintar encima de
 ellos. Todos pueden hacer una [acción](acciones.md) cuando el jugador los usa
 con <kbd>E</kbd> (<i class="fx fx-usar"></i>
@@ -20,6 +26,7 @@ con <kbd>E</kbd> (<i class="fx fx-usar"></i>
 | Valla | `valla` | |
 | Pozo | `pozo` | |
 | Roca | `roca` | |
+| Puerta | `puerta` | 1 × 2 m. Con una [Zona](componentes/zona.md) y la acción *Mover*, se abre al acercarse |
 
 ## Especiales
 
@@ -27,6 +34,7 @@ Se dibujan aparte, con su propio modelo.
 
 | Objeto | Tipo | Se ve al jugar | Qué hace |
 |---|---|---|---|
+| <i class="fx fx-objeto"></i> Entidad vacía | `entidad` | No | Una entidad sin modelo para colgarle [componentes](componentes/index.md): una luz, un sonido, el personaje |
 | <i class="fx fx-pelota"></i> Pelota | `pelota` | Sí | Se mueve con la física: cae, bota, rueda y flota. Se patea con <kbd>E</kbd> |
 | <i class="fx fx-vecino"></i> Vecino | `vecino` | Sí | Un habitante con nombre y frases. Ver [La vida del mundo](../guia/vida.md#vecinos) |
 | <i class="fx fx-inicio"></i> Punto de inicio | `inicio` | No | Donde empieza una partida nueva, mirando hacia su flecha |

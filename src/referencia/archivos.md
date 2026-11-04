@@ -21,7 +21,11 @@ Documentos/Foxy Engine/proyectos/Mi isla/
     imagenes/*.png        imágenes de pixel art (y su .ron con datos)
     paletas/*.ron         paletas de colores
     materiales.ron        materiales propios y cómo es cada material
-    objetos/*.ron         objetos propios
+    acciones.ron          el mapa de acciones de entrada
+    objetos/*.ron         objetos propios y objetos de ejemplo
+    prefabricados/*.ron   prefabricados
+    sonidos/*.wav, *.ogg  sonidos propios
+    .foxy/copias/         copias de seguridad hechas al actualizar el formato
     guiones/mundo.lua     el guion del mundo
     partidas/             partidas guardadas al jugar
     papelera/             escenas quitadas desde el mapa de escenas
@@ -44,9 +48,26 @@ Archivo: `proyecto.ron`
     version: "0.1.0",
     descripcion: "Un pueblo con mercado y vecinos.",
     icono: "",                       // imagen de imagenes/ sin .png; vacío = el del motor
-    formato: 2,                      // versión del formato del proyecto
+    cubito: 0.5,                     // tamaño del cubito: 1.0, 0.5 o 0.25 m
+    modulos: (clima: true, vecinos: false, ...),   // ver Módulos
+    formato: 3,                      // versión del formato del proyecto
 )
 ```
+
+### Actualizar el formato
+
+Cuando una versión nueva del motor cambia el formato de los archivos, al
+abrir un proyecto antiguo el editor:
+
+1. Hace una **copia de seguridad** de todo el proyecto en
+   `.foxy/copias/formato-<anterior>-<fecha>/`.
+2. Copia en `objetos/` los objetos de ejemplo que usan sus escenas.
+3. Vuelve a escribir las escenas con el formato nuevo.
+4. Lo indica en la barra de estado.
+
+El juego se ve y se juega igual que antes. Para volver atrás, basta con
+copiar el contenido de la copia de seguridad sobre la carpeta del
+proyecto.
 
 Todos los campos menos `nombre` son opcionales: un proyecto creado con una
 versión anterior del motor se abre igual. Se editan desde
@@ -73,8 +94,8 @@ Archivo: `mundos/<escena>.ron`
 
 ```ron
 (
-    isla: (
-        terreno: Isla,        // Isla o Llano
+    generador: (
+        tipo: Isla,           // Isla, Llano, Vacio, Colinas o Cuevas
         semilla: 7,           // otra semilla, otra isla
         lado: 192.0,          // tamaño del mundo (la isla está en el centro)
         radio: 66.0,          // tamaño de la isla
@@ -83,16 +104,15 @@ Archivo: `mundos/<escena>.ron`
         arboles: 0.2,         // de 0 (ninguno) a 1 (bosque)
         muelle: true,         // muelle de madera en la playa del sur
     ),
-    // Con terreno: Llano solo cuentan `lado` (el suelo de hierba) y
-    // `nivel_del_mar`. Un proyecto vacío empieza con un llano de 96 m.
+    // Cada generador usa sus campos; ver Generadores de terreno.
     vida: (
         minutos_por_dia: 24.0,   // 0 = la hora no avanza
         dias_por_estacion: 7,
         estacion: Primavera,     // Primavera, Verano, Otono o Invierno
         clima: Despejado,        // Despejado, Nublado, Lluvia o Tormenta
         clima_cambia: true,
-        romper_bloques: true,    // jugando se rompen bloques, derrumbes y agua
     ),
+    modulos: (clima: Some(false)),   // lo que la escena cambia de los módulos del proyecto
     carpetas: ["Pueblo", "Pueblo/Casas", "Vecinos"],
     objetos: [
         (tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), giro: 0, carpeta: "Pueblo/Casas"),
@@ -102,6 +122,12 @@ Archivo: `mundos/<escena>.ron`
          accion: IrAEscena(escena: "cueva", entrada: "boca")),
         (tipo: "casa", nombre: "Tienda de Tomás", pos: (108.0, 18.0, 121.0), giro: 3,
          accion: AbrirInterfaz("tienda")),
+        (tipo: "puerta", nombre: "Puerta", pos: (92.0, 16.0, 118.0), giro: 0,
+         componentes: [Zona((tamano: (4.0, 3.0, 4.0),
+             al_entrar: Mover(desplazamiento: (1.0, 0.0, 0.0)),
+             al_salir: Mover(desplazamiento: (0.0, 0.0, 0.0))))]),
+        (tipo: "farola", nombre: "Farola", pos: (94.0, 16.0, 116.0), giro: 0,
+         prefabricado: "farola_de_la_plaza"),
     ],
     cambios: [
         (196, 29, 254, 4, Grava),
@@ -111,17 +137,44 @@ Archivo: `mundos/<escena>.ron`
 
 | Campo | Qué es |
 |---|---|
-| `isla` | Cómo se genera el terreno: `terreno` (`Isla` o `Llano`) y sus medidas. Ver [Construir el mundo](../guia/mundo.md#el-terreno) |
+| `generador` | Cómo se genera el terreno: `tipo` y sus parámetros. Ver [Generadores de terreno](../guia/generadores.md). Antes se llamaba `isla` |
 | `vida` | Cómo pasa el tiempo. Ver [La vida del mundo](../guia/vida.md#ajustes-de-la-vida) |
+| `modulos` | Los [módulos](modulos/index.md) que la escena cambia respecto al proyecto |
 | `carpetas` | Carpetas de la escena; las subcarpetas con `/` |
-| `objetos` | Objetos colocados: `tipo`, `nombre`, `pos` (centro de la base, en metros) y `giro` (cuartos de vuelta, 0 = mira al sur). Opcionales: `carpeta`, `frases` (vecinos) y `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>) |
-| `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos de medio metro** |
+| `objetos` | Objetos colocados: `tipo`, `nombre`, `pos` (centro de la base, en metros) y `giro` (cuartos de vuelta, 0 = mira al sur). Opcionales: `carpeta`, `frases` (vecinos), `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>), `componentes` (ver [Componentes](componentes/index.md)) y `prefabricado` (el id del prefabricado del que es copia) |
+| `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos** de la rejilla del proyecto |
 
-El motor construye el mundo en tres pasos: genera la isla a partir de `isla`,
+El motor construye el mundo en tres pasos: genera el terreno a partir de `generador`,
 aplica encima los `cambios` y coloca los `objetos`.
 
-> <i class="fx fx-nota"></i> **Compatibilidad.** Los archivos de la Fase 1, que solo describían la isla
-> (sin `isla:` alrededor), se siguen abriendo.
+> <i class="fx fx-nota"></i> **Compatibilidad.** Los archivos con `isla:` y
+> `terreno:` de versiones anteriores, y los de la Fase 1, que solo
+> describían la isla, se siguen abriendo.
+
+## Prefabricados
+
+Archivo: `prefabricados/<id>.ron`
+
+```ron
+(
+    nombre: "Farola de la plaza",
+    tipo: "farola",                  // su modelo; "entidad" si no se ve
+    componentes: [
+        Luz((intensidad: 1.5, alcance: 10.0)),
+    ],
+    accion: Ninguna,                 // lo que pasa al usarlo (E)
+)
+```
+
+Ver [Prefabricados](../guia/entidades.md#prefabricados).
+
+## Acciones de entrada
+
+Archivo: `acciones.ron`. Ver [Acciones de entrada](../guia/acciones-entrada.md#en-el-archivo).
+
+## Sonidos
+
+Carpeta: `sonidos/`, con archivos WAV u OGG. Ver [Sonidos](../guia/sonidos.md).
 
 ## Objetos propios
 

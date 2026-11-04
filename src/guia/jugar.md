@@ -88,8 +88,11 @@ Lo que rompes jugando no cambia la escena. Al volver al editor, al empezar
 una partida nueva o al cargar una, el mundo vuelve a estar como lo
 construiste. Lo roto todavía no se guarda en las partidas.
 
-Para un juego en el que no se deba romper nada, apaga **Romper bloques** en
-los [ajustes de la vida](vida.md#ajustes-de-la-vida).
+Para un juego en el que no se deba romper nada, desactiva el módulo
+[Romper bloques](../referencia/modulos/romper-bloques.md) en el proyecto o
+en la escena. Los módulos [Líquidos](../referencia/modulos/liquidos.md) y
+[Escombros](../referencia/modulos/escombros.md) controlan el agua que corre
+y los trozos que caen.
 
 ## El punto de inicio
 

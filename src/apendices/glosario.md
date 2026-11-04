@@ -6,9 +6,14 @@
 | **Al usarlo (E)** | La acción de un objeto que el jugador usa mirándolo de cerca y pulsando <kbd>E</kbd>. |
 | **Ancla** | El punto de la pantalla al que está pegado un elemento de una interfaz. |
 | **Bloque** | Un cubo de 1 m, hecho de 2 × 2 × 2 cubitos. |
-| **Cubito** | La pieza más pequeña del mundo: un cubo de medio metro. |
+| **Componente** | Una pieza que da un comportamiento a una entidad: Luz, Zona, Controlador… Ver [Componentes](../referencia/componentes/index.md). |
+| **Cubito** | La pieza más pequeña del mundo. Mide 50 cm salvo que el proyecto elija otra [rejilla](../editor/ajustes-proyecto.md#rejilla-y-materiales). |
 | **Detalle de lejos** | Los trozos lejanos se dibujan con una forma más sencilla (cada casilla junta 2 × 2 × 2 cubitos) para que todo vaya más rápido. Ver [Rendimiento](../guia/rendimiento.md). |
 | **Espacio (de trabajo)** | Un reparto de paneles para un trabajo: Construir, Programar, Pixel art o uno propio. Ver [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md). |
+| **Entidad** | Cualquier cosa colocada en una escena, con nombre, posición, giro, un modelo opcional y componentes. Ver [Conceptos básicos](../conceptos/basicos.md). |
+| **Generador** | Lo que crea el terreno de una escena: vacío, plano, isla, colinas o cuevas. Ver [Generadores de terreno](../guia/generadores.md). |
+| **Módulo** | Una parte del motor que el proyecto activa o desactiva. Ver [Módulos](../referencia/modulos/index.md). |
+| **Prefabricado** | Una entidad guardada como recurso; sus copias siguen al original. Ver [Prefabricados](../guia/entidades.md#prefabricados). |
 | **Entrada (punto de)** | Un punto con nombre por donde se llega a una escena desde otra. |
 | **Escena inicial** | La escena donde empiezan las partidas nuevas (<i class="fx fx-estrella"></i>). |
 | **Escena** | Un mundo dentro de un proyecto (la isla, una cueva…). Se guarda en `mundos/`. |

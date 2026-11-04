@@ -33,6 +33,8 @@ se guardan en su propia carpeta:
 | Imágenes y paletas | `imagenes/`, `paletas/` | [Pixel art](../guia/pixel-art.md) |
 | Interfaces | `interfaces/` | [Interfaces](../guia/interfaces.md) |
 | Guiones y nodos | `guiones/` | [Nodos](../guia/nodos.md) y [Guiones en Lua](../guia/guiones.md) |
+| Prefabricados | `prefabricados/` | [Inspector](../guia/entidades.md#prefabricados) |
+| Sonidos | `sonidos/` | Arrastrando archivos WAV u OGG ([Sonidos](../guia/sonidos.md)) |
 
 Un mismo recurso se puede usar en todas las escenas del proyecto: al
 cambiarlo, cambia en todas.
@@ -44,6 +46,8 @@ miniatura de la pantalla de inicio. Se puede borrar sin perder nada del
 juego: el editor la vuelve a crear.
 
 ## Véase también
+
+- [Conceptos básicos](basicos.md)
 
 - [Archivos del proyecto](../referencia/archivos.md)
 - [Glosario](../apendices/glosario.md)

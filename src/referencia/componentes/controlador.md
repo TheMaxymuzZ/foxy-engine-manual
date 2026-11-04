@@ -1,0 +1,39 @@
+# Controlador de jugador
+
+El jugador maneja esta entidad. La partida empieza en ella, en lugar de en
+el *Punto de inicio*.
+
+| Propiedad | Campo | De fábrica | Descripción |
+|---|---|---|---|
+| Tipo | `tipo` | Primera persona | Cómo se maneja y desde dónde se ve (ver abajo) |
+| Andando | `velocidad` | 4,5 m/s | Velocidad al caminar |
+| Corriendo | `carrera` | 8 m/s | Velocidad con *Correr* |
+| Salto | `salto` | 1,33 m | Altura del salto. 0 = no salta |
+| Gravedad | `gravedad` | 24 m/s² | La de la Tierra es 9,8 |
+
+## Tipos
+
+| Tipo | En el archivo | Descripción |
+|---|---|---|
+| Primera persona | `PrimeraPersona` | Se ve con los ojos del personaje. El ratón mueve la mirada |
+| Tercera persona | `TerceraPersona` | La cámara va detrás del personaje, que se ve entero. Si una pared se interpone, la cámara se acerca |
+| Cenital | `Cenital` | Desde arriba. La cámara no gira; *Adelante* es hacia el norte |
+| Isométrico | `Isometrico` | En diagonal desde arriba, como un diorama |
+| Plataformas 2D | `Plataformas2D` | De lado. El personaje solo se mueve a izquierda y derecha y salta |
+| Cámara libre | `CamaraLibre` | Vuela y atraviesa todo. Útil para recorrer la escena |
+
+En los tipos en los que se ve el personaje, se usa el modelo de la entidad;
+una *Entidad vacía* se muestra con la figura de un vecino.
+
+Si hay varias entidades con controlador, se usa la primera de la lista
+**En la escena**. La distancia y la altura de la cámara se ajustan con el
+componente [Cámara](camara.md).
+
+```ron
+Controlador((tipo: TerceraPersona, velocidad: 5.0, salto: 1.5))
+```
+
+## Véase también
+
+- [Componentes](index.md)
+- [Entidades y componentes](../../guia/entidades.md)

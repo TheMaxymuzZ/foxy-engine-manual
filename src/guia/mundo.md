@@ -142,12 +142,9 @@ Sin nada elegido, el inspector muestra la **escena** entera.
 
 ### El terreno
 
-**Tipo** elige cómo se genera el suelo:
-
-| Tipo | Opciones |
-|---|---|
-| **Isla** | **Semilla** (otra semilla, otra isla), **Tamaño** de la isla (de 20 a 90 m de radio), **Colinas** (lo altas que son, de 2 a 30 m), **Árboles** (de 0, ninguno, a 1, un bosque) y **Muelle** (de madera, en la playa del sur) |
-| **Llano vacío** | **Lado**: un suelo de hierba cuadrado y completamente llano, de 32 a 256 m. Es el terreno de un proyecto vacío |
+**Generador** elige cómo se crea el suelo: **Vacío**, **Plano**, **Isla**,
+**Colinas** o **Cuevas**, cada uno con sus parámetros y los materiales de
+cada capa. Se describen en [Generadores de terreno](generadores.md).
 
 <i class="fx fx-girar"></i> **Regenerar el terreno** vuelve a crear el suelo
 con las opciones nuevas y **conserva** los objetos y los bloques que pusiste

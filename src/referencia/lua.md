@@ -14,6 +14,8 @@ Escríbelas en `guiones/mundo.lua`; todas son opcionales.
 | `al_nuevo_dia(dia)` | Al empezar un día | `dia`: número del día, desde 1 | — |
 | `al_cambiar_hora(hora)` | Al empezar cada hora | `hora`: entero de 0 a 23 | — |
 | `cada_segundo()` | Una vez por segundo de juego | — | — |
+| `al_pulsar(nombre)` | Al pulsar una [acción de entrada](../guia/acciones-entrada.md) propia | `nombre`: el de la acción | — |
+| *tu función*`(nombre)` | Las del componente [Guion](componentes/guion.md) de una entidad | `nombre`: el de la entidad | — |
 | `al_entrar_escena(nombre)` | Al llegar a otra escena | `nombre`: el de la escena | — |
 | *tu función*`(quien)` | Un botón o una zona con la acción *Llamar al guion* | `quien`: nombre del botón o la zona | — |
 
@@ -59,10 +61,32 @@ end
 
 | Función | Qué hace |
 |---|---|
-| `motor.sonar(nombre)` | Toca un efecto |
+| `motor.sonar(nombre)` | Toca un sonido: uno de ejemplo o uno de `sonidos/` |
 
-Sonidos: `paso`, `salto`, `caida`, `patada`, `hablar`, `trueno`, `pajaro`,
-`campana`, `clic`.
+Sonidos de ejemplo: `paso`, `salto`, `caida`, `patada`, `hablar`, `trueno`,
+`pajaro`, `campana`, `clic`. Ver [Sonidos](../guia/sonidos.md).
+
+### Entidades
+
+| Función | Qué hace |
+|---|---|
+| `motor.mover(nombre, x, y, z, segundos)` | Desplaza la entidad desde su sitio del editor. Con `0, 0, 0` vuelve a su sitio |
+| `motor.ocultar(nombre)` | La entidad deja de verse y de chocar |
+| `motor.mostrar(nombre)` | Vuelve a enseñarla |
+
+```lua
+function abrir_cofre(quien)
+  motor.mover("Tapa del cofre", 0, 0.5, 0, 0.6)
+  motor.sonar("campana")
+end
+```
+
+### Acciones de entrada
+
+| Función | Qué hace |
+|---|---|
+| `motor.accion(nombre)` | `true` mientras la acción está pulsada |
+| `motor.accion_pulsada(nombre)` | `true` solo en el momento de pulsarla |
 
 ### Escenas e interfaces
 
