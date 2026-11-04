@@ -27,6 +27,11 @@ Documentos/Foxy Engine/proyectos/Mi isla/
     sonidos/*.wav, *.ogg  sonidos propios
     .foxy/copias/         copias de seguridad hechas al actualizar el formato
     guiones/mundo.lua     el guion del mundo
+    guiones/mundo.nodos.ron  el grafo de nodos del juego
+    mundos/*.nodos.ron    el grafo de cada escena (junto a su escena)
+    grafos/*.nodos.ron    grafos de entidad
+    funciones/*.nodos.ron funciones hechas con nodos
+    nodos/*.lua           nodos escritos en Lua
     partidas/             partidas guardadas al jugar
     papelera/             escenas quitadas desde el mapa de escenas
     .papelera/            archivos quitados desde Archivos del proyecto
@@ -230,7 +235,7 @@ Las medidas van en puntos de una pantalla de diseño de **1280 × 720**.
 
 | Campo del elemento | Qué es |
 |---|---|
-| `tipo` | `Panel`, `Texto`, `Boton` o `Imagen` |
+| `tipo` | `Panel`, `Texto`, `Boton`, `Imagen` o `Barra` |
 | `nombre` | Para reconocerlo en la lista y en el guion |
 | `ancla` | A qué está pegado: `ArribaIzquierda`, `Arriba`, `ArribaDerecha`, `Izquierda`, `Centro`, `Derecha`, `AbajoIzquierda`, `Abajo` o `AbajoDerecha` |
 | `pos` | Distancia al punto del ancla, en puntos |
@@ -245,6 +250,7 @@ Las medidas van en puntos de una pantalla de diseño de **1280 × 720**.
 | `proporcion` | `true`: la imagen no se deforma y cabe entera |
 | `accion` | Lo que hace un botón. Ver [Acciones](acciones.md) |
 | `visible` | `false` lo esconde |
+| `valor`, `maximo` | En una barra: lo que la llena (`{vida}` o un número) y el valor con el que está llena |
 
 Todos los campos son opcionales: lo que no se escribe toma su valor por defecto.
 

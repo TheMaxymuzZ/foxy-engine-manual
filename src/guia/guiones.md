@@ -51,7 +51,12 @@ end
 | `al_nuevo_dia(dia)` | Cuando empieza un día nuevo |
 | `al_cambiar_hora(hora)` | Al empezar cada hora del juego. Recibe la hora en punto, de 0 a 23 |
 | `cada_segundo()` | Una vez por segundo |
+| `cada_fotograma(segundos)` | Unas 60 veces por segundo. Recibe los segundos desde el anterior |
 | `al_entrar_escena(nombre)` | Al llegar a otra escena |
+| `al_pulsar(accion)` | Al pulsar una [acción de entrada](acciones-entrada.md) |
+| `al_chocar(entidad)` | Cuando el jugador toca una entidad |
+| `al_entrar_zona(entidad)`, `al_salir_zona(entidad)` | Cuando el jugador entra o sale de una [zona](../referencia/componentes/zona.md) |
+| `al_recibir_dano(entidad, cantidad, de)` | Cuando algo hace daño a una entidad con `motor.danar` o con el nodo *Hacer daño* |
 
 No hace falta escribirlas todas: si una no está, el motor no hace nada.
 
@@ -112,6 +117,45 @@ function abrir_cofre(quien)
   motor.decir("¡Has encontrado 10 monedas!")
 end
 ```
+
+## Esperar sin parar el juego
+
+Las funciones que llama el motor pueden usar `motor.esperar(segundos)`:
+esa función se detiene y sigue después, pero el juego no se para.
+
+```lua
+function al_entrar_zona(entidad)
+  motor.decir("La trampa se activa…")
+  motor.esperar(2)
+  motor.danar("jugador", 20)
+end
+```
+
+## Guiones y nodos juntos
+
+Los guiones y los [nodos](nodos.md) funcionan a la vez y pueden hablar
+entre ellos:
+
+- Las variables **del juego** de los nodos son valores: léelas con
+  `motor.valor("vida")` y cámbialas con `motor.poner_valor`.
+- `motor.emitir("alarma", valor)` pone en marcha los nodos
+  *Al recibir un evento* con ese nombre.
+- **Pasar a código**, en el panel Nodos, copia el grafo del juego a
+  `mundo.lua` para seguir a mano. Ver
+  [Depurar y pasar a código](nodos-depurar.md#pasar-a-código).
+
+## Autocompletado
+
+Si escribes los guiones en un editor externo con LuaLS (por ejemplo,
+Visual Studio Code con la extensión *Lua*), genera las definiciones de la
+tabla `motor` y guárdalas en la carpeta del proyecto:
+
+```sh
+foxy-engine --definiciones-lua guiones/motor.lua
+```
+
+El editor reconocerá todas las funciones de `motor`, con sus parámetros y
+su ayuda. El motor no ejecuta ese archivo: solo lo lee tu editor.
 
 ## Errores
 

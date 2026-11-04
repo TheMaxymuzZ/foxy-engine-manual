@@ -5,6 +5,33 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR25: Nodos 2.0
+
+- **[Nodos 2.0](../guia/nodos.md)**: grafos del juego, de cada escena y de
+  entidad (con el componente
+  [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md)). Cables de
+  ejecución y cables de datos con tipo y color, con conversión automática.
+- **Variables** del grafo, de la entidad (con su valor en el Inspector) y
+  del juego (que se guardan con la partida y se ven en las interfaces).
+- **[Eventos y flujo](../guia/nodos-flujo.md)** nuevos: cada fotograma, al
+  pulsar una acción, al chocar, zonas, daño, temporizadores y eventos
+  propios; si, elegir, repetir, para cada, mientras, secuencia, esperar sin
+  parar el juego, solo una vez y puerta.
+- **[Funciones y bibliotecas](../guia/nodos-funciones.md)**: *Pasar a
+  función* convierte una selección en un nodo nuevo; las funciones se
+  importan de otros proyectos. **Nodos escritos en Lua** con una cabecera.
+- **Lienzo**: buscador al soltar un cable, comentarios, puntos de paso,
+  alinear y repartir, minimapa, copiar y pegar entre grafos y deshacer.
+- **[Depuración](../guia/nodos-depurar.md)** jugando: <kbd>F8</kbd> enseña
+  el grafo con los cables encendidos y los valores; puntos de parada con
+  <kbd>F9</kbd> y <kbd>F6</kbd>. *Ver el Lua* y *Pasar a código*.
+- Elemento **[Barra](../guia/interfaces.md#barras)** en las interfaces.
+- Funciones nuevas de Lua para entidades, vectores, esperas y eventos
+  (ver [API de Lua](../referencia/lua.md)).
+- La [referencia de nodos](../referencia/nodos.md) y las definiciones de
+  Lua para el autocompletado se generan desde el propio motor.
+- Los nodos de la versión anterior se convierten solos al abrirlos.
+
 ## 0.0.1-PR24: núcleo general
 
 - **Entidades y componentes**: cualquier cosa de una escena puede llevar

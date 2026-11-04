@@ -14,10 +14,30 @@ Escríbelas en `guiones/mundo.lua`; todas son opcionales.
 | `al_nuevo_dia(dia)` | Al empezar un día | `dia`: número del día, desde 1 | — |
 | `al_cambiar_hora(hora)` | Al empezar cada hora | `hora`: entero de 0 a 23 | — |
 | `cada_segundo()` | Una vez por segundo de juego | — | — |
+| `cada_fotograma(segundos)` | Cada fotograma | `segundos`: los que han pasado desde el anterior | — |
+| `al_chocar(entidad, otro)` | Cuando el jugador toca una entidad | `entidad`: la que se toca; `otro`: `0`, el jugador | — |
+| `al_entrar_zona(entidad, quien)`, `al_salir_zona(entidad, quien)` | Cuando el jugador entra o sale de una entidad con [Zona](componentes/zona.md) | `entidad`: la zona; `quien`: `0`, el jugador | — |
+| `al_recibir_dano(entidad, cantidad, de)` | Cuando `motor.danar` (o el nodo *Hacer daño*) apunta a una entidad | `entidad`, `cantidad` y quién lo hace | — |
 | `al_pulsar(nombre)` | Al pulsar una [acción de entrada](../guia/acciones-entrada.md) propia | `nombre`: el de la acción | — |
 | *tu función*`(nombre)` | Las del componente [Guion](componentes/guion.md) de una entidad | `nombre`: el de la entidad | — |
 | `al_entrar_escena(nombre)` | Al llegar a otra escena | `nombre`: el de la escena | — |
 | *tu función*`(quien)` | Un botón o una zona con la acción *Llamar al guion* | `quien`: nombre del botón o la zona | — |
+
+## Entidades en Lua
+
+Las funciones que reciben una **entidad** aceptan su nombre (`"Lobo"`), su
+número (el que dan `motor.entidad` y los eventos) o `"jugador"`. El número
+`0` es siempre el jugador. Las posiciones son **vectores**: tablas con `x`,
+`y` y `z`, en metros, que se suman, se restan y se multiplican por un
+número con `+`, `-` y `*`.
+
+```lua
+local lobo = motor.entidad("Lobo")
+local hacia = motor.posicion_jugador() - motor.posicion(lobo)
+if motor.longitud(hacia) < 5 then
+  motor.decir("¡El lobo está cerca!")
+end
+```
 
 ## La tabla `motor`
 
@@ -45,6 +65,7 @@ Escríbelas en `guiones/mundo.lua`; todas son opcionales.
 | Función | Qué hace |
 |---|---|
 | `motor.jugador()` | Devuelve `x, y, z` del jugador, en metros |
+| `motor.posicion_jugador()` | Dónde está el jugador, como vector |
 | `motor.vecinos()` | Una lista con los nombres de los vecinos |
 | `motor.vecino(nombre)` | Devuelve `x, y, z` de ese vecino, o `nil` si no existe |
 | `motor.llevar(nombre, x, y, z)` | El vecino camina hasta ese punto |
@@ -70,9 +91,21 @@ Sonidos de ejemplo: `paso`, `salto`, `caida`, `patada`, `hablar`, `trueno`,
 
 | Función | Qué hace |
 |---|---|
+| `motor.entidad(nombre)` | El número de la entidad que se llama así, o `nil` |
+| `motor.entidades(nombre)` | Una lista con todas las que se llaman así |
+| `motor.nombre(e)` | El nombre de una entidad |
+| `motor.posicion(e)` | Dónde está, como vector |
+| `motor.poner_posicion(e, v)` | La pone en ese sitio al momento |
+| `motor.mover_hacia(e, destino, velocidad)` | La acerca al destino a esa velocidad (metros por segundo; por defecto 3). Úsala en `cada_fotograma`. Devuelve `true` al llegar |
+| `motor.mirar_hacia(e, punto)` | La gira para que mire hacia ese punto |
+| `motor.ve(e, objetivo, alcance)` | `true` si el objetivo (por defecto, el jugador) está a menos de `alcance` metros (por defecto 8) y no está oculto |
 | `motor.mover(nombre, x, y, z, segundos)` | Desplaza la entidad desde su sitio del editor. Con `0, 0, 0` vuelve a su sitio |
 | `motor.ocultar(nombre)` | La entidad deja de verse y de chocar |
 | `motor.mostrar(nombre)` | Vuelve a enseñarla |
+| `motor.oculta(e)` | `true` si está oculta |
+| `motor.danar(e, cantidad, de)` | Pone en marcha `al_recibir_dano` y los nodos *Al recibir daño* |
+| `motor.variable(e, nombre)` | Una variable *de la entidad* de sus nodos |
+| `motor.poner_variable(e, nombre, valor)` | La cambia |
 
 ```lua
 function abrir_cofre(quien)
@@ -96,6 +129,7 @@ end
 | `motor.cambiar_escena(nombre, entrada)` | Va a otra escena. `entrada` es opcional: el nombre de un punto de entrada; sin él, al punto de inicio |
 | `motor.abrir_interfaz(nombre)` | Abre una interfaz de `interfaces/`. Si es un marcador escondido, lo vuelve a enseñar |
 | `motor.cerrar_interfaz(nombre)` | Sin nombre, cierra la interfaz de arriba del todo. Con nombre, cierra esa; si es un marcador, lo esconde |
+| `motor.partida_nueva()` | Empieza una partida nueva |
 
 ### Valores
 
@@ -106,14 +140,36 @@ interfaces enseñan escribiendo `{nombre}`.
 |---|---|
 | `motor.poner_valor(nombre, valor)` | Guarda un número, texto o booleano. `nil` lo borra |
 | `motor.valor(nombre)` | Lo devuelve (número si era un número), o `nil` si no existe |
+| `motor.sumar_valor(nombre, n)` | Le suma `n` (por defecto 1). Si no existía, empieza en 0 |
 
 Los booleanos se guardan como `"sí"` y `"no"`.
+
+Las variables **del juego** de los [nodos](../guia/nodos.md#variables)
+también son valores.
+
+### Tiempo, eventos y vectores
+
+| Función | Qué hace |
+|---|---|
+| `motor.esperar(segundos)` | Detiene la función que la llama durante esos segundos, sin parar el juego. Solo dentro de las funciones que llama el motor |
+| `motor.tiempo()` | Segundos de juego desde que empezó la partida |
+| `motor.emitir(evento, valor)` | Pone en marcha los nodos *Al recibir un evento* con ese nombre |
+| `motor.emitir_a(e, evento, valor)` | Lo mismo, solo para el grafo de esa entidad |
+| `motor.vector(x, y, z)` | Un vector nuevo |
+| `motor.longitud(v)`, `motor.normalizar(v)` | El largo de un vector y el mismo vector con largo 1 |
+| `motor.distancia(a, b)` | Metros entre dos puntos o dos entidades |
+| `motor.color(r, g, b)` | Un color como `"#ff8000"`, con componentes de 0 a 255 |
 
 ### Otros
 
 | Función | Qué hace |
 |---|---|
 | `motor.aleatorio(a, b)` | Un número entero al azar entre `a` y `b`, ambos incluidos |
+| `motor.imprimir(...)` | Como `print` |
+
+Para el autocompletado en un editor externo, genera las definiciones con
+`foxy-engine --definiciones-lua`. Ver
+[Guiones en Lua](../guia/guiones.md#autocompletado).
 
 ## Cómo se ejecuta
 

@@ -17,6 +17,17 @@ cargo run --release -- --juego
 | `--ayuda`, `-h` | Enseña la ayuda |
 | `--version`, `-V` | Enseña la versión |
 
+## Documentación de los nodos y de Lua
+
+Estas opciones escriben un archivo y terminan, sin abrir ninguna ventana.
+
+| Opción | Qué escribe |
+|---|---|
+| `--referencia-nodos <archivo.md>` | La [referencia de todos los nodos](nodos.md), en Markdown, a partir del catálogo del motor |
+| `--definiciones-lua <archivo.lua>` | Las definiciones de `motor.*` para el autocompletado de Lua en editores con LuaLS, como Visual Studio Code. Ver [Guiones en Lua](../guia/guiones.md#autocompletado) |
+
+Se pueden usar las dos a la vez.
+
 ## Capturas sin ventana
 
 Con `--captura` el motor dibuja una escena y la guarda como imagen PNG, **sin
@@ -47,7 +58,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `nodos`, `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo) o `ajustes` (los ajustes del proyecto) |
+| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo) o `ajustes` (los ajustes del proyecto) |
 | `--plantilla <nombre>` | Sin `--editor`: dibuja el mundo de una plantilla (`vacio-3d`, `isla-voxel` o `isla-de-ejemplo`) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto` |
 | `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |

@@ -38,7 +38,11 @@
 - [Escenas](guia/escenas.md)
 - [Interfaces](guia/interfaces.md)
 - [La vida del mundo](guia/vida.md)
-- [Nodos (sin código)](guia/nodos.md)
+- [Nodos](guia/nodos.md)
+    - [Eventos y flujo](guia/nodos-flujo.md)
+    - [Funciones, bibliotecas y nodos en Lua](guia/nodos-funciones.md)
+    - [Depurar y pasar a código](guia/nodos-depurar.md)
+    - [Tutorial: un enemigo que persigue](guia/tutorial-enemigo.md)
 - [Guiones en Lua](guia/guiones.md)
 - [Probar el juego](guia/jugar.md)
 - [Rendimiento](guia/rendimiento.md)
@@ -52,6 +56,7 @@
 # Referencia
 
 - [Atajos de teclado](referencia/atajos.md)
+- [Referencia de nodos](referencia/nodos.md)
 - [API de Lua](referencia/lua.md)
 - [Acciones](referencia/acciones.md)
 - [Componentes](referencia/componentes/index.md)

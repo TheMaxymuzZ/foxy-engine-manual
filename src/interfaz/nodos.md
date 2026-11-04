@@ -2,12 +2,22 @@
 
 ![El panel Nodos](../imagenes/capturas/panel-nodos.png)
 
-**Guiones sin código.** A la izquierda, las cajas que se pueden poner:
-*Cuándo* (lo que pasa), *Si* (una condición) y *Hacer* (una acción). Un clic en una
-la pone en el lienzo (o clic derecho en el lienzo), y se unen con cables. A la derecha, el Lua que sale de
-los nodos, para aprender cómo se escribiría.
+El editor de grafos de nodos: la forma de programar el juego sin escribir
+código.
 
-Se abre desde *Herramientas → Nodos* o en el espacio **Programar**, junto al
-panel [Código](codigo.md).
+- **Izquierda.** La lista de **grafos** del proyecto (el del juego, los de
+  escena, los de entidad, las funciones y los nodos en Lua), las
+  **variables** del grafo abierto, o la firma si es una función, y la
+  **paleta** con todos los nodos por categorías.
+- **Centro.** El lienzo, con su minimapa.
+- **Derecha.** Los ajustes y la ayuda del nodo elegido, o el Lua que sale
+  del grafo con **Ver el Lua**.
+- **Barra superior.** Guardar, deshacer y rehacer, alinear y repartir,
+  **Comentario**, **Pasar a función**, el zoom y **Pasar a código**.
 
-Todo se explica en [Nodos (sin código)](../guia/nodos.md).
+Se abre desde el panel [Proyecto](proyecto.md) (*Guion → Nodos*), desde
+*Herramientas → Nodos* o en el espacio **Programar**, junto al panel
+[Código](codigo.md). Jugando, <kbd>F8</kbd> enseña el grafo abierto encima
+del juego.
+
+Todo se explica en [Nodos](../guia/nodos.md).

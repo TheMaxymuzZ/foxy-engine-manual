@@ -65,4 +65,4 @@ pantalla de inicio.
 
 - [La interfaz del editor](editor.md): para qué sirve cada panel.
 - [Construir el mundo](../guia/mundo.md): pinceles, simetría y extrusión.
-- [Nodos (sin código)](../guia/nodos.md): dar comportamiento al juego.
+- [Nodos](../guia/nodos.md): dar comportamiento al juego sin escribir código.
