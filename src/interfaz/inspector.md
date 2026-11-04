@@ -25,6 +25,12 @@ valores. En una copia de un prefabricado, los componentes heredados indican
 *del prefabricado* y los cambiados *cambiado aquí*. Ver
 [Entidades y componentes](../guia/entidades.md).
 
+El componente **Guion** enseña además las **propiedades** del guion elegido,
+cada una con su campo, y los botones **Abrir en Código** y **Guion nuevo**.
+Ver [Guiones de entidad](../guia/guiones-entidad.md#propiedades).
+
+![Las propiedades de un guion de enemigo en el inspector](../imagenes/capturas/panel-inspector-guion.png)
+
 ## Módulos de la escena
 
 Cada [módulo](../referencia/modulos/index.md) puede estar *Como el

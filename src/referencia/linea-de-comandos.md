@@ -24,9 +24,10 @@ Estas opciones escriben un archivo y terminan, sin abrir ninguna ventana.
 | Opción | Qué escribe |
 |---|---|
 | `--referencia-nodos <archivo.md>` | La [referencia de todos los nodos](nodos.md), en Markdown, a partir del catálogo del motor |
-| `--definiciones-lua <archivo.lua>` | Las definiciones de `motor.*` para el autocompletado de Lua en editores con LuaLS, como Visual Studio Code. Ver [Guiones en Lua](../guia/guiones.md#autocompletado) |
+| `--referencia-lua <archivo.md>` | La [referencia de la API de Lua](api-lua.md), en Markdown, a partir del catálogo del motor |
+| `--definiciones-lua <archivo.lua>` | Las definiciones de la API (`motor.*`, `yo`, `propiedades` y las funciones que llama el motor) para editores con LuaLS, como Visual Studio Code o Zed. Ver [Editores externos](../guia/lua-editor-externo.md) |
 
-Se pueden usar las dos a la vez.
+Se pueden usar varias a la vez.
 
 ## Capturas sin ventana
 

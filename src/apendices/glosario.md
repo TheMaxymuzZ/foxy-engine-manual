@@ -20,7 +20,8 @@
 | **Función (de nodos)** | Un grupo de nodos guardado en `funciones/` que se usa como un nodo más. Ver [Funciones](../guia/nodos-funciones.md). |
 | **Generador** | Lo que crea el terreno de una escena: vacío, plano, isla, colinas o cuevas. Ver [Generadores de terreno](../guia/generadores.md). |
 | **Grafo** | Un conjunto de nodos unidos con cables: del juego, de una escena o de una entidad. Ver [Nodos](../guia/nodos.md). |
-| **Guion** | El código Lua del proyecto, en `guiones/mundo.lua`. |
+| **Guion** | Un archivo de código Lua en `guiones/`. El guion del mundo es `mundo.lua`; los guiones de entidad dan comportamiento a una entidad. Ver [Programar en Lua](../guia/programar-lua.md). |
+| **Guion de entidad** | Un guion que lleva una entidad con el componente Guion. Cada entidad tiene su propia copia. Ver [Guiones de entidad](../guia/guiones-entidad.md). |
 | **Inspector** | El [panel](../interfaz/inspector.md) del editor con las opciones de la herramienta y de lo que tengas elegido. |
 | **Interfaz** | Algo que se dibuja encima del juego: un menú, un marcador, un cartel. |
 | **Llano** | Un terreno de hierba completamente plano, sin isla ni mar a la vista. Es el de un proyecto vacío. |
@@ -28,6 +29,7 @@
 | **Material** | De qué está hecho un cubito: hierba, piedra, madera… |
 | **Mipmaps** | Copias cada vez más pequeñas de una textura, que se usan de lejos para que no parpadee. |
 | **Módulo** | Una parte del motor que el proyecto activa o desactiva. Ver [Módulos](../referencia/modulos/index.md). |
+| **Módulo (de Lua)** | Un guion que devuelve funciones para otros guiones, que lo cargan con `require`. |
 | **Nine-slice (estirar en nueve partes)** | Forma de estirar una imagen sin deformar sus esquinas. |
 | **Nodo** | Una caja de un grafo que hace una sola cosa. Ver la [Referencia de nodos](../referencia/nodos.md). |
 | **Objeto propio** | Un objeto hecho con el creador de objetos, guardado en `objetos/`. |
@@ -39,9 +41,11 @@
 | **Pincel** | La forma (cubo o esfera) y el tamaño con los que se ponen, quitan o pintan bloques. |
 | **Plantilla** | El punto de partida de un proyecto nuevo: Vacío 3D, Isla vóxel o Isla de ejemplo. Ver [Crear un proyecto](../empezar/crear-proyecto.md). |
 | **Prefabricado** | Una entidad guardada como recurso; sus copias siguen al original. Ver [Prefabricados](../guia/entidades.md#prefabricados). |
+| **Propiedad (de un guion)** | Un valor de la tabla `propiedades` de un guion de entidad, que se ajusta en el inspector de cada entidad. |
 | **Proyecto** | La carpeta de un juego, con todas sus escenas, objetos, imágenes e interfaces. |
-| **Punto de parada** | Un nodo marcado para que el juego se detenga justo antes de ejecutarlo. Ver [Depurar](../guia/nodos-depurar.md#puntos-de-parada). |
+| **Punto de parada** | Un nodo o una línea de un guion marcados para que el juego se detenga justo antes de ejecutarlos. Ver [Depurar los nodos](../guia/nodos-depurar.md#puntos-de-parada) y [el depurador de Lua](../guia/lua-depurar.md#el-depurador). |
 | **Registro** | El [panel](../interfaz/registro.md) con todos los avisos del editor; y el archivo `registro.txt`, donde el motor apunta lo que hace al abrirse y los errores. |
+| **Recarga en caliente** | Volver a cargar un guion al guardarlo, con el juego en marcha y sin reiniciar. |
 | **RON** | El formato de texto de los archivos `.ron` de Foxy Engine. |
 | **Trozo** | Un pedazo del mundo de 32 × 32 × 32 cubitos. El motor dibuja y actualiza el mundo por trozos. |
 | **Valor** | Un dato con nombre que pone el guion (`motor.poner_valor`) y que se guarda con la partida. |

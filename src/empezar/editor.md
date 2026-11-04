@@ -23,7 +23,7 @@ un clic arriba en el centro:
 | Espacio | Para qué | Paneles |
 |---|---|---|
 | **Construir** | Hacer el mundo: bloques, objetos, terreno | Proyecto, En la escena, Vista e Inspector |
-| **Programar** | Escribir el guion o los nodos y probarlos | Proyecto, Código y Nodos, Vista, Registro e Inspector |
+| **Programar** | Escribir guiones o nodos, probarlos y depurarlos | Proyecto, Código y Nodos, Vista, Consola, Depurador, Inspector y Registro |
 | **Pixel art** | Dibujar imágenes y texturas | Proyecto, Pixel art, Vista y Materiales |
 
 | Programar | Pixel art |
@@ -41,7 +41,9 @@ Cada espacio **recuerda cómo lo dejaste** en cada proyecto. Más espacios
 | [Proyecto](../interfaz/proyecto.md) | Todo lo que tiene el proyecto: escenas, interfaces, objetos, imágenes y guion |
 | [En la escena](../interfaz/escena.md) | Lo que hay en la escena abierta, en carpetas |
 | [Inspector](../interfaz/inspector.md) | Las opciones de la herramienta y de lo que tengas elegido |
-| [Código](../interfaz/codigo.md) | El guion en Lua |
+| [Código](../interfaz/codigo.md) | Los guiones en Lua, con pestañas y autocompletado |
+| [Consola](../interfaz/consola.md) | Los `print()` y errores de los guiones, y Lua contra el juego |
+| [Depurador](../interfaz/depurador.md) | Puntos de parada, paso a paso y variables de los guiones |
 | [Nodos](../interfaz/nodos.md) | Guiones sin código, con cajas y cables |
 | [Archivos](../interfaz/archivos.md) | Las carpetas y archivos del proyecto |
 | [Materiales](../interfaz/materiales.md) | La paleta de materiales del mundo |

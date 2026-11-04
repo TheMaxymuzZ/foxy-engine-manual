@@ -61,7 +61,7 @@ Al jugar, los vecinos:
 ![Hablando con un vecino](../imagenes/capturas/fase4-hablar.png)
 
 Con un guion puedes hacer que digan otra cosa según la hora o el tiempo, o
-llevarlos a otro sitio. Mira [Guiones en Lua](guiones.md).
+llevarlos a otro sitio. Mira [Guion del mundo](guiones.md).
 
 ## Sonido y música
 

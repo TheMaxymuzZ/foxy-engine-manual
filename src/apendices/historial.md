@@ -5,6 +5,27 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR26: Código
+
+- **[Panel Código](../interfaz/codigo.md)** nuevo: pestañas, vista dividida,
+  colores de Lua, números de línea, plegado, buscar y reemplazar,
+  autocompletado de toda la API, errores al escribir e ir a la definición.
+- **[Guiones de entidad](../guia/guiones-entidad.md)**: el componente Guion
+  elige un archivo de `guiones/`, cada entidad tiene su copia y sus
+  **propiedades** se ajustan en el inspector. Módulos propios con
+  `require`. Plantillas de entidad vacía, enemigo, puerta, recogible y
+  módulo.
+- **[Recarga en caliente](../guia/lua-depurar.md#recargar-sin-reiniciar)**:
+  al guardar con el juego en marcha, sin reiniciar y sin perder las
+  variables.
+- **[Consola](../interfaz/consola.md)** que ejecuta Lua contra el juego y
+  **[Depurador](../interfaz/depurador.md)** con puntos de parada, paso a
+  paso y variables. Ventana **Código** con <kbd>F7</kbd> mientras se juega.
+- **[Editores externos](../guia/lua-editor-externo.md)**: VS Code y Zed con
+  el mismo autocompletado, y los cambios de fuera se recargan solos.
+- [Referencia de la API de Lua](../referencia/api-lua.md) generada a partir
+  del motor (`--referencia-lua`).
+
 ## 0.0.1-PR25: Nodos 2.0
 
 - **[Nodos 2.0](../guia/nodos.md)**: grafos del juego, de cada escena y de

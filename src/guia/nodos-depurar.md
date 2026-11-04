@@ -85,5 +85,5 @@ necesites.
 ## Véase también
 
 - [Nodos](nodos.md)
-- [Guiones en Lua](guiones.md)
+- [Programar en Lua](programar-lua.md)
 - [Probar el juego](jugar.md)

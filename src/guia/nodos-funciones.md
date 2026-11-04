@@ -103,5 +103,5 @@ y la línea.
 ## Véase también
 
 - [Nodos](nodos.md)
-- [Guiones en Lua](guiones.md)
+- [Programar en Lua](programar-lua.md)
 - [API de Lua](../referencia/lua.md)

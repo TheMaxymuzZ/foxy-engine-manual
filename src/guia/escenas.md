@@ -107,6 +107,6 @@ Es la forma más natural de entrar en un edificio.
 
 - Un **botón** con la acción *Ir a otra escena*. Mira [Interfaces](interfaces.md).
 - En Lua: `motor.cambiar_escena("cueva", "boca")`. Al llegar, el motor llama a
-  `al_entrar_escena(nombre)`. Mira [Guiones en Lua](guiones.md).
+  `al_entrar_escena(nombre)`. Mira [Guion del mundo](guiones.md).
 
 Las partidas guardadas recuerdan en qué escena estaba el jugador.

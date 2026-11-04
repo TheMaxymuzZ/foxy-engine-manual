@@ -309,11 +309,16 @@ Todos los campos (color, texturas, luz, metálico, pulido, transparencia,
 atravesable, golpes y peso) están en
 [Materiales › `materiales.ron`](materiales.md#materialesron).
 
-## Guion
+## Guiones
 
-Archivo: `guiones/mundo.lua`
+Archivos: `guiones/mundo.lua` (el guion del mundo) y `guiones/<nombre>.lua`
+(guiones de entidad y módulos; pueden ir en subcarpetas).
 
-Código Lua. Ver [Guiones en Lua](../guia/guiones.md) y [API de Lua](lua.md).
+Código Lua. Ver [Programar en Lua](../guia/programar-lua.md) y [API de Lua](lua.md).
+
+Para los editores externos, el motor escribe además `.foxy/lua/foxy.lua`
+(definiciones de la API) y `.luarc.json` (configuración de LuaLS). Ver
+[Editores externos](../guia/lua-editor-externo.md).
 
 ## Partidas
 
