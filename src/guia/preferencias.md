@@ -11,6 +11,9 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
   se refresca, y la cámara se mueve suave, **sin tirones**. Viene activada.
   Quítala solo si el motor se queda congelado en tu ordenador.
 - **Enseñar los fotogramas por segundo** en la barra de abajo.
+- **Detalle de lejos** y desde cuántos metros: los trozos lejanos se dibujan
+  con menos detalle, para que todo vaya más rápido. Ver
+  [Rendimiento](rendimiento.md#detalle-de-lejos).
 - **Tamaño de los paneles**: más grande si los textos se ven pequeños.
 
 > <i class="fx fx-nota"></i> En Mac la sincronía se usa solo con la ventana

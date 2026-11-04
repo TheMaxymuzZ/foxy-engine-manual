@@ -77,6 +77,7 @@
 .chapter a[href$="guia/vida.html"]::before { --fx: url("../imagenes/iconos/vida.svg"); }
 .chapter a[href$="guia/guiones.html"]::before { --fx: url("../imagenes/iconos/guion.svg"); }
 .chapter a[href$="guia/jugar.html"]::before { --fx: url("../imagenes/iconos/mando.svg"); }
+.chapter a[href$="guia/rendimiento.html"]::before { --fx: url("../imagenes/iconos/chip.svg"); }
 .chapter a[href$="referencia/atajos.html"]::before { --fx: url("../imagenes/iconos/teclado.svg"); }
 .chapter a[href$="referencia/lua.html"]::before { --fx: url("../imagenes/iconos/guion.svg"); }
 .chapter a[href$="referencia/acciones.html"]::before { --fx: url("../imagenes/iconos/usar.svg"); }

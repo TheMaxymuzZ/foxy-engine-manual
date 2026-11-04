@@ -5,6 +5,16 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR21: rendimiento
+
+- **[Detalle de lejos](../guia/rendimiento.md#detalle-de-lejos)**: los
+  trozos lejanos se dibujan con menos detalle (la isla de prueba, vista desde
+  fuera, pasa de 304 000 a unos 77 000 triángulos).
+- Las texturas de los bloques llevan **mipmaps**: de lejos ya no parpadean.
+- Ventana **[Rendimiento](../guia/rendimiento.md)** (*Ver → Rendimiento*),
+  con una gráfica de los fotogramas, lo que se dibuja y cómo iría en otros
+  ordenadores. Con **Notar cómo va**, el editor se pone a su ritmo.
+
 ## 0.0.1-PR20: nodos
 
 - **[Nodos](../guia/nodos.md)**: guiones sin código, con cajas *Cuándo*,

@@ -23,6 +23,7 @@
 - [Nodos (sin código)](guia/nodos.md)
 - [Guiones en Lua](guia/guiones.md)
 - [Probar el juego](guia/jugar.md)
+- [Rendimiento](guia/rendimiento.md)
 - [Preferencias y teclas](guia/preferencias.md)
 
 # Referencia

@@ -15,6 +15,18 @@ Seguramente sigue abierta la versión anterior. En Mac:
 3. Abre **Foxy Engine.app** desde `Documentos/Foxy Engine`, no desde una copia
    antigua del Dock o de *Descargas*.
 
+## El mundo va lento o a tirones
+
+1. Abre **Ver → Rendimiento** y mira los fotogramas por segundo y los
+   triángulos desde el sitio donde va peor.
+2. Comprueba que está activado el **detalle de lejos** y prueba a bajar su
+   distancia.
+3. Si el «peor» fotograma es mucho más alto que la media, revisa que la
+   **sincronía vertical** esté activada en
+   [Preferencias](../guia/preferencias.md).
+
+Más en [Rendimiento](../guia/rendimiento.md).
+
 ## Windows: el motor no se abre o se cierra solo
 
 Desde la versión 0.0.1-PR15, si el motor se cierra por un error, sale una

@@ -56,6 +56,8 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | `--jugar` | Como *Jugar aquí* |
 | `--romper <x,y,z>` | Jugando, rompe el bloque de ese punto, en metros. Se puede repetir |
 | `--esperar <s>` | Jugando, segundos que pasan antes de la captura (de 0 a 60) |
+| `--rendimiento` | Con la ventana [Rendimiento](../guia/rendimiento.md) abierta (mide unos fotogramas de verdad) |
+| `--sin-lejos` | Dibuja todo con todo el detalle, sin el [detalle de lejos](../guia/rendimiento.md#detalle-de-lejos) |
 
 ### Capturas del juego
 
