@@ -47,8 +47,10 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces) o `vacio` (un proyecto vacío recién creado) |
-| `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar` u `objeto` |
+| `--pestana <nombre>` | `mundo`, `guion`, `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar` o `importado` |
+| `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto` |
+| `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |
+| `--modelo <archivo>` | Un `.vox` o `.qb` para `--pestana importar` (la ventana) o `importado` (ya importado) |
 | `--raton x,y` | Dónde está el ratón, en píxeles |
 | `--elegir <n>` | Elige el objeto número `n` (desde 1) |
 | `--jugar` | Como *Jugar aquí* |

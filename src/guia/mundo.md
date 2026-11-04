@@ -15,6 +15,7 @@ tecla:
 | <i class="fx fx-poner"></i> | **Poner bloques** | <kbd>B</kbd> | Clic o arrastra para poner bloques encima de lo que tocas |
 | <i class="fx fx-quitar"></i> | **Quitar bloques** | <kbd>E</kbd> | Clic o arrastra para cavar. Bajo el nivel del mar el hueco se llena de agua |
 | <i class="fx fx-pintar"></i> | **Pintar** | <kbd>P</kbd> | Cambia el material de lo que ya hay, sin añadir ni quitar |
+| <i class="fx fx-extruir"></i> | **Extruir** | <kbd>X</kbd> | Clic en una cara para sacar una capa más de toda esa cara (o meterla) |
 | <i class="fx fx-colocar"></i> | **Colocar objetos** | <kbd>O</kbd> | Pone casas, árboles, vecinos, pelotas… |
 
 Las opciones de cada herramienta salen en el **inspector**, a la derecha.
@@ -38,6 +39,37 @@ trabajar al detalle, cubito a cubito.
 > el pincel se queda en la capa donde empezó la pincelada. Así puedes pintar
 > un suelo plano entero sin que vaya subiendo encima de lo que acabas de
 > poner.
+
+## Extruir
+
+Con <i class="fx fx-extruir"></i> **Extruir** (<kbd>X</kbd>) un clic en una
+cara coge **toda la parte de esa cara que tiene el mismo material y está al
+aire**, y le añade una capa de un cubito. Antes de hacer clic se ve en
+amarillo la capa que saldría. Es la forma rápida de levantar una pared
+entera, engordar un tejado o sacar un suelo.
+
+En el inspector se elige **Hacia fuera** (añade una capa) o **Hacia dentro**
+(quita la capa de la cara). Cada clic es una capa: al arrastrar no se sigue
+extruyendo.
+
+## Simetría
+
+En las opciones del pincel (también al extruir) está la
+<i class="fx fx-simetria"></i> **Simetría**, con un botón para cada eje:
+**X**, **Y** y **Z**. Con un eje encendido, todo lo que pones, quitas,
+pintas o extruyes a un lado del **espejo** se repite al otro lado, como en
+un espejo. Con dos o tres ejes se repite en cada cuarto (u octavo).
+
+El espejo se ve como una lámina morada fina. Empieza en el centro del
+mundo, y se mueve de dos formas:
+
+- Cambiando su número (**Espejo en X**…), en metros, de cuarto en cuarto de
+  metro.
+- Con **Poner el espejo donde mira la cámara**: el espejo pasa por el
+  cubito que hay en el centro de la pantalla. Así, para hacer una casa
+  simétrica, mira al centro de su fachada y pulsa el botón.
+
+![Extruir con simetría](../imagenes/capturas/extruir-simetria.png)
 
 ## Colocar objetos
 

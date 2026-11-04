@@ -19,6 +19,8 @@
 .fx-poner { --fx: url("../imagenes/iconos/poner.svg"); }
 .fx-quitar { --fx: url("../imagenes/iconos/quitar.svg"); }
 .fx-pintar { --fx: url("../imagenes/iconos/pintar.svg"); }
+.fx-extruir { --fx: url("../imagenes/iconos/extruir.svg"); }
+.fx-simetria { --fx: url("../imagenes/iconos/simetria.svg"); }
 .fx-colocar { --fx: url("../imagenes/iconos/colocar.svg"); }
 .fx-vecino { --fx: url("../imagenes/iconos/vecino.svg"); }
 .fx-zona { --fx: url("../imagenes/iconos/zona.svg"); }

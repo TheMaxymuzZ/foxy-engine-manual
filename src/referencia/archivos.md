@@ -102,7 +102,7 @@ Archivo: `objetos/<id>.ron`
 ```ron
 (
     nombre: "Farolillo",
-    tamano: (4, 8, 4),          // ancho, alto y fondo, en cubitos (máx. 32 = 16 m)
+    tamano: (4, 8, 4),          // ancho, alto y fondo, en cubitos (máx. 64 = 32 m)
     cubitos: [
         (1, 0, 1, 2, Madera),   // (x, y, z, cuántos seguidos hacia +x, material)
         (1, 1, 1, 2, Madera),

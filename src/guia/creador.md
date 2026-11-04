@@ -31,8 +31,9 @@ peana no es parte del objeto), y sus opciones:
 | Opción | Qué hace |
 |---|---|
 | **Nombre** | El que se ve en *Mis objetos* |
-| **Tamaño** | Ancho, alto y fondo de la caja del objeto, hasta 16 m por lado |
-| **Pincel** | Poner, quitar o pintar, igual que en el mundo |
+| **Tamaño** | Ancho, alto y fondo de la caja del objeto, hasta 64 cubitos (32 m) por lado |
+| **Pincel** | Poner, quitar, pintar o [extruir](mundo.md#extruir), igual que en el mundo |
+| <i class="fx fx-simetria"></i> **Simetría** | X, Y y Z. El espejo está siempre en el centro del objeto: ideal para personajes, barcos o muebles |
 | **Material** | Cualquier material del motor |
 | <i class="fx fx-guardar"></i> **Guardar objeto** | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> |
 | <i class="fx fx-colocar"></i> **Colocarlo en el mundo** | Vuelve a la escena con este objeto listo para colocar |
@@ -41,6 +42,10 @@ peana no es parte del objeto), y sus opciones:
 La vista se gira con el **botón derecho** o con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>
 + ratón, y la rueda acerca y aleja. <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd>
 deshace.
+
+> <i class="fx fx-consejo"></i> **Consejo.** Si ya tienes modelos hechos en
+> MagicaVoxel o Qubicle, [impórtalos](importar.md) y sigue trabajándolos
+> aquí.
 
 ## Cambios en vivo
 

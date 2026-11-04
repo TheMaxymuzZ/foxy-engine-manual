@@ -28,6 +28,7 @@ editor las teclas principales.
 | <kbd>B</kbd> | Poner bloques |
 | <kbd>E</kbd> | Quitar bloques |
 | <kbd>P</kbd> | Pintar |
+| <kbd>X</kbd> | Extruir |
 | <kbd>O</kbd> | Colocar objetos |
 | <kbd>[</kbd> / <kbd>]</kbd> | Pincel más pequeño / más grande |
 

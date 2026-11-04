@@ -5,6 +5,17 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR17: importar modelos, extruir y simetría
+
+- **[Importar modelos](../guia/importar.md)** de MagicaVoxel (`.vox`) y
+  Qubicle (`.qb`), como objeto propio o directamente en la escena, con un
+  material propio para cada color.
+- Herramienta **[Extruir](../guia/mundo.md#extruir)** (<kbd>X</kbd>): saca o
+  mete una capa de toda una cara.
+- **[Simetría](../guia/mundo.md#simetría)** en X, Y y Z al poner, quitar,
+  pintar y extruir, en el mundo y en el creador de objetos.
+- Los objetos propios pueden medir hasta 64 cubitos (32 m) de lado.
+
 ## 0.0.1-PR16: materiales, luces y archivos
 
 - **[Paleta de materiales](../guia/materiales.md)**: materiales propios con

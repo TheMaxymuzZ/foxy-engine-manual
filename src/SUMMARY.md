@@ -13,6 +13,7 @@
 - [Construir el mundo](guia/mundo.md)
 - [Ordenar la escena](guia/carpetas.md)
 - [Crear objetos propios](guia/creador.md)
+- [Importar modelos](guia/importar.md)
 - [Materiales](guia/materiales.md)
 - [Pixel art](guia/pixel-art.md)
 - [Archivos del proyecto](guia/archivos.md)
