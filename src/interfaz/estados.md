@@ -1,9 +1,18 @@
 # Estados
 
-![El panel Estados con la máquina de un personaje](../imagenes/capturas/panel-estados.png)
-
 **La máquina de estados** del componente Animador de la entidad elegida: qué
 animación usa en cada momento y cuándo cambia de una a otra.
+
+![El panel Estados con la máquina de un personaje](../imagenes/capturas/panel-estados.png)
+
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Barra** | **Estado**, **Transición** y **Personaje** (una máquina ya hecha) |
+| 2 | **Estado inicial** | El estado con <i class="fx fx-jugar"></i> es con el que empieza la máquina |
+| 3 | **Transición** | Una flecha con su condición |
+| 4 | **Cualquier estado** | Las flechas que salen de aquí valen desde todos los estados |
+| 5 | **Lo elegido** | Los ajustes del estado o la flecha elegidos, o del Animador |
+| 6 | **Parámetros** | Los valores que pone el motor y que usan las condiciones |
 
 | Parte | Qué hace |
 |---|---|

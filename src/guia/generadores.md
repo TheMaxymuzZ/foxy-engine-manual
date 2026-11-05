@@ -18,7 +18,7 @@ sección **Terreno** de la escena:
 3. Pulsa **Regenerar el terreno**. Las entidades y los bloques puestos a
    mano se conservan.
 
-> <i class="fx fx-aviso"></i> **Atención.** Regenerar el terreno no se puede
+> <i class="fx fx-aviso"></i> **Importante.** Regenerar el terreno no se puede
 > deshacer.
 
 ## Generadores
@@ -66,7 +66,7 @@ generador: (
 ),
 ```
 
-> <i class="fx fx-nota"></i> **Compatibilidad.** Las escenas de versiones
+> <i class="fx fx-nota"></i> **Nota.** Las escenas de versiones
 > anteriores, con `isla:` y `terreno:`, se siguen abriendo y se guardan con
 > los nombres nuevos.
 

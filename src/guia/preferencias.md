@@ -19,7 +19,7 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
   verde, morado, rosa o amarillo). Ver
   [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md#tema-color-y-tamaño).
 
-> <i class="fx fx-nota"></i> En Mac la sincronía se usa solo con la ventana
+> <i class="fx fx-nota"></i> **Nota.** En Mac la sincronía se usa solo con la ventana
 > delante: al cambiar a otra ventana, el motor la quita para no quedarse
 > esperando a una ventana tapada. Si alguna vez pedir una imagen tarda
 > demasiado, la quita sola hasta que cierres el motor.

@@ -15,6 +15,9 @@ explica [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md).
 | **En medio** | Los **paneles** |
 | **Abajo** | La **barra de estado** |
 
+Los menús, los botones de la barra superior y la barra de estado se
+describen en [Menús y barra de estado](../interfaz/menus.md).
+
 ## Los espacios
 
 Un espacio es un reparto de paneles pensado para un trabajo. Se cambia con
@@ -50,9 +53,9 @@ se abren en el espacio **2D**.
 | [Archivos](../interfaz/archivos.md) | Las carpetas y archivos del proyecto |
 | [Materiales](../interfaz/materiales.md) | La paleta de materiales del mundo |
 | [Pixel art](../interfaz/pixel-art.md) | Las imágenes, paletas y texturas del proyecto |
-| [Casillas](../guia/casillas.md) | En 2D: el juego de casillas para pintar, sus choques y sus autocasillas |
-| [Capas](../guia/casillas.md#capas) | En 2D: las capas de la escena y sus ajustes |
-| [Sprites](../guia/sprites.md) | En 2D: cortar hojas de sprites, el punto de anclaje y las animaciones |
+| [Casillas](../interfaz/casillas.md) | En 2D: el juego de casillas para pintar, sus choques y sus autocasillas |
+| [Capas](../interfaz/capas.md) | En 2D: las capas de la escena y sus ajustes |
+| [Sprites](../interfaz/sprites.md) | En 2D: cortar hojas de sprites, el punto de anclaje y las animaciones |
 | [Animación](../interfaz/animacion.md) | La línea de tiempo: claves, curvas y sucesos de una animación o una cinemática |
 | [Estados](../interfaz/estados.md) | La máquina de estados del Animador de la entidad elegida |
 | [Animaciones](../interfaz/animaciones.md) | Todas las animaciones y cinemáticas del proyecto |

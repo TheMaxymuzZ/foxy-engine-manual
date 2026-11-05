@@ -83,7 +83,7 @@ Actions fabrica el programa y lo guarda como un **artefacto** llamado
    **«Windows protegió su PC»** porque el programa todavía no está firmado.
    Pulsa **Más información → Ejecutar de todas formas**.
 
-> <i class="fx fx-aviso"></i> **Atención.** Los artefactos de GitHub
+> <i class="fx fx-aviso"></i> **Importante.** Los artefactos de GitHub
 > caducan a los **90 días**. Si el enlace ya no está, descarga el de una
 > ejecución más reciente.
 

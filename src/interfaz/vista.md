@@ -1,11 +1,18 @@
 # Vista
 
-![La Vista](../imagenes/capturas/panel-vista.png)
-
 La Vista es el panel del centro: **la escena en 3D**, donde se construye.
 No se puede cerrar, pero sí [maximizar o sacar a otra ventana](../editor/espacio-de-trabajo.md),
 por ejemplo para tenerla en un segundo monitor mientras programas en el
 primero.
+
+![La Vista](../imagenes/capturas/panel-vista.png)
+
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Pestañas de documentos** | La escena y los objetos, imágenes e interfaces abiertos. Un punto (•) marca los cambios sin guardar |
+| 2 | **Ayuda de la herramienta** | Qué hace la herramienta activa con el ratón |
+| 3 | **Tira de herramientas** | Cursor, Elegir y mover, Poner, Quitar, Pintar y Colocar objetos (ver la tabla de abajo) |
+| 4 | **Hora y velocidad** | La hora del día en el editor y la velocidad de la cámara |
 
 ## Qué tiene
 

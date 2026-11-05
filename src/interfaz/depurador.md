@@ -5,6 +5,16 @@ llegado ahí y el valor de todas las variables.
 
 ![El panel Depurador, parado en un guion de enemigo](../imagenes/capturas/panel-depurador.png)
 
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Pasos** | **Seguir**, **Siguiente**, **Entrar**, **Salir** y **Pausar** |
+| 2 | **Dónde está parado** | El guion y la línea |
+| 3 | **Pila de llamadas** | Las funciones por las que se ha llegado ahí |
+| 4 | **Locales** | Las variables de la función |
+| 5 | **De fuera de la función** | Las variables `local` del guion que usa la función |
+| 6 | **Del guion** | Las variables propias del guion, como `yo` |
+| 7 | **Propiedades** | Los valores de la tabla `propiedades` para esta entidad |
+
 Está en el espacio **Programar**, en *Ventana → Depurador* y, jugando, en la
 ventana **Código** (<kbd>F7</kbd>), que se abre sola al pararse.
 

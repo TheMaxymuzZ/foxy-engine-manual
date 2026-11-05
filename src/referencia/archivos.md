@@ -155,9 +155,8 @@ Archivo: `mundos/<escena>.ron`
 El motor construye el mundo en tres pasos: genera el terreno a partir de `generador`,
 aplica encima los `cambios` y coloca los `objetos`.
 
-> <i class="fx fx-nota"></i> **Compatibilidad.** Los archivos con `isla:` y
-> `terreno:` de versiones anteriores, y los de la Fase 1, que solo
-> describían la isla, se siguen abriendo.
+> <i class="fx fx-nota"></i> **Nota.** Los archivos de versiones anteriores,
+> con `isla:` o `terreno:` o que solo describían la isla, se siguen abriendo.
 
 ## Prefabricados
 

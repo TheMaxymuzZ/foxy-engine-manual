@@ -43,6 +43,7 @@ Estas opciones escriben un archivo y terminan, sin abrir ninguna ventana.
 |---|---|
 | `--referencia-nodos <archivo.md>` | La [referencia de todos los nodos](nodos.md), en Markdown, a partir del catálogo del motor |
 | `--referencia-lua <archivo.md>` | La [referencia de la API de Lua](api-lua.md), en Markdown, a partir del catálogo del motor |
+| `--referencia-componentes <carpeta>` | Pone al día las tablas de propiedades de las [páginas de componentes](componentes/index.md) a partir del catálogo del motor |
 | `--definiciones-lua <archivo.lua>` | Las definiciones de la API (`motor.*`, `yo`, `propiedades` y las funciones que llama el motor) para editores con LuaLS, como Visual Studio Code o Zed. Ver [Editores externos](../guia/lua-editor-externo.md) |
 
 Se pueden usar varias a la vez.

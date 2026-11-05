@@ -5,6 +5,14 @@ y ejecuta Lua contra el juego en marcha.
 
 ![El panel Consola](../imagenes/capturas/panel-consola.png)
 
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Filtros** | **Todo**, **Errores** o solo **print()** |
+| 2 | **Vaciar** | Borra los mensajes |
+| 3 | **Mensajes** | Lo que escriben los guiones, con la hora |
+| 4 | **Error** | Un clic abre el guion en la línea del error |
+| 5 | **Lua en vivo** | Escribe una línea de Lua y pulsa <kbd>Intro</kbd> para ejecutarla contra el juego |
+
 Está en el espacio **Programar**, en *Ventana → Consola* y, jugando, en la
 ventana **Código** (<kbd>F7</kbd>).
 

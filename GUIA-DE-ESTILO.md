@@ -46,7 +46,7 @@ escriben **en negrita** y exactamente como en el editor.
 | **Empezar** | Instalar, la pantalla de inicio y los primeros pasos |
 | **Manual del editor** | Una página por panel o herramienta |
 | **Conceptos** | Las ideas del motor: proyectos, escenas, objetos, recursos |
-| **Guías prácticas** | Tutoriales de principio a fin (llegarán con las plantillas) |
+| **Guías prácticas** | Tutoriales de principio a fin y guías de cada tarea, por tema |
 | **Referencia** | Teclas, Lua, nodos, acciones, formatos de archivo, línea de comandos |
 | **Apéndices** | Problemas comunes, glosario, marca e historial |
 
@@ -55,6 +55,24 @@ escriben **en negrita** y exactamente como en el editor.
 - Se hacen con el propio motor (`foxy-engine --captura … --editor
   --pestana …`), a 1440 × 860, con los proyectos de ejemplo, para que todas
   tengan el mismo aspecto y se puedan rehacer en cada versión.
-- Las capturas de panel se recortan de esas mismas imágenes y se llaman
+- **Todas están en `herramientas/capturas.py`**, con su orden. Una captura
+  nueva se añade ahí y se hace con
+  `python3 herramientas/capturas.py --solo <nombre>`; nunca a mano, salvo
+  las de la lista `A_MANO`.
+- Las capturas de panel se recortan con `--recortar <panel>` y se llaman
   `panel-<nombre>.png`.
+- **Capturas anotadas**: la página de cada panel lleva números sobre la
+  imagen (en `herramientas/anotaciones.py`) y, justo debajo, una tabla
+  `| Nº | Elemento | Descripción |` con un renglón por número, en el mismo
+  orden.
 - Toda imagen lleva un texto alternativo que dice qué muestra.
+- Ninguna captura ni texto menciona fases ni números de *pull request*;
+  eso solo va en el historial de versiones.
+
+## Referencias generadas
+
+Las referencias de [componentes](src/referencia/componentes/index.md),
+[nodos](src/referencia/nodos.md) y [API de Lua](src/referencia/api-lua.md)
+las escribe el motor. No se editan a mano: en las páginas de componentes,
+solo el texto fuera de las marcas `<!-- generado: propiedades -->` y
+`<!-- fin -->`. `herramientas/capturas.py` las pone al día.

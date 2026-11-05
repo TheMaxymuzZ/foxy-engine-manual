@@ -5,21 +5,26 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 
 ![Componentes en el inspector](../../imagenes/capturas/panel-componentes.png)
 
-| Componente | En el archivo | Estado |
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
+| Componente | En el archivo | Para qué sirve |
 |---|---|---|
-| [Colisión](colision.md) | `Colision` | Disponible |
-| [Cuerpo físico](cuerpo-fisico.md) | `CuerpoFisico` | Disponible |
-| [Controlador de jugador](controlador.md) | `Controlador` | Disponible |
-| [Cámara](camara.md) | `Camara` | Disponible |
-| [Luz](luz.md) | `Luz` | Disponible |
-| [Sonido](sonido.md) | `Sonido` | Disponible |
-| [Zona](zona.md) | `Zona` | Disponible |
-| [Guion](guion.md) | `Guion` | Disponible |
-| [Sprite](sprite.md) | `Sprite` | Disponible |
-| [Animador](animador.md) | `Animador` | Llega con la animación |
-| [Grafo de nodos](grafo-de-nodos.md) | `GrafoNodos` | Disponible |
-| [Recogible](recogible.md) | `Recogible` | Disponible |
-| [Partículas](particulas.md) | `Particulas` | Disponible |
+| [Colisión](colision.md) | `Colision` | Si se choca con la entidad o se atraviesa. |
+| [Cuerpo físico](cuerpo-fisico.md) | `CuerpoFisico` | Cae, bota, rueda y se puede empujar o patear. |
+| [Controlador de jugador](controlador.md) | `Controlador` | La maneja el jugador: primera o tercera persona, cenital… |
+| [Cámara](camara.md) | `Camara` | Distancia y altura de la cámara, o ver el juego desde aquí. |
+| [Luz](luz.md) | `Luz` | Ilumina alrededor, con su color y su alcance. |
+| [Sonido](sonido.md) | `Sonido` | Un sonido que sale de aquí y se oye más cerca que lejos. |
+| [Zona](zona.md) | `Zona` | Una caja invisible: pasa algo al entrar o al salir. |
+| [Guion](guion.md) | `Guion` | Su guion Lua: lo que hace, escrito en código, con propiedades para ajustar aquí. |
+| [Sprite](sprite.md) | `Sprite` | Una imagen o un fotograma de una hoja de sprites (en 2D). |
+| [Animador](animador.md) | `Animador` | Sus animaciones: un clip o una máquina de estados (quieto, andar, correr…). |
+| [Grafo de nodos](grafo-de-nodos.md) | `GrafoNodos` | Su propio grafo de nodos: lo que hace, sin escribir código. |
+| [Recogible](recogible.md) | `Recogible` | Se recoge al tocarlo: suma monedas (o lo que digas), suena y desaparece. |
+| [Partículas](particulas.md) | `Particulas` | Polvo, chispas, lluvia, nieve, humo u hojas que salen de aquí. |
+
+<!-- fin -->
 
 ## En el archivo de la escena
 

@@ -5,6 +5,14 @@ mundo, los guiones de entidad y los módulos.
 
 ![El panel Código con un guion de enemigo](../imagenes/capturas/panel-codigo.png)
 
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Pestañas** | Los guiones abiertos. **+** abre otro |
+| 2 | **Barra** | Guardar, Comprobar, Buscar, Dividir, la lista de funciones y abrir en un editor externo |
+| 3 | **Margen** | Los números de línea y las flechas para plegar funciones |
+| 4 | **Punto de parada** | Un clic en el margen pone o quita un punto rojo; jugando, el juego se para ahí |
+| 5 | **Estado** | Los errores del guion o la ayuda del autocompletado |
+
 Se abre con un clic en un guion del grupo **Guiones** del panel
 [Proyecto](proyecto.md), con **Abrir en Código** en el componente Guion del
 inspector, desde *Herramientas → Código* o en el espacio **Programar**.

@@ -11,7 +11,7 @@ juego.
 
 | Menú principal | Jugando | Pausa |
 |---|---|---|
-| ![Inicio](../imagenes/capturas/fase3-inicio.png) | ![Jugando](../imagenes/capturas/fase3-jugando.png) | ![Pausa](../imagenes/capturas/fase3-pausa.png) |
+| ![Inicio](../imagenes/capturas/juego-inicio.png) | ![Jugando](../imagenes/capturas/juego-jugando.png) | ![Pausa](../imagenes/capturas/juego-pausa.png) |
 
 ## Controles
 
@@ -72,7 +72,7 @@ mundo donde han quedado, así que un derrumbe deja ruinas.
 |---|---|
 | ![La casa del árbol vuelca](../imagenes/capturas/derrumbe-cae.png) | ![Las ruinas y el agua](../imagenes/capturas/derrumbe-ruinas.png) |
 
-> **Nota:** una pieza de más de 4096 cubitos se da por apoyada aunque no
+> <i class="fx fx-nota"></i> **Nota.** una pieza de más de 4096 cubitos se da por apoyada aunque no
 > toque el suelo: se entiende que es parte del terreno.
 
 ### Agua que corre

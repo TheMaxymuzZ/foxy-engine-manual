@@ -1,8 +1,17 @@
 # Inspector
 
+El inspector **cambia según lo que estés haciendo**:
+
 ![El Inspector](../imagenes/capturas/panel-inspector.png)
 
-El inspector **cambia según lo que estés haciendo**:
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Herramienta activa** | Las opciones de la herramienta: forma y tamaño del pincel, simetría |
+| 2 | **Material** | El material con el que se construye o se pinta |
+| 3 | **Objeto elegido** | El nombre, el tipo y la posición de la entidad elegida |
+| 4 | **Crear prefabricado** | Guarda la entidad como recurso reutilizable |
+| 5 | **Componentes** | Los componentes de la entidad y **Añadir componente** |
+| 6 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador usa la entidad |
 
 - Con una herramienta de bloques: el **pincel** (forma, tamaño, simetría) y
   los **materiales**.

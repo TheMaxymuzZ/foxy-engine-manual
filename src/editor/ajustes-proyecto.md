@@ -33,7 +33,7 @@ Pulsa **Guardar** para aplicar los cambios. Se escriben en el archivo
 |---|---|
 | **Tamaño del cubito** | La medida de cada cubito del terreno y de los objetos de vóxeles: **1 m**, **50 cm** (el de fábrica) o **25 cm**. Un cubito más pequeño da más detalle y más trabajo al ordenador |
 
-> <i class="fx fx-aviso"></i> **Atención.** Los mundos y los objetos se miden
+> <i class="fx fx-aviso"></i> **Importante.** Los mundos y los objetos se miden
 > en cubitos: al cambiar el tamaño, lo ya construido cambia de tamaño con
 > él. Conviene elegirlo al empezar el proyecto. Al guardar, el editor guarda
 > las escenas y vuelve a abrir el proyecto.

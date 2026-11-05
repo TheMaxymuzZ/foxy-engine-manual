@@ -44,7 +44,7 @@ distribución.
 |---|---|
 | ![Un panel separado](../imagenes/capturas/flotante.png) | Cada ventana separada se guarda con su sitio y su tamaño, y vuelve a abrirse igual la próxima vez |
 
-> <i class="fx fx-nota"></i> Al pulsar **Jugar aquí**, el juego ocupa la
+> <i class="fx fx-nota"></i> **Nota.** Al pulsar **Jugar aquí**, el juego ocupa la
 > ventana principal y las ventanas separadas se esconden; al volver al
 > editor reaparecen. Por ahora hay una sola Vista a la vez.
 

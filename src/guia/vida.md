@@ -5,7 +5,7 @@ estaciones y el tiempo, los vecinos van a lo suyo y suena música.
 
 | Otoño | Invierno | Tormenta |
 |---|---|---|
-| ![Otoño](../imagenes/capturas/fase4-otono.png) | ![Invierno](../imagenes/capturas/fase4-invierno.png) | ![Tormenta](../imagenes/capturas/fase4-tormenta.png) |
+| ![Otoño](../imagenes/capturas/estacion-otono.png) | ![Invierno](../imagenes/capturas/estacion-invierno.png) | ![Tormenta](../imagenes/capturas/clima-tormenta.png) |
 
 ## Día y noche
 
@@ -58,7 +58,7 @@ Al jugar, los vecinos:
 - Hablan contigo cuando pulsas <kbd>E</kbd> (o <span class="mando">X / <i class="fx fx-ps-cuadrado" title="Cuadrado"></i></span> en el mando), con una de
   sus frases.
 
-![Hablando con un vecino](../imagenes/capturas/fase4-hablar.png)
+![Hablando con un vecino](../imagenes/capturas/juego-hablar.png)
 
 Con un guion puedes hacer que digan otra cosa según la hora o el tiempo, o
 llevarlos a otro sitio. Mira [Guion del mundo](guiones.md).

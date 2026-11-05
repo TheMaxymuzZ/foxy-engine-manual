@@ -1,9 +1,19 @@
 # Proyecto
 
+**Todo lo que tiene el proyecto en un solo sitio.** Un clic abre cualquier
+cosa, y el <i class="fx fx-mas"></i> de cada grupo crea una nueva.
+
 ![El panel Proyecto](../imagenes/capturas/panel-proyecto.png)
 
-**Todo lo que tiene el proyecto en un solo sitio.** Un clic abre cualquier
-cosa, y el <i class="fx fx-mas"></i> de cada grupo crea una nueva:
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Proyecto** | El nombre del proyecto abierto |
+| 2 | **Escenas** | Las escenas del proyecto. El <i class="fx fx-mas"></i> crea una nueva |
+| 3 | **Escena inicial** | La <i class="fx fx-estrella"></i> marca la escena con la que empieza el juego; la resaltada es la abierta |
+| 4 | **Interfaces** | Menús, marcadores y carteles. El <i class="fx fx-aviso"></i> avisa de que nada abre esa interfaz |
+| 5 | **Objetos propios** | Los objetos de cubitos del proyecto. El número dice cuántos hay |
+
+Cada grupo lista una clase de recurso:
 
 | Grupo | Qué lista | Capítulo |
 |---|---|---|

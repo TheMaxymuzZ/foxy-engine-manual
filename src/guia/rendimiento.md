@@ -53,7 +53,7 @@ Es una **cuenta aproximada**: tiene en cuenta los triángulos, las llamadas
 de dibujo y los píxeles de la imagen, pero cada tarjeta gráfica es un mundo.
 Sirve para comparar: si quitas detalle, ¿mejora mucho en el PC antiguo?
 
-> <i class="fx fx-nota"></i> Mira el mundo desde los sitios donde más se ve
+> <i class="fx fx-nota"></i> **Nota.** Mira el mundo desde los sitios donde más se ve
 > (una montaña, la entrada de una ciudad). Desde ahí es donde más cuesta.
 
 ### Notar cómo va

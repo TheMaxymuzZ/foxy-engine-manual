@@ -5,11 +5,16 @@ Las animaciones de la entidad: una que se repite sin parar o una
 
 ![El Animador y la Zona de la puerta en el inspector](../../imagenes/capturas/panel-animador.png)
 
-| Propiedad | Campo | Descripción |
-|---|---|---|
-| Animación | `animacion` | La animación de `animaciones/` que se pone al empezar, si no hay máquina de estados |
-| Velocidad | `velocidad` | Lo deprisa que van sus animaciones (1 = normal) |
-| Máquina de estados | `maquina` | Los estados y las transiciones. Se hacen en el panel [Estados](../../interfaz/estados.md) |
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
+| Propiedad | Campo | De fábrica | Descripción |
+|---|---|---|---|
+| Animación | `animacion` | — | La animación de `animaciones/` que se reproduce al empezar si no hay máquina de estados. |
+| Máquina de estados | `maquina` | — | Los estados y las transiciones. Se editan en el panel **Estados**. |
+| Velocidad | `velocidad` | 1 | Multiplica la velocidad de sus animaciones (1 es la normal). |
+
+<!-- fin -->
 
 Los botones del inspector abren el panel **Estados**, abren su animación en
 la línea de tiempo (**Animar**) y, si no tiene máquina, hacen la de un

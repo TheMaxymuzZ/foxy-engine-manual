@@ -1,8 +1,16 @@
 # Registro
 
+**Todos los avisos del editor**, con su hora, del más nuevo al más viejo:
+
 ![El panel Registro](../imagenes/capturas/panel-registro.png)
 
-**Todos los avisos del editor**, con su hora, del más nuevo al más viejo:
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Contador** | Cuántos mensajes hay |
+| 2 | **Vaciar** | Borra la lista |
+| 3 | **Información** | Lo que ha hecho el editor, con la hora |
+| 4 | **Aviso** | Algo que conviene revisar, como una interfaz que nada abre |
+| 5 | **Error** | Un error de un guion o del editor. Un clic lleva al sitio |
 
 | Color | Qué es |
 |---|---|
