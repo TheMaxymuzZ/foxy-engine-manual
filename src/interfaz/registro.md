@@ -1,6 +1,6 @@
 # Registro
 
-**Todos los avisos del editor**, con su hora, del más nuevo al más viejo:
+**Todos los avisos del editor**, con su hora, del más nuevo al más viejo.
 
 ![El panel Registro](../imagenes/capturas/panel-registro.png)
 
@@ -11,6 +11,8 @@
 | 3 | **Información** | Lo que ha hecho el editor, con la hora |
 | 4 | **Aviso** | Algo que conviene revisar, como una interfaz que nada abre |
 | 5 | **Error** | Un error de un guion o del editor. Un clic lleva al sitio |
+
+Cada mensaje tiene un color según su tipo:
 
 | Color | Qué es |
 |---|---|

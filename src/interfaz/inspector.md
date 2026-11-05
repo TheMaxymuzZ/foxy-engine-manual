@@ -1,6 +1,6 @@
 # Inspector
 
-El inspector **cambia según lo que estés haciendo**:
+El inspector **cambia según lo que estés haciendo**.
 
 ![El Inspector](../imagenes/capturas/panel-inspector.png)
 
@@ -12,6 +12,8 @@ El inspector **cambia según lo que estés haciendo**:
 | 4 | **Crear prefabricado** | Guarda la entidad como recurso reutilizable |
 | 5 | **Componentes** | Los componentes de la entidad y **Añadir componente** |
 | 6 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador usa la entidad |
+
+Lo que muestra depende de la situación:
 
 - Con una herramienta de bloques: el **pincel** (forma, tamaño, simetría) y
   los **materiales**.
