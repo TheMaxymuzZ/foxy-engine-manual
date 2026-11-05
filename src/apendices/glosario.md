@@ -35,6 +35,7 @@
 | **Inspector** | El [panel](../interfaz/inspector.md) del editor con las opciones de la herramienta y de lo que tengas elegido. |
 | **Interfaz** | Algo que se dibuja encima del juego: un menú, un marcador, un cartel. |
 | **Juego de casillas** | Una imagen con todas las casillas con las que se pinta un mapa 2D. |
+| **Juego publicado** | Una aplicación hecha con **Proyecto › Publicar…** que se abre con doble clic, sin el motor instalado. Ver [Publicar tu juego](../publicar/publicar.md). |
 | **Llano** | Un terreno de hierba completamente plano, sin isla ni mar a la vista. Es el de un proyecto vacío. |
 | **Máquina de estados** | Estados con su animación y flechas con condiciones que eligen la animación sola. Ver [Máquina de estados](../guia/animacion.md#máquina-de-estados). |
 | **Marcador** | Una interfaz que está siempre a la vista mientras se juega. |
@@ -50,7 +51,9 @@
 | **Paleta de comandos** | La búsqueda de <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd>: escribe lo que quieres hacer o abrir. |
 | **Panel** | Cada parte del editor (Vista, Proyecto, Inspector, Código…). Se mueve, se junta en pestañas, se maximiza o se separa en otra ventana. Ver [La interfaz del editor](../empezar/editor.md#los-paneles). |
 | **Panel «Proyecto»** | El [panel](../interfaz/proyecto.md) del editor con las escenas, interfaces, objetos, imágenes y el guion del proyecto. |
+| **Pantalla de carga** | La imagen que sale al abrir un juego publicado, antes de «Powered by Foxy Engine». |
 | **Pantalla de inicio** | Lo primero que muestra el motor al abrirse: la lista de proyectos, las plantillas, los accesos al manual y las novedades. Ver [La pantalla de inicio](../empezar/pantalla-de-inicio.md). |
+| **Paquete (del juego)** | El archivo `juego.foxy` que va con un juego publicado: los archivos del proyecto que el juego usa, comprimidos. |
 | **Paralaje** | Cuánto se mueve una capa con la cámara. Las capas lejanas se mueven menos y dan sensación de profundidad. |
 | **Partículas** | Puntos pequeños que salen de una entidad: polvo, chispas, lluvia, nieve, humo u hojas. |
 | **Pieza** | Una caja de cubitos de un objeto que se anima por separado, con su punto de giro. Ver [Personajes por piezas](../guia/personajes-piezas.md). |

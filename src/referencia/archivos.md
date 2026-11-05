@@ -396,7 +396,8 @@ valores del guion. Se pueden leer, pero es mejor no cambiarlas a mano.
 
 ## Ajustes del jugador
 
-Archivo: `Documentos/Foxy Engine/ajustes.ron`
+Archivo: `Documentos/Foxy Engine/ajustes.ron` (en un juego publicado, en
+[su carpeta de datos](../publicar/publicar.md#dónde-guarda-el-jugador))
 
 Comunes a todos los proyectos. Se cambian en el menú *Opciones*:
 
@@ -410,5 +411,27 @@ Comunes a todos los proyectos. Se cambian en el menú *Opciones*:
     mostrar_fps: false,
     volumen_musica: 0.7,       // 0 a 1
     volumen_efectos: 0.9,      // 0 a 1
+    pantalla_completa: Some(true),        // solo si el jugador lo cambió
+    teclas: { "Saltar": ["J"] },          // las teclas cambiadas en Controles
 )
 ```
+
+## Juego publicado
+
+Al [publicar](../publicar/publicar.md), `proyecto.ron` guarda lo elegido en
+la ventana **Publicar**:
+
+```ron
+publicar: (
+    nombre_app: "",            // vacío = el nombre del proyecto
+    identificador: "",         // del Mac; vacío = com.<autor>.<nombre>
+    pantalla_carga: "portada", // una imagen de imagenes/, o vacío
+    ancho: 1280,
+    alto: 720,
+    pantalla_completa: false,
+    incluir_todo: false,       // meter también imágenes y sonidos sin usar
+),
+```
+
+El juego lleva sus archivos en `juego.foxy`, un paquete comprimido que solo
+abre Foxy Engine.

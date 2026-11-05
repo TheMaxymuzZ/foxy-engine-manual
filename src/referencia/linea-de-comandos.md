@@ -17,6 +17,24 @@ cargo run --release -- --juego
 | `--ayuda`, `-h` | Enseña la ayuda |
 | `--version`, `-V` | Enseña la versión |
 
+## Publicar
+
+Estas opciones [publican un juego](../publicar/publicar.md) sin abrir el
+editor, o abren uno ya publicado.
+
+| Opción | Qué hace |
+|---|---|
+| `--publicar <carpeta>` | Publica el proyecto de esa carpeta con lo guardado en su `proyecto.ron` |
+| `--sistema <nombre>` | `mac`, `windows` o `linux`. Por defecto, el sistema en el que estás |
+| `--motor <ejecutable>` | El Foxy Engine del otro sistema, si no es el tuyo |
+| `--salida <carpeta>` | Dónde se deja el juego. Por defecto, `Documentos/Foxy Engine/Juegos publicados` |
+| `--sin-zip` | Sin el `.zip` para compartir |
+| `--paquete <juego.foxy>` | Abre un juego publicado a partir de su paquete |
+
+```sh
+foxy-engine --publicar "Documents/Foxy Engine/proyectos/Zorro Saltarín" --sistema linux --motor foxy-engine
+```
+
 ## Documentación de los nodos y de Lua
 
 Estas opciones escriben un archivo y terminan, sin abrir ninguna ventana.
@@ -59,7 +77,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto) o `plataformas-2d`, `aventura-cenital`, `vacio-2d` y `plataformas-voxel` (un proyecto de esa plantilla) |
+| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto) o `plataformas-2d`, `aventura-cenital`, `vacio-2d` y `plataformas-voxel` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) |
 | `--plantilla <nombre>` | Sin `--editor`: dibuja el mundo de una plantilla (`vacio-3d`, `isla-voxel`, `isla-de-ejemplo` o `plataformas-voxel`) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto`; en 2D, `choques` o `autocasillas` abren ese modo del panel Casillas |
 | `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |
@@ -87,7 +105,7 @@ empiezan siempre por los espacios de serie y no cambian los que guardaste.
 
 | Opción | Qué hace |
 |---|---|
-| `--juego --menu <pantalla>` | `inicio`, `jugando`, `pausa`, `opciones`, `guardar`, `cargar`, `menu-propio` o `cartel` |
+| `--juego --menu <pantalla>` | `inicio`, `jugando`, `pausa`, `opciones`, `controles` (cambiando una tecla), `guardar`, `cargar`, `menu-propio` o `cartel` |
 | `--hablar` | El jugador hablando con el primer vecino |
 | `--splash` | La pantalla *Powered by Foxy Engine* |
 
