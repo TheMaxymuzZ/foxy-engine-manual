@@ -192,6 +192,48 @@ Al llegar a una escena (vacío = a cualquiera).
 
 En Lua: `function al_entrar_escena(escena) ... end`
 
+### Al terminar una animación {#evento-al_terminar_animacion}
+
+*Evento* · `evento.al_terminar_animacion`
+
+Cuando un clip que no va en bucle llega al final (o al principio, hacia atrás). Vacío = esta entidad (o cualquiera en el grafo del juego).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
+| Salida | entidad | entidad | — |
+| Salida | animación | texto | — |
+
+En Lua: `function al_terminar_animacion(entidad, animacion) ... end`
+
+### Aviso de una animación {#evento-al_evento_animacion}
+
+*Evento* · `evento.al_evento_animacion`
+
+Un suceso «Avisar a los nodos» de la línea de tiempo (vacío = cualquier aviso).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | aviso | texto | — (se escribe en el nodo) |
+| Salida | entidad | entidad | — |
+| Salida | aviso | texto | — |
+
+En Lua: `function al_evento_animacion(entidad, evento) ... end`
+
+### Al terminar una cinemática {#evento-al_terminar_cinematica}
+
+*Evento* · `evento.al_terminar_cinematica`
+
+Cuando una cinemática acaba o el jugador la salta (vacío = cualquiera).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | cinemática | recurso | — (se escribe en el nodo) |
+| Salida | cinemática | texto | — |
+
+En Lua: `function al_terminar_cinematica(cinematica) ... end`
+
 ### Cada día nuevo {#evento-al_nuevo_dia}
 
 *Evento* · `evento.al_nuevo_dia`
@@ -1576,20 +1618,81 @@ El vecino camina hasta allí.
 
 En Lua: `motor.llevar(nombre, x, y, z)`
 
-## 2D
+## Animación
 
 ### Animar {#motor-animar}
 
 *Acción* · `motor.animar`
 
-Pone una animación de su hoja de sprites (vacío = la de siempre). En el jugador, hasta que acaba.
+Pone un clip de animaciones/ (o, en 2D, una animación de su hoja de sprites). Manda sobre su máquina de estados hasta que acaba. Vacío = vuelve la de siempre.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
 | Entrada | entidad | entidad | esta entidad |
-| Entrada | animación | texto | «andar» |
+| Entrada | animación | recurso | «abrir» |
 
 En Lua: `motor.animar(entidad, animacion)`
+
+### Animar hacia atrás {#motor-animar_al_reves}
+
+*Acción* · `motor.animar_al_reves`
+
+Pone el clip hacia atrás desde donde vaya: una puerta abierta con «abrir» se cierra así. Al volver al principio, queda en reposo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+| Entrada | animación | recurso | «abrir» |
+
+En Lua: `motor.animar_al_reves(entidad, animacion)`
+
+### Parar la animación {#motor-parar_animacion}
+
+*Acción* · `motor.parar_animacion`
+
+Quita el clip puesto a mano: vuelve el de su máquina de estados (o se queda quieta).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+
+En Lua: `motor.parar_animacion(entidad)`
+
+### Poner un parámetro de animación {#motor-parametro_animacion}
+
+*Acción* · `motor.parametro_animacion`
+
+Cambia un parámetro de su máquina de estados (sí = 1, no = 0). Los de velocidad, en el suelo y en el agua los pone el motor.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | entidad | entidad | esta entidad |
+| Entrada | parámetro | texto | «enfadado» |
+| Entrada | valor | número | 1 |
+
+En Lua: `motor.parametro_animacion(entidad, nombre, valor)`
+
+### Poner una cinemática {#motor-cinematica}
+
+*Acción* · `motor.cinematica`
+
+Pone una cinemática de cinematicas/: mueve la cámara y las entidades y enseña sus frases. El jugador la salta con Espacio.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | cinemática | recurso | — |
+
+En Lua: `motor.cinematica(nombre)`
+
+### Terminar la cinemática {#motor-terminar_cinematica}
+
+*Acción* · `motor.terminar_cinematica`
+
+Termina la cinemática que se esté viendo y devuelve la cámara al jugador.
+
+En Lua: `motor.terminar_cinematica()`
+
+## 2D
 
 ### Dar la vuelta al sprite {#motor-voltear}
 

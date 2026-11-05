@@ -40,6 +40,7 @@ El editor abre el proyecto nuevo y lo añade a la lista de proyectos.
 | **Vacío 3D** | Un llano de 96 × 96 m, el punto de inicio y un guion con las funciones vacías | Empezar un juego desde cero |
 | **Isla vóxel** | Una isla generada con colinas, playa, árboles y muelle, sin construcciones | Construir sobre un terreno natural |
 | **Isla de ejemplo** | Una isla con pueblo, mercado, vecinos, pelotas y un guion de ejemplo | Aprender viendo un proyecto completo |
+| **Personaje animado** | Un personaje en tercera persona que anda, corre y salta, una puerta que se abre sola, un farol que parpadea y una cinemática de presentación | Aprender a [animar](../guia/animacion.md) |
 | **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta | Empezar un juego 2D desde cero |
 | **Plataformas 2D** | Un nivel de pixel art con monedas, escaleras, pinchos, agua y una bandera de meta | Aprender a hacer un juego de plataformas |
 | **Aventura cenital** | Un prado visto desde arriba con camino, lago, una vecina y gemas que buscar | Juegos de aventura y exploración |

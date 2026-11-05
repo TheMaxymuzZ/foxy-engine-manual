@@ -22,6 +22,9 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `al_recibir_dano(cantidad, de)` | Cuando algo le hace daño con motor.danar (en el guion del mundo: entidad, cantidad, de). |
 | `al_recibir(evento, valor, de)` | Un evento propio emitido con motor.emitir (solo en guiones de entidad). |
 | `al_pulsar(accion)` | Al pulsar una acción del mapa de acciones del proyecto. |
+| `al_terminar_animacion(animacion)` | Cuando termina un clip que no va en bucle (en el guion del mundo: entidad, animacion). |
+| `al_evento_animacion(evento)` | Un suceso «Avisar a los nodos» de la línea de tiempo (en el guion del mundo: entidad, evento). |
+| `al_terminar_cinematica(cinematica)` | Cuando una cinemática acaba o el jugador la salta. |
 | `al_hablar(vecino)` | Al hablar con un vecino. Lo que devuelva es lo que dice. |
 | `al_entrar_escena(escena)` | Al llegar a una escena. |
 | `al_nuevo_dia(dia)` | Cada vez que empieza un día. |
@@ -142,11 +145,21 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.vecino(nombre: texto)` | x (número), y (número), z (número) | La posición de un vecino. |
 | `motor.llevar(nombre: texto, x: número, y: número, z: número)` | — | El vecino camina hasta allí. |
 
+## Animación
+
+| Función | Devuelve | Qué hace |
+|---|---|---|
+| `motor.animar(entidad: entidad, animacion: texto)` | — | Pone un clip de animaciones/ (o, en 2D, una animación de su hoja de sprites). Manda sobre su máquina de estados hasta que acaba. Vacío = vuelve la de siempre. |
+| `motor.animar_al_reves(entidad: entidad, animacion: texto)` | — | Pone el clip hacia atrás desde donde vaya: una puerta abierta con «abrir» se cierra así. Al volver al principio, queda en reposo. |
+| `motor.parar_animacion(entidad: entidad)` | — | Quita el clip puesto a mano: vuelve el de su máquina de estados (o se queda quieta). |
+| `motor.parametro_animacion(entidad: entidad, nombre: texto, valor: número)` | — | Cambia un parámetro de su máquina de estados (sí = 1, no = 0). Los de velocidad, en el suelo y en el agua los pone el motor. |
+| `motor.cinematica(nombre: texto)` | — | Pone una cinemática de cinematicas/: mueve la cámara y las entidades y enseña sus frases. El jugador la salta con Espacio. |
+| `motor.terminar_cinematica()` | — | Termina la cinemática que se esté viendo y devuelve la cámara al jugador. |
+
 ## 2D
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.animar(entidad: entidad, animacion: texto)` | — | Pone una animación de su hoja de sprites (vacío = la de siempre). En el jugador, hasta que acaba. |
 | `motor.voltear(entidad: entidad, espejo: sí/no)` | — | Da la vuelta al sprite de la entidad (como en un espejo). |
 | `motor.impulsar(entidad: entidad, x: número, y: número)` | — | Empuja un cuerpo físico (o al jugador) con esa velocidad, en casillas por segundo. |
 | `motor.casilla(x: número, y: número, capa: texto)` | casilla (número) | El número de la casilla que hay en ese sitio de la capa (nada si está vacía). Capa vacía = la primera que choca. |

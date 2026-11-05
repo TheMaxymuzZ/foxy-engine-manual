@@ -10,7 +10,7 @@ explica [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md).
 | Dónde | Qué hay |
 |---|---|
 | **Arriba a la izquierda** | La **barra de menús** |
-| **Arriba en el centro** | Los **espacios**: *Construir*, *Programar* y *Pixel art* |
+| **Arriba en el centro** | Los **espacios**: *Construir*, *2D*, *Programar*, *Pixel art* y *Animar*. En pantallas estrechas salen en una lista |
 | **Arriba a la derecha** | Deshacer, rehacer, guardar, <i class="fx fx-jugar"></i> **Jugar aquí** y <i class="fx fx-mando"></i> **Desde el inicio** |
 | **En medio** | Los **paneles** |
 | **Abajo** | La **barra de estado** |
@@ -26,6 +26,7 @@ un clic arriba en el centro:
 | **Programar** | Escribir guiones o nodos, probarlos y depurarlos | Proyecto, Código y Nodos, Vista, Consola, Depurador, Inspector y Registro |
 | **Pixel art** | Dibujar imágenes y texturas | Proyecto, Pixel art, Vista y Materiales |
 | **2D** | Hacer escenas 2D: pintar casillas, ordenar capas y animar sprites | Proyecto, En la escena, Vista, Casillas, Capas, Sprites e Inspector |
+| **Animar** | Hacer animaciones, máquinas de estados y cinemáticas | Animaciones, Proyecto, En la escena, Vista, Animación, Inspector y Estados |
 
 | Programar | Pixel art |
 |---|---|
@@ -52,6 +53,9 @@ se abren en el espacio **2D**.
 | [Casillas](../guia/casillas.md) | En 2D: el juego de casillas para pintar, sus choques y sus autocasillas |
 | [Capas](../guia/casillas.md#capas) | En 2D: las capas de la escena y sus ajustes |
 | [Sprites](../guia/sprites.md) | En 2D: cortar hojas de sprites, el punto de anclaje y las animaciones |
+| [Animación](../interfaz/animacion.md) | La línea de tiempo: claves, curvas y sucesos de una animación o una cinemática |
+| [Estados](../interfaz/estados.md) | La máquina de estados del Animador de la entidad elegida |
+| [Animaciones](../interfaz/animaciones.md) | Todas las animaciones y cinemáticas del proyecto |
 | [Registro](../interfaz/registro.md) | Todos los avisos y errores |
 
 Los paneles que no estén en el espacio se abren desde el menú **Ventana**,

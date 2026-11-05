@@ -25,6 +25,8 @@ Documentos/Foxy Engine/proyectos/Mi isla/
     objetos/*.ron         objetos propios y objetos de ejemplo
     prefabricados/*.ron   prefabricados
     sonidos/*.wav, *.ogg  sonidos propios
+    animaciones/*.ron     animaciones (clips) de la línea de tiempo
+    cinematicas/*.ron     cinemáticas
     .foxy/copias/         copias de seguridad hechas al actualizar el formato
     guiones/mundo.lua     el guion del mundo
     guiones/mundo.nodos.ron  el grafo de nodos del juego
@@ -195,8 +197,49 @@ Archivo: `objetos/<id>.ron`
         (1, 1, 1, 2, Madera),
         (1, 6, 1, 2, Farol),
     ],
+    piezas: [                   // opcional: las piezas que se animan por separado
+        (nombre: "hoja", padre: "", desde: (1, 0, 0), hasta: (7, 8, 1), pivote: (1.0, 0.0, 0.5)),
+    ],
 )
 ```
+
+En `piezas`, `desde` y `hasta` son las esquinas de la caja en cubitos
+(`hasta` no se incluye), `pivote` es el punto de giro y `padre` la pieza de
+la que cuelga (vacío = la raíz, `"cuerpo"` = el resto del objeto). Ver
+[Personajes por piezas](../guia/personajes-piezas.md).
+
+## Animaciones y cinemáticas
+
+Archivos: `animaciones/<id>.ron` y `cinematicas/<id>.ron`, con el mismo
+formato. Los tiempos van en segundos, los giros en grados y las posiciones
+en metros (casillas en 2D), desde el sitio de la entidad.
+
+```ron
+(
+    nombre: "Abrir",
+    duracion: 1.2,
+    bucle: false,
+    pistas: [
+        (
+            objetivo: "hoja",       // "" = la entidad entera; una pieza; en una
+                                    // cinemática, "camara" o el nombre de una entidad
+            propiedad: Giro,        // Posicion, Giro, Escala, Fotograma, Color,
+                                    // Intensidad, Alcance, Mirar, Campo o Valor("nombre")
+            claves: [
+                (t: 0.0, v: (0.0, 0.0, 0.0), curva: Suave),
+                (t: 1.2, v: (0.0, 100.0, 0.0), curva: Suave),
+            ],
+        ),
+    ],
+    eventos: [
+        (t: 0.0, suceso: Sonido("clic")),
+        // Particulas("polvo"), Aviso("golpe"), Dialogo(texto: "Hola", segundos: 3.0)
+    ],
+)
+```
+
+Las curvas son `Lineal`, `Suave`, `Entrada` (acelerar), `Salida` (frenar),
+`Escalon`, `Rebote` y `Muelle`.
 
 ## Interfaces
 
