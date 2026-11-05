@@ -58,6 +58,15 @@ Cada animación tiene un nombre, sus fotogramas y su velocidad.
 | **bucle** | Vuelve a empezar al acabar |
 | **ida y vuelta** | Va hacia delante y luego hacia atrás (0 1 2 1 0…) |
 
+Con una animación elegida, la fila **Duración (ms)** deja que cada
+fotograma dure lo suyo, en milésimas de segundo: por ejemplo, un parpadeo
+corto entre dos fotogramas largos. Con 0, el fotograma dura lo que dicen
+los **fps**; **Iguales** vuelve a ponerlos todos así.
+
+Para animar un sprite con claves y curvas (moverlo, girarlo, teñirlo o
+cambiar de fotograma en momentos exactos), usa la
+[línea de tiempo](animacion.md#en-2d).
+
 ### Crear una animación
 
 1. Pulsa **Animación**.

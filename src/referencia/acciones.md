@@ -31,6 +31,8 @@ Se eligen de una lista, sin código.
 | Ocultar una entidad | `Ocultar("Cofre")` | La entidad deja de verse y de chocar. Vacío = la que tiene la acción |
 | Mostrar una entidad | `Mostrar("Cofre")` | Vuelve a enseñar una entidad oculta |
 | Tocar un sonido | `Sonar("campana")` | Toca un sonido del proyecto o de ejemplo. Si es el de una entidad con [Sonido](componentes/sonido.md), suena desde ella |
+| Animar una entidad | `Animar(entidad: "Puerta", animacion: "abrir", al_reves: false)` | Pone una [animación](../guia/animacion.md) en la entidad. Con `al_reves: true`, la pone de atrás hacia delante desde donde vaya: así se cierra lo que se abrió. `entidad` vacía = la que tiene la acción |
+| Poner una cinemática | `Cinematica("presentacion")` | Pone una [cinemática](../guia/cinematicas.md) de `cinematicas/` |
 
 Las acciones sobre entidades buscan la entidad **por su nombre** en la
 escena y solo duran la partida: al volver al editor, todo está como estaba.

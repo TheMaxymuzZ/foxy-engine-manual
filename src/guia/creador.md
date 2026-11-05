@@ -47,6 +47,12 @@ deshace.
 > MagicaVoxel o Qubicle, [impórtalos](importar.md) y sigue trabajándolos
 > aquí.
 
+## Piezas para animar
+
+La sección **Piezas (para animar)** parte el objeto en cajas que se mueven
+por separado, como la cabeza y los brazos de un personaje o la hoja de una
+puerta. Se explica en [Personajes por piezas](personajes-piezas.md).
+
 ## Cambios en vivo
 
 Cuando guardas un objeto, **todas las copias que ya estaban colocadas en el

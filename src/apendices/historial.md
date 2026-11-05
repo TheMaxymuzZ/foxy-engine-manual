@@ -5,6 +5,26 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR28: Animación
+
+- **[Animación](../guia/animacion.md)**: panel **Animación** con línea de
+  tiempo, pistas, claves y siete curvas para mover, girar, escalar, cambiar
+  de fotograma, teñir y cambiar luces, en 3D y en 2D. Sucesos que suenan,
+  sueltan partículas, avisan a los nodos o enseñan frases.
+- **[Personajes por piezas](../guia/personajes-piezas.md)**: el creador de
+  objetos parte un objeto en piezas con punto de giro y jerarquía. El cuerpo
+  del jugador viene partido y con sus animaciones.
+- **Máquina de estados** en el componente
+  [Animador](../referencia/componentes/animador.md), en el panel
+  [Estados](../interfaz/estados.md): quieto, andar, correr y saltar según la
+  velocidad.
+- **[Cinemáticas](../guia/cinematicas.md)** con cámara, entidades y frases,
+  que se saltan con <kbd>Espacio</kbd>.
+- Panel [Animaciones](../interfaz/animaciones.md), espacio **Animar**,
+  acciones **Animar una entidad** y **Poner una cinemática**, nodos y
+  funciones de Lua nuevas, y duración por fotograma en los sprites.
+- Plantilla **Personaje animado**.
+
 ## 0.0.1-PR27: Juegos 2D
 
 - **[Juegos 2D](../guia/juegos-2d.md)**: escenas 2D en casillas con cámara
