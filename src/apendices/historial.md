@@ -5,6 +5,25 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR29: Publicar
+
+- **[Publicar tu juego](../publicar/publicar.md)**: **Proyecto › Publicar…**
+  hace una aplicación para Mac (`.app` firmada), Windows (`.exe`) o Linux
+  que se abre con doble clic, sin el motor instalado, con su nombre, icono,
+  versión, tamaño de ventana y pantalla completa. **Probar el juego
+  publicado** la abre con un clic.
+- El juego lleva un **paquete** (`juego.foxy`) comprimido con solo lo que
+  usa; lo del editor y lo que nada nombra se queda fuera.
+- **Pantalla de carga** propia antes de «Powered by Foxy Engine», y el autor
+  encima del título del menú principal.
+- **Opciones** del juego en tres páginas: **Gráficos** (con pantalla
+  completa), **Sonido** y **Controles**, donde el jugador cambia la tecla de
+  cada acción.
+- Partidas, ajustes y registro de cada juego en su propia carpeta de datos.
+- [Mac, Windows y Linux](../publicar/sistemas.md): publicar para otro
+  sistema y solución de problemas de cada uno. Opciones `--publicar` y
+  `--paquete` en la [línea de comandos](../referencia/linea-de-comandos.md#publicar).
+
 ## 0.0.1-PR28: Animación
 
 - **[Animación](../guia/animacion.md)**: panel **Animación** con línea de

@@ -7,7 +7,7 @@ juego.
 |---|---|---|
 | <i class="fx fx-jugar"></i> **Jugar aquí** (<kbd>F5</kbd>) | Te pone de pie donde mira la cámara. <kbd>F5</kbd> vuelve al editor, justo donde estabas | Probar algo al momento |
 | <i class="fx fx-mando"></i> **Desde el inicio** | Abre el juego completo, con su menú principal, en el punto de inicio de la escena inicial | Probar el juego como lo verá quien lo juegue |
-| `foxy-engine --juego` | Solo el juego, sin editor | Así será el juego exportado (Fase 6) |
+| `foxy-engine --juego` | Solo el juego, sin editor | Ver el juego sin el editor alrededor. Para repartirlo, [publícalo](../publicar/publicar.md) |
 
 | Menú principal | Jugando | Pausa |
 |---|---|---|

@@ -56,6 +56,13 @@ Sale la primera vez porque el programa todavía no está firmado. Pulsa
 **Más información → Ejecutar de todas formas**. Solo hay que hacerlo una vez
 por cada `.exe` nuevo.
 
+## Un juego publicado no se abre
+
+Las soluciones para cada sistema (el aviso del Mac, «Windows protegió su
+PC», permisos en Linux) están en [Mac, Windows y
+Linux](../publicar/sistemas.md). El registro de un juego publicado está en
+[su carpeta de datos](../publicar/publicar.md#dónde-guarda-el-jugador).
+
 ## <i class="fx fx-registro"></i> El registro (`registro.txt`)
 
 Cada vez que se abre, el motor apunta lo que hace en

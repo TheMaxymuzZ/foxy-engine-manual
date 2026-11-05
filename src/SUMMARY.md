@@ -64,6 +64,11 @@
 - [Rendimiento](guia/rendimiento.md)
 - [Preferencias y teclas](guia/preferencias.md)
 
+# Publicar
+
+- [Publicar tu juego](publicar/publicar.md)
+    - [Mac, Windows y Linux](publicar/sistemas.md)
+
 # Conceptos
 
 - [Conceptos básicos](conceptos/basicos.md)
