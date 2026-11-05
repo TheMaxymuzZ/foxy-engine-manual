@@ -19,8 +19,8 @@ describen en [Conceptos básicos](../conceptos/basicos.md).
    componente.
 
 Para una entidad que no debe verse al jugar (un punto de luz, un altavoz, el
-personaje cuando se juega en primera persona), usa **Crear → Entidad vacía**
-o el objeto *Entidad vacía* de la paleta.
+personaje cuando se juega en primera persona), usa el objeto **Entidad vacía**
+de la paleta de **Colocar objetos**.
 
 ## Ejemplo: una puerta que se abre al acercarse
 

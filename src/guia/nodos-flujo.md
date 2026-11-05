@@ -77,7 +77,7 @@ y lo que viene **al terminar**.
   farolas de la escena de una vez.
 - **Mientras** repite mientras la condición sea *sí*.
 
-> <i class="fx fx-aviso"></i> **Atención.** Un bucle que no termina nunca
+> <i class="fx fx-aviso"></i> **Importante.** Un bucle que no termina nunca
 > no cuelga el juego: el motor lo corta y enseña el error «el guion tarda
 > demasiado». Para repetir algo a lo largo del tiempo, usa *Cada fotograma*,
 > *Cada cierto tiempo* o un *Esperar* dentro del bucle.

@@ -9,6 +9,7 @@ src = "src"
 default-theme = "light"
 preferred-dark-theme = "coal"
 additional-css = ["theme/foxy.css", "theme/iconos.css"]
+additional-js = ["theme/version.js", "theme/version-pagina.js"]
 no-section-label = true
 git-repository-url = "https://github.com/TheMaxymuzZ/foxy-engine-manual"
 git-repository-icon = "fa-github"

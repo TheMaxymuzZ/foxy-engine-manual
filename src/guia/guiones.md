@@ -12,7 +12,7 @@ Los guiones se escriben en [Lua](https://www.lua.org/manual/5.4/es/), un
 lenguaje pequeño y fácil que se usa en muchísimos juegos. Si prefieres no
 escribir, lo mismo se puede hacer con [nodos](nodos.md).
 
-![Pestaña Guion](../imagenes/capturas/fase4-guion.png)
+![Pestaña Guion](../imagenes/capturas/guion-mundo.png)
 
 ## Dónde está el guion
 

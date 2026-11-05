@@ -5,6 +5,30 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR30: Manual oficial
+
+- **Manual reorganizado en cinco partes**: Empezar, Manual del editor,
+  Conceptos, Guías prácticas y Referencia, más los apéndices.
+- **Dos tutoriales nuevos**, de principio a fin:
+  [tu primer juego 3D](../empezar/primer-proyecto.md) y
+  [tu primer juego 2D](../empezar/primer-juego-2d.md).
+- **Una página por panel** con su **captura anotada**: números sobre la
+  imagen explicados en una tabla. Páginas nuevas de
+  [Menús y barra de estado](../interfaz/menus.md),
+  [Casillas](../interfaz/casillas.md), [Capas](../interfaz/capas.md) y
+  [Sprites](../interfaz/sprites.md).
+- **Conceptos nuevos**: [Entidades, componentes y prefabricados](../conceptos/entidades.md),
+  [Escenas 3D y 2D](../conceptos/escenas-3d-2d.md) y
+  [Lógica del juego](../conceptos/logica.md).
+- **Escaparate** en la portada: una animación de cada plantilla hecha con el
+  propio motor.
+- **Capturas que se hacen solas**: un guion rehace todas las capturas del
+  manual con el motor en cada versión. Ver [Capturas del manual](capturas.md).
+- La **referencia de componentes** sale del motor
+  (`foxy-engine --referencia-componentes`), como ya pasaba con los nodos y la
+  API de Lua.
+- La **versión del motor** aparece en todas las páginas.
+
 ## 0.0.1-PR29: Publicar
 
 - **[Publicar tu juego](../publicar/publicar.md)**: **Proyecto › Publicar…**

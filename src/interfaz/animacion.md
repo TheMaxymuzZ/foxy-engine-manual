@@ -1,9 +1,18 @@
 # Animación
 
-![El panel Animación con la animación «Abrir» de la puerta](../imagenes/capturas/panel-animacion.png)
-
 **La línea de tiempo** de la animación o la cinemática abierta. Mientras se
 edita, la entidad elegida (o la fijada) se mueve en la Vista.
+
+![El panel Animación con la animación «Abrir» de la puerta](../imagenes/capturas/panel-animacion.png)
+
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Animación abierta** | La lista para abrir otra, crear una nueva, guardar, deshacer y reproducir |
+| 2 | **Ajustes** | Nombre, duración, si va en bucle y la entidad que se ve |
+| 3 | **Pista** | Lo que cambia (una pieza, la entidad entera) y qué propiedad. Los rombos son las claves |
+| 4 | **Línea roja** | El momento que se ve en la Vista. Se arrastra por la regla |
+| 5 | **Sucesos** | Marcas en la línea de tiempo que avisan a los guiones y a los nodos |
+| 6 | **Pista nueva** | Añade una pista: qué se mueve y qué cambia |
 
 | Parte | Qué hace |
 |---|---|

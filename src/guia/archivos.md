@@ -30,7 +30,7 @@ Se abre con **Proyecto → Archivos del proyecto** o con el icono
 Lo que se lleva a la papelera no se borra: va a la carpeta oculta
 `.papelera` del proyecto, desde donde se puede recuperar a mano.
 
-> <i class="fx fx-aviso"></i> Las carpetas y archivos que usa el motor
+> <i class="fx fx-aviso"></i> **Importante.** Las carpetas y archivos que usa el motor
 > (`mundos`, `imagenes`, `objetos`, `interfaces`, `guiones`, `paletas`,
 > `proyecto.ron` y `materiales.ron`) se pueden abrir y llenar, pero **no
 > renombrar, mover ni borrar**: el proyecto dejaría de encontrarlos.

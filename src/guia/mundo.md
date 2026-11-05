@@ -150,7 +150,7 @@ cada capa. Se describen en [Generadores de terreno](generadores.md).
 con las opciones nuevas y **conserva** los objetos y los bloques que pusiste
 a mano.
 
-> <i class="fx fx-aviso"></i> **Atención.** Regenerar el terreno no se puede
+> <i class="fx fx-aviso"></i> **Importante.** Regenerar el terreno no se puede
 > deshacer. Si dudas, guarda antes.
 
 ### La vida

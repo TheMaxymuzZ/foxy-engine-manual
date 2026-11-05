@@ -5,11 +5,16 @@ de ella, se ejecuta una [acción](../acciones.md).
 
 ![Una zona que abre una puerta](../../imagenes/capturas/panel-zona.png)
 
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
 | Propiedad | Campo | De fábrica | Descripción |
 |---|---|---|---|
-| Tamaño | `tamano` | 3 × 2,5 × 3 m | Ancho, alto y fondo, centrado en la base de la entidad |
-| Al entrar | `al_entrar` | Nada | Acción al entrar el jugador |
-| Al salir | `al_salir` | Nada | Acción al salir |
+| Tamaño | `tamano` | 3 × 2,5 × 3 m | Ancho, alto y fondo, centrado en la base de la entidad. |
+| Al entrar | `al_entrar` | Nada | Acción que se ejecuta cuando el jugador entra. |
+| Al salir | `al_salir` | Nada | Acción que se ejecuta cuando el jugador sale. |
+
+<!-- fin -->
 
 La zona se queda en el sitio que la entidad tiene en el editor, aunque la
 entidad se mueva durante la partida. Así una puerta que se desplaza no se

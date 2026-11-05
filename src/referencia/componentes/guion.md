@@ -7,12 +7,17 @@ con sus propias variables y propiedades. Ver
 
 ![El componente Guion con sus propiedades](../../imagenes/capturas/panel-inspector-guion.png)
 
-| Propiedad | Campo | Descripción |
-|---|---|---|
-| Archivo | `archivo` | El guion, relativo a `guiones/` (por ejemplo, `enemigo.lua`) |
-| Propiedades | `propiedades` | Los valores de la tabla `propiedades` del guion que se han cambiado en esta entidad. Los que no salen aquí toman el valor del guion |
-| Al empezar *(antiguo)* | `al_empezar` | Una función del guion del mundo que se llama al empezar, con el nombre de la entidad |
-| Cada segundo *(antiguo)* | `cada_segundo` | Una función del guion del mundo que se llama cada segundo, con el nombre de la entidad |
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
+| Propiedad | Campo | De fábrica | Descripción |
+|---|---|---|---|
+| Archivo | `archivo` | — | El guion, relativo a `guiones/` (por ejemplo, `enemigo.lua`). |
+| Propiedades | `propiedades` | — | Los valores de la tabla `propiedades` del guion cambiados en esta entidad. Los demás toman el valor del guion. |
+| Al empezar (antiguo) | `al_empezar` | — | Función del guion del mundo que se llama al empezar, con el nombre de la entidad. |
+| Cada segundo (antiguo) | `cada_segundo` | — | Función del guion del mundo que se llama cada segundo, con el nombre de la entidad. |
+
+<!-- fin -->
 
 La entidad recibe también una caja de colisión, para que lleguen
 `al_chocar` y las zonas.

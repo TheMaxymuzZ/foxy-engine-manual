@@ -5,7 +5,7 @@ Además de las casas, árboles y farolas que trae el motor, puedes hacer tus
 Se modelan una vez y se colocan en cualquier mundo del proyecto tantas veces
 como quieras.
 
-![Creador de objetos](../imagenes/capturas/fase4-creador.png)
+![Creador de objetos](../imagenes/capturas/creador.png)
 
 ## Abrir el creador
 
@@ -73,5 +73,5 @@ En el mundo se colocan con su nombre de archivo como `tipo`:
 (tipo: "farolillo", nombre: "", pos: (98.0, 16.0, 120.0), giro: 0),
 ```
 
-> <i class="fx fx-aviso"></i> **Atención.** Si borras el archivo de un objeto que está colocado en un
+> <i class="fx fx-aviso"></i> **Importante.** Si borras el archivo de un objeto que está colocado en un
 > mundo, el editor avisa abajo: «el motor no conoce estos objetos».

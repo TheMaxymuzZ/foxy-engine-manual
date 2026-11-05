@@ -3,15 +3,20 @@
 El jugador maneja esta entidad. La partida empieza en ella, en lugar de en
 el *Punto de inicio*.
 
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
 | Propiedad | Campo | De fábrica | Descripción |
 |---|---|---|---|
-| Tipo | `tipo` | Primera persona | Cómo se maneja y desde dónde se ve (ver abajo) |
-| Andando | `velocidad` | 4,5 m/s | Velocidad al caminar |
-| Corriendo | `carrera` | 8 m/s | Velocidad con *Correr* |
-| Salto | `salto` | 1,33 m | Altura del salto. 0 = no salta |
-| Gravedad | `gravedad` | 24 m/s² | La de la Tierra es 9,8 |
-| Coyote time | `coyote` | 0,1 s | En 2D: tiempo para saltar después de salir de un borde |
-| Salto variable | `salto_variable` | Sí | En 2D: soltar **Saltar** pronto hace el salto más bajo |
+| Tipo | `tipo` | `PrimeraPersona` | Cómo se maneja y desde dónde se ve. Los tipos se describen más abajo. |
+| Andando | `velocidad` | 4,5 m/s | Velocidad al caminar. |
+| Corriendo | `carrera` | 8 m/s | Velocidad con **Correr**. |
+| Salto | `salto` | 1,33 m | Altura del salto. 0 desactiva el salto. |
+| Gravedad | `gravedad` | 24 m/s² | Aceleración de caída. La de la Tierra es 9,8. |
+| Coyote time | `coyote` | 0,1 s | En 2D: tiempo para saltar después de salir de un borde. |
+| Salto variable | `salto_variable` | Sí | En 2D: soltar **Saltar** pronto hace el salto más bajo. |
+
+<!-- fin -->
 
 En una [escena 2D](../../guia/juegos-2d.md) las medidas van en casillas
 (casillas por segundo, casillas de salto).

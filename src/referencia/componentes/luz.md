@@ -2,12 +2,17 @@
 
 Ilumina alrededor de la entidad, de día y de noche.
 
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
 | Propiedad | Campo | De fábrica | Descripción |
 |---|---|---|---|
-| Color | `color` | `#ffd27a` | Color de la luz |
-| Intensidad | `intensidad` | 1 | De 0 a 4 |
-| Alcance | `alcance` | 8 m | Hasta dónde llega |
-| Altura | `altura` | 1 m | Altura de la luz sobre la base de la entidad |
+| Color | `color` | `"#ffd27a"` | Color de la luz, en `#rrggbb`. |
+| Intensidad | `intensidad` | 1 | De 0 a 4. |
+| Alcance | `alcance` | 8 m | Distancia hasta la que ilumina. En 2D se mide en casillas. |
+| Altura | `altura` | 1 m | Altura de la luz sobre la base de la entidad. |
+
+<!-- fin -->
 
 Las luces se ven en el editor y al jugar. En una
 [escena 2D](../../guia/juegos-2d.md#partículas-y-luces) se notan cuando la

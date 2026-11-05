@@ -1,11 +1,18 @@
 # En la escena
 
-![El panel En la escena](../imagenes/capturas/panel-escena.png)
-
 **Todo lo que hay en la escena abierta**: objetos, vecinos, zonas, puntos de
 entrada… ordenado en carpetas. Un clic elige un objeto (y el
 [Inspector](inspector.md) enseña sus opciones); <i class="fx fx-ver"></i>
 **Ver** (<kbd>F</kbd>) lleva la cámara hasta él.
+
+![El panel En la escena](../imagenes/capturas/panel-escena.png)
+
+| Nº | Elemento | Descripción |
+|---|---|---|
+| 1 | **Carpeta nueva** | Crea una carpeta para ordenar la escena |
+| 2 | **Carpeta** | Agrupa entidades. El número dice cuántas tiene. Se pliega con la flecha |
+| 3 | **Entidad** | Un clic la elige y el Inspector muestra sus opciones |
+| 4 | **Subcarpeta** | Las carpetas se pueden anidar |
 
 El <i class="fx fx-carpeta-nueva"></i> de arriba crea una carpeta. Los
 objetos se arrastran de una carpeta a otra (o **clic derecho → Mover a**), y

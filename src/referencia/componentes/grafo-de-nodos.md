@@ -5,10 +5,15 @@ de la carpeta `grafos/`. Cada entidad con este componente tiene su propia
 copia del grafo, con sus propias variables, que empieza a funcionar al
 llegar a la escena.
 
-| Propiedad | Campo | Descripción |
-|---|---|---|
-| Grafo | `archivo` | Archivo del grafo, relativo al proyecto (`grafos/enemigo.nodos.ron`) |
-| Variables de la entidad | `variables` | El valor de cada variable *de la entidad* del grafo para esta entidad. Las que no se cambian usan su valor inicial |
+<!-- generado: propiedades -->
+<!-- Esta tabla la escribe `foxy-engine --referencia-componentes`. -->
+
+| Propiedad | Campo | De fábrica | Descripción |
+|---|---|---|---|
+| Grafo | `archivo` | — | Archivo del grafo, relativo al proyecto (`grafos/enemigo.nodos.ron`). |
+| Variables de la entidad | `variables` | — | El valor de cada variable *de la entidad* del grafo para esta entidad. Las que no se cambian usan su valor inicial. |
+
+<!-- fin -->
 
 En el [Inspector](../../interfaz/inspector.md):
 
