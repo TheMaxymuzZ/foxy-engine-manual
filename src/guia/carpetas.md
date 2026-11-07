@@ -26,6 +26,12 @@ ordena en **carpetas**, como los archivos de tu ordenador.
 Un clic en un objeto de la lista lo elige en el mundo. <i class="fx fx-ver"></i> **Ver** (<kbd>F</kbd>)
 lleva la cámara hasta él.
 
+## Meter objetos dentro de otros
+
+Si sueltas un objeto **encima de otro objeto** (y no de una carpeta), va
+**dentro** de él y se mueve con él. Ver
+[Objetos libres y jerarquía](objetos-libres.md#objetos-dentro-de-otros).
+
 ## Cómo se guardan
 
 Las carpetas se guardan dentro del mundo. Las subcarpetas se escriben con `/`:
@@ -37,7 +43,7 @@ carpetas: [
     "Vecinos",
 ],
 objetos: [
-    (tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), giro: 0, carpeta: "Pueblo/Casas"),
+    (tipo: "casa", nombre: "Casa de Plumas", id: 1, pos: (86.0, 16.0, 118.0), carpeta: "Pueblo/Casas"),
 ],
 ```
 

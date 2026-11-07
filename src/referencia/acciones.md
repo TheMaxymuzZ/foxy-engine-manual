@@ -40,11 +40,11 @@ escena y solo duran la partida: al volver al editor, todo está como estaba.
 En los archivos, la acción va en el campo `accion` del objeto o del elemento:
 
 ```ron
-(tipo: "zona", nombre: "Puerta de la cueva", pos: (120.0, 14.0, 90.0), giro: 0,
+(tipo: "zona", nombre: "Puerta de la cueva", pos: (120.0, 14.0, 90.0),
  accion: IrAEscena(escena: "cueva", entrada: "boca")),
-(tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), giro: 0,
+(tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0),
  accion: IrAEscena(escena: "interior", entrada: "puerta")),
-(tipo: "puesto", nombre: "Puesto", pos: (96.0, 16.0, 112.0), giro: 1,
+(tipo: "puesto", nombre: "Puesto", pos: (96.0, 16.0, 112.0), giro: (0.0, 90.0, 0.0),
  accion: AbrirInterfaz("tienda")),
 ```
 

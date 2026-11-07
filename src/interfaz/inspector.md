@@ -21,11 +21,12 @@ Lo que muestra depende de la situación:
 - Con una entidad elegida: su **nombre**, sus
   [**etiquetas**](../guia/objetos-que-se-hablan.md#etiquetas), sus
   [**comportamientos**](../guia/comportamientos.md) con **➕ Comportamiento**,
-  su posición, **Crear
+  su **posición, giro y escala** (con el
+  [imán](../guia/objetos-libres.md#el-imán-a-la-rejilla)), **Crear
   prefabricado** (o, en una copia, los botones de su prefabricado), sus
   **componentes** con <i class="fx fx-mas"></i> **Añadir componente**, y
   <i class="fx fx-usar"></i> **Al usarlo (E)**, lo que pasa cuando el
-  jugador la usa. Abajo, el giro, *Al suelo*, *Ver*, *Duplicar* y *Borrar*.
+  jugador la usa. Abajo, *Al suelo*, *Ver*, *Duplicar* y *Borrar*.
 - Sin nada elegido: el **terreno** de la escena (su
   [generador](../guia/generadores.md)), cómo pasa el **tiempo** y los
   **módulos de la escena**.

@@ -24,7 +24,7 @@ describen en [Conceptos básicos](../conceptos/basicos.md).
    componente.
 
 Para una entidad que no debe verse al jugar (un punto de luz, un altavoz, el
-personaje cuando se juega en primera persona), usa el objeto **Entidad vacía**
+personaje cuando se juega en primera persona), usa el objeto **Objeto vacío**
 de la paleta de **Colocar objetos**.
 
 ## Ejemplo: una puerta que se abre al acercarse
@@ -50,7 +50,7 @@ Este ejemplo no necesita código ni la plantilla Isla.
 
 ## Ejemplo: un personaje en tercera persona
 
-1. Coloca una **Entidad vacía** (o cualquier objeto que quieras que sea el
+1. Coloca una **Objeto vacío** (o cualquier objeto que quieras que sea el
    personaje) y llámala «Héroe».
 2. Añade el componente **Controlador de jugador** y elige
    **Tipo: Tercera persona**.

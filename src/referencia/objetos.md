@@ -34,7 +34,7 @@ Se dibujan aparte, con su propio modelo.
 
 | Objeto | Tipo | Se ve al jugar | Qué hace |
 |---|---|---|---|
-| <i class="fx fx-objeto"></i> Entidad vacía | `entidad` | No | Una entidad sin modelo para colgarle [componentes](componentes/index.md): una luz, un sonido, el personaje |
+| <i class="fx fx-objeto"></i> Objeto vacío | `entidad` | No | Solo un punto: para [agrupar otros objetos](../guia/objetos-libres.md#objetos-vacíos), marcar un sitio o colgarle [componentes](componentes/index.md) (una luz, un sonido, el personaje) |
 | <i class="fx fx-pelota"></i> Pelota | `pelota` | Sí | Se mueve con la física: cae, bota, rueda y flota. Se patea con <kbd>E</kbd> |
 | <i class="fx fx-vecino"></i> Vecino | `vecino` | Sí | Un habitante con nombre y frases. Ver [La vida del mundo](../guia/vida.md#vecinos) |
 | <i class="fx fx-inicio"></i> Punto de inicio | `inicio` | No | Donde empieza una partida nueva, mirando hacia su flecha |
@@ -50,5 +50,7 @@ pueden hacer una acción al usarlos.
 ## Posición y giro
 
 En los archivos, `pos` es el **centro de la base** del objeto en metros, y
-`giro` va en **cuartos de vuelta** (0, 1, 2 o 3). Con 0 la puerta (o el
-frente) mira al **sur**.
+`giro` va en **grados** alrededor de X, Y y Z: `giro: (0.0, 90.0, 0.0)`.
+Con 0 en Y la puerta (o el frente) mira al **sur**. `escala` dice cuánto más
+grande es en cada eje (1 = como su modelo). Los dos se pueden omitir. Ver
+[Objetos libres y jerarquía](../guia/objetos-libres.md).

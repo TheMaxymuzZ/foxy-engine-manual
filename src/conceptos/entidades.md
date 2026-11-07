@@ -14,7 +14,7 @@ cámara, una luz, el jugador o un punto invisible. Toda entidad tiene:
 |---|---|
 | **Nombre** | Identificarla. Las acciones, los nodos y los guiones se refieren a ella por su nombre |
 | **Posición** y **giro** | Dónde está. En 3D, en metros; en 2D, en casillas |
-| **Modelo** | Cómo se ve: un objeto de cubitos en 3D o un sprite en 2D. La **Entidad vacía** no tiene modelo y no se ve al jugar |
+| **Modelo** | Cómo se ve: un objeto de cubitos en 3D o un sprite en 2D. La **Objeto vacío** no tiene modelo y no se ve al jugar |
 | **Comportamientos** | Lo que hace por su cuenta: grafos de nodos o guiones, tantos como quiera. Ver [Comportamientos](../guia/comportamientos.md) |
 | **Componentes** | Qué es: luz, sonido, física, zona… |
 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador la usa |

@@ -59,6 +59,7 @@
     - [Materiales](guia/materiales.md)
     - [La vida del mundo](guia/vida.md)
 - [Entidades y componentes](guia/entidades.md)
+    - [Objetos libres y jerarquía](guia/objetos-libres.md)
 - [Comportamientos](guia/comportamientos.md)
     - [Objetos que se hablan](guia/objetos-que-se-hablan.md)
 - [Juegos 2D](guia/juegos-2d.md)

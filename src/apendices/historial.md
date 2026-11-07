@@ -5,6 +5,25 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR33: Objetos libres y jerarquía
+
+- **[Objetos libres](../guia/objetos-libres.md)**: cada objeto se dibuja
+  aparte con su modelo (ya no se funde con los cubitos del terreno) y se
+  puede mover en cualquier momento.
+- **Posición, giro y escala libres** en el Inspector: giro en grados en los
+  tres ejes, escala por eje o proporcional (**1:1**).
+- **Imán a la rejilla** con <kbd>G</kbd> o **⊞ Imán**: con imán se mueve de
+  cubito en cubito y <kbd>R</kbd> gira 90°; sin imán, todo libre y
+  <kbd>R</kbd> gira 15°.
+- **Objetos dentro de otros**: suelta un objeto encima de otro en
+  *En la escena*. Se mueve, gira, escala, esconde y borra con su padre,
+  también jugando.
+- **Formas de choque** en [Colisión](../referencia/componentes/colision.md):
+  sus cubitos, caja, esfera o cápsula.
+- *Entidad vacía* pasa a llamarse **Objeto vacío**.
+- Formato de proyecto 6: el giro en cuartos de vuelta pasa solo a grados,
+  con copia de seguridad en `.foxy/copias/`.
+
 ## 0.0.1-PR32: Objetos que se hablan
 
 - **[Etiquetas](../guia/objetos-que-se-hablan.md#etiquetas)** en los objetos

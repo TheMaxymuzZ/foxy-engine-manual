@@ -30,7 +30,7 @@ Los componentes van en la lista `componentes` de cada entidad. Solo se
 escriben los valores distintos de los de fábrica:
 
 ```ron
-(tipo: "farola", nombre: "Farola de la plaza", pos: (90.0, 16.0, 118.0), giro: 0,
+(tipo: "farola", nombre: "Farola de la plaza", pos: (90.0, 16.0, 118.0),
  componentes: [
      Luz((color: "#ffd27a", intensidad: 1.5, alcance: 10.0)),
      Sonido((sonido: "grillos", volumen: 0.6)),

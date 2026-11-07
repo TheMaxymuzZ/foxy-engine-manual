@@ -57,7 +57,7 @@ Archivo: `proyecto.ron`
     icono: "",                       // imagen de imagenes/ sin .png; vacío = el del motor
     cubito: 0.5,                     // tamaño del cubito: 1.0, 0.5 o 0.25 m
     modulos: (clima: true, vecinos: false, ...),   // ver Módulos
-    formato: 3,                      // versión del formato del proyecto
+    formato: 6,                      // versión del formato del proyecto
 )
 ```
 
@@ -122,18 +122,18 @@ Archivo: `mundos/<escena>.ron`
     modulos: (clima: Some(false)),   // lo que la escena cambia de los módulos del proyecto
     carpetas: ["Pueblo", "Pueblo/Casas", "Vecinos"],
     objetos: [
-        (tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), giro: 0, carpeta: "Pueblo/Casas"),
-        (tipo: "vecino", nombre: "Plumas", pos: (88.0, 20.0, 123.0), giro: 0, carpeta: "Vecinos",
+        (tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), carpeta: "Pueblo/Casas"),
+        (tipo: "vecino", nombre: "Plumas", pos: (88.0, 20.0, 123.0), carpeta: "Vecinos",
          frases: ["¡Hola! Vivo en la casa del tejado rojo.", "¿Has visto el pozo?"]),
-        (tipo: "zona", nombre: "Cueva", pos: (120.0, 14.0, 90.0), giro: 0,
+        (tipo: "zona", nombre: "Cueva", pos: (120.0, 14.0, 90.0),
          accion: IrAEscena(escena: "cueva", entrada: "boca")),
-        (tipo: "casa", nombre: "Tienda de Tomás", pos: (108.0, 18.0, 121.0), giro: 3,
+        (tipo: "casa", nombre: "Tienda de Tomás", pos: (108.0, 18.0, 121.0), giro: (0.0, -90.0, 0.0),
          accion: AbrirInterfaz("tienda")),
-        (tipo: "puerta", nombre: "Puerta", pos: (92.0, 16.0, 118.0), giro: 0,
+        (tipo: "puerta", nombre: "Puerta", pos: (92.0, 16.0, 118.0),
          componentes: [Zona((tamano: (4.0, 3.0, 4.0),
              al_entrar: Mover(desplazamiento: (1.0, 0.0, 0.0)),
              al_salir: Mover(desplazamiento: (0.0, 0.0, 0.0))))]),
-        (tipo: "farola", nombre: "Farola", pos: (94.0, 16.0, 116.0), giro: 0,
+        (tipo: "farola", nombre: "Farola", pos: (94.0, 16.0, 116.0),
          prefabricado: "farola_de_la_plaza"),
     ],
     cambios: [
@@ -148,7 +148,7 @@ Archivo: `mundos/<escena>.ron`
 | `vida` | Cómo pasa el tiempo. Ver [La vida del mundo](../guia/vida.md#ajustes-de-la-vida) |
 | `modulos` | Los [módulos](modulos/index.md) que la escena cambia respecto al proyecto |
 | `carpetas` | Carpetas de la escena; las subcarpetas con `/` |
-| `objetos` | Objetos colocados: `tipo`, `nombre`, `pos` (centro de la base, en metros) y `giro` (cuartos de vuelta, 0 = mira al sur). Opcionales: `carpeta`, `frases` (vecinos), `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>), `componentes` (ver [Componentes](componentes/index.md)) y `prefabricado` (el id del prefabricado del que es copia) |
+| `objetos` | Objetos colocados: `tipo`, `nombre`, `id` (su número, para la jerarquía) y `pos` (centro de la base, en metros). Opcionales: `giro` (grados en X, Y y Z; en Y, 0 = mira al sur), `escala` (1 = como su modelo), `padre` (el `id` del objeto dentro del que va; ver [Objetos libres y jerarquía](../guia/objetos-libres.md)), `etiquetas`, `carpeta`, `frases` (vecinos), `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>), `componentes` (ver [Componentes](componentes/index.md)) y `prefabricado` (el id del prefabricado del que es copia) |
 | `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos** de la rejilla del proyecto |
 | `plano` | Solo en las escenas 2D: casilla, resolución, fondo, luz ambiente y las capas con sus mapas. Las posiciones de los `objetos` van entonces en casillas. Ver [Mapas de casillas](../guia/casillas.md#en-el-archivo-de-la-escena) |
 
