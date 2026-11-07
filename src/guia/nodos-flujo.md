@@ -22,7 +22,10 @@ según su posición en el lienzo.
 | **Al chocar con el jugador** | Cuando el jugador toca la entidad. En un grafo de entidad, vacío significa esta entidad |
 | **Al entrar en una zona** / **Al salir de una zona** | Cuando el jugador entra o sale de una entidad con el componente [Zona](../referencia/componentes/zona.md) |
 | **Al recibir daño** | Cuando un nodo *Hacer daño* (o `motor.danar` en Lua) apunta a esa entidad. Da la cantidad y quién lo hace |
-| **Al recibir un evento** | Cuando otro grafo, o un guion, emite un evento con ese nombre |
+| **Al chocar con otro objeto** | Cuando la entidad toca a otro objeto. Con *con etiqueta*, solo si el otro la lleva |
+| **Al entrar un objeto en una zona** / **Al salir un objeto de una zona** | Lo mismo que las zonas del jugador, pero con los demás objetos que se mueven |
+| **Al hacer clic en el objeto** | Cuando el jugador hace clic mirando a la entidad (3D) |
+| **Al recibir un mensaje** | Cuando otro grafo, o un guion, envía un mensaje con ese nombre |
 | **Al usar un objeto** | Cuando se usa con <kbd>E</kbd> un objeto cuya acción es *Llamar al guion* con ese nombre de función |
 | **Al hablar con** | Al hablar con un vecino. Termina con *Responder* para darle su frase |
 | **Al entrar en la escena** | Al llegar a esa escena (vacío: a cualquiera) |
@@ -32,19 +35,21 @@ Los eventos de entidad (chocar, zonas, daño) llevan un filtro *entidad*.
 En el grafo del juego, déjalo vacío para recibir los de todas las entidades
 y usa la salida *entidad* para saber de cuál se trata.
 
-### Eventos propios
+### Mensajes
 
-Un evento propio es un aviso con nombre que inventas tú. Sirve para que
+Un mensaje es un aviso con nombre que inventas tú. Sirve para que
 grafos distintos se comuniquen sin conocerse:
 
-1. En el grafo que avisa, añade **Emitir un evento** y escribe su nombre,
-   por ejemplo `alarma`. Opcionalmente, conecta un valor.
-2. En cualquier otro grafo, añade **Al recibir un evento** con el mismo
+1. En el grafo que avisa, añade **Enviar mensaje a todos** y escribe su
+   nombre, por ejemplo `alarma`. Opcionalmente, conecta un valor.
+2. En cualquier otro grafo, añade **Al recibir un mensaje** con el mismo
    nombre. Su salida *valor* trae lo que se envió y *de quién*, la entidad
-   que lo emitió.
+   que lo envió.
 
-**Emitir un evento a** hace lo mismo pero solo lo recibe el grafo de una
-entidad concreta. Desde Lua, usa `motor.emitir("alarma", valor)`.
+**Enviar mensaje a un objeto** solo llega a esa entidad, y **Enviar mensaje
+a los de una etiqueta**, a todas las que la llevan. Desde Lua, usa
+`motor.emitir("alarma", valor)`. Ver
+[Objetos que se hablan](objetos-que-se-hablan.md).
 
 ## Flujo
 

@@ -136,8 +136,14 @@ recargan también los guiones que lo usan.
 ## Hablar con otras entidades
 
 - `motor.emitir("alarma", valor, yo)` avisa a todos: a los nodos *Al recibir
-  un evento* y a la función `al_recibir` de todos los guiones de entidad.
+  un mensaje* y a la función `al_recibir` de todos los guiones de entidad.
 - `motor.emitir_a("Puerta", "abrir")` avisa solo a esa entidad.
+- `motor.emitir_etiqueta("enemigo", "alarma")` avisa a todas las que llevan
+  esa etiqueta.
+- `al_chocar_objeto(otro)`, `al_entrar_objeto_zona(quien)` y
+  `al_hacer_clic()` dicen cuándo toca a otro objeto, cuándo entra alguien
+  en su zona y cuándo el jugador le hace clic. Ver
+  [Objetos que se hablan](objetos-que-se-hablan.md).
 - `motor.danar(entidad, cantidad, yo)` llama a `al_recibir_dano` de la otra
   entidad.
 
@@ -153,5 +159,6 @@ end
 
 - [Programar en Lua](programar-lua.md)
 - [Comportamientos](comportamientos.md)
+- [Objetos que se hablan](objetos-que-se-hablan.md)
 - [Tutorial: el enemigo en Lua](tutorial-enemigo-lua.md)
 - [Recargar, consola y depurador](lua-depurar.md)

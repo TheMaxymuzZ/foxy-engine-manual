@@ -16,11 +16,15 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `cada_fotograma(segundos)` | Unas 60 veces por segundo, con los segundos desde la anterior. |
 | `cada_segundo()` | Una vez por segundo. |
 | `al_chocar(otro)` | Cuando el jugador toca la entidad (en el guion del mundo: entidad, otro). |
+| `al_chocar_objeto(otro)` | Cuando la entidad choca con otro objeto (en el guion del mundo: entidad, otro). |
+| `al_hacer_clic()` | Cuando el jugador hace clic en la entidad, mirándola (en el guion del mundo: entidad). |
 | `al_recoger(entidad, valor)` | Cuando el jugador recoge una entidad con el componente Recogible (con el valor que sube). |
 | `al_entrar_zona(quien)` | Cuando el jugador entra en la zona de la entidad (en el guion del mundo: entidad, quien). |
 | `al_salir_zona(quien)` | Cuando el jugador sale de la zona de la entidad (en el guion del mundo: entidad, quien). |
+| `al_entrar_objeto_zona(quien)` | Cuando otro objeto (no el jugador) entra en la zona de la entidad (en el guion del mundo: entidad, quien). |
+| `al_salir_objeto_zona(quien)` | Cuando otro objeto (no el jugador) sale de la zona de la entidad (en el guion del mundo: entidad, quien). |
 | `al_recibir_dano(cantidad, de)` | Cuando algo le hace daño con motor.danar (en el guion del mundo: entidad, cantidad, de). |
-| `al_recibir(evento, valor, de)` | Un evento propio emitido con motor.emitir (solo en guiones de entidad). |
+| `al_recibir(evento, valor, de)` | Un mensaje enviado con motor.emitir, motor.emitir_a o motor.emitir_etiqueta (solo en guiones de entidad). |
 | `al_pulsar(accion)` | Al pulsar una acción del mapa de acciones del proyecto. |
 | `al_terminar_animacion(animacion)` | Cuando termina un clip que no va en bucle (en el guion del mundo: entidad, animacion). |
 | `al_evento_animacion(evento)` | Un suceso «Avisar a los nodos» de la línea de tiempo (en el guion del mundo: entidad, evento). |
@@ -48,8 +52,8 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.variable(entidad: entidad, nombre: texto)` | valor (cualquiera) | Lee una variable «de la entidad» de otra entidad. |
-| `motor.poner_variable(entidad: entidad, nombre: texto, valor)` | — | Cambia una variable «de la entidad» de otra entidad. |
+| `motor.variable(entidad: entidad, nombre: texto)` | valor (cualquiera) | Lee una variable «de la entidad» de otro objeto (de sus grafos, o una propiedad de sus guiones): la vida del jugador, las monedas… |
+| `motor.poner_variable(entidad: entidad, nombre: texto, valor)` | — | Cambia una variable «de la entidad» de otro objeto. Sus grafos y guiones ven el valor nuevo. |
 
 ## Matemáticas
 
@@ -83,6 +87,17 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.mostrar(entidad: entidad)` | — | Vuelve a verse una entidad oculta. |
 | `motor.oculta(entidad: entidad)` | si (sí/no) | Sí si está oculta. |
 | `motor.ve(entidad: entidad, objetivo: entidad, alcance: número)` | si (sí/no) | Sí si el objetivo está a la vista: a menos de esa distancia y sin ocultar. |
+
+## Etiquetas y mensajes
+
+| Función | Devuelve | Qué hace |
+|---|---|---|
+| `motor.tiene_etiqueta(entidad: entidad, etiqueta: texto)` | si (sí/no) | Sí si el objeto lleva esa etiqueta. Para saber con qué se ha chocado. El jugador lleva siempre «jugador». |
+| `motor.con_etiqueta(etiqueta: texto)` | lista (lista) | Todos los objetos que llevan esa etiqueta y no están ocultos (para «Para cada elemento»). |
+| `motor.mas_cercano(etiqueta: texto, desde: entidad)` | entidad (entidad) | El objeto con esa etiqueta que está más cerca (sin contar el de «cerca de»). Nada si no hay ninguno. |
+| `motor.etiquetas(entidad: entidad)` | lista (lista) | Las etiquetas que lleva ahora el objeto. |
+| `motor.poner_etiqueta(entidad: entidad, etiqueta: texto)` | — | Le pone una etiqueta mientras dure la partida (en el editor no cambia). |
+| `motor.quitar_etiqueta(entidad: entidad, etiqueta: texto)` | — | Le quita una etiqueta mientras dure la partida. |
 
 ## Jugador
 
@@ -172,5 +187,6 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 |---|---|---|
 | `motor.soltar_particulas(tipo, x, y, z, cantidad)` | — | Suelta de golpe partículas de un tipo (polvo, chispas, lluvia, nieve, humo u hojas) en ese sitio. |
 | `motor.danar(entidad, cantidad, de)` | — | Pone en marcha «Al recibir daño» de esa entidad. |
-| `motor.emitir(evento, valor, de)` | — | Emite un evento propio: lo reciben los nodos «Al recibir un evento» y la función al_recibir de los guiones de entidad. |
-| `motor.emitir_a(entidad, evento, valor, de)` | — | Como motor.emitir, pero solo para el grafo o el guion de esa entidad. |
+| `motor.emitir(evento, valor, de)` | — | Envía un mensaje a todos: lo reciben los nodos «Al recibir un mensaje» y la función al_recibir de los guiones de entidad. |
+| `motor.emitir_a(entidad, evento, valor, de)` | — | Como motor.emitir, pero solo para los comportamientos de esa entidad. |
+| `motor.emitir_etiqueta(etiqueta, evento, valor, de)` | — | Como motor.emitir, pero solo para las entidades que llevan esa etiqueta. |

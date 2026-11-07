@@ -5,6 +5,25 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR32: Objetos que se hablan
+
+- **[Etiquetas](../guia/objetos-que-se-hablan.md#etiquetas)** en los objetos
+  y en los prefabricados, en el Inspector debajo del nombre. El jugador
+  lleva siempre `jugador`.
+- **Eventos nuevos**: *Al chocar con otro objeto*, *Al entrar / salir un
+  objeto en una zona* (los dos con filtro de etiqueta) y *Al hacer clic en
+  el objeto*.
+- **Mensajes**: *Enviar mensaje a todos*, *a un objeto* y *a los de una
+  etiqueta*, y *Al recibir un mensaje* (antes *Emitir un evento* y *Al
+  recibir un evento*; los grafos de antes siguen igual).
+- **Nodos de etiquetas**: *¿Tiene la etiqueta?*, *Buscar objetos con la
+  etiqueta*, *El más cercano con la etiqueta*, *Poner* y *Quitar una
+  etiqueta*.
+- **Variables de un objeto**: la casilla *variable* ofrece las del
+  proyecto, y el inspector dice cuáles ve el resto.
+- Formato de proyecto 5: los proyectos de antes se abren igual, con copia
+  de seguridad en `.foxy/copias/`.
+
 ## 0.0.1-PR31: Comportamientos
 
 - **[Comportamientos](../guia/comportamientos.md)**: cada objeto puede llevar

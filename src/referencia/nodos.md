@@ -82,6 +82,34 @@ Cuando el jugador toca la entidad. Vacío = esta entidad (o cualquiera en el gra
 
 En Lua: `function al_chocar(entidad, otro) ... end`
 
+### Al chocar con otro objeto {#evento-al_chocar_objeto}
+
+*Evento* · `evento.al_chocar_objeto`
+
+Cuando el objeto toca a otro (no al jugador). Con una etiqueta, solo si el otro la lleva. Vacío = este objeto (o cualquiera en el grafo del juego).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | con etiqueta | recurso | — (se escribe en el nodo) |
+| Salida | objeto | entidad | — |
+| Salida | con qué choca | entidad | — |
+
+En Lua: `function al_chocar_objeto(entidad, otro) ... end`
+
+### Al hacer clic en el objeto {#evento-al_hacer_clic}
+
+*Evento* · `evento.al_hacer_clic`
+
+Cuando el jugador hace clic (o pulsa «Golpear») mirando al objeto, en 3D. Vacío = este objeto (o cualquiera en el grafo del juego).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | esta entidad (se escribe en el nodo) |
+| Salida | objeto | entidad | — |
+
+En Lua: `function al_hacer_clic(entidad) ... end`
+
 ### Al recoger algo {#evento-al_recoger}
 
 *Evento* · `evento.al_recoger`
@@ -124,6 +152,36 @@ Cuando el jugador sale de la zona (componente Zona) de una entidad.
 
 En Lua: `function al_salir_zona(entidad, quien) ... end`
 
+### Al entrar un objeto en una zona {#evento-al_entrar_objeto_zona}
+
+*Evento* · `evento.al_entrar_objeto_zona`
+
+Cuando otro objeto (no el jugador) entra en la zona de una entidad. Con una etiqueta, solo si la lleva.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | zona de | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | con etiqueta | recurso | — (se escribe en el nodo) |
+| Salida | entidad de la zona | entidad | — |
+| Salida | quién entra | entidad | — |
+
+En Lua: `function al_entrar_objeto_zona(entidad, quien) ... end`
+
+### Al salir un objeto de una zona {#evento-al_salir_objeto_zona}
+
+*Evento* · `evento.al_salir_objeto_zona`
+
+Cuando otro objeto (no el jugador) sale de la zona de una entidad. Con una etiqueta, solo si la lleva.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | zona de | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | con etiqueta | recurso | — (se escribe en el nodo) |
+| Salida | entidad de la zona | entidad | — |
+| Salida | quién sale | entidad | — |
+
+En Lua: `function al_salir_objeto_zona(entidad, quien) ... end`
+
 ### Al recibir daño {#evento-al_recibir_dano}
 
 *Evento* · `evento.al_recibir_dano`
@@ -139,15 +197,15 @@ Cuando algo hace daño a la entidad con «Hacer daño». Pon «jugador» para el
 
 En Lua: `function al_recibir_dano(entidad, cantidad, de) ... end`
 
-### Al recibir un evento {#evento-al_recibir}
+### Al recibir un mensaje {#evento-al_recibir}
 
 *Evento* · `evento.al_recibir`
 
-Un evento propio: otro grafo (o este) lo emite con «Emitir un evento».
+Un mensaje con ese nombre, enviado con «Enviar mensaje…» desde otro grafo, otro guion o este mismo.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | evento | texto | «mi_evento» (se escribe en el nodo) |
+| Entrada | mensaje | texto | «mi_mensaje» (se escribe en el nodo) |
 | Salida | valor | cualquiera | — |
 | Salida | de quién | entidad | — |
 
@@ -375,29 +433,6 @@ Deja pasar mientras está abierta. Ábrela o ciérrala con sus otras entradas.
 | Entrada de ejecución | cerrar | — | — |
 | Entrada | empieza abierta | sí/no | sí (se escribe en el nodo) |
 
-### Emitir un evento {#control-emitir}
-
-*Flujo* · `control.emitir`
-
-Avisa a todos los grafos: los nodos «Al recibir un evento» con ese nombre se ponen en marcha.
-
-| Pin | Nombre | Tipo | Valor de partida |
-|---|---|---|---|
-| Entrada | evento | texto | «mi_evento» (se escribe en el nodo) |
-| Entrada | valor | cualquiera | — |
-
-### Emitir un evento a {#control-emitir_a}
-
-*Flujo* · `control.emitir_a`
-
-Como «Emitir un evento», pero solo lo recibe el grafo de esa entidad.
-
-| Pin | Nombre | Tipo | Valor de partida |
-|---|---|---|---|
-| Entrada | entidad | entidad | jugador |
-| Entrada | evento | texto | «mi_evento» (se escribe en el nodo) |
-| Entrada | valor | cualquiera | — |
-
 ### Responder {#control-responder}
 
 *Flujo* · `control.responder`
@@ -424,29 +459,29 @@ Solo sirve para llevar el cable por otro sitio.
 
 Las variables del grafo, de la entidad y del juego se leen y se cambian con los nodos **Leer** y **Poner** que añaden sus botones en el grupo *Variables* del panel; su tipo es el de la variable. Los nodos de esta categoría leen y cambian las variables de la entidad de **otra** entidad.
 
-### Variable de una entidad {#motor-variable}
+### Variable de un objeto {#motor-variable}
 
 *Valor* · `motor.variable`
 
-Lee una variable «de la entidad» de otra entidad.
+Lee una variable «de la entidad» de otro objeto (de sus grafos, o una propiedad de sus guiones): la vida del jugador, las monedas…
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | entidad | esta entidad |
 | Entrada | variable | texto | «vida» |
 | Salida | valor | cualquiera | — |
 
 En Lua: `local valor = motor.variable(entidad, nombre)`
 
-### Poner variable de una entidad {#motor-poner_variable}
+### Poner variable de un objeto {#motor-poner_variable}
 
 *Acción* · `motor.poner_variable`
 
-Cambia una variable «de la entidad» de otra entidad.
+Cambia una variable «de la entidad» de otro objeto. Sus grafos y guiones ven el valor nuevo.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | entidad | esta entidad |
 | Entrada | variable | texto | «vida» |
 | Entrada | valor | cualquiera | — |
 
@@ -1269,6 +1304,123 @@ Pone en marcha «Al recibir daño» de esa entidad (y los del juego). Qué pasa 
 | Entrada | cantidad | número | 10 |
 
 En Lua: `motor.danar(entidad, cantidad, yo)`
+
+## Etiquetas y mensajes
+
+### Enviar mensaje a todos {#control-emitir}
+
+*Flujo* · `control.emitir`
+
+Lo reciben todos los grafos y guiones: sus nodos «Al recibir un mensaje» con ese nombre se ponen en marcha.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | mensaje | texto | «mi_mensaje» (se escribe en el nodo) |
+| Entrada | valor | cualquiera | — |
+
+### Enviar mensaje a un objeto {#control-emitir_a}
+
+*Flujo* · `control.emitir_a`
+
+Como «Enviar mensaje a todos», pero solo lo reciben los comportamientos de ese objeto.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | jugador |
+| Entrada | mensaje | texto | «mi_mensaje» (se escribe en el nodo) |
+| Entrada | valor | cualquiera | — |
+
+### Enviar mensaje a los de una etiqueta {#control-emitir_etiqueta}
+
+*Flujo* · `control.emitir_etiqueta`
+
+Lo reciben los comportamientos de todos los objetos que llevan esa etiqueta.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | etiqueta | recurso | «enemigo» |
+| Entrada | mensaje | texto | «mi_mensaje» (se escribe en el nodo) |
+| Entrada | valor | cualquiera | — |
+
+### ¿Tiene la etiqueta? {#motor-tiene_etiqueta}
+
+*Valor* · `motor.tiene_etiqueta`
+
+Sí si el objeto lleva esa etiqueta. Para saber con qué se ha chocado. El jugador lleva siempre «jugador».
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | esta entidad |
+| Entrada | etiqueta | recurso | «enemigo» |
+| Salida | la tiene | sí/no | — |
+
+En Lua: `local si = motor.tiene_etiqueta(entidad, etiqueta)`
+
+### Buscar objetos con la etiqueta {#motor-con_etiqueta}
+
+*Valor* · `motor.con_etiqueta`
+
+Todos los objetos que llevan esa etiqueta y no están ocultos (para «Para cada elemento»).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | etiqueta | recurso | «moneda» |
+| Salida | lista | lista | — |
+
+En Lua: `local lista = motor.con_etiqueta(etiqueta)`
+
+### El más cercano con la etiqueta {#motor-mas_cercano}
+
+*Valor* · `motor.mas_cercano`
+
+El objeto con esa etiqueta que está más cerca (sin contar el de «cerca de»). Nada si no hay ninguno.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | etiqueta | recurso | «enemigo» |
+| Entrada | cerca de | entidad | esta entidad |
+| Salida | objeto | entidad | — |
+
+En Lua: `local entidad = motor.mas_cercano(etiqueta, desde)`
+
+### Etiquetas de un objeto {#motor-etiquetas}
+
+*Valor* · `motor.etiquetas`
+
+Las etiquetas que lleva ahora el objeto.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | esta entidad |
+| Salida | etiquetas | lista | — |
+
+En Lua: `local lista = motor.etiquetas(entidad)`
+
+### Poner una etiqueta {#motor-poner_etiqueta}
+
+*Acción* · `motor.poner_etiqueta`
+
+Le pone una etiqueta mientras dure la partida (en el editor no cambia).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | esta entidad |
+| Entrada | etiqueta | recurso | «activado» |
+
+En Lua: `motor.poner_etiqueta(entidad, etiqueta)`
+
+### Quitar una etiqueta {#motor-quitar_etiqueta}
+
+*Acción* · `motor.quitar_etiqueta`
+
+Le quita una etiqueta mientras dure la partida.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | entidad | esta entidad |
+| Entrada | etiqueta | recurso | «activado» |
+
+En Lua: `motor.quitar_etiqueta(entidad, etiqueta)`
 
 ## Jugador
 
