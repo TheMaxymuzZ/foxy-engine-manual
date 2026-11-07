@@ -105,7 +105,7 @@ grafo. Al añadir uno se copia a `grafos/` del proyecto (si no estaba ya).
 4. Juega y toca el botón: la puerta se abre y, al tocarlo otra vez, se
    cierra.
 
-La puerta escucha el evento con el nodo **Al recibir un evento**, así que
+La puerta escucha el mensaje con el nodo **Al recibir un mensaje**, así que
 cualquier grafo o guion tuyo puede abrirla también mandándole «activar».
 
 ## Ver un grafo como código

@@ -155,7 +155,8 @@ también son valores.
 |---|---|
 | `motor.esperar(segundos)` | Detiene la función que la llama durante esos segundos, sin parar el juego. Solo dentro de las funciones que llama el motor |
 | `motor.tiempo()` | Segundos de juego desde que empezó la partida |
-| `motor.emitir(evento, valor)` | Pone en marcha los nodos *Al recibir un evento* con ese nombre |
+| `motor.emitir(evento, valor)` | Pone en marcha los nodos *Al recibir un mensaje* con ese nombre |
+| `motor.emitir_etiqueta(etiqueta, evento, valor)` | Lo mismo, solo para las entidades con esa etiqueta |
 | `motor.emitir_a(e, evento, valor)` | Lo mismo, solo para el grafo de esa entidad |
 | `motor.vector(x, y, z)` | Un vector nuevo |
 | `motor.longitud(v)`, `motor.normalizar(v)` | El largo de un vector y el mismo vector con largo 1 |

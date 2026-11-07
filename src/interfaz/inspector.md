@@ -8,7 +8,7 @@ El inspector **cambia según lo que estés haciendo**.
 |---|---|---|
 | 1 | **Herramienta activa** | Las opciones de la herramienta: forma y tamaño del pincel, simetría |
 | 2 | **Material** | El material con el que se construye o se pinta |
-| 3 | **Objeto elegido** | El nombre, los comportamientos, el tipo y la posición de la entidad elegida |
+| 3 | **Objeto elegido** | El nombre, las etiquetas, los comportamientos, el tipo y la posición de la entidad elegida |
 | 4 | **Crear prefabricado** | Guarda la entidad como recurso reutilizable |
 | 5 | **Componentes** | Los componentes de la entidad y **Añadir componente** |
 | 6 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador usa la entidad |
@@ -19,6 +19,7 @@ Lo que muestra depende de la situación:
   los **materiales**.
 - Con *Colocar objetos*: la **lista de objetos** para colocar.
 - Con una entidad elegida: su **nombre**, sus
+  [**etiquetas**](../guia/objetos-que-se-hablan.md#etiquetas), sus
   [**comportamientos**](../guia/comportamientos.md) con **➕ Comportamiento**,
   su posición, **Crear
   prefabricado** (o, en una copia, los botones de su prefabricado), sus
@@ -37,6 +38,12 @@ Cada componente se muestra en un apartado plegable con su descripción y sus
 valores. En una copia de un prefabricado, los componentes heredados indican
 *del prefabricado* y los cambiados *cambiado aquí*. Ver
 [Entidades y componentes](../guia/entidades.md).
+
+## Etiquetas
+
+Debajo del nombre, la fila **Etiquetas**: escribe una en **nueva…** y pulsa
+Intro, pon una del proyecto con **➕** o quita una con su **×**. Ver
+[Objetos que se hablan](../guia/objetos-que-se-hablan.md).
 
 ## Comportamientos
 

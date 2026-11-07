@@ -143,7 +143,7 @@ entre ellos:
 - Las variables **del juego** de los nodos son valores: léelas con
   `motor.valor("vida")` y cámbialas con `motor.poner_valor`.
 - `motor.emitir("alarma", valor)` pone en marcha los nodos
-  *Al recibir un evento* con ese nombre.
+  *Al recibir un mensaje* con ese nombre.
 - **{ } Ver como código**, en el panel Nodos, enseña el Lua de cualquier
   grafo para copiarlo a `mundo.lua`, sin borrar el grafo. Ver
   [Depurar y ver como código](nodos-depurar.md#ver-como-código).
