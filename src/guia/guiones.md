@@ -144,9 +144,9 @@ entre ellos:
   `motor.valor("vida")` y cámbialas con `motor.poner_valor`.
 - `motor.emitir("alarma", valor)` pone en marcha los nodos
   *Al recibir un evento* con ese nombre.
-- **Pasar a código**, en el panel Nodos, copia el grafo del juego a
-  `mundo.lua` para seguir a mano. Ver
-  [Depurar y pasar a código](nodos-depurar.md#pasar-a-código).
+- **{ } Ver como código**, en el panel Nodos, enseña el Lua de cualquier
+  grafo para copiarlo a `mundo.lua`, sin borrar el grafo. Ver
+  [Depurar y ver como código](nodos-depurar.md#ver-como-código).
 
 ## Autocompletado
 

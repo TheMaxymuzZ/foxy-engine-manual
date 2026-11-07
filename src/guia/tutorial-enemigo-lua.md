@@ -80,9 +80,8 @@ end
 
 1. Elige el lobo en la escena.
 2. En el [Inspector](../interfaz/inspector.md), pulsa
-   <i class="fx fx-mas"></i> **Añadir componente → Guion** y elige
-   `enemigo.lua` en **Archivo**.
-3. En **Propiedades**, cambia **velocidad** a `5` y **vision** a `12`.
+   **➕ Comportamiento → 📂 Del proyecto** y elige `enemigo.lua`.
+3. En el recuadro del comportamiento, cambia **velocidad** a `5` y **vision** a `12`.
 
 ![Las propiedades del lobo en el inspector](../imagenes/capturas/panel-inspector-guion.png)
 

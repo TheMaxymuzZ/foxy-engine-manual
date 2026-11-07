@@ -135,6 +135,11 @@ LISTA: dict[str, str] = {
     # Lógica
     "nodos": f"--ancho 1600 --alto 900 --editor --pestana nodos",
     "nodos-depurar": f"--ancho 1600 --alto 900 --editor --pestana nodos-depurar",
+    "comportamientos": f"{ED} --pestana comportamientos --herramienta elegir",
+    "panel-comportamientos": "@recorte comportamientos 1126,70,1440,470",
+    "programar": f"{ED} --pestana programar --herramienta elegir",
+    "nodos-codigo": f"{ED} --pestana nodos-codigo --maximizar nodos",
+    "panel-nodos-codigo": "@recorte nodos-codigo 1160,105,1440,510",
     "guion-mundo": f"{ED} --pestana guion",
     "codigo-autocompletar": f"{ED} --pestana codigo-autocompletar --espacio programar",
     "depurar": f"{ED} --pestana codigo-depurar --jugar --espacio programar",

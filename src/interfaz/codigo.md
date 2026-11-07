@@ -14,7 +14,7 @@ mundo, los guiones de entidad y los módulos.
 | 5 | **Estado** | Los errores del guion o la ayuda del autocompletado |
 
 Se abre con un clic en un guion del grupo **Guiones** del panel
-[Proyecto](proyecto.md), con **Abrir en Código** en el componente Guion del
+[Proyecto](proyecto.md), con doble clic en un comportamiento de código del
 inspector, desde *Herramientas → Código* o en el espacio **Programar**.
 Jugando, se abre encima del juego con <kbd>F7</kbd>.
 

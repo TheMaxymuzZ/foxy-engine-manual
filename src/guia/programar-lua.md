@@ -12,7 +12,7 @@ mezclar en el mismo proyecto.
 | Guion | Dónde está | Para qué sirve |
 |---|---|---|
 | **Guion del mundo** | `guiones/mundo.lua` | Lo que afecta a todo el juego: la hora, el clima, los vecinos, las interfaces. Ver [Guion del mundo](guiones.md) |
-| **Guion de entidad** | `guiones/<nombre>.lua`, elegido en el componente [Guion](../referencia/componentes/guion.md) | El comportamiento de una entidad: un enemigo, una puerta, una moneda. Cada entidad tiene su propia copia. Ver [Guiones de entidad](guiones-entidad.md) |
+| **Guion de entidad** | `guiones/<nombre>.lua`, puesto a la entidad como [comportamiento](comportamientos.md) | El comportamiento de una entidad: un enemigo, una puerta, una moneda. Cada entidad tiene su propia copia. Ver [Guiones de entidad](guiones-entidad.md) |
 | **Módulo** | `guiones/<nombre>.lua`, cargado con `require` | Funciones que comparten varios guiones. Ver [Módulos](guiones-entidad.md#módulos) |
 
 Todos son archivos de texto dentro de la carpeta `guiones/` del proyecto. Se
@@ -47,8 +47,8 @@ editor externo, como VS Code o Zed.
 2. En el panel **Proyecto**, grupo **Guiones**, pulsa **Guion nuevo** y elige
    la plantilla **Enemigo**.
 3. Elige una entidad en la escena. En el
-   [Inspector](../interfaz/inspector.md), añade el componente **Guion** y elige
-   el archivo `enemigo.lua`.
+   [Inspector](../interfaz/inspector.md), pulsa **➕ Comportamiento →
+   📂 Del proyecto** y elige `enemigo.lua`.
 4. Cambia **velocidad** en las propiedades del inspector.
 5. Pulsa **Jugar aquí**. Con el juego en marcha, pulsa <kbd>F7</kbd>, cambia
    el guion y guárdalo con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>: el

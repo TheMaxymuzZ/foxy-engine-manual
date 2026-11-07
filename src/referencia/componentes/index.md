@@ -17,10 +17,8 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Luz](luz.md) | `Luz` | Ilumina alrededor, con su color y su alcance. |
 | [Sonido](sonido.md) | `Sonido` | Un sonido que sale de aquí y se oye más cerca que lejos. |
 | [Zona](zona.md) | `Zona` | Una caja invisible: pasa algo al entrar o al salir. |
-| [Guion](guion.md) | `Guion` | Su guion Lua: lo que hace, escrito en código, con propiedades para ajustar aquí. |
 | [Sprite](sprite.md) | `Sprite` | Una imagen o un fotograma de una hoja de sprites (en 2D). |
 | [Animador](animador.md) | `Animador` | Sus animaciones: un clip o una máquina de estados (quieto, andar, correr…). |
-| [Grafo de nodos](grafo-de-nodos.md) | `GrafoNodos` | Su propio grafo de nodos: lo que hace, sin escribir código. |
 | [Recogible](recogible.md) | `Recogible` | Se recoge al tocarlo: suma monedas (o lo que digas), suena y desaparece. |
 | [Partículas](particulas.md) | `Particulas` | Polvo, chispas, lluvia, nieve, humo u hojas que salen de aquí. |
 

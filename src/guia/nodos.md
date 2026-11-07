@@ -13,8 +13,11 @@ sección profundizan en cada parte:
   decide por dónde sigue.
 - [Funciones, bibliotecas y nodos en Lua](nodos-funciones.md): reutilizar
   grupos de nodos y ampliar la paleta.
-- [Depurar y pasar a código](nodos-depurar.md): ver los cables encendidos
-  mientras juegas, detener el juego en un nodo y leer el Lua que sale.
+- [Depurar y ver como código](nodos-depurar.md): ver los cables encendidos
+  mientras juegas, detener el juego en un nodo y leer o copiar el Lua que
+  sale.
+- [Comportamientos](comportamientos.md): dar a un objeto uno o varios
+  grafos, y los diez que ya trae el motor.
 - [Tutorial: un enemigo que persigue](tutorial-enemigo.md): un juego
   completo con vida, barra de vida y pantalla de derrota, sin código.
 - [Referencia de nodos](../referencia/nodos.md): todos los nodos del motor.
@@ -30,9 +33,9 @@ lo que abarcan:
 |---|---|---|
 | **Del juego** | `guiones/mundo.nodos.ron` | Durante toda la partida, en todas las escenas |
 | **De escena** | `mundos/<escena>.nodos.ron` | Solo mientras se juega en esa escena |
-| **De entidad** | `grafos/<nombre>.nodos.ron` | Una copia por cada entidad que lo lleva, con el componente [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md) |
+| **De objeto** | `grafos/<nombre>.nodos.ron` | Una copia por cada objeto que lo lleva como [comportamiento](comportamientos.md) |
 
-Los grafos de entidad son los más útiles para dar comportamiento: el mismo
+Los grafos de objeto son los más útiles para dar comportamiento: el mismo
 grafo *enemigo* puede ir en diez entidades y cada una patrulla por su
 cuenta, con sus propias variables. Dentro de ellos, **Esta entidad** es la
 entidad que lleva el grafo.
@@ -45,18 +48,20 @@ entidad que lleva el grafo.
 ![El panel Nodos](../imagenes/capturas/panel-nodos.png)
 
 - **Izquierda.** La lista de **Grafos** del proyecto (el del juego, los de
-  escena, los de entidad, las funciones y los nodos en Lua), las
+  escena, los de objeto, las funciones y los nodos en Lua), las
   **Variables** del grafo abierto y **Todos los nodos**, la paleta por
   categorías.
 - **Centro.** El lienzo, con un minimapa abajo a la derecha.
-- **Derecha.** Los ajustes del nodo elegido y su ayuda. Con **Ver el Lua**
+- **Derecha.** Los ajustes del nodo elegido y su ayuda. Con **{ } Ver como código**
   activado, el código que sale del grafo.
 - **Arriba.** Guardar, deshacer y rehacer, alinear y repartir lo elegido,
-  **Comentario**, **Pasar a función**, el zoom y **Pasar a código**.
+  **Comentario**, **Pasar a función**, el zoom, **{ } Ver como código** y,
+  en los grafos de objeto, **📜 Copiar a un guion nuevo**.
 
-Para crear un grafo de entidad, pulsa <i class="fx fx-mas"></i>
-**Grafo de entidad** en la lista, o en el [Inspector](../interfaz/inspector.md)
-de una entidad con el componente *Grafo de nodos*, pulsa **Grafo nuevo**.
+Para crear un grafo de objeto, elige el objeto y, en el
+[Inspector](../interfaz/inspector.md), pulsa **➕ Comportamiento → 🔌 Nodos
+nuevos**. También puedes pulsar <i class="fx fx-mas"></i> **Grafo de
+objeto** en la lista y añadirlo después con **📂 Del proyecto**.
 
 ## Cables y tipos
 

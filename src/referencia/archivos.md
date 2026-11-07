@@ -169,9 +169,17 @@ Archivo: `prefabricados/<id>.ron`
     componentes: [
         Luz((intensidad: 1.5, alcance: 10.0)),
     ],
+    comportamientos: [
+        (archivo: "grafos/flotar.nodos.ron", valores: {"altura": "0.3"}),
+    ],
     accion: Ninguna,                 // lo que pasa al usarlo (E)
 )
 ```
+
+Cada entidad de una escena y cada prefabricado pueden llevar una lista
+`comportamientos`. Cada uno tiene su `archivo` (un `.nodos.ron` de `grafos/`
+o un `.lua` de `guiones/`), sus `valores` (solo los que cambian) y, si está
+apagado, `apagado: true`. Ver [Comportamientos](../guia/comportamientos.md).
 
 Ver [Prefabricados](../guia/entidades.md#prefabricados).
 
@@ -377,6 +385,8 @@ atravesable, golpes y peso) están en
 
 Archivos: `guiones/mundo.lua` (el guion del mundo) y `guiones/<nombre>.lua`
 (guiones de entidad y módulos; pueden ir en subcarpetas).
+
+Los grafos de objeto van en `grafos/<nombre>.nodos.ron`.
 
 Código Lua. Ver [Programar en Lua](../guia/programar-lua.md) y [API de Lua](lua.md).
 
