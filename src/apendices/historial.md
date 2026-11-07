@@ -5,6 +5,25 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR31: Comportamientos
+
+- **[Comportamientos](../guia/comportamientos.md)**: cada objeto puede llevar
+  varios, hechos con nodos o con código, con sus propios valores y una
+  casilla para encenderlos o apagarlos. La sección está arriba del
+  Inspector, con **➕ Comportamiento**.
+- **Diez comportamientos ya hechos**: moverse con teclas, seguir al
+  jugador, patrullar, girar, flotar, recoger, hacer daño, puerta que se
+  abre, plataforma que se mueve y botón que activa algo.
+- **✏ Programar este objeto**, con clic derecho en la Vista o en
+  *En la escena*. **Doble clic** en un comportamiento lo abre.
+- **Los grafos ya no se borran**: *Pasar a código* se cambia por
+  **Ver como código** (solo lectura, con colores) y
+  **Copiar a un guion nuevo**. Ver
+  [Depurar y ver como código](../guia/nodos-depurar.md).
+- Nodos nuevos **Seno** y **Coseno**.
+- Los componentes *Guion* y *Grafo de nodos* desaparecen: los proyectos
+  antiguos se convierten solos, con copia de seguridad en `.foxy/copias/`.
+
 ## 0.0.1-PR30: Manual oficial
 
 - **Manual reorganizado en cinco partes**: Empezar, Manual del editor,
@@ -113,7 +132,7 @@ del motor con el número del último cambio (*pull request*) incorporado.
 
 - **[Nodos 2.0](../guia/nodos.md)**: grafos del juego, de cada escena y de
   entidad (con el componente
-  [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md)). Cables de
+  Grafo de nodos, hoy un [comportamiento](../guia/comportamientos.md)). Cables de
   ejecución y cables de datos con tipo y color, con conversión automática.
 - **Variables** del grafo, de la entidad (con su valor en el Inspector) y
   del juego (que se guardan con la partida y se ven en las interfaces).

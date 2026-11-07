@@ -24,11 +24,12 @@ Un grafo de nodos describe un comportamiento con cajas: los **eventos**
 (*Al empezar*, *Cada fotograma*, *Al entrar en una zona*) dan la salida, y
 los cables llevan el flujo por **condiciones**, **bucles** y **acciones**.
 Los datos tienen tipo (número, texto, vector, entidad) y se ven en el color
-de cada cable. Un grafo puede ser del juego, de una escena o de una entidad,
+de cada cable. Un grafo puede ser del juego, de una escena o de un objeto,
 y se puede **depurar en vivo** viendo qué cables se encienden.
 
-Todo nodo es una función de la API de Lua, así que un grafo se puede pasar a
-código en cualquier momento. Ver [Nodos](../guia/nodos.md).
+Todo nodo es una función de la API de Lua, así que un grafo se puede **ver
+como código** en cualquier momento, o copiar a un guion nuevo, sin perder
+el grafo. Ver [Nodos](../guia/nodos.md).
 
 ## Lua
 
@@ -41,6 +42,9 @@ parada. Hay dos clases de guion:
   juego.
 - Los **guiones de entidad**: el comportamiento de una entidad, con
   propiedades que se ajustan en el Inspector para cada copia.
+
+Los grafos de objeto y los guiones de entidad se ponen a los objetos como
+[comportamientos](../guia/comportamientos.md): uno o varios por objeto.
 
 Ver [Programar en Lua](../guia/programar-lua.md).
 

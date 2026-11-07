@@ -14,7 +14,8 @@
 | **Casilla** | En 2D, cada cuadrito de un mapa de casillas, y la medida de las escenas 2D. Ver [Mapas de casillas](../guia/casillas.md). |
 | **Cinemática** | Una escena corta que el jugador mira sin manejar, con la cámara y frases. Ver [Cinemáticas](../guia/cinematicas.md). |
 | **Clave** | El valor de una propiedad en un segundo concreto de una animación. Entre dos claves, el motor rellena el camino. |
-| **Componente** | Una pieza que da un comportamiento a una entidad: Luz, Zona, Controlador… Ver [Componentes](../referencia/componentes/index.md). |
+| **Componente** | Una pieza que dice lo que una entidad es: Luz, Zona, Controlador… Ver [Componentes](../referencia/componentes/index.md). |
+| **Comportamiento** | Algo que hace un objeto por su cuenta, con un grafo de nodos o un guion Lua. Un objeto puede llevar varios, cada uno con sus valores; el motor trae diez ya hechos. Ver [Comportamientos](../guia/comportamientos.md). |
 | **Coyote time** | Un momento después de salir de un borde en el que todavía se puede saltar. |
 | **Cubito** | La pieza más pequeña del mundo. Mide 50 cm salvo que el proyecto elija otra [rejilla](../editor/ajustes-proyecto.md#rejilla-y-materiales). |
 | **Curva** | Cómo se va de una clave a la siguiente: suave, lineal, rebotando, de golpe… Ver [Las curvas](../guia/animacion.md#las-curvas). |
@@ -29,8 +30,8 @@
 | **Función (de nodos)** | Un grupo de nodos guardado en `funciones/` que se usa como un nodo más. Ver [Funciones](../guia/nodos-funciones.md). |
 | **Generador** | Lo que crea el terreno de una escena: vacío, plano, isla, colinas o cuevas. Ver [Generadores de terreno](../guia/generadores.md). |
 | **Grafo** | Un conjunto de nodos unidos con cables: del juego, de una escena o de una entidad. Ver [Nodos](../guia/nodos.md). |
-| **Guion** | Un archivo de código Lua en `guiones/`. El guion del mundo es `mundo.lua`; los guiones de entidad dan comportamiento a una entidad. Ver [Programar en Lua](../guia/programar-lua.md). |
-| **Guion de entidad** | Un guion que lleva una entidad con el componente Guion. Cada entidad tiene su propia copia. Ver [Guiones de entidad](../guia/guiones-entidad.md). |
+| **Guion** | Un archivo de código Lua en `guiones/`. El guion del mundo es `mundo.lua`; los guiones de entidad son comportamientos de una entidad. Ver [Programar en Lua](../guia/programar-lua.md). |
+| **Guion de entidad** | Un guion que lleva una entidad como comportamiento. Cada entidad tiene su propia copia. Ver [Guiones de entidad](../guia/guiones-entidad.md). |
 | **Hoja de sprites** | Una imagen con varios fotogramas que se cortan para hacer animaciones. Ver [Sprites](../guia/sprites.md). |
 | **Inspector** | El [panel](../interfaz/inspector.md) del editor con las opciones de la herramienta y de lo que tengas elegido. |
 | **Interfaz** | Algo que se dibuja encima del juego: un menú, un marcador, un cartel. |

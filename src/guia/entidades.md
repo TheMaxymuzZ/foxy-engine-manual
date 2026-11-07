@@ -6,6 +6,11 @@ describen en [Conceptos básicos](../conceptos/basicos.md).
 
 ![Una puerta con el componente Zona en el inspector](../imagenes/capturas/entidades.png)
 
+> <i class="fx fx-consejo"></i> **Consejo.** Los componentes dicen lo que
+> una entidad **es** (una luz, un cuerpo que cae, una zona). Para lo que
+> **hace** por su cuenta (perseguir, girar, abrirse con un botón), usa
+> [comportamientos](comportamientos.md).
+
 ## Añadir y quitar componentes
 
 1. Con la herramienta <i class="fx fx-cursor"></i> **Elegir**, haz clic en
@@ -72,8 +77,8 @@ nueva posición.
 
 ## Prefabricados
 
-Un prefabricado guarda una entidad (su modelo, sus componentes y su acción
-al usarla) en `prefabricados/<id>.ron` para colocarla muchas veces.
+Un prefabricado guarda una entidad (su modelo, sus componentes, sus
+[comportamientos](comportamientos.md) y su acción al usarla) en `prefabricados/<id>.ron` para colocarla muchas veces.
 
 ### Crear un prefabricado
 
@@ -87,7 +92,8 @@ al usarla) en `prefabricados/<id>.ron` para colocarla muchas veces.
 En una copia, el Inspector indica de qué prefabricado procede. Cada
 componente heredado muestra *del prefabricado*; si se cambia en la copia,
 muestra *cambiado aquí* y el botón **Como el original** para deshacer ese
-cambio.
+cambio. Con los comportamientos pasa lo mismo: **↺ Como el original** está
+en su menú **☰**.
 
 | Botón | Qué hace |
 |---|---|
@@ -100,6 +106,7 @@ cambio.
 
 ## Véase también
 
+- [Comportamientos](comportamientos.md): lo que hace cada entidad, con nodos o con código.
 - [Referencia de componentes](../referencia/componentes/index.md)
 - [Acciones](../referencia/acciones.md)
 - [Archivos del proyecto: prefabricados](../referencia/archivos.md#prefabricados)

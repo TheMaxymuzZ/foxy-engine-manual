@@ -9,13 +9,17 @@ copia**, con sus propias variables.
 
 ## Crear un guion
 
-1. En el panel **Proyecto**, grupo **Guiones**, pulsa **Guion nuevo**. También
-   está en el botón **+** de las pestañas del panel **Código** y en el
-   componente **Guion** del inspector.
-2. Elige una plantilla y escribe el nombre. El archivo se guarda en
-   `guiones/<nombre>.lua`.
-3. Elige la entidad en la escena y, en el inspector, añade el componente
-   **Guion** y elige el archivo en **Archivo**.
+La forma más rápida es desde el propio objeto:
+
+1. Elige la entidad en la escena.
+2. En el inspector, pulsa **➕ Comportamiento → 📜 Código nuevo** y elige
+   una plantilla. El guion se crea en `guiones/`, se le pone al objeto como
+   [comportamiento](comportamientos.md) y se abre en el panel **Código**.
+
+También puedes crearlo antes, con **Guion nuevo** en el grupo **Guiones**
+del panel **Proyecto** o con el botón **+** de las pestañas de **Código**, y
+después ponérselo a la entidad con **➕ Comportamiento → 📂 Del proyecto**.
+Una entidad puede llevar varios guiones y grafos a la vez.
 
 | Plantilla | Qué hace |
 |---|---|
@@ -148,6 +152,6 @@ end
 ## Véase también
 
 - [Programar en Lua](programar-lua.md)
-- [Componente Guion](../referencia/componentes/guion.md)
+- [Comportamientos](comportamientos.md)
 - [Tutorial: el enemigo en Lua](tutorial-enemigo-lua.md)
 - [Recargar, consola y depurador](lua-depurar.md)

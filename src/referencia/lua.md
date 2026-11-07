@@ -21,7 +21,7 @@ Escríbelas en `guiones/mundo.lua`; todas son opcionales.
 | `al_entrar_zona(entidad, quien)`, `al_salir_zona(entidad, quien)` | Cuando el jugador entra o sale de una entidad con [Zona](componentes/zona.md) | `entidad`: la zona; `quien`: `0`, el jugador | — |
 | `al_recibir_dano(entidad, cantidad, de)` | Cuando `motor.danar` (o el nodo *Hacer daño*) apunta a una entidad | `entidad`, `cantidad` y quién lo hace | — |
 | `al_pulsar(nombre)` | Al pulsar una [acción de entrada](../guia/acciones-entrada.md) propia | `nombre`: el de la acción | — |
-| *tu función*`(nombre)` | Las del componente [Guion](componentes/guion.md) de una entidad | `nombre`: el de la entidad | — |
+| *tu función*`(nombre)` | Las que elige el comportamiento *Llamar al mundo* (`guiones/llamar_al_mundo.lua`) de una entidad, al empezar o cada segundo. Lo crean solos los proyectos antiguos; ver [Comportamientos](../guia/comportamientos.md#proyectos-de-versiones-anteriores) | `nombre`: el de la entidad | — |
 | `al_entrar_escena(nombre)` | Al llegar a otra escena | `nombre`: el de la escena | — |
 | *tu función*`(quien)` | Un botón o una zona con la acción *Llamar al guion* | `quien`: nombre del botón o la zona | — |
 

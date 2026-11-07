@@ -17,9 +17,9 @@ Necesitas unos 20 minutos. Conviene haber leído antes [Nodos](nodos.md).
    objetos; si quieres uno propio, hazlo en el [creador](creador.md).
    Ponle de nombre **Lobo**.
 3. Con el lobo elegido, en el [Inspector](../interfaz/inspector.md), pulsa
-   <i class="fx fx-mas"></i> **Añadir componente → Grafo de nodos** y, en
-   el componente, **Grafo nuevo**. Se crea `grafos/lobo.nodos.ron` y se
-   abre en el panel Nodos.
+   **➕ Comportamiento → 🔌 Nodos nuevos**. Se crea `grafos/lobo.nodos.ron`,
+   se le pone al lobo como [comportamiento](comportamientos.md) y se abre
+   en el panel Nodos.
 
 ## 2. Las variables del enemigo
 
@@ -127,7 +127,7 @@ La vida es del jugador y debe valer en todas las escenas, así que va en el
 Para estudiar el golpe con calma, elige el nodo **Hacer daño**, pulsa
 <kbd>F9</kbd> y vuelve a jugar: el juego se detiene justo antes de cada
 golpe. Pulsa <kbd>F6</kbd> para seguir. Lo explica
-[Depurar y pasar a código](nodos-depurar.md).
+[Depurar y ver como código](nodos-depurar.md).
 
 ## Para seguir
 

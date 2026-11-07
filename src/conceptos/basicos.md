@@ -48,8 +48,6 @@ o ser el propio jugador.
 | [Luz](../referencia/componentes/luz.md) | Ilumina alrededor |
 | [Sonido](../referencia/componentes/sonido.md) | Un sonido que sale de la entidad |
 | [Zona](../referencia/componentes/zona.md) | Hace algo al entrar o salir el jugador |
-| [Guion](../referencia/componentes/guion.md) | Le da comportamiento con un guion Lua |
-| [Grafo de nodos](../referencia/componentes/grafo-de-nodos.md) | Le da comportamiento con un grafo de [nodos](../guia/nodos.md) |
 | [Sprite](../referencia/componentes/sprite.md) | La imagen con la que se ve en 2D |
 | [Animador](../referencia/componentes/animador.md) | Sus animaciones y su máquina de estados |
 | [Recogible](../referencia/componentes/recogible.md) | Se recoge al tocarlo y suma a un valor |
@@ -58,6 +56,11 @@ o ser el propio jugador.
 Cada entidad puede tener **un componente de cada clase**. Se añaden y se
 quitan en el [Inspector](../interfaz/inspector.md). Ver
 [Entidades y componentes](../guia/entidades.md).
+
+Lo que una entidad **hace** por su cuenta (perseguir, girar, abrirse…) son
+sus **comportamientos**: grafos de nodos o guiones Lua, tantos como quieras,
+cada uno con sus valores. El motor trae diez ya hechos. Ver
+[Comportamientos](../guia/comportamientos.md).
 
 ## Recurso
 

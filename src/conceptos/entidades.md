@@ -15,7 +15,8 @@ cámara, una luz, el jugador o un punto invisible. Toda entidad tiene:
 | **Nombre** | Identificarla. Las acciones, los nodos y los guiones se refieren a ella por su nombre |
 | **Posición** y **giro** | Dónde está. En 3D, en metros; en 2D, en casillas |
 | **Modelo** | Cómo se ve: un objeto de cubitos en 3D o un sprite en 2D. La **Entidad vacía** no tiene modelo y no se ve al jugar |
-| **Componentes** | Qué hace |
+| **Comportamientos** | Lo que hace por su cuenta: grafos de nodos o guiones, tantos como quiera. Ver [Comportamientos](../guia/comportamientos.md) |
+| **Componentes** | Qué es: luz, sonido, física, zona… |
 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador la usa |
 
 > <i class="fx fx-consejo"></i> **Consejo.** Da a las entidades nombres
@@ -35,8 +36,10 @@ combinan libremente:
 | Una moneda | Sprite (en 2D) y Recogible |
 | Una puerta que se abre al acercarse | Zona (con la acción **Mover una entidad**) |
 | El jugador en tercera persona | Controlador de jugador y Cámara |
-| Un enemigo que persigue | Grafo de nodos o Guion |
 | Un personaje que anda y salta | Controlador de jugador y Animador |
+
+Para que haga algo más (perseguir al jugador, flotar, abrirse con un
+botón…), dale un [comportamiento](../guia/comportamientos.md).
 
 La lista completa, con todas sus propiedades y valores de fábrica, está en
 la [Referencia de componentes](../referencia/componentes/index.md).

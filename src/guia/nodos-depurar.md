@@ -1,9 +1,9 @@
-# Depurar y pasar a código
+# Depurar y ver como código
 
 Cuando un grafo no hace lo que esperas, el editor te deja verlo funcionar
 por dentro mientras juegas: qué cables se encienden, qué valor lleva cada
 uno y dónde se detiene la ejecución. Esta página explica esas herramientas
-y cómo leer o conservar el Lua que sale de los nodos.
+y cómo leer o copiar el Lua que sale de los nodos.
 
 ![Un grafo depurándose: los nodos por los que pasa la ejecución se encienden y cada salida enseña su último valor](../imagenes/capturas/nodos-depurar.png)
 
@@ -55,32 +55,40 @@ habituales:
 | Mensaje | Qué significa |
 |---|---|
 | «el guion tarda demasiado» | Un *Mientras* o un *Repetir* que nunca termina. Revisa su condición |
-| «grafos/….nodos.ron: no se pudo leer» | El componente *Grafo de nodos* apunta a un archivo que ya no existe |
+| «grafos/….nodos.ron: no se pudo leer» | Un comportamiento apunta a un grafo que ya no existe (el inspector lo marca con ⚠) |
 
 En el lienzo, un nodo que llama a una función borrada o renombrada se
 titula *Función «…» (no existe)* y aparece apagado. Vuelve a elegir la
 función o borra el nodo.
 
-## Ver el Lua
+## Ver como código
 
-Activa **Ver el Lua** en la barra del panel. A la derecha aparece el código
-que el motor genera a partir del grafo, y se actualiza al momento con cada
-cambio. Es una buena forma de aprender Lua: cada nodo se convierte en una
-o dos líneas reconocibles, como `motor.decir("Hola")`.
+Pulsa **{ } Ver como código** en la barra del panel. A la derecha aparece,
+con colores, el Lua que hace lo mismo que el grafo, y se actualiza al
+momento con cada cambio. **📋 Copiar el código** lo copia entero. Es una
+buena forma de aprender Lua: cada nodo se convierte en una o dos líneas
+reconocibles, como `motor.decir("Hola")`.
 
-## Pasar a código
+Ese código **solo se lee**: el grafo no cambia ni se borra.
 
-Si un grafo del juego ha crecido tanto que prefieres seguir escribiéndolo a
-mano, pulsa **Pasar a código**:
+![El grafo «Flotar» con su código al lado](../imagenes/capturas/panel-nodos-codigo.png)
 
-1. El código del grafo se añade al final de `guiones/mundo.lua`, con un
-   comentario que indica de dónde viene.
-2. El grafo se vacía (las variables se conservan) y se abre el panel
-   [Código](../interfaz/codigo.md).
+## Copiar a un guion nuevo
 
-El resultado funciona igual que antes. **Pasar a código** solo está en el
-grafo del juego; para los demás grafos, usa **Ver el Lua** y copia lo que
-necesites.
+Si un grafo de objeto ha crecido tanto que prefieres seguir escribiéndolo a
+mano, pulsa **📜 Copiar a un guion nuevo**:
+
+1. El motor escribe un guion nuevo en `guiones/` que se comporta igual que
+   el grafo, con sus variables *de la entidad* como
+   [propiedades](guiones-entidad.md#propiedades).
+2. Si el objeto elegido usaba el grafo, el grafo se **apaga** en él y el
+   guion se añade como [comportamiento](comportamientos.md) con los mismos
+   valores.
+3. El guion se abre en el panel [Código](../interfaz/codigo.md).
+
+El grafo **no se borra**: sigue en `grafos/` y puedes volver a encenderlo
+cuando quieras. En el grafo del juego o de una escena, usa **Ver como
+código** y copia lo que necesites a `guiones/mundo.lua`.
 
 ## Véase también
 

@@ -605,6 +605,32 @@ La raíz cuadrada.
 
 En Lua: `math.sqrt(math.max(0, n))`
 
+### Seno {#mat-seno}
+
+*Valor* · `mat.seno`
+
+El seno de un ángulo en grados: va de −1 a 1 y vuelve. Para lo que sube y baja o va y viene.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | número | número | 0 |
+| Salida | resultado | número | — |
+
+En Lua: `math.sin(math.rad(n))`
+
+### Coseno {#mat-coseno}
+
+*Valor* · `mat.coseno`
+
+El coseno de un ángulo en grados (como el seno, un cuarto de vuelta antes).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | número | número | 0 |
+| Salida | resultado | número | — |
+
+En Lua: `math.cos(math.rad(n))`
+
 ### Limitar {#mat-limitar}
 
 *Valor* · `mat.limitar`
