@@ -21,6 +21,8 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Animador](animador.md) | `Animador` | Sus animaciones: un clip o una máquina de estados (quieto, andar, correr…). |
 | [Recogible](recogible.md) | `Recogible` | Se recoge al tocarlo: suma monedas (o lo que digas), suena y desaparece. |
 | [Partículas](particulas.md) | `Particulas` | Polvo, chispas, lluvia, nieve, humo u hojas que salen de aquí. |
+| [Terreno de cubitos](terreno.md) | `Terreno` | El suelo de cubitos de la escena: plano, islas, colinas, cuevas o una imagen. |
+| [Luz del sol](sol.md) | `Sol` | La luz de la escena: la hora del sol, su fuerza y su color. |
 
 <!-- fin -->
 

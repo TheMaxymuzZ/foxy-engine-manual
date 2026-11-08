@@ -5,6 +5,29 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR34: Escenas sin isla
+
+- **[El terreno es un objeto](../guia/generadores.md)**: el *Terreno de
+  cubitos* sale en *En la escena* y su generador se cambia en el Inspector.
+  Se puede borrar (la escena queda sin suelo) o poner con
+  **Crear → Terreno de cubitos**.
+- **Regenerar el terreno se deshace** con <kbd>Cmd/Ctrl</kbd>+<kbd>Z</kbd>.
+- Generador nuevo, **[Imagen de alturas](../guia/generadores.md#imagen-de-alturas)**:
+  el relieve sale de una imagen en grises del proyecto.
+- **[Una escena nueva empieza vacía](../guia/escena-desde-cero.md)**: una
+  cámara y la luz del sol. Componente nuevo
+  **[Luz del sol](../referencia/componentes/sol.md)** (hora, intensidad y
+  color), que pone la hora del editor y de la partida.
+- **Solo lo que activas**: los módulos de la escena son casillas, y el día,
+  las estaciones, el clima y los vecinos solo aparecen si su módulo está
+  encendido.
+- **Crear → En esta escena**: Terreno de cubitos, Cámara, Luz del sol y Luz.
+- Los objetos que solo se ven en el editor (objeto vacío, cámara, punto de
+  inicio...) ya no se chocan, salvo con
+  [Colisión](../referencia/componentes/colision.md).
+- Formato de proyecto 7: el terreno de cada escena pasa solo a ser el objeto
+  *Terreno de cubitos*, con copia de seguridad en `.foxy/copias/`.
+
 ## 0.0.1-PR33: Objetos libres y jerarquía
 
 - **[Objetos libres](../guia/objetos-libres.md)**: cada objeto se dibuja

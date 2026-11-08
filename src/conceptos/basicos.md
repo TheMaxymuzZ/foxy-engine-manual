@@ -16,10 +16,12 @@ Ver [Proyectos, escenas y recursos](proyectos.md).
 ## Escena
 
 Una **escena** es un lugar del juego: un nivel, una casa por dentro, un
-menú con fondo. Cada escena es un archivo de `mundos/` con su terreno, sus
-entidades y los módulos que cambia respecto al proyecto. El terreno lo
-crea un [generador](../guia/generadores.md) (vacío, plano, isla, colinas o
-cuevas) y encima se guardan los cambios hechos con el pincel.
+menú con fondo. Cada escena es un archivo de `mundos/` con sus entidades y
+los módulos que cambia respecto al proyecto. El suelo de cubitos, si lo
+hay, es una entidad más, el [Terreno de cubitos](../guia/generadores.md),
+con su generador (vacío, plano, colinas, cuevas, islas o una imagen de
+alturas); encima se guardan los cambios hechos con el pincel. Una escena
+nueva empieza sin terreno, con una cámara y la luz del sol.
 
 ## Entidad
 
@@ -85,8 +87,8 @@ Ver [Prefabricados](../guia/entidades.md#prefabricados).
 Proyecto  (proyecto.ron: rejilla, materiales, módulos, acciones de entrada)
 ├── Recursos  (objetos/, prefabricados/, sonidos/, imagenes/, interfaces/…)
 └── Escenas   (mundos/*.ron)
-    ├── Terreno  (generador + cambios del pincel)
-    └── Entidades
+    ├── Cambios del pincel  (cubitos puestos o quitados a mano)
+    └── Entidades  (el Terreno de cubitos, la Cámara, el Sol, casas…)
         ├── modelo  (un objeto, o ninguno)
         └── componentes  (Luz, Zona, Controlador…)
 ```

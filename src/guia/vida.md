@@ -30,7 +30,9 @@ pocas horas, según la estación.
 ## Ajustes de la vida
 
 Sin nada elegido en el editor, el inspector de la derecha tiene el apartado
-**Vida (al jugar)**:
+**Al jugar**. Solo salen los ajustes de los
+[módulos](../referencia/modulos/index.md) encendidos en la escena (la
+estación también sale si no es la de siempre, porque se sigue viendo):
 
 | Ajuste | Qué hace | Por defecto |
 |---|---|---|
@@ -42,7 +44,9 @@ Sin nada elegido en el editor, el inspector de la derecha tiene el apartado
 
 Qué partes de la vida están activas (día y noche, clima, estaciones,
 vecinos) lo deciden los [módulos](../referencia/modulos/index.md) del
-proyecto y de la escena.
+proyecto y de la escena, que se encienden con sus casillas encima. Si la
+escena lleva [Luz del sol](../referencia/componentes/sol.md), la partida
+empieza a su hora.
 
 ## Vecinos
 
