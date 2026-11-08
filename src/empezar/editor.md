@@ -71,7 +71,7 @@ Al lado de cada cosa está su tecla.
 
 | Menú | Qué tiene |
 |---|---|
-| **Archivo** | *Proyecto nuevo…*, *Abrir proyecto…*, *Cerrar proyecto*, *Guardar* (<kbd>Cmd</kbd>+<kbd>S</kbd>), *Guardar todo*, *Volver a abrir lo guardado*, *Importar al proyecto…*, *Importar modelo (.vox, .qb)…* y *Salir* |
+| **Archivo** | *Proyecto nuevo…*, *Abrir proyecto…*, *Cerrar proyecto*, *Guardar* (<kbd>Cmd</kbd>+<kbd>S</kbd>), *Guardar todo*, *Volver a abrir lo guardado*, *Importar al proyecto…*, *Importar modelo…* (glTF, OBJ, .vox o .qb) y *Salir* |
 | **Editar** | *Deshacer*, *Rehacer*, *Duplicar*, *Ir a verlo*, *Borrar*, *Buscar una acción…* (<kbd>Cmd</kbd>+<kbd>K</kbd>) y *Preferencias…* |
 | **Crear** | *Escena nueva…*, *Interfaz nueva…*, *Objeto nuevo*, *Imagen de pixel art…*, *Material…*, *Importar modelo…*; y en la escena abierta *Zona de cambio*, *Punto de entrada* y *Vecino* |
 | **Ver** | La hora y la velocidad de la cámara, *Rendimiento* y los fotogramas por segundo |

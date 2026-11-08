@@ -61,6 +61,7 @@
     - [La vida del mundo](guia/vida.md)
 - [Entidades y componentes](guia/entidades.md)
     - [Objetos libres y jerarquía](guia/objetos-libres.md)
+    - [Modelos 3D (glTF y OBJ)](guia/modelos-3d.md)
 - [Comportamientos](guia/comportamientos.md)
     - [Objetos que se hablan](guia/objetos-que-se-hablan.md)
 - [Juegos 2D](guia/juegos-2d.md)

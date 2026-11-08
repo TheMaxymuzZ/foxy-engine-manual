@@ -83,6 +83,22 @@ El mundo usa un objeto cuyo archivo no está en `objetos/` (quizá lo borraste
 o lo renombraste). Vuelve a ponerlo en la carpeta, o borra esas copias del
 mundo.
 
+## Un modelo 3D sale enorme, diminuto, sin textura o no sale
+
+- **Enorme o diminuto**: el programa lo exportó en otra unidad. Cambia su
+  **Escala** en el Inspector, o expórtalo en metros. Los que miden más de
+  100 m se pasan solos de centímetros a metros.
+- **Sin textura** (un `.gltf` o un `.obj`): faltan las imágenes a su lado.
+  Importa el modelo arrastrando el `.gltf` o el `.obj` (no la carpeta): el
+  motor copia con él lo que nombra. Si las imágenes estaban en otra carpeta
+  con una ruta absoluta, mejor expórtalo como `.glb`.
+- **No sale, y el Inspector lo dice en rojo**: el archivo se movió, se
+  renombró o está roto. Mira el mensaje y el [registro](#el-registro-registrotxt).
+- **Sale negro o al revés**: las caras miran hacia dentro. En Blender,
+  *Malla → Normales → Recalcular hacia fuera* antes de exportar.
+
+Ver [Modelos 3D (glTF y OBJ)](../guia/modelos-3d.md).
+
 ## Un botón o una zona no lleva a ningún sitio
 
 En el panel «Proyecto», abre <i class="fx fx-mapa"></i> **Cómo se

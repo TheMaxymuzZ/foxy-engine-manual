@@ -23,6 +23,7 @@ Documentos/Foxy Engine/proyectos/Mi isla/
     materiales.ron        materiales propios y cómo es cada material
     acciones.ron          el mapa de acciones de entrada
     objetos/*.ron         objetos propios y objetos de ejemplo
+    modelos/              modelos 3D (.glb, .gltf, .obj) con sus texturas
     prefabricados/*.ron   prefabricados
     sonidos/*.wav, *.ogg  sonidos propios
     animaciones/*.ron     animaciones (clips) de la línea de tiempo
@@ -184,6 +185,18 @@ Archivo: `acciones.ron`. Ver [Acciones de entrada](../guia/acciones-entrada.md#e
 ## Sonidos
 
 Carpeta: `sonidos/`, con archivos WAV u OGG. Ver [Sonidos](../guia/sonidos.md).
+
+## Modelos 3D
+
+Carpeta: `modelos/`, con archivos glTF (`.glb`, o `.gltf` con su `.bin` y
+sus imágenes) u OBJ (con su `.mtl` y sus imágenes). Un objeto de una escena
+usa un modelo cuando su `tipo` es la ruta del archivo:
+
+```ron
+(tipo: "modelos/cofre.glb", pos: (46.0, 5.0, 45.0), giro: (0.0, 20.0, 0.0))
+```
+
+Ver [Modelos 3D (glTF y OBJ)](../guia/modelos-3d.md).
 
 ## Objetos propios
 
