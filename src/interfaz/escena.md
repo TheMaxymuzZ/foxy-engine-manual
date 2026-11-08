@@ -18,4 +18,8 @@ El <i class="fx fx-carpeta-nueva"></i> de arriba crea una carpeta. Los
 objetos se arrastran de una carpeta a otra (o **clic derecho → Mover a**), y
 el número al lado de cada carpeta dice cuántos tiene.
 
+**Suelta un objeto encima de otro** para meterlo dentro: sale debajo de él,
+con sangría, y se mueve con él. Ver
+[Objetos libres y jerarquía](../guia/objetos-libres.md).
+
 Todo se explica en [Ordenar la escena](../guia/carpetas.md).

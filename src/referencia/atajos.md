@@ -38,7 +38,8 @@ editor las teclas principales.
 
 | Tecla | Qué hace |
 |---|---|
-| <kbd>R</kbd> | Girar el objeto elegido o el que vas a colocar |
+| <kbd>R</kbd> | Girar el objeto elegido o el que vas a colocar (90° con imán, 15° sin él) |
+| <kbd>G</kbd> | Encender o apagar el [imán a la rejilla](../guia/objetos-libres.md#el-imán-a-la-rejilla) |
 | <kbd>F</kbd> | Llevar la cámara al objeto elegido |
 | <kbd>Supr</kbd> o <kbd>Retroceso</kbd> | Borrar el objeto elegido |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>D</kbd> | Duplicar el objeto elegido |

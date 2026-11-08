@@ -33,7 +33,7 @@ En una [escena 2D](../../guia/juegos-2d.md) las medidas van en casillas
 | Cámara libre | `CamaraLibre` | Vuela y atraviesa todo. Útil para recorrer la escena |
 
 En los tipos en los que se ve el personaje, se usa el modelo de la entidad;
-una *Entidad vacía* se muestra con la figura de un vecino.
+una *Objeto vacío* se muestra con la figura de un vecino.
 
 Si hay varias entidades con controlador, se usa la primera de la lista
 **En la escena**. La distancia y la altura de la cámara se ajustan con el

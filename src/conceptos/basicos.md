@@ -26,7 +26,7 @@ cuevas) y encima se guardan los cambios hechos con el pincel.
 Una **entidad** es cualquier cosa colocada en una escena: una casa, una
 puerta, una luz, el personaje del jugador o un punto invisible. Toda entidad
 tiene un **nombre**, una **posición** y un **giro**, y puede tener un
-**modelo** (un objeto de vóxeles) o ninguno: la *Entidad vacía* no se ve al
+**modelo** (un objeto de vóxeles) o ninguno: la *Objeto vacío* no se ve al
 jugar y sirve para colgarle componentes.
 
 Las acciones y los guiones se refieren a las entidades **por su nombre**,

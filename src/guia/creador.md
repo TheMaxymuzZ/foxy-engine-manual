@@ -70,7 +70,7 @@ Su formato está en [Archivos del proyecto](../referencia/archivos.md#objetos-pr
 En el mundo se colocan con su nombre de archivo como `tipo`:
 
 ```ron
-(tipo: "farolillo", nombre: "", pos: (98.0, 16.0, 120.0), giro: 0),
+(tipo: "farolillo", nombre: "", pos: (98.0, 16.0, 120.0)),
 ```
 
 > <i class="fx fx-aviso"></i> **Importante.** Si borras el archivo de un objeto que está colocado en un
