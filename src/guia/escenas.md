@@ -31,7 +31,8 @@ nueva…**) abre una ventana:
 
    | Empezar con | Qué trae |
    |---|---|
-   | **Vacía** | Un suelo llano, sin nada |
+   | **Vacía** | Una cámara y la luz del sol, sin terreno (ver [Empezar una escena desde cero](escena-desde-cero.md)) |
+   | **Con un terreno de cubitos llano** | Un suelo plano y el punto de inicio |
    | **Isla sin objetos** | Una isla con colinas, playa y árboles |
    | **Plaza de prueba** | La isla de ejemplo, con casas y vecinos |
    | **Una copia de esta escena** | Todo lo que tiene la escena abierta |
@@ -97,7 +98,8 @@ Es la forma más natural de entrar en un edificio.
 ### Un ejemplo: entrar en una cueva
 
 1. Pulsa el <i class="fx fx-mas"></i> de *Escenas*, llámala *cueva*, elige
-   **Vacía** y deja marcado **Conectarla con «principal»**.
+   **Con un terreno de cubitos llano** y deja marcado **Conectarla con
+   «principal»**.
 2. En *principal*, mueve la zona que ha puesto el editor hasta la boca de la
    cueva, y la entrada justo delante.
 3. En *cueva*, mueve la zona de vuelta a donde quieras salir.

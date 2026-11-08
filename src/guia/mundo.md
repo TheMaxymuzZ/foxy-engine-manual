@@ -138,25 +138,23 @@ gusto. Con uno de los tuyos, **Editar este objeto** lo abre en el creador.
 
 ## Las opciones de la escena
 
-Sin nada elegido, el inspector muestra la **escena** entera.
+Sin nada elegido, el inspector muestra la **escena** entera: sus
+[módulos](../referencia/modulos/index.md) (día y noche, clima, estaciones,
+vecinos...) como casillas y, debajo, en **Al jugar**, solo los ajustes de
+los que están encendidos. Lo explica
+[Empezar una escena desde cero](escena-desde-cero.md#solo-lo-que-activas).
 
 ### El terreno
 
-**Generador** elige cómo se crea el suelo: **Vacío**, **Plano**, **Isla**,
-**Colinas** o **Cuevas**, cada uno con sus parámetros y los materiales de
-cada capa. Se describen en [Generadores de terreno](generadores.md).
+El suelo es el objeto **Terreno de cubitos**: elígelo en *En la escena* para
+cambiar su **generador** (**Vacío**, **Plano**, **Colinas**, **Cuevas**,
+**Islas** o **Imagen de alturas**). Se describen en
+[El terreno de cubitos](generadores.md).
 
 <i class="fx fx-girar"></i> **Regenerar el terreno** vuelve a crear el suelo
-con las opciones nuevas y **conserva** los objetos y los bloques que pusiste
-a mano.
-
-> <i class="fx fx-aviso"></i> **Importante.** Regenerar el terreno no se puede
-> deshacer. Si dudas, guarda antes.
-
-### La vida
-
-Cuánto dura un día, con qué estación y clima empieza, cuántos días dura cada
-estación y si el tiempo cambia solo. Lo explica [La vida del mundo](vida.md).
+con las opciones nuevas, **conserva** los objetos y los bloques que pusiste
+a mano y se deshace con <kbd>Cmd/Ctrl</kbd>+<kbd>Z</kbd>. Si la escena no
+tiene terreno, el Inspector ofrece **➕ Terreno de cubitos**.
 
 ## La cámara
 

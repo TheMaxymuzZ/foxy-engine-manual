@@ -1,0 +1,9 @@
+// Una escena nueva vacía, como la crea el editor: una cámara y la luz del
+// sol (para la captura de «Empezar una escena desde cero»).
+(
+    objetos: [
+        (tipo: "entidad", nombre: "Cámara", id: 1, pos: (48.0, 6.0, 60.0), componentes: [Camara((fija: true))]),
+        (tipo: "entidad", nombre: "Sol", id: 2, pos: (42.0, 12.0, 42.0), componentes: [Sol((hora: 9.0))]),
+    ],
+    cambios: [],
+)

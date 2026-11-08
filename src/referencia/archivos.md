@@ -101,17 +101,6 @@ Archivo: `mundos/<escena>.ron`
 
 ```ron
 (
-    generador: (
-        tipo: Isla,           // Isla, Llano, Vacio, Colinas o Cuevas
-        semilla: 7,           // otra semilla, otra isla
-        lado: 192.0,          // tamaño del mundo (la isla está en el centro)
-        radio: 66.0,          // tamaño de la isla
-        altura: 16.0,         // altura de las colinas sobre el mar
-        nivel_del_mar: 10.0,  // profundidad del mar en los bordes
-        arboles: 0.2,         // de 0 (ninguno) a 1 (bosque)
-        muelle: true,         // muelle de madera en la playa del sur
-    ),
-    // Cada generador usa sus campos; ver Generadores de terreno.
     vida: (
         minutos_por_dia: 24.0,   // 0 = la hora no avanza
         dias_por_estacion: 7,
@@ -122,6 +111,10 @@ Archivo: `mundos/<escena>.ron`
     modulos: (clima: Some(false)),   // lo que la escena cambia de los módulos del proyecto
     carpetas: ["Pueblo", "Pueblo/Casas", "Vecinos"],
     objetos: [
+        // El terreno: un objeto más, con su generador (ver El terreno de cubitos).
+        (tipo: "terreno", nombre: "Terreno", id: 16, pos: (0.0, 0.0, 0.0),
+         componentes: [Terreno((tipo: Isla, semilla: 7, lado: 192.0, radio: 66.0,
+             altura: 16.0, nivel_del_mar: 10.0, arboles: 0.2, muelle: true))]),
         (tipo: "casa", nombre: "Casa de Plumas", pos: (86.0, 16.0, 118.0), carpeta: "Pueblo/Casas"),
         (tipo: "vecino", nombre: "Plumas", pos: (88.0, 20.0, 123.0), carpeta: "Vecinos",
          frases: ["¡Hola! Vivo en la casa del tejado rojo.", "¿Has visto el pozo?"]),
@@ -144,7 +137,6 @@ Archivo: `mundos/<escena>.ron`
 
 | Campo | Qué es |
 |---|---|
-| `generador` | Cómo se genera el terreno: `tipo` y sus parámetros. Ver [Generadores de terreno](../guia/generadores.md). Antes se llamaba `isla` |
 | `vida` | Cómo pasa el tiempo. Ver [La vida del mundo](../guia/vida.md#ajustes-de-la-vida) |
 | `modulos` | Los [módulos](modulos/index.md) que la escena cambia respecto al proyecto |
 | `carpetas` | Carpetas de la escena; las subcarpetas con `/` |
@@ -152,11 +144,13 @@ Archivo: `mundos/<escena>.ron`
 | `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos** de la rejilla del proyecto |
 | `plano` | Solo en las escenas 2D: casilla, resolución, fondo, luz ambiente y las capas con sus mapas. Las posiciones de los `objetos` van entonces en casillas. Ver [Mapas de casillas](../guia/casillas.md#en-el-archivo-de-la-escena) |
 
-El motor construye el mundo en tres pasos: genera el terreno a partir de `generador`,
-aplica encima los `cambios` y coloca los `objetos`.
+El motor construye el mundo en tres pasos: genera el terreno a partir del
+objeto `terreno` (su componente [`Terreno`](componentes/terreno.md); sin él,
+solo aire), aplica encima los `cambios` y coloca los demás `objetos`.
 
 > <i class="fx fx-nota"></i> **Nota.** Los archivos de versiones anteriores,
-> con `isla:` o `terreno:` o que solo describían la isla, se siguen abriendo.
+> con `generador:`, `isla:` o `terreno:` aparte, o que solo describían la
+> isla, se siguen abriendo: su terreno pasa a ser el objeto `terreno`.
 
 ## Prefabricados
 

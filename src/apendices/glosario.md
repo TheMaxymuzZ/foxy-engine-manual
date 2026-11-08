@@ -28,7 +28,9 @@
 | **Evento** | El nodo con el que empieza una cadena: al empezar, cada fotograma, al chocar… Ver [Eventos y flujo](../guia/nodos-flujo.md). |
 | **Fotogramas por segundo (fps)** | Cuántas imágenes dibuja el motor cada segundo. Con 60 o más va suave; por debajo de 30 se notan tirones. |
 | **Función (de nodos)** | Un grupo de nodos guardado en `funciones/` que se usa como un nodo más. Ver [Funciones](../guia/nodos-funciones.md). |
-| **Generador** | Lo que crea el terreno de una escena: vacío, plano, isla, colinas o cuevas. Ver [Generadores de terreno](../guia/generadores.md). |
+| **Generador** | Lo que crea el terreno de cubitos de una escena: vacío, plano, colinas, cuevas, islas o una imagen de alturas. Ver [El terreno de cubitos](../guia/generadores.md). |
+| **Terreno de cubitos** | El objeto que lleva el suelo de cubitos de una escena y su generador. Una escena lleva uno o ninguno. Ver [El terreno de cubitos](../guia/generadores.md). |
+| **Luz del sol** | El componente que pone la hora del sol, su fuerza y su color. Ver [Luz del sol](../referencia/componentes/sol.md). |
 | **Grafo** | Un conjunto de nodos unidos con cables: del juego, de una escena o de una entidad. Ver [Nodos](../guia/nodos.md). |
 | **Guion** | Un archivo de código Lua en `guiones/`. El guion del mundo es `mundo.lua`; los guiones de entidad son comportamientos de una entidad. Ver [Programar en Lua](../guia/programar-lua.md). |
 | **Guion de entidad** | Un guion que lleva una entidad como comportamiento. Cada entidad tiene su propia copia. Ver [Guiones de entidad](../guia/guiones-entidad.md). |

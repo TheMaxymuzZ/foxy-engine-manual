@@ -27,9 +27,12 @@ Lo que muestra depende de la situación:
   **componentes** con <i class="fx fx-mas"></i> **Añadir componente**, y
   <i class="fx fx-usar"></i> **Al usarlo (E)**, lo que pasa cuando el
   jugador la usa. Abajo, *Al suelo*, *Ver*, *Duplicar* y *Borrar*.
-- Sin nada elegido: el **terreno** de la escena (su
-  [generador](../guia/generadores.md)), cómo pasa el **tiempo** y los
-  **módulos de la escena**.
+- Con el **Terreno de cubitos** elegido: su
+  [generador](../guia/generadores.md) y **Regenerar el terreno**.
+- Sin nada elegido: los **módulos de la escena** como casillas y, en
+  **Al jugar**, los ajustes de los encendidos (cuánto dura un día, la
+  estación, el clima). Si la escena no tiene terreno, el botón
+  **➕ Terreno de cubitos**.
 
 ![Componentes de una entidad en el inspector](../imagenes/capturas/panel-componentes.png)
 
@@ -61,5 +64,5 @@ nombre lo abre en Nodos o en Código. Ver
 Cada [módulo](../referencia/modulos/index.md) puede estar *Como el
 proyecto*, *Sí, aquí* o *No, aquí*.
 
-Ver [Construir el mundo](../guia/mundo.md), [Generadores de terreno](../guia/generadores.md)
+Ver [Construir el mundo](../guia/mundo.md), [El terreno de cubitos](../guia/generadores.md)
 y [La vida del mundo](../guia/vida.md).
