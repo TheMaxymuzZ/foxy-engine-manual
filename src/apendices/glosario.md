@@ -31,6 +31,7 @@
 | **Generador** | Lo que crea el terreno de cubitos de una escena: vacío, plano, colinas, cuevas, islas o una imagen de alturas. Ver [El terreno de cubitos](../guia/generadores.md). |
 | **Terreno de cubitos** | El objeto que lleva el suelo de cubitos de una escena y su generador. Una escena lleva uno o ninguno. Ver [El terreno de cubitos](../guia/generadores.md). |
 | **Luz del sol** | El componente que pone la hora del sol, su fuerza y su color. Ver [Luz del sol](../referencia/componentes/sol.md). |
+| **glTF** | El formato más común para modelos 3D: `.glb` (todo en un archivo) o `.gltf` (con su `.bin` y sus imágenes). Ver [Modelos 3D](../guia/modelos-3d.md). |
 | **Grafo** | Un conjunto de nodos unidos con cables: del juego, de una escena o de una entidad. Ver [Nodos](../guia/nodos.md). |
 | **Guion** | Un archivo de código Lua en `guiones/`. El guion del mundo es `mundo.lua`; los guiones de entidad son comportamientos de una entidad. Ver [Programar en Lua](../guia/programar-lua.md). |
 | **Guion de entidad** | Un guion que lleva una entidad como comportamiento. Cada entidad tiene su propia copia. Ver [Guiones de entidad](../guia/guiones-entidad.md). |
@@ -44,11 +45,13 @@
 | **Marcador** | Una interfaz que está siempre a la vista mientras se juega. |
 | **Material** | De qué está hecho un cubito: hierba, piedra, madera… |
 | **Mipmaps** | Copias cada vez más pequeñas de una textura, que se usan de lejos para que no parpadee. |
+| **Modelo 3D** | Un modelo de triángulos hecho en otro programa (Blender, Blockbench…), en glTF u OBJ, que se coloca como cualquier objeto. Ver [Modelos 3D](../guia/modelos-3d.md). |
 | **Módulo** | Una parte del motor que el proyecto activa o desactiva. Ver [Módulos](../referencia/modulos/index.md). |
 | **Módulo (de Lua)** | Un guion que devuelve funciones para otros guiones, que lo cargan con `require`. |
 | **Nine-slice (estirar en nueve partes)** | Forma de estirar una imagen sin deformar sus esquinas. |
 | **Nodo** | Una caja de un grafo que hace una sola cosa. Ver la [Referencia de nodos](../referencia/nodos.md). |
 | **Objeto propio** | Un objeto hecho con el creador de objetos, guardado en `objetos/`. |
+| **OBJ** | Un formato sencillo de modelos 3D: el `.obj` con la forma y el `.mtl` con los materiales. Ver [Modelos 3D](../guia/modelos-3d.md). |
 | **Ortográfica (cámara)** | Una cámara sin perspectiva: lo lejano se ve igual de grande que lo cercano. |
 | **Paleta** | Una lista de colores para dibujar en pixel art. |
 | **Paleta de comandos** | La búsqueda de <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd>: escribe lo que quieres hacer o abrir. |

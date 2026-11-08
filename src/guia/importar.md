@@ -1,6 +1,11 @@
 # Importar modelos
 
-Foxy Engine lee los modelos de cubitos de otros programas:
+Foxy Engine lee los modelos de cubitos de otros programas (esta página) y
+también **modelos 3D normales**, de triángulos, en glTF (`.glb`, `.gltf`) u
+OBJ: esos se ven con su forma y sus texturas, sin pasar a cubitos. Ver
+[Modelos 3D (glTF y OBJ)](modelos-3d.md).
+
+Los modelos de cubitos que lee son:
 
 | Programa | Archivo | Qué se lee |
 |---|---|---|
@@ -14,7 +19,7 @@ Un modelo de 40 cubitos de alto mide 20 m.
 
 Hay tres formas:
 
-- <i class="fx fx-mas"></i> **Crear → Importar modelo (.vox, .qb)…** y
+- <i class="fx fx-mas"></i> **Crear → Importar modelo…** y
   elegir el archivo.
 - **Soltar el archivo** sobre la ventana del editor.
 - Abrirlo desde [Archivos del proyecto](archivos.md), si ya está dentro del

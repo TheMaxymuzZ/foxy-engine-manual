@@ -5,6 +5,27 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR35: Modelos 3D normales
+
+- **[Modelos 3D](../guia/modelos-3d.md)** de otros programas: glTF
+  (`.glb`, `.gltf`) y OBJ (`.obj` con su `.mtl`), con sus **texturas y
+  materiales** (color, metálico, rugosidad, luz propia, transparencia
+  recortada y dos caras).
+- Se ven **con la misma luz y las mismas sombras** que los cubitos, y se
+  mezclan con ellos en la misma escena y al jugar.
+- **Importar arrastrando** el archivo a la ventana o al panel Archivos, o con
+  **Crear → Importar modelo…**. Van a la carpeta nueva `modelos/`, con sus
+  texturas en su propia carpeta si las necesitan.
+- **Colocar objetos** tiene la lista **Modelos 3D (glTF, OBJ)**, con
+  **📚 Añadir modelos de ejemplo** (cofre, esfera de oro, planta y árbol).
+- Un modelo 3D es un objeto más: posición, giro, escala, jerarquía,
+  comportamientos, componentes y prefabricados. De serie es sólido como una
+  caja; con [Colisión](../referencia/componentes/colision.md) se cambia.
+- Si se vuelve a exportar desde Blender, se recarga solo al volver a la
+  ventana del motor.
+- Más rápido: el editor y el juego ya no reconstruyen el modelo de cada
+  objeto en cada fotograma para saber dónde dibujarlo.
+
 ## 0.0.1-PR34: Escenas sin isla
 
 - **[El terreno es un objeto](../guia/generadores.md)**: el *Terreno de

@@ -31,7 +31,7 @@ Lo que se lleva a la papelera no se borra: va a la carpeta oculta
 `.papelera` del proyecto, desde donde se puede recuperar a mano.
 
 > <i class="fx fx-aviso"></i> **Importante.** Las carpetas y archivos que usa el motor
-> (`mundos`, `imagenes`, `objetos`, `interfaces`, `guiones`, `paletas`,
+> (`mundos`, `imagenes`, `modelos`, `objetos`, `interfaces`, `guiones`, `paletas`,
 > `proyecto.ron` y `materiales.ron`) se pueden abrir y llenar, pero **no
 > renombrar, mover ni borrar**: el proyecto dejaría de encontrarlos.
 
@@ -43,7 +43,9 @@ Dos maneras de traer archivos de tu ordenador a la carpeta abierta:
    archivos (también desde **Archivo → Importar al proyecto…**).
 2. **Arrastrar**: suelta archivos del Finder o del Explorador de Windows
    **encima de la ventana del motor**. Si no está abierto el panel Archivos y
-   son PNG, van directos a `imagenes/` y ya salen en el pixel art.
+   son PNG, van directos a `imagenes/` y ya salen en el pixel art. Un modelo
+   3D (`.glb`, `.gltf`, `.obj`) va a `modelos/`, con sus texturas, listo para
+   colocarlo (ver [Modelos 3D](modelos-3d.md)).
 
 Importar **copia** los archivos: el original se queda donde estaba. Si ya hay
 uno con el mismo nombre, el nuevo se llama «nombre 2».
