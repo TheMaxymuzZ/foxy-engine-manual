@@ -1,7 +1,7 @@
 # Entidades y componentes
 
 Esta guía explica cómo dar comportamiento a las entidades de una escena con
-componentes y cómo reutilizarlas con prefabricados. Los conceptos se
+componentes y cómo reutilizarlas. Los conceptos se
 describen en [Conceptos básicos](../conceptos/basicos.md).
 
 ![Una puerta con el componente Zona en el inspector](../imagenes/capturas/entidades.png)
@@ -75,38 +75,15 @@ Mientras una entidad se mueve, se dibuja aparte del mundo; al detenerse
 vuelve a formar parte de los cubitos, y se puede chocar con ella en su
 nueva posición.
 
-## Prefabricados
+## Objetos reutilizables
 
-Un prefabricado guarda una entidad (su modelo, sus componentes, sus
-[comportamientos](comportamientos.md) y su acción al usarla) en `prefabricados/<id>.ron` para colocarla muchas veces.
-
-### Crear un prefabricado
-
-1. Prepara una entidad con los componentes que quieras.
-2. En el Inspector, pulsa **Crear prefabricado**.
-3. El prefabricado aparece en la paleta de objetos, en la sección
-   **Prefabricados**, y la entidad pasa a ser su primera copia.
-
-### Copias y cambios propios
-
-En una copia, el Inspector indica de qué prefabricado procede. Cada
-componente heredado muestra *del prefabricado*; si se cambia en la copia,
-muestra *cambiado aquí* y el botón **Como el original** para deshacer ese
-cambio. Con los comportamientos pasa lo mismo: **↺ Como el original** está
-en su menú **☰**.
-
-| Botón | Qué hace |
-|---|---|
-| **Guardar en el original** | Pasa los cambios de la copia al prefabricado. Todas las copias cambian |
-| **Quitar cambios** | La copia vuelve a ser igual que el original |
-| **Desvincular** | La copia deja de seguir al original y se queda como está |
-
-> <i class="fx fx-nota"></i> **Nota.** El nombre, la posición y el giro son
-> siempre propios de cada copia.
+Una entidad (con lo que lleva dentro) se puede guardar como **objeto
+reutilizable** para colocarla muchas veces; sus copias siguen al original.
+Se explica en [Objetos reutilizables](reutilizables.md).
 
 ## Véase también
 
 - [Comportamientos](comportamientos.md): lo que hace cada entidad, con nodos o con código.
 - [Referencia de componentes](../referencia/componentes/index.md)
 - [Acciones](../referencia/acciones.md)
-- [Archivos del proyecto: prefabricados](../referencia/archivos.md#prefabricados)
+- [Objetos reutilizables](reutilizables.md)

@@ -69,13 +69,13 @@ Si el archivo de un comportamiento ya no existe, el recuadro avisa con
 Los comportamientos de un mismo objeto **comparten** esas variables: si
 «Patrullar» y un guion tuyo usan los dos `velocidad`, es la misma.
 
-### En los prefabricados
+### En los objetos reutilizables
 
 Los comportamientos se guardan también en los
-[prefabricados](entidades.md#prefabricados). Cada copia los hereda y puede
+[objetos reutilizables](reutilizables.md). Cada copia los hereda y puede
 cambiar sus valores o encender y apagar alguno; **↺ Como el original**, en
 el menú **☰**, deshace ese cambio. **💾 Guardar en el original** pasa los
-cambios de la copia al prefabricado.
+cambios de la copia al original y a todas sus copias.
 
 ## Los comportamientos ya hechos
 

@@ -33,7 +33,7 @@ se guardan en su propia carpeta:
 | Imágenes y paletas | `imagenes/`, `paletas/` | [Pixel art](../guia/pixel-art.md) |
 | Interfaces | `interfaces/` | [Interfaces](../guia/interfaces.md) |
 | Guiones y nodos | `guiones/`, `grafos/`, `funciones/`, `nodos/` | [Nodos](../guia/nodos.md) y [Programar en Lua](../guia/programar-lua.md) |
-| Prefabricados | `prefabricados/` | [Inspector](../guia/entidades.md#prefabricados) |
+| Objetos reutilizables | `prefabricados/` | [Objetos reutilizables](../guia/reutilizables.md) |
 | Sonidos | `sonidos/` | Arrastrando archivos WAV u OGG ([Sonidos](../guia/sonidos.md)) |
 
 Un mismo recurso se puede usar en todas las escenas del proyecto: al

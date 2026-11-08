@@ -24,7 +24,7 @@ Documentos/Foxy Engine/proyectos/Mi isla/
     acciones.ron          el mapa de acciones de entrada
     objetos/*.ron         objetos propios y objetos de ejemplo
     modelos/              modelos 3D (.glb, .gltf, .obj) con sus texturas
-    prefabricados/*.ron   prefabricados
+    prefabricados/*.ron   objetos reutilizables
     sonidos/*.wav, *.ogg  sonidos propios
     animaciones/*.ron     animaciones (clips) de la línea de tiempo
     cinematicas/*.ron     cinemáticas
@@ -141,7 +141,7 @@ Archivo: `mundos/<escena>.ron`
 | `vida` | Cómo pasa el tiempo. Ver [La vida del mundo](../guia/vida.md#ajustes-de-la-vida) |
 | `modulos` | Los [módulos](modulos/index.md) que la escena cambia respecto al proyecto |
 | `carpetas` | Carpetas de la escena; las subcarpetas con `/` |
-| `objetos` | Objetos colocados: `tipo`, `nombre`, `id` (su número, para la jerarquía) y `pos` (centro de la base, en metros). Opcionales: `giro` (grados en X, Y y Z; en Y, 0 = mira al sur), `escala` (1 = como su modelo), `padre` (el `id` del objeto dentro del que va; ver [Objetos libres y jerarquía](../guia/objetos-libres.md)), `etiquetas`, `carpeta`, `frases` (vecinos), `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>), `componentes` (ver [Componentes](componentes/index.md)) y `prefabricado` (el id del prefabricado del que es copia) |
+| `objetos` | Objetos colocados: `tipo`, `nombre`, `id` (su número, para la jerarquía) y `pos` (centro de la base, en metros). Opcionales: `giro` (grados en X, Y y Z; en Y, 0 = mira al sur), `escala` (1 = como su modelo), `padre` (el `id` del objeto dentro del que va; ver [Objetos libres y jerarquía](../guia/objetos-libres.md)), `etiquetas`, `carpeta`, `frases` (vecinos), `accion` (zonas, y objetos que hacen algo al usarlos con <kbd>E</kbd>), `componentes` (ver [Componentes](componentes/index.md)), `prefabricado` (el id del [objeto reutilizable](../guia/reutilizables.md) del que es copia, o de cuya copia es parte), `pieza` (en una parte de una copia: qué parte del original es) y `movida` (una parte movida a mano, que ya no sigue el sitio del original). Una copia y sus partes solo guardan lo que cambian del original |
 | `cambios` | Lo que has cambiado con el pincel: `(x, y, z, cuántos seguidos hacia +x, material)`, en **cubitos** de la rejilla del proyecto |
 | `plano` | Solo en las escenas 2D: casilla, resolución, fondo, luz ambiente y las capas con sus mapas. Las posiciones de los `objetos` van entonces en casillas. Ver [Mapas de casillas](../guia/casillas.md#en-el-archivo-de-la-escena) |
 
@@ -153,7 +153,7 @@ solo aire), aplica encima los `cambios` y coloca los demás `objetos`.
 > con `generador:`, `isla:` o `terreno:` aparte, o que solo describían la
 > isla, se siguen abriendo: su terreno pasa a ser el objeto `terreno`.
 
-## Prefabricados
+## Objetos reutilizables
 
 Archivo: `prefabricados/<id>.ron`
 
@@ -168,15 +168,29 @@ Archivo: `prefabricados/<id>.ron`
         (archivo: "grafos/flotar.nodos.ron", valores: {"altura": "0.3"}),
     ],
     accion: Ninguna,                 // lo que pasa al usarlo (E)
+    hijos: [                         // lo que lleva dentro
+        (tipo: "banco", nombre: "", id: 1, pos: (1.5, 0.0, 0.0), giro: (0.0, 90.0, 0.0)),
+        (tipo: "pozo", nombre: "", id: 2, pos: (-2.0, 0.0, 0.0),
+         prefabricado: "rueda"),     // una copia de otro reutilizable
+    ],
 )
 ```
+
+En `hijos`, la posición, el giro y la escala son **respecto al original**
+(su base en el origen, sin girar). `padre: 0` (o sin `padre`) = va
+directamente dentro del original; si no, el `id` del hijo dentro del que va.
+Un hijo que es copia de otro reutilizable lleva su `prefabricado`, y las
+partes de esa copia, su `pieza`.
+
+En una escena, la parte `"2/1"` de una copia es la parte 1 del reutilizable
+que el original lleva con el número 2.
 
 Cada entidad de una escena y cada prefabricado pueden llevar una lista
 `comportamientos`. Cada uno tiene su `archivo` (un `.nodos.ron` de `grafos/`
 o un `.lua` de `guiones/`), sus `valores` (solo los que cambian) y, si está
 apagado, `apagado: true`. Ver [Comportamientos](../guia/comportamientos.md).
 
-Ver [Prefabricados](../guia/entidades.md#prefabricados).
+Ver [Objetos reutilizables](../guia/reutilizables.md).
 
 ## Acciones de entrada
 

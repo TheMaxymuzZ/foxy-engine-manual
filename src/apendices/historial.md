@@ -5,6 +5,24 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR36: Objetos reutilizables 2.0
+
+- **[Objetos reutilizables](../guia/reutilizables.md)** (antes,
+  prefabricados) **con todo lo que llevan dentro**: se crean arrastrando un
+  objeto de *En la escena* al grupo **♻ Reutilizables** del panel Proyecto.
+- **El original se edita en su propia pestaña**: al guardar, todas las
+  copias cambian, menos lo cambiado a mano en cada una (componentes,
+  comportamientos, etiquetas, acción y el sitio de una parte).
+- **Reutilizables dentro de reutilizables**: un coche con cuatro ruedas
+  reutilizables.
+- Inspector de copias (*Guardar en el original*, *Quitar cambios*,
+  *Desvincular*) y de sus partes.
+- **Duplicar** copia el objeto con todo lo que lleva dentro.
+- Más rápido: las copias ya no copian el original entero cada vez que se
+  mira un componente.
+- Formato de proyecto 8: los proyectos de antes se abren igual, con copia
+  de seguridad en `.foxy/copias/`.
+
 ## 0.0.1-PR35: Modelos 3D normales
 
 - **[Modelos 3D](../guia/modelos-3d.md)** de otros programas: glTF
@@ -244,7 +262,7 @@ del motor con el número del último cambio (*pull request*) incorporado.
   físico, Controlador de jugador, Cámara, Luz, Sonido, Zona y Guion) que se
   añaden y se quitan en el [Inspector](../interfaz/inspector.md). Nuevo
   objeto *Entidad vacía*.
-- **[Prefabricados](../guia/entidades.md#prefabricados)** cuyas copias
+- **[Prefabricados](../guia/reutilizables.md)** cuyas copias
   siguen al original, con cambios propios por copia.
 - **[Generadores de terreno](../guia/generadores.md)**: vacío, plano, isla,
   colinas y cuevas, con sus parámetros y materiales a la vista.
