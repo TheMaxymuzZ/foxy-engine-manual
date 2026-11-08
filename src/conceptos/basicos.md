@@ -68,18 +68,18 @@ cada uno con sus valores. El motor trae diez ya hechos. Ver
 
 Un **recurso** es una pieza reutilizable que se guarda en su propio archivo
 y que pueden usar todas las escenas: objetos de vóxeles, materiales,
-imágenes, sonidos, interfaces, guiones y prefabricados. Al cambiar un
+imágenes, sonidos, interfaces, guiones y objetos reutilizables. Al cambiar un
 recurso, cambia en todas partes donde se usa.
 
-## Prefabricado
+## Objeto reutilizable
 
-Un **prefabricado** es una entidad guardada como recurso, con su modelo,
-sus componentes y su acción al usarla. Se coloca tantas veces como se
-quiera y **todas las copias siguen al original**: al cambiar el
-prefabricado, cambian todas. Cada copia puede cambiar por su cuenta algunos
+Un **objeto reutilizable** (antes, *prefabricado*) es un objeto guardado
+como recurso, con todo lo que lleva dentro, sus componentes y sus
+comportamientos. Se coloca tantas veces como se quiera y **todas las copias
+siguen al original**: al cambiar el original, cambian todas. Cada copia puede cambiar por su cuenta algunos
 componentes; esos cambios se conservan aunque cambie el original.
 
-Ver [Prefabricados](../guia/entidades.md#prefabricados).
+Ver [Objetos reutilizables](../guia/reutilizables.md).
 
 ## Cómo encaja todo
 

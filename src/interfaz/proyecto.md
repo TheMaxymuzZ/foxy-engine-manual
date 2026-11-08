@@ -19,6 +19,7 @@ Cada grupo lista una clase de recurso:
 |---|---|---|
 | <i class="fx fx-mundo"></i> **Escenas** | Las escenas. La <i class="fx fx-estrella"></i> marca la inicial. *Cómo se conectan…* abre el mapa de escenas | [Escenas](../guia/escenas.md) |
 | <i class="fx fx-interfaz"></i> **Interfaces** | Menús, marcadores y carteles | [Interfaces](../guia/interfaces.md) |
+| **♻ Reutilizables** | Los objetos reutilizables. Clic para editar el original en su pestaña; **suelta aquí un objeto** de *En la escena* para hacerlo reutilizable | [Objetos reutilizables](../guia/reutilizables.md) |
 | <i class="fx fx-objeto"></i> **Objetos propios** | Los objetos hechos con cubitos | [Crear objetos propios](../guia/creador.md) |
 | **Materiales** | La paleta de materiales | [Materiales](../guia/materiales.md) |
 | <i class="fx fx-pixel"></i> **Pixel art** | Las imágenes, y *Biblioteca, paletas y texturas…* | [Pixel art](../guia/pixel-art.md) |

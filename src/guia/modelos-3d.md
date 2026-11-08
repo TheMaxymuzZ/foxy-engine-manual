@@ -55,7 +55,7 @@ Desde ese momento es **un objeto más**: se mueve, se gira y se escala en el
 [Inspector](../interfaz/inspector.md) (ver
 [Objetos libres y jerarquía](objetos-libres.md)), puede ir dentro de otro,
 llevar [comportamientos](comportamientos.md), etiquetas y componentes, y
-convertirse en un [prefabricado](entidades.md). Debajo de su nombre, el
+convertirse en un [objeto reutilizable](reutilizables.md). Debajo de su nombre, el
 Inspector dice cuántos triángulos y materiales tiene y cuánto mide.
 
 ## Tamaño y orientación

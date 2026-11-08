@@ -1,4 +1,4 @@
-# Entidades, componentes y prefabricados
+# Entidades, componentes y reutilizables
 
 Todo lo que hay en una escena es una **entidad**, y lo que una entidad hace
 lo deciden sus **componentes**. Este modelo es el mismo en 3D y en 2D, y es
@@ -44,20 +44,22 @@ botón…), dale un [comportamiento](../guia/comportamientos.md).
 La lista completa, con todas sus propiedades y valores de fábrica, está en
 la [Referencia de componentes](../referencia/componentes/index.md).
 
-## Prefabricado
+## Objeto reutilizable
 
-Un prefabricado es una entidad guardada como **recurso**, con su modelo, sus
-componentes y su acción al usarla. Se coloca tantas veces como haga falta y
+Un objeto reutilizable (antes, *prefabricado*) es un objeto guardado como
+**recurso**, **con todo lo que lleva dentro**, sus comportamientos, sus
+componentes y su acción al usarlo. Se coloca tantas veces como haga falta y
 **todas las copias siguen al original**:
 
-- Al cambiar el prefabricado, cambian todas las copias.
-- Cada copia puede cambiar algunos valores por su cuenta; esos cambios se
+- Al cambiar el original (en su propia pestaña), cambian todas las copias.
+- Cada copia puede cambiar algunas cosas por su cuenta; esos cambios se
   conservan aunque cambie el original. El Inspector los marca como
   *cambiado aquí*.
+- Un reutilizable puede llevar otros dentro: un coche con sus ruedas.
 
-Los prefabricados se guardan en `prefabricados/`. Se crean con el botón
-**Crear prefabricado** del Inspector. Ver
-[Prefabricados](../guia/entidades.md#prefabricados).
+Se guardan en `prefabricados/`. Se crean arrastrando un objeto de *En la
+escena* al grupo **♻ Reutilizables** del panel Proyecto. Ver
+[Objetos reutilizables](../guia/reutilizables.md).
 
 ## Módulos
 

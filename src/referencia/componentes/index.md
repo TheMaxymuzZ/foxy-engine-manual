@@ -39,7 +39,7 @@ escriben los valores distintos de los de fábrica:
  ]),
 ```
 
-En una copia de un [prefabricado](../../guia/entidades.md#prefabricados),
+En una copia de un [objeto reutilizable](../../guia/reutilizables.md),
 `componentes` solo guarda lo que la copia cambia; el resto se toma del
 prefabricado.
 

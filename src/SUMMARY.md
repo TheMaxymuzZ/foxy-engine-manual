@@ -42,7 +42,7 @@
 
 - [Conceptos básicos](conceptos/basicos.md)
 - [Proyectos, escenas y recursos](conceptos/proyectos.md)
-- [Entidades, componentes y prefabricados](conceptos/entidades.md)
+- [Entidades, componentes y reutilizables](conceptos/entidades.md)
 - [Escenas 3D y 2D](conceptos/escenas-3d-2d.md)
 - [Lógica del juego: acciones, nodos y Lua](conceptos/logica.md)
 
@@ -62,6 +62,7 @@
 - [Entidades y componentes](guia/entidades.md)
     - [Objetos libres y jerarquía](guia/objetos-libres.md)
     - [Modelos 3D (glTF y OBJ)](guia/modelos-3d.md)
+    - [Objetos reutilizables](guia/reutilizables.md)
 - [Comportamientos](guia/comportamientos.md)
     - [Objetos que se hablan](guia/objetos-que-se-hablan.md)
 - [Juegos 2D](guia/juegos-2d.md)

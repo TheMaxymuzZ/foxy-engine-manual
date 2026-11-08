@@ -28,7 +28,7 @@ Un objeto puede llevar varias (`enemigo` y `volador`, por ejemplo). No
 importan las mayúsculas ni los espacios de los lados: `Enemigo` y `enemigo`
 son la misma.
 
-- **En un [prefabricado](entidades.md#prefabricados)**, todas sus copias
+- **En un [objeto reutilizable](reutilizables.md)**, todas sus copias
   llevan sus etiquetas. Cada copia puede añadir las suyas; las del original
   salen en gris y se cambian en el original.
 - **El jugador** lleva siempre la etiqueta `jugador`, y además las del

@@ -29,6 +29,7 @@
 | **Fotogramas por segundo (fps)** | Cuántas imágenes dibuja el motor cada segundo. Con 60 o más va suave; por debajo de 30 se notan tirones. |
 | **Función (de nodos)** | Un grupo de nodos guardado en `funciones/` que se usa como un nodo más. Ver [Funciones](../guia/nodos-funciones.md). |
 | **Generador** | Lo que crea el terreno de cubitos de una escena: vacío, plano, colinas, cuevas, islas o una imagen de alturas. Ver [El terreno de cubitos](../guia/generadores.md). |
+| **Reutilizable (objeto)** | Un objeto guardado, con lo que lleva dentro, para colocarlo muchas veces. Sus copias siguen al original salvo lo cambiado a mano en cada una; sus **partes** son lo que lleva dentro. Ver [Objetos reutilizables](../guia/reutilizables.md). |
 | **Terreno de cubitos** | El objeto que lleva el suelo de cubitos de una escena y su generador. Una escena lleva uno o ninguno. Ver [El terreno de cubitos](../guia/generadores.md). |
 | **Luz del sol** | El componente que pone la hora del sol, su fuerza y su color. Ver [Luz del sol](../referencia/componentes/sol.md). |
 | **glTF** | El formato más común para modelos 3D: `.glb` (todo en un archivo) o `.gltf` (con su `.bin` y sus imágenes). Ver [Modelos 3D](../guia/modelos-3d.md). |
@@ -67,7 +68,7 @@
 | **Pista** | En una animación, la fila que cambia una propiedad de una cosa (el giro de la hoja, la posición de la cámara…). |
 | **Pixel perfect** | Cada píxel del juego ocupa un número entero de píxeles de la pantalla, para que el pixel art se vea nítido. |
 | **Plantilla** | El punto de partida de un proyecto nuevo: Vacío 3D, Isla vóxel, Isla de ejemplo, Personaje animado, Vacío 2D, Plataformas 2D, Aventura cenital o Plataformas vóxel. Ver [Crear un proyecto](../empezar/crear-proyecto.md). |
-| **Prefabricado** | Una entidad guardada como recurso; sus copias siguen al original. Ver [Prefabricados](../guia/entidades.md#prefabricados). |
+| **Prefabricado** | El nombre de antes de los [objetos reutilizables](../guia/reutilizables.md). |
 | **Propiedad (de un guion)** | Un valor de la tabla `propiedades` de un guion de entidad, que se ajusta en el inspector de cada entidad. |
 | **Proyecto** | La carpeta de un juego, con todas sus escenas, objetos, imágenes e interfaces. |
 | **Punto de parada** | Un nodo o una línea de un guion marcados para que el juego se detenga justo antes de ejecutarlos. Ver [Depurar los nodos](../guia/nodos-depurar.md#puntos-de-parada) y [el depurador de Lua](../guia/lua-depurar.md#el-depurador). |

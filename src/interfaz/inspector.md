@@ -9,7 +9,7 @@ El inspector **cambia según lo que estés haciendo**.
 | 1 | **Herramienta activa** | Las opciones de la herramienta: forma y tamaño del pincel, simetría |
 | 2 | **Material** | El material con el que se construye o se pinta |
 | 3 | **Objeto elegido** | El nombre, las etiquetas, los comportamientos, el tipo y la posición de la entidad elegida |
-| 4 | **Crear prefabricado** | Guarda la entidad como recurso reutilizable |
+| 4 | **Guardar como reutilizable** | Guarda el objeto, con lo que lleva dentro, para colocarlo muchas veces (en una copia, sus botones: editar el original, guardar en él, quitar cambios, desvincular) |
 | 5 | **Componentes** | Los componentes de la entidad y **Añadir componente** |
 | 6 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador usa la entidad |
 
@@ -22,8 +22,9 @@ Lo que muestra depende de la situación:
   [**etiquetas**](../guia/objetos-que-se-hablan.md#etiquetas), sus
   [**comportamientos**](../guia/comportamientos.md) con **➕ Comportamiento**,
   su **posición, giro y escala** (con el
-  [imán](../guia/objetos-libres.md#el-imán-a-la-rejilla)), **Crear
-  prefabricado** (o, en una copia, los botones de su prefabricado), sus
+  [imán](../guia/objetos-libres.md#el-imán-a-la-rejilla)), **Guardar como
+  reutilizable** (o, en una copia o en una de sus partes, sus
+  [botones](../guia/reutilizables.md#copias-y-partes)), sus
   **componentes** con <i class="fx fx-mas"></i> **Añadir componente**, y
   <i class="fx fx-usar"></i> **Al usarlo (E)**, lo que pasa cuando el
   jugador la usa. Abajo, *Al suelo*, *Ver*, *Duplicar* y *Borrar*.
@@ -39,8 +40,9 @@ Lo que muestra depende de la situación:
 ## Componentes
 
 Cada componente se muestra en un apartado plegable con su descripción y sus
-valores. En una copia de un prefabricado, los componentes heredados indican
-*del prefabricado* y los cambiados *cambiado aquí*. Ver
+valores. En una copia de un [objeto reutilizable](../guia/reutilizables.md), los
+componentes heredados indican *del original* y los cambiados *cambiado
+aquí*. Ver
 [Entidades y componentes](../guia/entidades.md).
 
 ## Etiquetas

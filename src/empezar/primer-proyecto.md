@@ -90,7 +90,7 @@ Al tocar una gema, el jugador la recoge: suena, suelta chispas y el valor
 > <i class="fx fx-consejo"></i> **Consejo.** Con la primera gema ya
 > preparada, pulsa <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>D</kbd> para
 > duplicarla con sus componentes. Para muchas copias iguales, conviene un
-> [prefabricado](../guia/entidades.md#prefabricados).
+> [objeto reutilizable](../guia/reutilizables.md).
 
 ## 7. Mostrar un marcador
 
