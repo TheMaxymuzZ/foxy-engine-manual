@@ -82,7 +82,7 @@ con tres páginas. También se abre desde un botón de un
 
 | Página | Ajustes |
 |---|---|
-| **Gráficos** | **Pantalla completa**, **Campo de visión**, **Balanceo al caminar**, **Mostrar fotogramas por segundo** |
+| **Gráficos** | **Pantalla completa**, **Calidad** (Bajo, Medio, Alto, Ultra o Cine; empieza con la del proyecto), **Campo de visión**, **Balanceo al caminar**, **Mostrar fotogramas por segundo** |
 | **Sonido** | **Volumen de la música**, **Volumen de los efectos** |
 | **Controles** | **Sensibilidad del ratón** y **del mando**, **Invertir arriba y abajo**, y la tecla de cada [acción de entrada](../guia/acciones-entrada.md) |
 

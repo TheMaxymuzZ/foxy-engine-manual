@@ -178,6 +178,16 @@ LISTA: dict[str, str] = {
     "estacion-otono": f"{JUEGO} {ISLA} --estacion otono",
     "farolas-de-noche": f"{JUEGO} {PLAZA} --camara 118,26,142 --mirar 96,17,118 --hora 21.5",
     "isla": f"{JUEGO} {ISLA}",
+    # Gráficos (Fase I)
+    "ajustes-graficos": f"{ED} --pestana ajustes-graficos",
+    "panel-ajustes-graficos": "@recorte ajustes-graficos 476,236,964,624",
+    "juego-opciones-graficos": f"{JUEGO} --juego --menu opciones-graficos",
+    "cueva-antorchas": f"{JUEGO} --enorme cueva-con-antorchas",
+    "modelos-pbr": f"{ED} --pestana modelos --camara 49.6,6.6,50.6 --mirar 47.8,5.2,46 --hora 21 --recortar vista",
+    "tono-cine": f"--ancho 720 --alto 430 {ISLA} --hora 17.2 --tono cine",
+    "tono-blender": f"--ancho 720 --alto 430 {ISLA} --hora 17.2 --tono blender",
+    "tono-neutro": f"--ancho 720 --alto 430 {ISLA} --hora 17.2 --tono neutro",
+    "tono-ninguno": f"--ancho 720 --alto 430 {ISLA} --hora 17.2 --tono ninguno",
     # Marca
     "marca-splash": f"{JUEGO} --splash",
     "marca-carga-editor": f"{JUEGO} --editor --splash",

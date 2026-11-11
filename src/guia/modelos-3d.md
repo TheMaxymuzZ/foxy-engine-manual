@@ -81,9 +81,16 @@ Cada trozo del modelo usa su material, y el motor lee de él:
 | **Color base** y **textura de color** | El color de la superficie. La textura se multiplica por el color |
 | **Metálico** | Refleja el cielo y lo que le rodea con su propio color, como el oro o el hierro |
 | **Rugosidad** | Mate (1) o pulido como un espejo (0): el brillo del sol se hace más pequeño y fuerte |
-| **Luz propia** (*emissive*) | Brilla aunque sea de noche |
+| **Relieve** (*normal map*) | Pequeños bultos y grietas sin más triángulos. Se usa con su fuerza (*scale*) |
+| **Textura de rugosidad y metal** | Partes mates y pulidas, o de metal, en la misma pieza |
+| **Oclusión** | Oscurece los rincones a los que llega menos luz |
+| **Luz propia** (*emissive*), con su textura y su fuerza | Brilla aunque sea de noche. Si brilla con fuerza (como la lava), **ilumina** lo que tiene alrededor |
 | **Transparencia recortada** (*alpha mask*) | Lo transparente de la textura no se dibuja: hojas, rejas, pelo |
 | **Dos caras** (*double sided*) | Se ve por delante y por detrás (hojas sueltas, telas) |
+
+Es el mismo modelo de materiales de Blender (*Principled BSDF*), así que un
+modelo se ve aquí como en Blender. Para que coincida del todo, elige el tono
+**Como Blender** en [Gráficos](graficos.md#tono).
 
 Los colores de los vértices, si el modelo los trae, también se usan. Las
 texturas de más de 2048 píxeles de lado se reducen al importarlas.

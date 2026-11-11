@@ -60,7 +60,9 @@ el primero de la lista. El tiempo es solo de ese objeto: si su guion manda
 un mensaje a otro, lo que tarda el otro en contestar se le apunta al otro.
 
 **La tarjeta gráfica.** Lo que tarda la tarjeta en cada pasada del dibujo:
-las sombras del sol, las sombras de cerca y el mundo con el agua. Las
+las sombras del sol, las sombras de cerca, las sombras de las luces, el
+mundo con el agua y el tono. Encima sale la lista de pasadas de este
+fotograma: las [piezas](graficos.md#piezas-del-dibujo) apagadas no salen. Las
 sombras se guardan y solo se vuelven a dibujar si algo cambia; entonces
 pone *guardadas*. Algunas tarjetas no saben decir lo que tardan; entonces
 la ventana lo avisa.

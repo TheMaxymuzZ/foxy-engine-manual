@@ -47,6 +47,7 @@
 - [Ajustes del proyecto](editor/ajustes-proyecto.md)
 - [Preferencias y teclas](guia/preferencias.md)
 - [Probar el juego](guia/jugar.md)
+- [Gráficos: luz, sombras y calidad](guia/graficos.md)
 - [Rendimiento](guia/rendimiento.md)
 
 # Conceptos

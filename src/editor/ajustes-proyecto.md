@@ -1,9 +1,9 @@
 # Ajustes del proyecto
 
 La ventana **Ajustes del proyecto** reúne lo que es común a todo el juego.
-Se abre con **Proyecto → Ajustes del proyecto…** y tiene cuatro páginas:
-**General**, **Rejilla y materiales**, **Módulos** y **Acciones de
-entrada**.
+Se abre con **Proyecto → Ajustes del proyecto…** y tiene cinco páginas:
+**General**, **Rejilla y materiales**, **Módulos**, **Acciones de
+entrada** y **Gráficos**.
 
 ![La ventana Ajustes del proyecto sobre el editor](../imagenes/capturas/ajustes-proyecto.png)
 
@@ -57,9 +57,24 @@ Qué tecla, botón del ratón y botón del mando hace cada acción del juego, y
 las acciones propias del proyecto. Ver
 [Acciones de entrada](../guia/acciones-entrada.md).
 
+## Gráficos
+
+Cómo se ve el juego. Los cambios se ven al momento en la escena.
+
+| Opción | Descripción |
+|---|---|
+| **Exposición** | Más luz (+) o menos (−), como en una cámara: +1 es el doble |
+| **Tono** | Cómo pasa la luz a colores: **Cine (ACES)**, **Como Blender (AgX)**, **Neutro** o **Ninguno** |
+| **Calidad del juego** | La calidad con la que empieza el juego. Cada jugador la cambia en **Opciones → Gráficos** |
+| **Piezas del dibujo** | Apaga sombras, luces, cielo, niebla, agua o transparentes |
+
+**Volver a como venía** deja la página como al principio. Todo se explica en
+[Gráficos: luz, sombras y calidad](../guia/graficos.md).
+
 ## Véase también
 
 - [Archivos del proyecto: proyecto.ron](../referencia/archivos.md#proyecto)
 - [Módulos](../referencia/modulos/index.md)
 - [Escenas](../guia/escenas.md)
+- [Gráficos: luz, sombras y calidad](../guia/graficos.md)
 - [Pixel art](../guia/pixel-art.md)

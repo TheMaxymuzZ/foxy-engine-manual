@@ -5,6 +5,23 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase I: Corazón gráfico nuevo
+
+- **Luz de verdad (HDR)** con **exposición** y **tono** (Cine, Como Blender,
+  Neutro o Ninguno), en la página nueva **Gráficos** de los ajustes del
+  proyecto. Ver [Gráficos](../guia/graficos.md).
+- **Cientos de luces** a la vez, y la casilla **Sombras** de la
+  [Luz](../referencia/componentes/luz.md): una antorcha hace sombras en una
+  cueva.
+- **Materiales completos** en los modelos glTF: relieve, rugosidad, metal,
+  oclusión y brillo. Lo que brilla ilumina alrededor. Un modelo de Blender
+  se ve como en Blender.
+- **Calidad**: Bajo, Medio, Alto, Ultra y Cine, en las preferencias del
+  editor y en **Opciones → Gráficos** del juego.
+- **Piezas del dibujo**: cada parte (sombras, luces, cielo, niebla, agua,
+  transparentes) se enciende o se apaga.
+- El **dibujante clásico** sigue en *Preferencias*, por si acaso.
+
 ## Fase H: Medir de verdad
 
 - **Perfilador** en la ventana [Rendimiento](../guia/rendimiento.md): una

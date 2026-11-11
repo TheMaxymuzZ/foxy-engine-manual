@@ -28,6 +28,17 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
 > esperando a una ventana tapada. Si alguna vez pedir una imagen tarda
 > demasiado, la quita sola hasta que cierres el motor.
 
+## Gráficos
+
+- **Calidad de los gráficos** en el editor: Bajo, Medio, Alto, Ultra o Cine.
+  Bájala si el editor va lento en tu ordenador; no cambia la calidad del
+  juego.
+- **Dibujante**: el **Nuevo** (luz de verdad, cientos de luces con sombra y
+  materiales completos) o el **Clásico**, el de antes. Usa el clásico solo si
+  el nuevo da problemas en tu ordenador.
+
+Ver [Gráficos: luz, sombras y calidad](graficos.md).
+
 ## Cámara
 
 La **velocidad al volar**, la **sensibilidad del ratón** y si se **invierte
