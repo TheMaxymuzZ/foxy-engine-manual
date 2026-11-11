@@ -12,22 +12,22 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 
 | Función | Cuándo |
 |---|---|
-| `al_empezar()` | Al empezar la partida (guion del mundo) o al llegar a la escena (guion de entidad). |
+| `al_empezar()` | Al empezar la partida (guion del mundo) o al llegar a la escena (guion de objeto). |
 | `cada_fotograma(segundos)` | Unas 60 veces por segundo, con los segundos desde la anterior. |
 | `cada_segundo()` | Una vez por segundo. |
-| `al_chocar(otro)` | Cuando el jugador toca la entidad (en el guion del mundo: entidad, otro). |
-| `al_chocar_objeto(otro)` | Cuando la entidad choca con otro objeto (en el guion del mundo: entidad, otro). |
-| `al_hacer_clic()` | Cuando el jugador hace clic en la entidad, mirándola (en el guion del mundo: entidad). |
-| `al_recoger(entidad, valor)` | Cuando el jugador recoge una entidad con el componente Recogible (con el valor que sube). |
-| `al_entrar_zona(quien)` | Cuando el jugador entra en la zona de la entidad (en el guion del mundo: entidad, quien). |
-| `al_salir_zona(quien)` | Cuando el jugador sale de la zona de la entidad (en el guion del mundo: entidad, quien). |
-| `al_entrar_objeto_zona(quien)` | Cuando otro objeto (no el jugador) entra en la zona de la entidad (en el guion del mundo: entidad, quien). |
-| `al_salir_objeto_zona(quien)` | Cuando otro objeto (no el jugador) sale de la zona de la entidad (en el guion del mundo: entidad, quien). |
-| `al_recibir_dano(cantidad, de)` | Cuando algo le hace daño con motor.danar (en el guion del mundo: entidad, cantidad, de). |
-| `al_recibir(evento, valor, de)` | Un mensaje enviado con motor.emitir, motor.emitir_a o motor.emitir_etiqueta (solo en guiones de entidad). |
+| `al_chocar(otro)` | Cuando el jugador toca el objeto (en el guion del mundo: objeto, otro). |
+| `al_chocar_objeto(otro)` | Cuando el objeto choca con otro objeto (en el guion del mundo: objeto, otro). |
+| `al_hacer_clic()` | Cuando el jugador hace clic en el objeto, mirándolo (en el guion del mundo: objeto). |
+| `al_recoger(objeto, valor)` | Cuando el jugador recoge un objeto con el componente Recogible (con el valor que sube). |
+| `al_entrar_zona(quien)` | Cuando el jugador entra en la zona del objeto (en el guion del mundo: objeto, quien). |
+| `al_salir_zona(quien)` | Cuando el jugador sale de la zona del objeto (en el guion del mundo: objeto, quien). |
+| `al_entrar_objeto_zona(quien)` | Cuando otro objeto (no el jugador) entra en la zona del objeto (en el guion del mundo: objeto, quien). |
+| `al_salir_objeto_zona(quien)` | Cuando otro objeto (no el jugador) sale de la zona del objeto (en el guion del mundo: objeto, quien). |
+| `al_recibir_dano(cantidad, de)` | Cuando algo le hace daño con motor.danar (en el guion del mundo: objeto, cantidad, de). |
+| `al_recibir(evento, valor, de)` | Un mensaje enviado con motor.emitir, motor.emitir_a o motor.emitir_etiqueta (solo en guiones de objeto). |
 | `al_pulsar(accion)` | Al pulsar una acción del mapa de acciones del proyecto. |
-| `al_terminar_animacion(animacion)` | Cuando termina un clip que no va en bucle (en el guion del mundo: entidad, animacion). |
-| `al_evento_animacion(evento)` | Un suceso «Avisar a los nodos» de la línea de tiempo (en el guion del mundo: entidad, evento). |
+| `al_terminar_animacion(animacion)` | Cuando termina un clip que no va en bucle (en el guion del mundo: objeto, animacion). |
+| `al_evento_animacion(evento)` | Un suceso «Avisar a los nodos» de la línea de tiempo (en el guion del mundo: objeto, evento). |
 | `al_terminar_cinematica(cinematica)` | Cuando una cinemática acaba o el jugador la salta. |
 | `al_hablar(vecino)` | Al hablar con un vecino. Lo que devuelva es lo que dice. |
 | `al_entrar_escena(escena)` | Al llegar a una escena. |
@@ -52,8 +52,8 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.variable(entidad: entidad, nombre: texto)` | valor (cualquiera) | Lee una variable «de la entidad» de otro objeto (de sus grafos, o una propiedad de sus guiones): la vida del jugador, las monedas… |
-| `motor.poner_variable(entidad: entidad, nombre: texto, valor)` | — | Cambia una variable «de la entidad» de otro objeto. Sus grafos y guiones ven el valor nuevo. |
+| `motor.variable(entidad: objeto, nombre: texto)` | valor (cualquiera) | Lee una variable «del objeto» de otro objeto (de sus grafos, o una propiedad de sus guiones): la vida del jugador, las monedas… |
+| `motor.poner_variable(entidad: objeto, nombre: texto, valor)` | — | Cambia una variable «del objeto» de otro objeto. Sus grafos y guiones ven el valor nuevo. |
 
 ## Matemáticas
 
@@ -66,38 +66,38 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | Función | Devuelve | Qué hace |
 |---|---|---|
 | `motor.vector(x: número, y: número, z: número)` | v (vector) | Un punto o una dirección en metros (x a la derecha, y arriba, z hacia atrás). |
-| `motor.distancia(a: vector, b: vector)` | metros (número) | Los metros que hay entre dos puntos. Vale también con entidades. |
+| `motor.distancia(a: vector, b: vector)` | metros (número) | Los metros que hay entre dos puntos. Vale también con objetos. |
 | `motor.longitud(v: vector)` | metros (número) | Lo largo que es (en metros). |
 | `motor.normalizar(v: vector)` | v (vector) | La misma dirección, con largo 1. |
 | `motor.color(r: número, g: número, b: número)` | color (texto) | Un color, como "#rrggbb". |
 
-## Entidades
+## Objetos
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.entidad(nombre: texto)` | entidad (entidad) | La primera entidad de la escena con ese nombre. |
-| `motor.entidades(nombre: texto)` | lista (lista) | Todas las entidades con ese nombre (las copias de un prefabricado, por ejemplo). |
-| `motor.nombre(entidad: entidad)` | nombre (texto) | Su nombre en la escena. |
-| `motor.posicion(entidad: entidad)` | posicion (vector) | Dónde está ahora la entidad (sus pies), en metros. |
-| `motor.poner_posicion(entidad: entidad, posicion: vector)` | — | Lleva la entidad a ese sitio de golpe. Con el jugador, lo teletransporta. |
-| `motor.mover_hacia(entidad: entidad, destino: vector, velocidad: número)` | llegado (sí/no) | Da un paso hacia el destino, a esa velocidad. Úsalo en «Cada fotograma» para que vaya andando. |
-| `motor.mirar_hacia(entidad: entidad, punto: vector)` | — | Gira la entidad para que mire a ese punto. |
-| `motor.mover(entidad: entidad, x: número, y: número, z: número, segundos: número)` | — | La lleva poco a poco a su sitio del editor más esos metros (puertas, plataformas...). |
-| `motor.ocultar(entidad: entidad)` | — | La entidad deja de verse y de chocar. |
-| `motor.mostrar(entidad: entidad)` | — | Vuelve a verse una entidad oculta. |
-| `motor.oculta(entidad: entidad)` | si (sí/no) | Sí si está oculta. |
-| `motor.ve(entidad: entidad, objetivo: entidad, alcance: número)` | si (sí/no) | Sí si el objetivo está a la vista: a menos de esa distancia y sin ocultar. |
+| `motor.entidad(nombre: texto)` | entidad (objeto) | El primer objeto de la escena con ese nombre. |
+| `motor.entidades(nombre: texto)` | lista (lista) | Todos los objetos con ese nombre (las copias de un objeto reutilizable, por ejemplo). |
+| `motor.nombre(entidad: objeto)` | nombre (texto) | Su nombre en la escena. |
+| `motor.posicion(entidad: objeto)` | posicion (vector) | Dónde está ahora el objeto (sus pies), en metros. |
+| `motor.poner_posicion(entidad: objeto, posicion: vector)` | — | Lleva el objeto a ese sitio de golpe. Con el jugador, lo teletransporta. |
+| `motor.mover_hacia(entidad: objeto, destino: vector, velocidad: número)` | llegado (sí/no) | Da un paso hacia el destino, a esa velocidad. Úsalo en «Cada fotograma» para que vaya andando. |
+| `motor.mirar_hacia(entidad: objeto, punto: vector)` | — | Gira el objeto para que mire a ese punto. |
+| `motor.mover(entidad: objeto, x: número, y: número, z: número, segundos: número)` | — | La lleva poco a poco a su sitio del editor más esos metros (puertas, plataformas...). |
+| `motor.ocultar(entidad: objeto)` | — | El objeto deja de verse y de chocar. |
+| `motor.mostrar(entidad: objeto)` | — | Vuelve a verse un objeto oculto. |
+| `motor.oculta(entidad: objeto)` | si (sí/no) | Sí si está oculta. |
+| `motor.ve(entidad: objeto, objetivo: objeto, alcance: número)` | si (sí/no) | Sí si el objetivo está a la vista: a menos de esa distancia y sin ocultar. |
 
 ## Etiquetas y mensajes
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.tiene_etiqueta(entidad: entidad, etiqueta: texto)` | si (sí/no) | Sí si el objeto lleva esa etiqueta. Para saber con qué se ha chocado. El jugador lleva siempre «jugador». |
+| `motor.tiene_etiqueta(entidad: objeto, etiqueta: texto)` | si (sí/no) | Sí si el objeto lleva esa etiqueta. Para saber con qué se ha chocado. El jugador lleva siempre «jugador». |
 | `motor.con_etiqueta(etiqueta: texto)` | lista (lista) | Todos los objetos que llevan esa etiqueta y no están ocultos (para «Para cada elemento»). |
-| `motor.mas_cercano(etiqueta: texto, desde: entidad)` | entidad (entidad) | El objeto con esa etiqueta que está más cerca (sin contar el de «cerca de»). Nada si no hay ninguno. |
-| `motor.etiquetas(entidad: entidad)` | lista (lista) | Las etiquetas que lleva ahora el objeto. |
-| `motor.poner_etiqueta(entidad: entidad, etiqueta: texto)` | — | Le pone una etiqueta mientras dure la partida (en el editor no cambia). |
-| `motor.quitar_etiqueta(entidad: entidad, etiqueta: texto)` | — | Le quita una etiqueta mientras dure la partida. |
+| `motor.mas_cercano(etiqueta: texto, desde: objeto)` | entidad (objeto) | El objeto con esa etiqueta que está más cerca (sin contar el de «cerca de»). Nada si no hay ninguno. |
+| `motor.etiquetas(entidad: objeto)` | lista (lista) | Las etiquetas que lleva ahora el objeto. |
+| `motor.poner_etiqueta(entidad: objeto, etiqueta: texto)` | — | Le pone una etiqueta mientras dure la partida (en el editor no cambia). |
+| `motor.quitar_etiqueta(entidad: objeto, etiqueta: texto)` | — | Le quita una etiqueta mientras dure la partida. |
 
 ## Jugador
 
@@ -164,22 +164,22 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.animar(entidad: entidad, animacion: texto)` | — | Pone un clip de animaciones/ (o, en 2D, una animación de su hoja de sprites). Manda sobre su máquina de estados hasta que acaba. Vacío = vuelve la de siempre. |
-| `motor.animar_al_reves(entidad: entidad, animacion: texto)` | — | Pone el clip hacia atrás desde donde vaya: una puerta abierta con «abrir» se cierra así. Al volver al principio, queda en reposo. |
-| `motor.parar_animacion(entidad: entidad)` | — | Quita el clip puesto a mano: vuelve el de su máquina de estados (o se queda quieta). |
-| `motor.parametro_animacion(entidad: entidad, nombre: texto, valor: número)` | — | Cambia un parámetro de su máquina de estados (sí = 1, no = 0). Los de velocidad, en el suelo y en el agua los pone el motor. |
-| `motor.cinematica(nombre: texto)` | — | Pone una cinemática de cinematicas/: mueve la cámara y las entidades y enseña sus frases. El jugador la salta con Espacio. |
+| `motor.animar(entidad: objeto, animacion: texto)` | — | Pone un clip de animaciones/ (o, en 2D, una animación de su hoja de sprites). Manda sobre su máquina de estados hasta que acaba. Vacío = vuelve la de siempre. |
+| `motor.animar_al_reves(entidad: objeto, animacion: texto)` | — | Pone el clip hacia atrás desde donde vaya: una puerta abierta con «abrir» se cierra así. Al volver al principio, queda en reposo. |
+| `motor.parar_animacion(entidad: objeto)` | — | Quita el clip puesto a mano: vuelve el de su máquina de estados (o se queda quieta). |
+| `motor.parametro_animacion(entidad: objeto, nombre: texto, valor: número)` | — | Cambia un parámetro de su máquina de estados (sí = 1, no = 0). Los de velocidad, en el suelo y en el agua los pone el motor. |
+| `motor.cinematica(nombre: texto)` | — | Pone una cinemática de cinematicas/: mueve la cámara y los objetos y enseña sus frases. El jugador la salta con Espacio. |
 | `motor.terminar_cinematica()` | — | Termina la cinemática que se esté viendo y devuelve la cámara al jugador. |
 
 ## 2D
 
 | Función | Devuelve | Qué hace |
 |---|---|---|
-| `motor.voltear(entidad: entidad, espejo: sí/no)` | — | Da la vuelta al sprite de la entidad (como en un espejo). |
-| `motor.impulsar(entidad: entidad, x: número, y: número)` | — | Empuja un cuerpo físico (o al jugador) con esa velocidad, en casillas por segundo. |
+| `motor.voltear(entidad: objeto, espejo: sí/no)` | — | Da la vuelta al sprite del objeto (como en un espejo). |
+| `motor.impulsar(entidad: objeto, x: número, y: número)` | — | Empuja un cuerpo físico (o al jugador) con esa velocidad, en casillas por segundo. |
 | `motor.casilla(x: número, y: número, capa: texto)` | casilla (número) | El número de la casilla que hay en ese sitio de la capa (nada si está vacía). Capa vacía = la primera que choca. |
 | `motor.poner_casilla(x: número, y: número, casilla: número, capa: texto)` | — | Cambia una casilla del mapa mientras se juega (para romper bloques, abrir pasos...). |
-| `motor.particulas(entidad: entidad, encendidas: sí/no)` | — | Enciende o apaga el componente Partículas de la entidad (también en 3D). |
+| `motor.particulas(entidad: objeto, encendidas: sí/no)` | — | Enciende o apaga el componente Partículas del objeto (también en 3D). |
 
 ## Otros
 

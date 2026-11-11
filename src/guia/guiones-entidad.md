@@ -1,8 +1,8 @@
-# Guiones de entidad
+# Guiones de objeto
 
-Un **guion de entidad** describe el comportamiento de una sola entidad: un
+Un **guion de objeto** describe el comportamiento de un solo objeto: un
 enemigo que patrulla, una puerta que se abre, una moneda que se recoge. El
-mismo archivo se puede usar en muchas entidades, y **cada una tiene su propia
+mismo archivo se puede usar en muchos objetos, y **cada uno tiene su propia
 copia**, con sus propias variables.
 
 ![Un guion de enemigo en el panel Código](../imagenes/capturas/panel-codigo.png)
@@ -11,19 +11,19 @@ copia**, con sus propias variables.
 
 La forma más rápida es desde el propio objeto:
 
-1. Elige la entidad en la escena.
+1. Elige el objeto en la escena.
 2. En el inspector, pulsa **➕ Comportamiento → 📜 Código nuevo** y elige
    una plantilla. El guion se crea en `guiones/`, se le pone al objeto como
    [comportamiento](comportamientos.md) y se abre en el panel **Código**.
 
 También puedes crearlo antes, con **Guion nuevo** en el grupo **Guiones**
 del panel **Proyecto** o con el botón **+** de las pestañas de **Código**, y
-después ponérselo a la entidad con **➕ Comportamiento → 📂 Del proyecto**.
-Una entidad puede llevar varios guiones y grafos a la vez.
+después ponérselo al objeto con **➕ Comportamiento → 📂 Del proyecto**.
+Un objeto puede llevar varios guiones y grafos a la vez.
 
 | Plantilla | Qué hace |
 |---|---|
-| **Entidad vacía** | Las funciones principales vacías y una tabla de propiedades |
+| **Objeto vacío** | Las funciones principales vacías y una tabla de propiedades |
 | **Enemigo** | Patrulla, persigue al jugador cuando lo ve y le hace daño al alcanzarlo |
 | **Puerta** | Se abre al acercarse el jugador y se cierra al irse, con sonido |
 | **Recogible** | Al tocarlo desaparece, suena y suma a un valor del juego (por ejemplo, `monedas`) |
@@ -31,8 +31,8 @@ Una entidad puede llevar varios guiones y grafos a la vez.
 
 ## `yo` y las funciones del motor
 
-Dentro de un guion de entidad, **`yo`** es la entidad que lo lleva. Se pasa a
-las funciones de `motor` como cualquier otra entidad:
+Dentro de un guion de objeto, **`yo`** es el objeto que lo lleva. Se pasa a
+las funciones de `motor` como cualquier otro objeto:
 
 ```lua
 function al_empezar()
@@ -44,8 +44,8 @@ Las funciones que llama el motor son las mismas que en el
 [guion del mundo](guiones.md), con dos diferencias:
 
 - **Choques, zonas y daño** (`al_chocar`, `al_entrar_zona`, `al_salir_zona` y
-  `al_recibir_dano`) solo llegan cuando afectan a **esta** entidad, y no
-  reciben la entidad como primer argumento: `al_chocar(otro)`,
+  `al_recibir_dano`) solo llegan cuando afectan a **esta** objeto, y no
+  reciben el objeto como primer argumento: `al_chocar(otro)`,
   `al_recibir_dano(cantidad, de)`.
 - **`al_recibir(evento, valor, de)`** recibe los eventos propios enviados
   con `motor.emitir` o `motor.emitir_a`.
@@ -72,22 +72,22 @@ propiedades = {
 
 El inspector enseña un campo para cada propiedad, según su tipo: número,
 **sí/no**, texto o vector. El botón **↺** devuelve el valor del guion. Cada
-entidad guarda sus propios valores en la escena, así que dos lobos con el
+objeto guarda sus propios valores en la escena, así que dos lobos con el
 mismo guion pueden ir a velocidades distintas.
 
 En el código, los valores se leen con `propiedades.velocidad`. Son los
-mismos que las **variables de la entidad** de los [nodos](nodos.md): otra
-entidad los lee con `motor.variable(entidad, "velocidad")` y los cambia con
+mismos que las **variables del objeto** de los [nodos](nodos.md): otra
+objeto los lee con `motor.variable(entidad, "velocidad")` y los cambia con
 `motor.poner_variable`.
 
 > <i class="fx fx-consejo"></i> **Consejo.** Si cambias el valor de una
-> propiedad en el código, las entidades que tenían el valor anterior y no lo
+> propiedad en el código, los objetos que tenían el valor anterior y no lo
 > habían cambiado en el inspector toman el nuevo, también con el juego en
 > marcha.
 
 ## Variables del guion
 
-Las variables `local` declaradas fuera de las funciones son de cada entidad y
+Las variables `local` declaradas fuera de las funciones son de cada objeto y
 duran toda la partida. Sirven para recordar cosas entre fotogramas:
 
 ```lua
@@ -133,11 +133,11 @@ Los módulos pueden estar en subcarpetas: `require("ia.patrulla")` carga
 `guiones/ia/patrulla.lua`. Al guardar un módulo con el juego en marcha, se
 recargan también los guiones que lo usan.
 
-## Hablar con otras entidades
+## Hablar con otros objetos
 
 - `motor.emitir("alarma", valor, yo)` avisa a todos: a los nodos *Al recibir
-  un mensaje* y a la función `al_recibir` de todos los guiones de entidad.
-- `motor.emitir_a("Puerta", "abrir")` avisa solo a esa entidad.
+  un mensaje* y a la función `al_recibir` de todos los guiones de objeto.
+- `motor.emitir_a("Puerta", "abrir")` avisa solo a ese objeto.
 - `motor.emitir_etiqueta("enemigo", "alarma")` avisa a todas las que llevan
   esa etiqueta.
 - `al_chocar_objeto(otro)`, `al_entrar_objeto_zona(quien)` y
@@ -145,7 +145,7 @@ recargan también los guiones que lo usan.
   en su zona y cuándo el jugador le hace clic. Ver
   [Objetos que se hablan](objetos-que-se-hablan.md).
 - `motor.danar(entidad, cantidad, yo)` llama a `al_recibir_dano` de la otra
-  entidad.
+  objeto.
 
 ```lua
 function al_recibir(evento, valor, de)

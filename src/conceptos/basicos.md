@@ -16,52 +16,52 @@ Ver [Proyectos, escenas y recursos](proyectos.md).
 ## Escena
 
 Una **escena** es un lugar del juego: un nivel, una casa por dentro, un
-menú con fondo. Cada escena es un archivo de `mundos/` con sus entidades y
+menú con fondo. Cada escena es un archivo de `mundos/` con sus objetos y
 los módulos que cambia respecto al proyecto. El suelo de cubitos, si lo
-hay, es una entidad más, el [Terreno de cubitos](../guia/generadores.md),
+hay, es un objeto más, el [Terreno de cubitos](../guia/generadores.md),
 con su generador (vacío, plano, colinas, cuevas, islas o una imagen de
 alturas); encima se guardan los cambios hechos con el pincel. Una escena
 nueva empieza sin terreno, con una cámara y la luz del sol.
 
-## Entidad
+## Objeto
 
-Una **entidad** es cualquier cosa colocada en una escena: una casa, una
-puerta, una luz, el personaje del jugador o un punto invisible. Toda entidad
+Una **objeto** es cualquier cosa colocada en una escena: una casa, una
+puerta, una luz, el personaje del jugador o un punto invisible. Toda objeto
 tiene un **nombre**, una **posición** y un **giro**, y puede tener un
 **modelo** (un objeto de vóxeles) o ninguno: la *Objeto vacío* no se ve al
 jugar y sirve para colgarle componentes.
 
-Las acciones y los guiones se refieren a las entidades **por su nombre**,
+Las acciones y los guiones se refieren a los objetos **por su nombre**,
 por lo que conviene darles nombres claros, como «Puerta del castillo».
 
 ## Componente
 
-Un **componente** da a una entidad un comportamiento concreto. Una entidad
+Un **componente** da a un objeto un comportamiento concreto. Un objeto
 sin componentes solo se ve y se choca con ella; con componentes puede
 iluminar, sonar, caer con la física, reaccionar cuando el jugador se acerca
 o ser el propio jugador.
 
 | Componente | Para qué sirve |
 |---|---|
-| [Colisión](../referencia/componentes/colision.md) | Decide si la entidad es sólida o se atraviesa |
+| [Colisión](../referencia/componentes/colision.md) | Decide si el objeto es sólida o se atraviesa |
 | [Cuerpo físico](../referencia/componentes/cuerpo-fisico.md) | Cae, bota, rueda y se puede empujar |
-| [Controlador de jugador](../referencia/componentes/controlador.md) | El jugador maneja la entidad |
+| [Controlador de jugador](../referencia/componentes/controlador.md) | El jugador maneja el objeto |
 | [Cámara](../referencia/componentes/camara.md) | Cómo se ve el juego |
 | [Luz](../referencia/componentes/luz.md) | Ilumina alrededor |
-| [Sonido](../referencia/componentes/sonido.md) | Un sonido que sale de la entidad |
+| [Sonido](../referencia/componentes/sonido.md) | Un sonido que sale del objeto |
 | [Zona](../referencia/componentes/zona.md) | Hace algo al entrar o salir el jugador |
 | [Sprite](../referencia/componentes/sprite.md) | La imagen con la que se ve en 2D |
 | [Animador](../referencia/componentes/animador.md) | Sus animaciones y su máquina de estados |
 | [Recogible](../referencia/componentes/recogible.md) | Se recoge al tocarlo y suma a un valor |
 | [Partículas](../referencia/componentes/particulas.md) | Polvo, chispas, lluvia, humo… |
 
-Cada entidad puede tener **un componente de cada clase**. Se añaden y se
+Cada objeto puede tener **un componente de cada clase**. Se añaden y se
 quitan en el [Inspector](../interfaz/inspector.md). Ver
-[Entidades y componentes](../guia/entidades.md).
+[Objetos y componentes](../guia/entidades.md).
 
-Lo que una entidad **hace** por su cuenta (perseguir, girar, abrirse…) son
+Lo que un objeto **hace** por su cuenta (perseguir, girar, abrirse…) son
 sus **comportamientos**: grafos de nodos o guiones Lua, tantos como quieras,
-cada uno con sus valores. El motor trae diez ya hechos. Ver
+cada uno con sus valores. El motor trae once ya hechos. Ver
 [Comportamientos](../guia/comportamientos.md).
 
 ## Recurso

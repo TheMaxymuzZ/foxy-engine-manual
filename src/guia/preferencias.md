@@ -7,6 +7,10 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
 
 ## General
 
+- **Modo**: *Sencillo* (solo lo necesario para empezar) o *Avanzado* (todos
+  los paneles). Ver [Modo Sencillo y tutorial guiado](../empezar/modo-sencillo.md).
+- **Enseñar el tutorial guiado al abrir un proyecto**: márcalo para volver a
+  ver el tutorial la próxima vez.
 - **Sincronía vertical (VSync)**: cada imagen sale justo cuando la pantalla
   se refresca, y la cámara se mueve suave, **sin tirones**. Viene activada.
   Quítala solo si el motor se queda congelado en tu ordenador.

@@ -26,7 +26,7 @@ La forma más rápida es partir de nodos que ya funcionan:
 
 La selección debe tener una sola entrada y una sola salida de ejecución.
 Las variables **del grafo** no existen dentro de una función: pásalas como
-entrada, o cámbialas a variables de la entidad.
+entrada, o cámbialas a variables del objeto.
 
 ### Crear una función vacía
 
@@ -43,8 +43,8 @@ Guarda la función y estará en la categoría **Funciones** de la paleta de
 todos los grafos del proyecto.
 
 > <i class="fx fx-nota"></i> **Nota.** Una función se ejecuta dentro de la
-> cadena que la llama. Por eso puede usar **Esperar**, y **Esta entidad**
-> es la entidad del grafo que la llama.
+> cadena que la llama. Por eso puede usar **Esperar**, y **Este objeto**
+> es el objeto del grafo que la llama.
 
 ## Bibliotecas
 

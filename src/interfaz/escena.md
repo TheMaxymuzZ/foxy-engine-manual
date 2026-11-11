@@ -10,8 +10,8 @@ entrada… ordenado en carpetas. Un clic elige un objeto (y el
 | Nº | Elemento | Descripción |
 |---|---|---|
 | 1 | **Carpeta nueva** | Crea una carpeta para ordenar la escena |
-| 2 | **Carpeta** | Agrupa entidades. El número dice cuántas tiene. Se pliega con la flecha |
-| 3 | **Entidad** | Un clic la elige y el Inspector muestra sus opciones |
+| 2 | **Carpeta** | Agrupa objetos. El número dice cuántas tiene. Se pliega con la flecha |
+| 3 | **Objeto** | Un clic la elige y el Inspector muestra sus opciones |
 | 4 | **Subcarpeta** | Las carpetas se pueden anidar |
 
 El <i class="fx fx-carpeta-nueva"></i> de arriba crea una carpeta. Los

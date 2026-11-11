@@ -11,9 +11,9 @@ nombre del sonido: `sonidos/campanario.ogg` se llama `campanario`.
 
 ## Usar un sonido
 
-- **Desde una entidad**: añade el componente
-  [Sonido](../referencia/componentes/sonido.md). El sonido sale de la
-  entidad y se oye más fuerte cuanto más cerca está el jugador.
+- **Desde un objeto**: añade el componente
+  [Sonido](../referencia/componentes/sonido.md). El sonido sale de el
+  objeto y se oye más fuerte cuanto más cerca está el jugador.
 - **Con una acción**: la acción **Tocar un sonido** de una zona, un botón o
   un objeto. Ver [Acciones](../referencia/acciones.md).
 - **Desde un guion**: `motor.sonar("campanario")`.

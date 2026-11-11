@@ -9,7 +9,7 @@ atrás, y muestra los ajustes de la capa elegida y de la escena.
 |---|---|---|
 | 1 | **+ Casillas** y **+ Imagen** | Añaden una capa de ese tipo |
 | 2 | **Capa activa** | La capa en la que se pinta. En cada fila, el ojo la muestra u oculta, el candado la bloquea, las flechas la mueven delante o detrás y la papelera la borra |
-| 3 | **aquí van las entidades** | Dónde se dibujan los personajes y los objetos: las capas de encima los tapan |
+| 3 | **aquí van los objetos** | Dónde se dibujan los personajes y los objetos: las capas de encima los tapan |
 | 4 | **Ajustes de la capa** | Nombre, casillas o imagen, paralaje, opacidad y si choca |
 
 ## Ajustes de la capa

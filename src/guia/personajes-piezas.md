@@ -48,7 +48,7 @@ raíz, para que no se inclinen cuando el cuerpo se inclina al correr.
 
 Con las piezas guardadas, cualquier animación puede moverlas:
 
-1. Elige en la escena una entidad con ese objeto.
+1. Elige en la escena un objeto con ese objeto.
 2. En el panel **Animación**, en **Pista nueva**, elige la pieza en
    **Qué** y su propiedad en **Cambia** (casi siempre **Giro**).
 3. Pon las claves. El giro de una pieza es sobre su punto de giro y se suma

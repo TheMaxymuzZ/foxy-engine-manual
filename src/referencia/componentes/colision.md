@@ -7,7 +7,7 @@ Decide si se puede chocar con la entidad.
 
 | Propiedad | Campo | De fábrica | Descripción |
 |---|---|---|---|
-| Sólida | `solida` | Sí | Sin marcar, la entidad se atraviesa. |
+| Sólida | `solida` | Sí | Sin marcar, el objeto se atraviesa. |
 
 <!-- fin -->
 

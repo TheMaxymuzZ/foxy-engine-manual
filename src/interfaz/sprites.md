@@ -11,7 +11,7 @@ animaciones.
 | 1 | **Imagen** | La imagen de `imagenes/` que se edita. **Retocar** la abre en [Pixel art](pixel-art.md) |
 | 2 | **Es** | **Imagen suelta**, **Hoja de sprites** o **Juego de casillas** |
 | 3 | **Corte** | **Entera**, **En rejilla** (ancho, alto, margen y separación) o **A mano** |
-| 4 | **Punto de anclaje** | El punto de cada fotograma que va en la posición de la entidad. **Pies** y **Centro** lo ponen de golpe |
+| 4 | **Punto de anclaje** | El punto de cada fotograma que va en la posición del objeto. **Pies** y **Centro** lo ponen de golpe |
 | 5 | **Animaciones** | Cada animación con sus fotogramas, su velocidad en fotogramas por segundo, si va en bucle y si va de ida y vuelta |
 | 6 | Vista previa | La animación elegida, moviéndose, con el punto de anclaje en rojo |
 | 7 | Fotogramas | Todos los fotogramas, numerados desde 0. Los de la animación elegida salen en amarillo |
@@ -37,4 +37,4 @@ Todo se explica en [Sprites](../guia/sprites.md).
 ## Véase también
 
 - [Sprite](../referencia/componentes/sprite.md), el componente.
-- [Animación](../guia/animacion.md): animaciones de entidades y cinemáticas.
+- [Animación](../guia/animacion.md): animaciones de objetos y cinemáticas.

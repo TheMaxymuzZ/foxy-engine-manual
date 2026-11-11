@@ -1,7 +1,7 @@
 # Escenas 3D y 2D
 
 Un proyecto de Foxy Engine puede tener escenas **3D**, hechas de cubitos, y
-escenas **2D**, hechas de casillas y sprites. Las dos comparten entidades,
+escenas **2D**, hechas de casillas y sprites. Las dos comparten objetos,
 componentes, interfaces, sonidos, nodos y guiones; cambia cómo se construye
 y cómo se ve el mundo.
 
@@ -9,7 +9,7 @@ y cómo se ve el mundo.
 |---|---|---|
 | **Terreno** | Cubitos de 0,5 m, generados o construidos con pinceles | Capas de casillas pintadas con un juego de casillas |
 | **Unidad** | Metros | Casillas (16 píxeles de fábrica) |
-| **Cómo se ven las entidades** | Un objeto de cubitos | Un sprite |
+| **Cómo se ven los objetos** | Un objeto de cubitos | Un sprite |
 | **Cámara** | Con perspectiva, u ortográfica para vistas de lado o desde arriba | *Pixel perfect*: cada píxel del juego ocupa un número entero de píxeles de la pantalla |
 | **Espacio de trabajo** | **Construir** | **2D** |
 | **Física** | Bloques sólidos, cuerpos que caen y ruedan | Casillas sólidas, plataformas, escaleras, agua y peligro |

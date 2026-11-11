@@ -10,7 +10,7 @@ Ilumina alrededor de la entidad, de día y de noche.
 | Color | `color` | `"#ffd27a"` | Color de la luz, en `#rrggbb`. |
 | Intensidad | `intensidad` | 1 | De 0 a 4. |
 | Alcance | `alcance` | 8 m | Distancia hasta la que ilumina. En 2D se mide en casillas. |
-| Altura | `altura` | 1 m | Altura de la luz sobre la base de la entidad. |
+| Altura | `altura` | 1 m | Altura de la luz sobre la base del objeto. |
 
 <!-- fin -->
 

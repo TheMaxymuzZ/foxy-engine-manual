@@ -14,26 +14,26 @@ según su posición en el lienzo.
 
 | Evento | Cuándo pasa |
 |---|---|
-| **Al empezar** | Al empezar la partida. En un grafo de escena o de entidad, al llegar a la escena |
+| **Al empezar** | Al empezar la partida. En un grafo de escena o de objeto, al llegar a la escena |
 | **Cada fotograma** | Unas 60 veces por segundo. Su salida *segundos desde el anterior* sirve para moverse a velocidad constante |
 | **Cada segundo** | Una vez por segundo |
 | **Cada cierto tiempo** | Cada tantos segundos, los que escribas en el nodo |
 | **Al pulsar una acción** | Al pulsar una [acción de entrada](acciones-entrada.md). Vacío: cualquiera |
-| **Al chocar con el jugador** | Cuando el jugador toca la entidad. En un grafo de entidad, vacío significa esta entidad |
-| **Al entrar en una zona** / **Al salir de una zona** | Cuando el jugador entra o sale de una entidad con el componente [Zona](../referencia/componentes/zona.md) |
-| **Al recibir daño** | Cuando un nodo *Hacer daño* (o `motor.danar` en Lua) apunta a esa entidad. Da la cantidad y quién lo hace |
-| **Al chocar con otro objeto** | Cuando la entidad toca a otro objeto. Con *con etiqueta*, solo si el otro la lleva |
+| **Al chocar con el jugador** | Cuando el jugador toca el objeto. En un grafo de objeto, vacío significa este objeto |
+| **Al entrar en una zona** / **Al salir de una zona** | Cuando el jugador entra o sale de un objeto con el componente [Zona](../referencia/componentes/zona.md) |
+| **Al recibir daño** | Cuando un nodo *Hacer daño* (o `motor.danar` en Lua) apunta a ese objeto. Da la cantidad y quién lo hace |
+| **Al chocar con otro objeto** | Cuando el objeto toca a otro objeto. Con *con etiqueta*, solo si el otro la lleva |
 | **Al entrar un objeto en una zona** / **Al salir un objeto de una zona** | Lo mismo que las zonas del jugador, pero con los demás objetos que se mueven |
-| **Al hacer clic en el objeto** | Cuando el jugador hace clic mirando a la entidad (3D) |
+| **Al hacer clic en el objeto** | Cuando el jugador hace clic mirando al objeto (3D) |
 | **Al recibir un mensaje** | Cuando otro grafo, o un guion, envía un mensaje con ese nombre |
 | **Al usar un objeto** | Cuando se usa con <kbd>E</kbd> un objeto cuya acción es *Llamar al guion* con ese nombre de función |
 | **Al hablar con** | Al hablar con un vecino. Termina con *Responder* para darle su frase |
 | **Al entrar en la escena** | Al llegar a esa escena (vacío: a cualquiera) |
 | **Cada día nuevo**, **Cada hora**, **Al llegar la hora** | Con el reloj del juego. Ver [La vida del mundo](vida.md) |
 
-Los eventos de entidad (chocar, zonas, daño) llevan un filtro *entidad*.
-En el grafo del juego, déjalo vacío para recibir los de todas las entidades
-y usa la salida *entidad* para saber de cuál se trata.
+Los eventos de objeto (chocar, zonas, daño) llevan un filtro *objeto*.
+En el grafo del juego, déjalo vacío para recibir los de todos los objetos
+y usa la salida *objeto* para saber de cuál se trata.
 
 ### Mensajes
 
@@ -43,10 +43,10 @@ grafos distintos se comuniquen sin conocerse:
 1. En el grafo que avisa, añade **Enviar mensaje a todos** y escribe su
    nombre, por ejemplo `alarma`. Opcionalmente, conecta un valor.
 2. En cualquier otro grafo, añade **Al recibir un mensaje** con el mismo
-   nombre. Su salida *valor* trae lo que se envió y *de quién*, la entidad
+   nombre. Su salida *valor* trae lo que se envió y *de quién*, el objeto
    que lo envió.
 
-**Enviar mensaje a un objeto** solo llega a esa entidad, y **Enviar mensaje
+**Enviar mensaje a un objeto** solo llega a ese objeto, y **Enviar mensaje
 a los de una etiqueta**, a todas las que la llevan. Desde Lua, usa
 `motor.emitir("alarma", valor)`. Ver
 [Objetos que se hablan](objetos-que-se-hablan.md).
@@ -78,7 +78,7 @@ y lo que viene **al terminar**.
 - **Repetir** da tantas vueltas como diga *veces*. Su salida *vuelta* cuenta
   desde 1.
 - **Para cada elemento** recorre una lista. Por ejemplo, con
-  **Entidades que se llaman** («Farola») y **Ocultar**, apaga todas las
+  **Objetos que se llaman** («Farola») y **Ocultar**, apaga todas las
   farolas de la escena de una vez.
 - **Mientras** repite mientras la condición sea *sí*.
 
@@ -107,7 +107,7 @@ Ejemplo: una trampa que se activa con retraso.
 ### Solo una vez y Puerta
 
 **Solo una vez** deja pasar la primera ejecución y ninguna más. En un grafo
-de entidad, cuenta por separado para cada entidad. Es útil para un mensaje
+de objeto, cuenta por separado para cada objeto. Es útil para un mensaje
 de bienvenida o un logro.
 
 **Puerta** deja pasar la ejecución mientras está abierta. Tiene dos

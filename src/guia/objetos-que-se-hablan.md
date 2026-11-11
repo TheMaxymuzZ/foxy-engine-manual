@@ -95,7 +95,7 @@ nombre, que también dice **de quién** viene.
 
 ## Variables de un objeto
 
-Las variables **de la entidad** de un grafo y las
+Las variables **del objeto** de un grafo y las
 [`propiedades`](guiones-entidad.md#propiedades) de un guion son visibles
 desde los demás objetos. En el inspector, debajo de los comportamientos de
 un objeto, se ve cuáles tiene.
@@ -127,5 +127,5 @@ Con nodos es igual: **Al chocar con otro objeto** con *con etiqueta* =
 
 - [Comportamientos](comportamientos.md)
 - [Eventos y flujo](nodos-flujo.md)
-- [Guiones de entidad](guiones-entidad.md)
+- [Guiones de objeto](guiones-entidad.md)
 - [Referencia de nodos](../referencia/nodos.md)

@@ -17,17 +17,17 @@ Escríbelas en `guiones/mundo.lua`; todas son opcionales.
 | `al_cambiar_hora(hora)` | Al empezar cada hora | `hora`: entero de 0 a 23 | — |
 | `cada_segundo()` | Una vez por segundo de juego | — | — |
 | `cada_fotograma(segundos)` | Cada fotograma | `segundos`: los que han pasado desde el anterior | — |
-| `al_chocar(entidad, otro)` | Cuando el jugador toca una entidad | `entidad`: la que se toca; `otro`: `0`, el jugador | — |
-| `al_entrar_zona(entidad, quien)`, `al_salir_zona(entidad, quien)` | Cuando el jugador entra o sale de una entidad con [Zona](componentes/zona.md) | `entidad`: la zona; `quien`: `0`, el jugador | — |
-| `al_recibir_dano(entidad, cantidad, de)` | Cuando `motor.danar` (o el nodo *Hacer daño*) apunta a una entidad | `entidad`, `cantidad` y quién lo hace | — |
+| `al_chocar(entidad, otro)` | Cuando el jugador toca un objeto | `entidad`: la que se toca; `otro`: `0`, el jugador | — |
+| `al_entrar_zona(entidad, quien)`, `al_salir_zona(entidad, quien)` | Cuando el jugador entra o sale de un objeto con [Zona](componentes/zona.md) | `entidad`: la zona; `quien`: `0`, el jugador | — |
+| `al_recibir_dano(entidad, cantidad, de)` | Cuando `motor.danar` (o el nodo *Hacer daño*) apunta a un objeto | `entidad`, `cantidad` y quién lo hace | — |
 | `al_pulsar(nombre)` | Al pulsar una [acción de entrada](../guia/acciones-entrada.md) propia | `nombre`: el de la acción | — |
-| *tu función*`(nombre)` | Las que elige el comportamiento *Llamar al mundo* (`guiones/llamar_al_mundo.lua`) de una entidad, al empezar o cada segundo. Lo crean solos los proyectos antiguos; ver [Comportamientos](../guia/comportamientos.md#proyectos-de-versiones-anteriores) | `nombre`: el de la entidad | — |
+| *tu función*`(nombre)` | Las que elige el comportamiento *Llamar al mundo* (`guiones/llamar_al_mundo.lua`) de un objeto, al empezar o cada segundo. Lo crean solos los proyectos antiguos; ver [Comportamientos](../guia/comportamientos.md#proyectos-de-versiones-anteriores) | `nombre`: el del objeto | — |
 | `al_entrar_escena(nombre)` | Al llegar a otra escena | `nombre`: el de la escena | — |
 | *tu función*`(quien)` | Un botón o una zona con la acción *Llamar al guion* | `quien`: nombre del botón o la zona | — |
 
-## Entidades en Lua
+## Objetos en Lua
 
-Las funciones que reciben una **entidad** aceptan su nombre (`"Lobo"`), su
+Las funciones que reciben una **objeto** aceptan su nombre (`"Lobo"`), su
 número (el que dan `motor.entidad` y los eventos) o `"jugador"`. El número
 `0` es siempre el jugador. Las posiciones son **vectores**: tablas con `x`,
 `y` y `z`, en metros, que se suman, se restan y se multiplican por un
@@ -89,24 +89,24 @@ end
 Sonidos de ejemplo: `paso`, `salto`, `caida`, `patada`, `hablar`, `trueno`,
 `pajaro`, `campana`, `clic`. Ver [Sonidos](../guia/sonidos.md).
 
-### Entidades
+### Objetos
 
 | Función | Qué hace |
 |---|---|
-| `motor.entidad(nombre)` | El número de la entidad que se llama así, o `nil` |
+| `motor.entidad(nombre)` | El número del objeto que se llama así, o `nil` |
 | `motor.entidades(nombre)` | Una lista con todas las que se llaman así |
-| `motor.nombre(e)` | El nombre de una entidad |
+| `motor.nombre(e)` | El nombre de un objeto |
 | `motor.posicion(e)` | Dónde está, como vector |
 | `motor.poner_posicion(e, v)` | La pone en ese sitio al momento |
 | `motor.mover_hacia(e, destino, velocidad)` | La acerca al destino a esa velocidad (metros por segundo; por defecto 3). Úsala en `cada_fotograma`. Devuelve `true` al llegar |
 | `motor.mirar_hacia(e, punto)` | La gira para que mire hacia ese punto |
 | `motor.ve(e, objetivo, alcance)` | `true` si el objetivo (por defecto, el jugador) está a menos de `alcance` metros (por defecto 8) y no está oculto |
-| `motor.mover(nombre, x, y, z, segundos)` | Desplaza la entidad desde su sitio del editor. Con `0, 0, 0` vuelve a su sitio |
-| `motor.ocultar(nombre)` | La entidad deja de verse y de chocar |
+| `motor.mover(nombre, x, y, z, segundos)` | Desplaza el objeto desde su sitio del editor. Con `0, 0, 0` vuelve a su sitio |
+| `motor.ocultar(nombre)` | El objeto deja de verse y de chocar |
 | `motor.mostrar(nombre)` | Vuelve a enseñarla |
 | `motor.oculta(e)` | `true` si está oculta |
 | `motor.danar(e, cantidad, de)` | Pone en marcha `al_recibir_dano` y los nodos *Al recibir daño* |
-| `motor.variable(e, nombre)` | Una variable *de la entidad* de sus nodos |
+| `motor.variable(e, nombre)` | Una variable *del objeto* de sus nodos |
 | `motor.poner_variable(e, nombre, valor)` | La cambia |
 
 ```lua
@@ -156,11 +156,11 @@ también son valores.
 | `motor.esperar(segundos)` | Detiene la función que la llama durante esos segundos, sin parar el juego. Solo dentro de las funciones que llama el motor |
 | `motor.tiempo()` | Segundos de juego desde que empezó la partida |
 | `motor.emitir(evento, valor)` | Pone en marcha los nodos *Al recibir un mensaje* con ese nombre |
-| `motor.emitir_etiqueta(etiqueta, evento, valor)` | Lo mismo, solo para las entidades con esa etiqueta |
-| `motor.emitir_a(e, evento, valor)` | Lo mismo, solo para el grafo de esa entidad |
+| `motor.emitir_etiqueta(etiqueta, evento, valor)` | Lo mismo, solo para los objetos con esa etiqueta |
+| `motor.emitir_a(e, evento, valor)` | Lo mismo, solo para el grafo de ese objeto |
 | `motor.vector(x, y, z)` | Un vector nuevo |
 | `motor.longitud(v)`, `motor.normalizar(v)` | El largo de un vector y el mismo vector con largo 1 |
-| `motor.distancia(a, b)` | Metros entre dos puntos o dos entidades |
+| `motor.distancia(a, b)` | Metros entre dos puntos o dos objetos |
 | `motor.color(r, g, b)` | Un color como `"#ff8000"`, con componentes de 0 a 255 |
 
 ### Otros

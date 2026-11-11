@@ -1,7 +1,7 @@
 # Código
 
 El panel **Código** es el editor de guiones de Lua del motor: el guion del
-mundo, los guiones de entidad y los módulos.
+mundo, los guiones de objeto y los módulos.
 
 ![El panel Código con un guion de enemigo](../imagenes/capturas/panel-codigo.png)
 

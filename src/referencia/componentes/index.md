@@ -10,7 +10,7 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 
 | Componente | En el archivo | Para qué sirve |
 |---|---|---|
-| [Colisión](colision.md) | `Colision` | Si se choca con la entidad o se atraviesa. |
+| [Colisión](colision.md) | `Colision` | Si se choca con el objeto o se atraviesa. |
 | [Cuerpo físico](cuerpo-fisico.md) | `CuerpoFisico` | Cae, bota, rueda y se puede empujar o patear. |
 | [Controlador de jugador](controlador.md) | `Controlador` | La maneja el jugador: primera o tercera persona, cenital… |
 | [Cámara](camara.md) | `Camara` | Distancia y altura de la cámara, o ver el juego desde aquí. |

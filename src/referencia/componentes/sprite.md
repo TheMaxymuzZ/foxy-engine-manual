@@ -14,7 +14,7 @@ animación.
 | Fotograma | `fotograma` | 0 | El fotograma fijo, contando desde 0, si no hay animación. |
 | Animación | `animacion` | — | La animación de la hoja con la que empieza. |
 | Espejo | `espejo` | No | Dibuja la imagen volteada, mirando a la izquierda. |
-| Orden | `orden` | 0 | Entre entidades, los números altos se dibujan delante. |
+| Orden | `orden` | 0 | Entre objetos, los números altos se dibujan delante. |
 | Tinte | `color` | — | Color que tiñe la imagen, en `#rrggbb`. Vacío no tiñe. |
 
 <!-- fin -->

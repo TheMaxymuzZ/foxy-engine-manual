@@ -10,11 +10,11 @@ sprites** (las de las hojas de sprites, en 2D).
 |---|---|---|
 | 1 | **Buscar** | Filtra por nombre. **Animación** crea una nueva |
 | 2 | **Animaciones** | Los clips de `animaciones/` |
-| 3 | **Clip** | Su nombre, duración, si va en bucle, sus claves y qué entidad lo usa |
+| 3 | **Clip** | Su nombre, duración, si va en bucle, sus claves y qué objeto lo usa |
 | 4 | **Cinemáticas** | Las cinemáticas de `cinematicas/` |
 
 Cada una enseña una miniatura con sus claves, cuánto dura, cuántas claves y
-sucesos tiene y **en qué entidades de la escena se usa**: las que la tienen
+sucesos tiene y **en qué objetos de la escena se usa**: los que la tienen
 en su Animador, en su máquina de estados o en una acción.
 
 | Para… | Haz esto |

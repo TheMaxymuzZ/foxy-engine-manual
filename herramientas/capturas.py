@@ -88,6 +88,11 @@ LISTA: dict[str, str] = {
     "editor-2d": f"{ED} --pestana plataformas-2d --espacio 2d --herramienta pintar",
     "editor-2d-cenital": f"{ED} --pestana aventura-cenital",
     "flotante": f"{ED} --pestana proyecto --flotante inspector",
+    # Para principiantes (Fase G)
+    "modo-sencillo": f"{ED} --pestana tercera-persona --sencillo",
+    "tutorial-guiado": f"{ED} --pestana tercera-persona --sencillo --tutorial 6",
+    "plantilla-tercera-persona": f"{ED} --pestana tercera-persona",
+    "plantilla-puzle": f"{ED} --pestana puzle",
     "maximizar": f"{ED} --pestana proyecto --maximizar vista",
     "paleta": f"{ED} --pestana proyecto --paleta abri",
     "tema-claro": f"{ED} --pestana proyecto --tema-claro",

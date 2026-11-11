@@ -5,6 +5,24 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## 0.0.1-PR39: Plantillas y principiantes
+
+- **Plantillas por tipo de juego**: el asistente pregunta **¿Qué juego
+  quieres hacer?** y agrupa las plantillas en empezar de cero, plataformas,
+  vista desde arriba, 3D en tercera persona, puzle y mundo de cubitos. Ver
+  [Crear un proyecto](../empezar/crear-proyecto.md).
+- Dos plantillas nuevas: **Aventura en tercera persona** y **Puzle de
+  botones**. Las monedas y gemas de las demás ya llevan comportamientos.
+- La sección **[Tu primer juego](../tu-primer-juego/index.md)**, con un
+  tutorial para cada plantilla.
+- **[Modo Sencillo y modo Avanzado](../empezar/modo-sencillo.md)**: el
+  Sencillo esconde los paneles técnicos.
+- **Tutorial guiado** de ocho pasos la primera vez que se abre un proyecto.
+- Una línea de ayuda en todos los menús y las mismas palabras en todo el
+  editor: lo que antes se llamaba *entidad* ahora es siempre **objeto**.
+- Comportamiento ya hecho nuevo: **Botón que activa a los de una etiqueta**.
+- Al abrir una plantilla 3D, la cámara mira a sus objetos.
+
 ## 0.0.1-PR36: Objetos reutilizables 2.0
 
 - **[Objetos reutilizables](../guia/reutilizables.md)** (antes,
@@ -82,7 +100,7 @@ del motor con el número del último cambio (*pull request*) incorporado.
   también jugando.
 - **Formas de choque** en [Colisión](../referencia/componentes/colision.md):
   sus cubitos, caja, esfera o cápsula.
-- *Entidad vacía* pasa a llamarse **Objeto vacío**.
+- *Objeto vacío* pasa a llamarse **Objeto vacío**.
 - Formato de proyecto 6: el giro en cuartos de vuelta pasa solo a grados,
   con copia de seguridad en `.foxy/copias/`.
 
@@ -136,7 +154,7 @@ del motor con el número del último cambio (*pull request*) incorporado.
   [Menús y barra de estado](../interfaz/menus.md),
   [Casillas](../interfaz/casillas.md), [Capas](../interfaz/capas.md) y
   [Sprites](../interfaz/sprites.md).
-- **Conceptos nuevos**: [Entidades, componentes y prefabricados](../conceptos/entidades.md),
+- **Conceptos nuevos**: [Objetos, componentes y prefabricados](../conceptos/entidades.md),
   [Escenas 3D y 2D](../conceptos/escenas-3d-2d.md) y
   [Lógica del juego](../conceptos/logica.md).
 - **Escaparate** en la portada: una animación de cada plantilla hecha con el
@@ -180,10 +198,10 @@ del motor con el número del último cambio (*pull request*) incorporado.
   [Animador](../referencia/componentes/animador.md), en el panel
   [Estados](../interfaz/estados.md): quieto, andar, correr y saltar según la
   velocidad.
-- **[Cinemáticas](../guia/cinematicas.md)** con cámara, entidades y frases,
+- **[Cinemáticas](../guia/cinematicas.md)** con cámara, objetos y frases,
   que se saltan con <kbd>Espacio</kbd>.
 - Panel [Animaciones](../interfaz/animaciones.md), espacio **Animar**,
-  acciones **Animar una entidad** y **Poner una cinemática**, nodos y
+  acciones **Animar un objeto** y **Poner una cinemática**, nodos y
   funciones de Lua nuevas, y duración por fotograma en los sprites.
 - Plantilla **Personaje animado**.
 
@@ -212,10 +230,10 @@ del motor con el número del último cambio (*pull request*) incorporado.
 - **[Panel Código](../interfaz/codigo.md)** nuevo: pestañas, vista dividida,
   colores de Lua, números de línea, plegado, buscar y reemplazar,
   autocompletado de toda la API, errores al escribir e ir a la definición.
-- **[Guiones de entidad](../guia/guiones-entidad.md)**: el componente Guion
-  elige un archivo de `guiones/`, cada entidad tiene su copia y sus
+- **[Guiones de objeto](../guia/guiones-entidad.md)**: el componente Guion
+  elige un archivo de `guiones/`, cada objeto tiene su copia y sus
   **propiedades** se ajustan en el inspector. Módulos propios con
-  `require`. Plantillas de entidad vacía, enemigo, puerta, recogible y
+  `require`. Plantillas de objeto vacío, enemigo, puerta, recogible y
   módulo.
 - **[Recarga en caliente](../guia/lua-depurar.md#recargar-sin-reiniciar)**:
   al guardar con el juego en marcha, sin reiniciar y sin perder las
@@ -231,10 +249,10 @@ del motor con el número del último cambio (*pull request*) incorporado.
 ## 0.0.1-PR25: Nodos 2.0
 
 - **[Nodos 2.0](../guia/nodos.md)**: grafos del juego, de cada escena y de
-  entidad (con el componente
+  objeto (con el componente
   Grafo de nodos, hoy un [comportamiento](../guia/comportamientos.md)). Cables de
   ejecución y cables de datos con tipo y color, con conversión automática.
-- **Variables** del grafo, de la entidad (con su valor en el Inspector) y
+- **Variables** del grafo, del objeto (con su valor en el Inspector) y
   del juego (que se guardan con la partida y se ven en las interfaces).
 - **[Eventos y flujo](../guia/nodos-flujo.md)** nuevos: cada fotograma, al
   pulsar una acción, al chocar, zonas, daño, temporizadores y eventos
@@ -249,7 +267,7 @@ del motor con el número del último cambio (*pull request*) incorporado.
   el grafo con los cables encendidos y los valores; puntos de parada con
   <kbd>F9</kbd> y <kbd>F6</kbd>. *Ver el Lua* y *Pasar a código*.
 - Elemento **[Barra](../guia/interfaces.md#barras)** en las interfaces.
-- Funciones nuevas de Lua para entidades, vectores, esperas y eventos
+- Funciones nuevas de Lua para objetos, vectores, esperas y eventos
   (ver [API de Lua](../referencia/lua.md)).
 - La [referencia de nodos](../referencia/nodos.md) y las definiciones de
   Lua para el autocompletado se generan desde el propio motor.
@@ -257,11 +275,11 @@ del motor con el número del último cambio (*pull request*) incorporado.
 
 ## 0.0.1-PR24: núcleo general
 
-- **Entidades y componentes**: cualquier cosa de una escena puede llevar
+- **Objetos y componentes**: cualquier cosa de una escena puede llevar
   [componentes](../referencia/componentes/index.md) (Colisión, Cuerpo
   físico, Controlador de jugador, Cámara, Luz, Sonido, Zona y Guion) que se
   añaden y se quitan en el [Inspector](../interfaz/inspector.md). Nuevo
-  objeto *Entidad vacía*.
+  objeto *Objeto vacío*.
 - **[Prefabricados](../guia/reutilizables.md)** cuyas copias
   siguen al original, con cambios propios por copia.
 - **[Generadores de terreno](../guia/generadores.md)**: vacío, plano, isla,

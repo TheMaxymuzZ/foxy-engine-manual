@@ -78,7 +78,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto) o `plataformas-2d`, `aventura-cenital`, `vacio-2d` y `plataformas-voxel` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) o `modelos` (los modelos 3D de ejemplo junto a una farola de cubitos) |
+| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto) o `plataformas-2d`, `aventura-cenital`, `vacio-2d`, `plataformas-voxel`, `tercera-persona` y `puzle` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) o `modelos` (los modelos 3D de ejemplo junto a una farola de cubitos) |
 | `--plantilla <nombre>` | Sin `--editor`: dibuja el mundo de una plantilla (`vacio-3d`, `isla-voxel`, `isla-de-ejemplo` o `plataformas-voxel`) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto`; en 2D, `choques` o `autocasillas` abren ese modo del panel Casillas |
 | `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |
@@ -92,6 +92,8 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | `--sin-lejos` | Dibuja todo con todo el detalle, sin el [detalle de lejos](../guia/rendimiento.md#detalle-de-lejos) |
 | `--espacio <nombre>` | El espacio de trabajo: `construir`, `programar`, `pixel-art` o `2d` |
 | `--abrir <panel>` | Abre también ese panel. Se puede repetir |
+| `--sencillo` | El editor en el [modo Sencillo](../empezar/modo-sencillo.md), sin los paneles técnicos |
+| `--tutorial <n>` | Con el paso `n` del [tutorial guiado](../empezar/modo-sencillo.md#el-tutorial-guiado) a la vista (desde 1) |
 | `--flotante <panel>` | Ese panel en una ventana separada. Se puede repetir |
 | `--maximizar <panel>` | Ese panel maximizado |
 | `--recortar <panel>` | Guarda solo ese panel, con su pestaña |

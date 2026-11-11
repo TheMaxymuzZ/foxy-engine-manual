@@ -11,7 +11,7 @@ Esta página recoge todos los nodos que trae el motor, agrupados como en la pale
 | Valor | Calcula algo. No tiene ejecución: se calcula cuando se usa. |
 | Flujo | Decide por dónde sigue la ejecución. |
 
-Tipos de dato: **número**, **texto**, **sí/no**, **vector**, **color**, **entidad**, **recurso**, **lista**, **cualquiera**.
+Tipos de dato: **número**, **texto**, **sí/no**, **vector**, **color**, **objeto**, **recurso**, **lista**, **cualquiera**.
 
 ## Eventos
 
@@ -19,7 +19,7 @@ Tipos de dato: **número**, **texto**, **sí/no**, **vector**, **color**, **enti
 
 *Evento* · `evento.al_empezar`
 
-Al empezar la partida, o al llegar a la escena si es el grafo de una entidad.
+Al empezar la partida, o al llegar a la escena si es el grafo de un objeto.
 
 En Lua: `function al_empezar() ... end`
 
@@ -72,13 +72,13 @@ En Lua: `function al_pulsar(accion) ... end`
 
 *Evento* · `evento.al_chocar`
 
-Cuando el jugador toca la entidad. Vacío = esta entidad (o cualquiera en el grafo del juego).
+Cuando el jugador toca el objeto. Vacío = este objeto (o cualquiera en el grafo del juego).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
-| Salida | entidad | entidad | — |
-| Salida | quién choca | entidad | — |
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
+| Salida | objeto | objeto | — |
+| Salida | quién choca | objeto | — |
 
 En Lua: `function al_chocar(entidad, otro) ... end`
 
@@ -90,10 +90,10 @@ Cuando el objeto toca a otro (no al jugador). Con una etiqueta, solo si el otro 
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
 | Entrada | con etiqueta | recurso | — (se escribe en el nodo) |
-| Salida | objeto | entidad | — |
-| Salida | con qué choca | entidad | — |
+| Salida | objeto | objeto | — |
+| Salida | con qué choca | objeto | — |
 
 En Lua: `function al_chocar_objeto(entidad, otro) ... end`
 
@@ -105,8 +105,8 @@ Cuando el jugador hace clic (o pulsa «Golpear») mirando al objeto, en 3D. Vac�
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad (se escribe en el nodo) |
-| Salida | objeto | entidad | — |
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
+| Salida | objeto | objeto | — |
 
 En Lua: `function al_hacer_clic(entidad) ... end`
 
@@ -114,12 +114,12 @@ En Lua: `function al_hacer_clic(entidad) ... end`
 
 *Evento* · `evento.al_recoger`
 
-Cuando el jugador recoge una entidad con el componente Recogible (vacío = cualquiera).
+Cuando el jugador recoge un objeto con el componente Recogible (vacío = cualquiera).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
-| Salida | lo recogido | entidad | — |
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
+| Salida | lo recogido | objeto | — |
 | Salida | valor que sube | texto | — |
 
 En Lua: `function al_recoger(entidad, valor) ... end`
@@ -128,13 +128,13 @@ En Lua: `function al_recoger(entidad, valor) ... end`
 
 *Evento* · `evento.al_entrar_zona`
 
-Cuando el jugador entra en la zona (componente Zona) de una entidad.
+Cuando el jugador entra en la zona (componente Zona) de un objeto.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | zona de | entidad | esta entidad (se escribe en el nodo) |
-| Salida | entidad de la zona | entidad | — |
-| Salida | quién entra | entidad | — |
+| Entrada | zona de | objeto | este objeto (se escribe en el nodo) |
+| Salida | objeto de la zona | objeto | — |
+| Salida | quién entra | objeto | — |
 
 En Lua: `function al_entrar_zona(entidad, quien) ... end`
 
@@ -142,13 +142,13 @@ En Lua: `function al_entrar_zona(entidad, quien) ... end`
 
 *Evento* · `evento.al_salir_zona`
 
-Cuando el jugador sale de la zona (componente Zona) de una entidad.
+Cuando el jugador sale de la zona (componente Zona) de un objeto.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | zona de | entidad | esta entidad (se escribe en el nodo) |
-| Salida | entidad de la zona | entidad | — |
-| Salida | quién sale | entidad | — |
+| Entrada | zona de | objeto | este objeto (se escribe en el nodo) |
+| Salida | objeto de la zona | objeto | — |
+| Salida | quién sale | objeto | — |
 
 En Lua: `function al_salir_zona(entidad, quien) ... end`
 
@@ -156,14 +156,14 @@ En Lua: `function al_salir_zona(entidad, quien) ... end`
 
 *Evento* · `evento.al_entrar_objeto_zona`
 
-Cuando otro objeto (no el jugador) entra en la zona de una entidad. Con una etiqueta, solo si la lleva.
+Cuando otro objeto (no el jugador) entra en la zona de un objeto. Con una etiqueta, solo si la lleva.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | zona de | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | zona de | objeto | este objeto (se escribe en el nodo) |
 | Entrada | con etiqueta | recurso | — (se escribe en el nodo) |
-| Salida | entidad de la zona | entidad | — |
-| Salida | quién entra | entidad | — |
+| Salida | objeto de la zona | objeto | — |
+| Salida | quién entra | objeto | — |
 
 En Lua: `function al_entrar_objeto_zona(entidad, quien) ... end`
 
@@ -171,14 +171,14 @@ En Lua: `function al_entrar_objeto_zona(entidad, quien) ... end`
 
 *Evento* · `evento.al_salir_objeto_zona`
 
-Cuando otro objeto (no el jugador) sale de la zona de una entidad. Con una etiqueta, solo si la lleva.
+Cuando otro objeto (no el jugador) sale de la zona de un objeto. Con una etiqueta, solo si la lleva.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | zona de | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | zona de | objeto | este objeto (se escribe en el nodo) |
 | Entrada | con etiqueta | recurso | — (se escribe en el nodo) |
-| Salida | entidad de la zona | entidad | — |
-| Salida | quién sale | entidad | — |
+| Salida | objeto de la zona | objeto | — |
+| Salida | quién sale | objeto | — |
 
 En Lua: `function al_salir_objeto_zona(entidad, quien) ... end`
 
@@ -186,14 +186,14 @@ En Lua: `function al_salir_objeto_zona(entidad, quien) ... end`
 
 *Evento* · `evento.al_recibir_dano`
 
-Cuando algo hace daño a la entidad con «Hacer daño». Pon «jugador» para el jugador.
+Cuando algo hace daño al objeto con «Hacer daño». Pon «jugador» para el jugador.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | quién | entidad | esta entidad (se escribe en el nodo) |
-| Salida | quién lo recibe | entidad | — |
+| Entrada | quién | objeto | este objeto (se escribe en el nodo) |
+| Salida | quién lo recibe | objeto | — |
 | Salida | cantidad | número | — |
-| Salida | de quién | entidad | — |
+| Salida | de quién | objeto | — |
 
 En Lua: `function al_recibir_dano(entidad, cantidad, de) ... end`
 
@@ -207,7 +207,7 @@ Un mensaje con ese nombre, enviado con «Enviar mensaje…» desde otro grafo, o
 |---|---|---|---|
 | Entrada | mensaje | texto | «mi_mensaje» (se escribe en el nodo) |
 | Salida | valor | cualquiera | — |
-| Salida | de quién | entidad | — |
+| Salida | de quién | objeto | — |
 
 En Lua: `motor.emitir("mi_evento", valor)`
 
@@ -254,12 +254,12 @@ En Lua: `function al_entrar_escena(escena) ... end`
 
 *Evento* · `evento.al_terminar_animacion`
 
-Cuando un clip que no va en bucle llega al final (o al principio, hacia atrás). Vacío = esta entidad (o cualquiera en el grafo del juego).
+Cuando un clip que no va en bucle llega al final (o al principio, hacia atrás). Vacío = este objeto (o cualquiera en el grafo del juego).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
-| Salida | entidad | entidad | — |
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
+| Salida | objeto | objeto | — |
 | Salida | animación | texto | — |
 
 En Lua: `function al_terminar_animacion(entidad, animacion) ... end`
@@ -272,9 +272,9 @@ Un suceso «Avisar a los nodos» de la línea de tiempo (vacío = cualquier avis
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad (se escribe en el nodo) |
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
 | Entrada | aviso | texto | — (se escribe en el nodo) |
-| Salida | entidad | entidad | — |
+| Salida | objeto | objeto | — |
 | Salida | aviso | texto | — |
 
 En Lua: `function al_evento_animacion(entidad, evento) ... end`
@@ -419,7 +419,7 @@ Espera y sigue después, sin parar el juego.
 
 *Flujo* · `control.una_vez`
 
-Deja pasar la primera vez y ninguna más (por cada entidad).
+Deja pasar la primera vez y ninguna más (por cada objeto).
 
 ### Puerta {#control-puerta}
 
@@ -463,11 +463,11 @@ Las variables del grafo, de la entidad y del juego se leen y se cambian con los 
 
 *Valor* · `motor.variable`
 
-Lee una variable «de la entidad» de otro objeto (de sus grafos, o una propiedad de sus guiones): la vida del jugador, las monedas…
+Lee una variable «del objeto» de otro objeto (de sus grafos, o una propiedad de sus guiones): la vida del jugador, las monedas…
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | variable | texto | «vida» |
 | Salida | valor | cualquiera | — |
 
@@ -477,11 +477,11 @@ En Lua: `local valor = motor.variable(entidad, nombre)`
 
 *Acción* · `motor.poner_variable`
 
-Cambia una variable «de la entidad» de otro objeto. Sus grafos y guiones ven el valor nuevo.
+Cambia una variable «del objeto» de otro objeto. Sus grafos y guiones ven el valor nuevo.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | variable | texto | «vida» |
 | Entrada | valor | cualquiera | — |
 
@@ -800,7 +800,7 @@ En Lua: `__foxy.si(condicion, si, no)`
 
 *Valor* · `logica.existe`
 
-Sí si el valor existe (una variable sin poner, una entidad que no está... no tienen).
+Sí si el valor existe (una variable sin poner, un objeto que no está... no tienen).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -957,7 +957,7 @@ En Lua: `(v * k)`
 
 *Valor* · `motor.distancia`
 
-Los metros que hay entre dos puntos. Vale también con entidades.
+Los metros que hay entre dos puntos. Vale también con objetos.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -1117,38 +1117,38 @@ Quita el elemento de esa posición.
 
 En Lua: `__foxy.quitar(lista, i)`
 
-## Entidades
+## Objetos
 
-### Esta entidad {#ent-yo}
+### Este objeto {#ent-yo}
 
 *Valor* · `ent.yo`
 
-La entidad que tiene este grafo (nada en el grafo del juego).
+El objeto que tiene este grafo (nada en el grafo del juego).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Salida | entidad | entidad | — |
+| Salida | objeto | objeto | — |
 
 En Lua: `yo`
 
-### Entidad que se llama {#motor-entidad}
+### Objeto que se llama {#motor-entidad}
 
 *Valor* · `motor.entidad`
 
-La primera entidad de la escena con ese nombre.
+El primer objeto de la escena con ese nombre.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
 | Entrada | nombre | texto | — |
-| Salida | entidad | entidad | — |
+| Salida | objeto | objeto | — |
 
 En Lua: `local entidad = motor.entidad(nombre)`
 
-### Entidades que se llaman {#motor-entidades}
+### Objetos que se llaman {#motor-entidades}
 
 *Valor* · `motor.entidades`
 
-Todas las entidades con ese nombre (las copias de un prefabricado, por ejemplo).
+Todos los objetos con ese nombre (las copias de un objeto reutilizable, por ejemplo).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -1157,7 +1157,7 @@ Todas las entidades con ese nombre (las copias de un prefabricado, por ejemplo).
 
 En Lua: `local lista = motor.entidades(nombre)`
 
-### Nombre de la entidad {#motor-nombre}
+### Nombre del objeto {#motor-nombre}
 
 *Valor* · `motor.nombre`
 
@@ -1165,7 +1165,7 @@ Su nombre en la escena.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Salida | nombre | texto | — |
 
 En Lua: `local nombre = motor.nombre(entidad)`
@@ -1174,11 +1174,11 @@ En Lua: `local nombre = motor.nombre(entidad)`
 
 *Valor* · `motor.posicion`
 
-Dónde está ahora la entidad (sus pies), en metros.
+Dónde está ahora el objeto (sus pies), en metros.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Salida | posición | vector | — |
 
 En Lua: `local posicion = motor.posicion(entidad)`
@@ -1187,11 +1187,11 @@ En Lua: `local posicion = motor.posicion(entidad)`
 
 *Acción* · `motor.poner_posicion`
 
-Lleva la entidad a ese sitio de golpe. Con el jugador, lo teletransporta.
+Lleva el objeto a ese sitio de golpe. Con el jugador, lo teletransporta.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | posición | vector | (0, 0, 0) |
 
 En Lua: `motor.poner_posicion(entidad, posicion)`
@@ -1204,7 +1204,7 @@ Da un paso hacia el destino, a esa velocidad. Úsalo en «Cada fotograma» para 
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | destino | vector | (0, 0, 0) |
 | Entrada | metros por segundo | número | 3 |
 | Salida | ha llegado | sí/no | — |
@@ -1215,11 +1215,11 @@ En Lua: `local llegado = motor.mover_hacia(entidad, destino, velocidad)`
 
 *Acción* · `motor.mirar_hacia`
 
-Gira la entidad para que mire a ese punto.
+Gira el objeto para que mire a ese punto.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | punto | vector | (0, 0, 0) |
 
 En Lua: `motor.mirar_hacia(entidad, punto)`
@@ -1232,7 +1232,7 @@ La lleva poco a poco a su sitio del editor más esos metros (puertas, plataforma
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | x | número | 0 |
 | Entrada | y | número | 2.5 |
 | Entrada | z | número | 0 |
@@ -1244,11 +1244,11 @@ En Lua: `motor.mover(entidad, x, y, z, segundos)`
 
 *Acción* · `motor.ocultar`
 
-La entidad deja de verse y de chocar.
+El objeto deja de verse y de chocar.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 
 En Lua: `motor.ocultar(entidad)`
 
@@ -1256,11 +1256,11 @@ En Lua: `motor.ocultar(entidad)`
 
 *Acción* · `motor.mostrar`
 
-Vuelve a verse una entidad oculta.
+Vuelve a verse un objeto oculto.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 
 En Lua: `motor.mostrar(entidad)`
 
@@ -1272,7 +1272,7 @@ Sí si está oculta.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Salida | oculta | sí/no | — |
 
 En Lua: `local si = motor.oculta(entidad)`
@@ -1285,8 +1285,8 @@ Sí si el objetivo está a la vista: a menos de esa distancia y sin ocultar.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | quién mira | entidad | esta entidad |
-| Entrada | a quién | entidad | jugador |
+| Entrada | quién mira | objeto | este objeto |
+| Entrada | a quién | objeto | jugador |
 | Entrada | hasta (metros) | número | 8 |
 | Salida | lo ve | sí/no | — |
 
@@ -1296,11 +1296,11 @@ En Lua: `local si = motor.ve(entidad, objetivo, alcance)`
 
 *Acción* · `motor.danar`
 
-Pone en marcha «Al recibir daño» de esa entidad (y los del juego). Qué pasa con la vida lo decides tú.
+Pone en marcha «Al recibir daño» de ese objeto (y los del juego). Qué pasa con la vida lo decides tú.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | a quién | entidad | jugador |
+| Entrada | a quién | objeto | jugador |
 | Entrada | cantidad | número | 10 |
 
 En Lua: `motor.danar(entidad, cantidad, yo)`
@@ -1326,7 +1326,7 @@ Como «Enviar mensaje a todos», pero solo lo reciben los comportamientos de ese
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | jugador |
+| Entrada | objeto | objeto | jugador |
 | Entrada | mensaje | texto | «mi_mensaje» (se escribe en el nodo) |
 | Entrada | valor | cualquiera | — |
 
@@ -1350,7 +1350,7 @@ Sí si el objeto lleva esa etiqueta. Para saber con qué se ha chocado. El jugad
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | etiqueta | recurso | «enemigo» |
 | Salida | la tiene | sí/no | — |
 
@@ -1378,8 +1378,8 @@ El objeto con esa etiqueta que está más cerca (sin contar el de «cerca de»).
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
 | Entrada | etiqueta | recurso | «enemigo» |
-| Entrada | cerca de | entidad | esta entidad |
-| Salida | objeto | entidad | — |
+| Entrada | cerca de | objeto | este objeto |
+| Salida | objeto | objeto | — |
 
 En Lua: `local entidad = motor.mas_cercano(etiqueta, desde)`
 
@@ -1391,7 +1391,7 @@ Las etiquetas que lleva ahora el objeto.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Salida | etiquetas | lista | — |
 
 En Lua: `local lista = motor.etiquetas(entidad)`
@@ -1404,7 +1404,7 @@ Le pone una etiqueta mientras dure la partida (en el editor no cambia).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | etiqueta | recurso | «activado» |
 
 En Lua: `motor.poner_etiqueta(entidad, etiqueta)`
@@ -1417,7 +1417,7 @@ Le quita una etiqueta mientras dure la partida.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | objeto | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | etiqueta | recurso | «activado» |
 
 En Lua: `motor.quitar_etiqueta(entidad, etiqueta)`
@@ -1428,11 +1428,11 @@ En Lua: `motor.quitar_etiqueta(entidad, etiqueta)`
 
 *Valor* · `ent.jugador`
 
-El jugador, como entidad (para «Hacer daño», «Distancia»...).
+El jugador, como objeto (para «Hacer daño», «Distancia»...).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Salida | jugador | entidad | — |
+| Salida | jugador | objeto | — |
 
 En Lua: `0`
 
@@ -1806,7 +1806,7 @@ Pone un clip de animaciones/ (o, en 2D, una animación de su hoja de sprites). M
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | animación | recurso | «abrir» |
 
 En Lua: `motor.animar(entidad, animacion)`
@@ -1819,7 +1819,7 @@ Pone el clip hacia atrás desde donde vaya: una puerta abierta con «abrir» se 
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | animación | recurso | «abrir» |
 
 En Lua: `motor.animar_al_reves(entidad, animacion)`
@@ -1832,7 +1832,7 @@ Quita el clip puesto a mano: vuelve el de su máquina de estados (o se queda qui
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 
 En Lua: `motor.parar_animacion(entidad)`
 
@@ -1844,7 +1844,7 @@ Cambia un parámetro de su máquina de estados (sí = 1, no = 0). Los de velocid
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | parámetro | texto | «enfadado» |
 | Entrada | valor | número | 1 |
 
@@ -1854,7 +1854,7 @@ En Lua: `motor.parametro_animacion(entidad, nombre, valor)`
 
 *Acción* · `motor.cinematica`
 
-Pone una cinemática de cinematicas/: mueve la cámara y las entidades y enseña sus frases. El jugador la salta con Espacio.
+Pone una cinemática de cinematicas/: mueve la cámara y los objetos y enseña sus frases. El jugador la salta con Espacio.
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -1876,11 +1876,11 @@ En Lua: `motor.terminar_cinematica()`
 
 *Acción* · `motor.voltear`
 
-Da la vuelta al sprite de la entidad (como en un espejo).
+Da la vuelta al sprite del objeto (como en un espejo).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | mirando a la izquierda | sí/no | sí |
 
 En Lua: `motor.voltear(entidad, espejo)`
@@ -1893,7 +1893,7 @@ Empuja un cuerpo físico (o al jugador) con esa velocidad, en casillas por segun
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | x | número | 0 |
 | Entrada | y | número | 8 |
 
@@ -1933,11 +1933,11 @@ En Lua: `motor.poner_casilla(x, y, casilla, capa)`
 
 *Acción* · `motor.particulas`
 
-Enciende o apaga el componente Partículas de la entidad (también en 3D).
+Enciende o apaga el componente Partículas del objeto (también en 3D).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
-| Entrada | entidad | entidad | esta entidad |
+| Entrada | objeto | objeto | este objeto |
 | Entrada | encendidas | sí/no | sí |
 
 En Lua: `motor.particulas(entidad, encendidas)`

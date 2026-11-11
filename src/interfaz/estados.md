@@ -1,6 +1,6 @@
 # Estados
 
-**La máquina de estados** del componente Animador de la entidad elegida: qué
+**La máquina de estados** del componente Animador de la objeto elegido: qué
 animación usa en cada momento y cuándo cambia de una a otra.
 
 ![El panel Estados con la máquina de un personaje](../imagenes/capturas/panel-estados.png)
@@ -27,6 +27,6 @@ Un clic elige una caja o una flecha; las cajas se arrastran y el fondo
 también, para moverse. Doble clic en una caja hace que la máquina empiece
 ahí. Jugando, el estado de ahora sale resaltado.
 
-Si la entidad no tiene Animador, el panel ofrece **Añadir un Animador**.
+Si el objeto no tiene Animador, el panel ofrece **Añadir un Animador**.
 
 Todo se explica en [Animación: máquina de estados](../guia/animacion.md#máquina-de-estados).
