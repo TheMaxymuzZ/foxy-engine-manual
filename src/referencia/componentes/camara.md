@@ -10,7 +10,7 @@ Cambia cómo se ve el juego.
 | Distancia | `distancia` | 4,5 m | Distancia por detrás del personaje. |
 | Altura | `altura` | 1,8 m | Altura sobre los pies del personaje. |
 | Campo de visión | `campo_de_vision` | 0° | Apertura de la cámara. 0 usa la de las opciones del juego. |
-| Fija | `fija` | No | El juego se ve desde esta entidad, mirando al jugador. |
+| Fija | `fija` | No | El juego se ve desde este objeto, mirando al jugador. |
 | Ortográfica | `ortografica` | No | Sin perspectiva: lo lejano se ve igual de grande. Indicada para cubitos vistos de lado o desde arriba. |
 | Alto visible | `alto_visible` | 14 m | Con **Ortográfica**, cuántos metros de alto se ven. |
 | Suavizado (2D) | `suavizado` | 0,15 | En 2D: 0 deja la cámara pegada al jugador; valores mayores lo siguen con más calma. |

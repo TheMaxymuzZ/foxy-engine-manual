@@ -23,7 +23,7 @@ Cada grupo lista una clase de recurso:
 | <i class="fx fx-objeto"></i> **Objetos propios** | Los objetos hechos con cubitos | [Crear objetos propios](../guia/creador.md) |
 | **Materiales** | La paleta de materiales | [Materiales](../guia/materiales.md) |
 | <i class="fx fx-pixel"></i> **Pixel art** | Las imágenes, y *Biblioteca, paletas y texturas…* | [Pixel art](../guia/pixel-art.md) |
-| <i class="fx fx-guion"></i> **Guiones** | `mundo.lua`, los guiones de entidad, los módulos y los nodos. **Guion nuevo** crea uno a partir de una plantilla | [Programar en Lua](../guia/programar-lua.md) |
+| <i class="fx fx-guion"></i> **Guiones** | `mundo.lua`, los guiones de objeto, los módulos y los nodos. **Guion nuevo** crea uno a partir de una plantilla | [Programar en Lua](../guia/programar-lua.md) |
 
 Arriba están el nombre del proyecto y una <i class="fx fx-buscar"></i> lupa
 que abre su carpeta. Sin proyecto (un mundo suelto), el panel ofrece

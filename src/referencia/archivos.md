@@ -185,7 +185,7 @@ partes de esa copia, su `pieza`.
 En una escena, la parte `"2/1"` de una copia es la parte 1 del reutilizable
 que el original lleva con el número 2.
 
-Cada entidad de una escena y cada prefabricado pueden llevar una lista
+Cada objeto de una escena y cada prefabricado pueden llevar una lista
 `comportamientos`. Cada uno tiene su `archivo` (un `.nodos.ron` de `grafos/`
 o un `.lua` de `guiones/`), sus `valores` (solo los que cambian) y, si está
 apagado, `apagado: true`. Ver [Comportamientos](../guia/comportamientos.md).
@@ -240,7 +240,7 @@ la que cuelga (vacío = la raíz, `"cuerpo"` = el resto del objeto). Ver
 
 Archivos: `animaciones/<id>.ron` y `cinematicas/<id>.ron`, con el mismo
 formato. Los tiempos van en segundos, los giros en grados y las posiciones
-en metros (casillas en 2D), desde el sitio de la entidad.
+en metros (casillas en 2D), desde el sitio del objeto.
 
 ```ron
 (
@@ -405,7 +405,7 @@ atravesable, golpes y peso) están en
 ## Guiones
 
 Archivos: `guiones/mundo.lua` (el guion del mundo) y `guiones/<nombre>.lua`
-(guiones de entidad y módulos; pueden ir en subcarpetas).
+(guiones de objeto y módulos; pueden ir en subcarpetas).
 
 Los grafos de objeto van en `grafos/<nombre>.nodos.ron`.
 

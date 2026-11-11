@@ -1,14 +1,14 @@
-# Entidades, componentes y reutilizables
+# Objetos, componentes y reutilizables
 
-Todo lo que hay en una escena es una **entidad**, y lo que una entidad hace
+Todo lo que hay en una escena es un **objeto**, y lo que un objeto hace
 lo deciden sus **componentes**. Este modelo es el mismo en 3D y en 2D, y es
 la base de todo lo demás: los nodos, los guiones y las animaciones actúan
-siempre sobre entidades.
+siempre sobre objetos.
 
-## Entidad
+## Objeto
 
-Una entidad es una cosa colocada en una escena: una casa, una moneda, la
-cámara, una luz, el jugador o un punto invisible. Toda entidad tiene:
+Un objeto es una cosa colocada en una escena: una casa, una moneda, la
+cámara, una luz, el jugador o un punto invisible. Todo objeto tiene:
 
 | Dato | Para qué |
 |---|---|
@@ -19,14 +19,14 @@ cámara, una luz, el jugador o un punto invisible. Toda entidad tiene:
 | **Componentes** | Qué es: luz, sonido, física, zona… |
 | **Al usarlo (E)** | La acción que se ejecuta cuando el jugador la usa |
 
-> <i class="fx fx-consejo"></i> **Consejo.** Da a las entidades nombres
+> <i class="fx fx-consejo"></i> **Consejo.** Da a los objetos nombres
 > claros y únicos, como «Puerta del castillo». Un nombre repetido hace que
 > una acción o un guion actúe sobre la primera que encuentre.
 
 ## Componente
 
-Un componente es una pieza de comportamiento con sus propios valores. Una
-entidad puede tener **un componente de cada clase**, y las clases se
+Un componente es una pieza de comportamiento con sus propios valores. Un
+objeto puede tener **un componente de cada clase**, y las clases se
 combinan libremente:
 
 | Se quiere | Componentes |
@@ -34,7 +34,7 @@ combinan libremente:
 | Una farola que alumbra de noche | Luz |
 | Una caja que cae y se empuja | Cuerpo físico |
 | Una moneda | Sprite (en 2D) y Recogible |
-| Una puerta que se abre al acercarse | Zona (con la acción **Mover una entidad**) |
+| Una puerta que se abre al acercarse | Zona (con la acción **Mover un objeto**) |
 | El jugador en tercera persona | Controlador de jugador y Cámara |
 | Un personaje que anda y salta | Controlador de jugador y Animador |
 
@@ -63,13 +63,13 @@ escena* al grupo **♻ Reutilizables** del panel Proyecto. Ver
 
 ## Módulos
 
-Algunos comportamientos no son de una entidad sino de toda la escena: el
+Algunos comportamientos no son de un objeto sino de toda la escena: el
 paso del día y la noche, el clima, los vecinos, romper bloques. Son los
 **módulos**. Cada proyecto elige los que usa y cada escena puede activarlos
 o desactivarlos para ella. Ver la [referencia de módulos](../referencia/modulos/index.md).
 
 ## Véase también
 
-- [Entidades y componentes](../guia/entidades.md): la guía práctica.
+- [Objetos y componentes](../guia/entidades.md): la guía práctica.
 - [Inspector](../interfaz/inspector.md): donde se editan.
-- [Lógica del juego](logica.md): cómo dar comportamiento a las entidades.
+- [Lógica del juego](logica.md): cómo dar comportamiento a los objetos.

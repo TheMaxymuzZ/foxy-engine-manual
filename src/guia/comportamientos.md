@@ -10,8 +10,8 @@ Un comportamiento puede estar hecho de tres formas:
 | Forma | Qué es | Dónde se guarda |
 |---|---|---|
 | 🔌 **Nodos** | Un grafo de cajas y cables, sin escribir código. Ver [Nodos](nodos.md) | `grafos/<nombre>.nodos.ron` |
-| 📜 **Código** | Un guion Lua. Ver [Guiones de entidad](guiones-entidad.md) | `guiones/<nombre>.lua` |
-| ⭐ **Ya hecho** | Uno de los diez grafos que trae el motor, listo para usar y para cambiar | `grafos/<nombre>.nodos.ron` |
+| 📜 **Código** | Un guion Lua. Ver [Guiones de objeto](guiones-entidad.md) | `guiones/<nombre>.lua` |
+| ⭐ **Ya hecho** | Uno de los once grafos que trae el motor, listo para usar y para cambiar | `grafos/<nombre>.nodos.ron` |
 
 Los tres funcionan igual en el juego y se pueden mezclar en el mismo
 objeto: una gema puede **girar** y **flotar** con dos comportamientos ya
@@ -62,7 +62,7 @@ Si el archivo de un comportamiento ya no existe, el recuadro avisa con
 ### De dónde salen los valores
 
 - En un **grafo**, son sus [variables](nodos.md#variables) de la clase
-  **de la entidad**.
+  **del objeto**.
 - En un **guion**, son las de su tabla
   [`propiedades`](guiones-entidad.md#propiedades).
 
@@ -94,6 +94,7 @@ grafo. Al añadir uno se copia a `grafos/` del proyecto (si no estaba ya).
 | 🚪 **Puerta que se abre** | Se abre al acercarse el jugador y se cierra al irse. Con `con_boton`, solo la abre un botón | `apertura`, `distancia`, `segundos`, `con_boton` |
 | ⬍ **Plataforma que se mueve** | Va y vuelve sin parar, con una pausa en cada punta | `recorrido`, `segundos`, `pausa` |
 | 🔘 **Botón que activa algo** | Al tocarlo se hunde, suena y manda el evento **activar** al objeto que se llama como `objetivo` | `objetivo`, `sonido` |
+| **Botón que activa a los de una etiqueta** | Como el anterior, pero manda **activar** a todos los objetos que llevan la `etiqueta` (por ejemplo, todas las puertas rojas) | `etiqueta`, `sonido` |
 
 ### Ejemplo: un botón que abre una puerta
 
@@ -107,6 +108,11 @@ grafo. Al añadir uno se copia a `grafos/` del proyecto (si no estaba ya).
 
 La puerta escucha el mensaje con el nodo **Al recibir un mensaje**, así que
 cualquier grafo o guion tuyo puede abrirla también mandándole «activar».
+
+Para que un botón mueva **varias** puertas a la vez, ponles a todas la misma
+[etiqueta](objetos-que-se-hablan.md) (por ejemplo `rojo`) y usa **Botón que activa a
+los de una etiqueta** con `etiqueta` = `rojo`. La plantilla
+[Puzle de botones](../tu-primer-juego/puzle.md) está hecha así.
 
 ## Ver un grafo como código
 
@@ -143,6 +149,6 @@ No hay que hacer nada más: el juego funciona igual que antes.
 ## Ver también
 
 - [Nodos](nodos.md)
-- [Guiones de entidad](guiones-entidad.md)
-- [Entidades y componentes](entidades.md)
+- [Guiones de objeto](guiones-entidad.md)
+- [Objetos y componentes](entidades.md)
 - [Eventos y flujo](nodos-flujo.md)

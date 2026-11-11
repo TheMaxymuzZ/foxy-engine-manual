@@ -7,8 +7,19 @@
 - [Instalar Foxy Engine](empezar/instalar.md)
 - [La pantalla de inicio](empezar/pantalla-de-inicio.md)
 - [Crear un proyecto](empezar/crear-proyecto.md)
-- [Tutorial: tu primer juego 3D](empezar/primer-proyecto.md)
-- [Tutorial: tu primer juego 2D](empezar/primer-juego-2d.md)
+- [Modo Sencillo y tutorial guiado](empezar/modo-sencillo.md)
+
+# Tu primer juego
+
+- [Empezar con una plantilla](tu-primer-juego/index.md)
+- [Desde cero](tu-primer-juego/desde-cero.md)
+    - [Tutorial: tu primer juego 3D](empezar/primer-proyecto.md)
+    - [Tutorial: tu primer juego 2D](empezar/primer-juego-2d.md)
+- [Plataformas](tu-primer-juego/plataformas.md)
+- [Vista desde arriba](tu-primer-juego/vista-desde-arriba.md)
+- [Tercera persona](tu-primer-juego/tercera-persona.md)
+- [Puzle](tu-primer-juego/puzle.md)
+- [Mundo de cubitos](tu-primer-juego/mundo-de-cubitos.md)
 
 # Manual del editor
 
@@ -42,7 +53,7 @@
 
 - [Conceptos básicos](conceptos/basicos.md)
 - [Proyectos, escenas y recursos](conceptos/proyectos.md)
-- [Entidades, componentes y reutilizables](conceptos/entidades.md)
+- [Objetos, componentes y reutilizables](conceptos/entidades.md)
 - [Escenas 3D y 2D](conceptos/escenas-3d-2d.md)
 - [Lógica del juego: acciones, nodos y Lua](conceptos/logica.md)
 
@@ -59,7 +70,7 @@
     - [Importar modelos](guia/importar.md)
     - [Materiales](guia/materiales.md)
     - [La vida del mundo](guia/vida.md)
-- [Entidades y componentes](guia/entidades.md)
+- [Objetos y componentes](guia/entidades.md)
     - [Objetos libres y jerarquía](guia/objetos-libres.md)
     - [Modelos 3D (glTF y OBJ)](guia/modelos-3d.md)
     - [Objetos reutilizables](guia/reutilizables.md)
@@ -75,7 +86,7 @@
     - [Depurar y ver como código](guia/nodos-depurar.md)
 - [Programar en Lua](guia/programar-lua.md)
     - [Guion del mundo](guia/guiones.md)
-    - [Guiones de entidad](guia/guiones-entidad.md)
+    - [Guiones de objeto](guia/guiones-entidad.md)
     - [Recargar, consola y depurador](guia/lua-depurar.md)
     - [Editores externos](guia/lua-editor-externo.md)
 - [Animación](guia/animacion.md)

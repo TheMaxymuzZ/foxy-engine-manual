@@ -15,11 +15,14 @@ probar el juego.
 
 1. En la [pantalla de inicio](pantalla-de-inicio.md), pulsa
    <i class="fx fx-mas"></i> **Nuevo proyecto**.
-2. En **Tipo**, elige **3D vóxel**. En **Plantilla**, elige **Vacío 3D**.
+2. En **¿Qué juego quieres hacer?**, elige **Vacío 3D** (en *Empezar de
+   cero*).
 3. En **Nombre**, escribe `Mi primer juego` y pulsa **Crear proyecto**.
 
-El editor se abre en el espacio **Construir**, con un suelo liso y el
-**Punto de inicio**, la bandera donde aparece el jugador.
+El editor se abre con un suelo liso y el **Punto de inicio**, la bandera
+donde aparece el jugador. Si es la primera vez, sale antes el
+[tutorial guiado](modo-sencillo.md#el-tutorial-guiado): síguelo o pulsa
+**Saltar el tutorial**.
 
 ## 2. Moverse por la escena
 
@@ -111,7 +114,7 @@ entre llaves se sustituye por el valor al jugar. Ver
    {gemas} gemas!` y guárdala.
 2. Vuelve a la escena y elige la **Puerta**.
 3. Pulsa **Añadir componente → Zona**.
-4. En **Al entrar**, elige **Mover una entidad**. Deja **Entidad** vacío
+4. En **Al entrar**, elige **Mover un objeto**. Deja **Objeto** vacío
    (la propia puerta) y escribe en **Cuánto** `0`, `3`, `0`: la puerta
    subirá tres metros.
 5. En **Al usarlo (E)**, elige **Abrir una interfaz** y la interfaz **Meta**.

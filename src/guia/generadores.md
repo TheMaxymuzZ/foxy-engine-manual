@@ -33,7 +33,7 @@ cubitos de la escena.
 1. Elige el objeto **Terreno** en *En la escena*.
 2. En su componente **Terreno de cubitos**, elige un **Generador**.
 3. Ajusta sus parámetros. Solo aparecen los que usa ese generador.
-4. Pulsa **Regenerar el terreno**. Las entidades y los bloques puestos a
+4. Pulsa **Regenerar el terreno**. Los objetos y los bloques puestos a
    mano se conservan. **Descartar** vuelve a lo que había.
 
 > <i class="fx fx-consejo"></i> **Consejo.** Regenerar el terreno se deshace

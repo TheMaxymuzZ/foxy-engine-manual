@@ -1,8 +1,8 @@
 # Guion del mundo
 
 El **guion del mundo** (`guiones/mundo.lua`) controla lo que afecta a todo el
-juego. Para el comportamiento de una sola entidad, usa un
-[guion de entidad](guiones-entidad.md).
+juego. Para el comportamiento de una sola objeto, usa un
+[guion de objeto](guiones-entidad.md).
 
 Casi todo se hace con el ratón, pero cuando quieras que el mundo **reaccione**
 (que un vecino diga algo distinto cuando llueve, que suene una campana cada
@@ -58,9 +58,9 @@ end
 | `cada_fotograma(segundos)` | Unas 60 veces por segundo. Recibe los segundos desde el anterior |
 | `al_entrar_escena(nombre)` | Al llegar a otra escena |
 | `al_pulsar(accion)` | Al pulsar una [acción de entrada](acciones-entrada.md) |
-| `al_chocar(entidad)` | Cuando el jugador toca una entidad |
+| `al_chocar(entidad)` | Cuando el jugador toca un objeto |
 | `al_entrar_zona(entidad)`, `al_salir_zona(entidad)` | Cuando el jugador entra o sale de una [zona](../referencia/componentes/zona.md) |
-| `al_recibir_dano(entidad, cantidad, de)` | Cuando algo hace daño a una entidad con `motor.danar` o con el nodo *Hacer daño* |
+| `al_recibir_dano(entidad, cantidad, de)` | Cuando algo hace daño a un objeto con `motor.danar` o con el nodo *Hacer daño* |
 
 No hace falta escribirlas todas: si una no está, el motor no hace nada.
 

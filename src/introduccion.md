@@ -36,7 +36,7 @@ están hechas con el propio motor.
 ## Qué se puede hacer
 
 <div class="tarjetas">
-  <a href="guia/mundo.html"><strong><i class="fx fx-mundo"></i>Construir</strong><span>Esculpir el terreno con pinceles y generadores, y colocar objetos y entidades.</span></a>
+  <a href="guia/mundo.html"><strong><i class="fx fx-mundo"></i>Construir</strong><span>Esculpir el terreno con pinceles y generadores, y colocar objetos y objetos.</span></a>
   <a href="guia/creador.html"><strong><i class="fx fx-objeto"></i>Modelar</strong><span>Objetos de cubitos propios, o importados de MagicaVoxel y Qubicle.</span></a>
   <a href="guia/juegos-2d.html"><strong><i class="fx fx-pixel"></i>Juegos 2D</strong><span>Sprites, hojas de animación y mapas de casillas con autocasillas.</span></a>
   <a href="guia/animacion.html"><strong><i class="fx fx-jugar"></i>Animar</strong><span>Línea de tiempo, máquinas de estados, personajes por piezas y cinemáticas.</span></a>
@@ -60,7 +60,7 @@ están hechas con el propio motor.
 |---|---|
 | **Empezar** | Instalación, la pantalla de inicio, la creación de un proyecto y los dos primeros tutoriales. Se recomienda leerla en orden |
 | **Manual del editor** | Una página por cada panel, con su captura anotada, y la personalización del espacio de trabajo. Se consulta en cualquier orden |
-| **Conceptos** | Las ideas en las que se basa el motor: proyectos, escenas, entidades, componentes y lógica |
+| **Conceptos** | Las ideas en las que se basa el motor: proyectos, escenas, objetos, componentes y lógica |
 | **Guías prácticas** | Tutoriales de principio a fin y guías de cada tarea, agrupadas por tema |
 | **Referencia** | Componentes, módulos, acciones, nodos, API de Lua, formatos de archivo, atajos y línea de comandos. Las referencias de componentes, nodos y Lua las genera el propio motor |
 | **Apéndices** | Solución de problemas, glosario, capturas, marca e historial de versiones |

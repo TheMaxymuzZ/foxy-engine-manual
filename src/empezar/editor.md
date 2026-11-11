@@ -10,13 +10,18 @@ explica [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md).
 | Dónde | Qué hay |
 |---|---|
 | **Arriba a la izquierda** | La **barra de menús** |
-| **Arriba en el centro** | Los **espacios**: *Construir*, *2D*, *Programar*, *Pixel art* y *Animar*. En pantallas estrechas salen en una lista |
+| **Arriba en el centro** | El cambio de [modo](modo-sencillo.md), **Sencillo** o **Avanzado**, y, en el Avanzado, los **espacios**: *Construir*, *2D*, *Programar*, *Pixel art* y *Animar*. En pantallas estrechas salen en una lista |
 | **Arriba a la derecha** | Deshacer, rehacer, guardar, <i class="fx fx-jugar"></i> **Jugar aquí** y <i class="fx fx-mando"></i> **Desde el inicio** |
 | **En medio** | Los **paneles** |
 | **Abajo** | La **barra de estado** |
 
 Los menús, los botones de la barra superior y la barra de estado se
 describen en [Menús y barra de estado](../interfaz/menus.md).
+
+> <i class="fx fx-nota"></i> **Nota.** En el **modo Sencillo** el editor
+> enseña solo los paneles para hacer el juego (Proyecto, En la escena, Vista
+> e Inspector) y no salen los espacios. Esta página describe el modo
+> **Avanzado**. Ver [Modo Sencillo y tutorial guiado](modo-sencillo.md).
 
 ## Los espacios
 
@@ -57,7 +62,7 @@ se abren en el espacio **2D**.
 | [Capas](../interfaz/capas.md) | En 2D: las capas de la escena y sus ajustes |
 | [Sprites](../interfaz/sprites.md) | En 2D: cortar hojas de sprites, el punto de anclaje y las animaciones |
 | [Animación](../interfaz/animacion.md) | La línea de tiempo: claves, curvas y sucesos de una animación o una cinemática |
-| [Estados](../interfaz/estados.md) | La máquina de estados del Animador de la entidad elegida |
+| [Estados](../interfaz/estados.md) | La máquina de estados del Animador de la objeto elegido |
 | [Animaciones](../interfaz/animaciones.md) | Todas las animaciones y cinemáticas del proyecto |
 | [Registro](../interfaz/registro.md) | Todos los avisos y errores |
 

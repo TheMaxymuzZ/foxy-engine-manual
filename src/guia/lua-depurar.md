@@ -22,7 +22,7 @@ la derecha, las pestañas **Consola** y **Depurador**.
 1. Con el juego en marcha, abre el guion en la ventana **Código**
    (<kbd>F7</kbd>) o en tu editor externo.
 2. Cámbialo y guárdalo con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>.
-3. La consola confirma «enemigo.lua recargado en 3 entidades» y el juego
+3. La consola confirma «enemigo.lua recargado en 3 objetos» y el juego
    sigue con el código nuevo.
 
 Al recargar:
@@ -98,7 +98,7 @@ Con el juego parado, el depurador enseña:
 | **Locales** | Las variables de la función, con sus argumentos |
 | **De fuera de la función** | Las variables `local` del guion que usa la función |
 | **Del guion** | Las variables globales del guion, como `yo` |
-| **Propiedades** | Los valores de la entidad |
+| **Propiedades** | Los valores del objeto |
 
 > <i class="fx fx-nota"></i> **Nota.** Mientras el juego está parado en un
 > guion, el mundo se queda quieto, igual que con los puntos de parada de los

@@ -3,7 +3,7 @@
 Todo lo que se mueve en un juego se anima en el mismo editor, en 3D y en
 2D: una puerta que se abre, un farol que parpadea, un personaje que anda y
 salta, o una presentación con la cámara. Cada movimiento se guarda como una
-**animación** (un *clip*) que cualquier entidad puede usar.
+**animación** (un *clip*) que cualquier objeto puede usar.
 
 ![El espacio Animar con la puerta a medio abrir en la Vista](../imagenes/capturas/espacio-animar.png)
 
@@ -15,8 +15,8 @@ salta, o una presentación con la cámara. Cada movimiento se guarda como una
 | **Clave** | El valor que tiene algo en un segundo concreto. Entre dos claves, el motor rellena el camino | Línea de tiempo |
 | **Curva** | Cómo se va de una clave a la siguiente: suave, rebotando, de golpe… | Al elegir una clave |
 | **Suceso** | Algo que pasa en un segundo: un sonido, partículas, un aviso a los nodos o una frase | Línea de tiempo, fila **Sucesos** |
-| **Animador** | El componente que dice qué animaciones usa una entidad | [Inspector](../referencia/componentes/animador.md) |
-| **Máquina de estados** | Elige sola la animación según lo que hace la entidad: quieta, andando, saltando… | Panel [Estados](../interfaz/estados.md) |
+| **Animador** | El componente que dice qué animaciones usa un objeto | [Inspector](../referencia/componentes/animador.md) |
+| **Máquina de estados** | Elige sola la animación según lo que hace el objeto: quieta, andando, saltando… | Panel [Estados](../interfaz/estados.md) |
 | **Cinemática** | Una animación de la escena entera, con la cámara y frases | [Cinemáticas](cinematicas.md) |
 
 Las animaciones se guardan en la carpeta `animaciones/` del proyecto y las
@@ -29,12 +29,12 @@ cinemáticas en `cinematicas/`. El panel
 
 ## Crear una animación
 
-1. Elige en la escena la entidad que quieres animar. La animación se verá
+1. Elige en la escena el objeto que quieres animar. La animación se verá
    en ella mientras la editas.
 2. En el panel **Animación**, pulsa <i class="fx fx-mas"></i> y luego
    **Animación nueva**, o escribe un nombre en el panel **Animaciones** y
    pulsa **Animación**.
-3. En **Pista nueva**, elige **Qué** se mueve (la entidad entera o una de
+3. En **Pista nueva**, elige **Qué** se mueve (el objeto entero o una de
    sus [piezas](personajes-piezas.md)) y **Cambia** (posición, giro…), y
    pulsa **Añadir la pista**.
 4. Mueve la línea roja al segundo que quieras y pulsa el rombo de la pista
@@ -48,8 +48,8 @@ La animación se guarda como `animaciones/<nombre>.ron`.
 ## Las pistas
 
 Cada pista cambia una propiedad de una cosa. Los valores van siempre
-**desde su sitio** en el editor: una posición de `(0, 1, 0)` sube la
-entidad un metro, y un giro de `(0, 90, 0)` la gira 90° sobre sí misma.
+**desde su sitio** en el editor: una posición de `(0, 1, 0)` sube el
+objeto un metro, y un giro de `(0, 90, 0)` lo gira 90° sobre sí mismo.
 
 | Propiedad | Qué cambia | Medida |
 |---|---|---|
@@ -108,19 +108,19 @@ doble clic en la fila.
 | Suceso | Qué hace |
 |---|---|
 | **Sonar** | Toca un sonido del proyecto o de ejemplo (los pasos, una bisagra…) |
-| **Partículas** | Suelta unas partículas en la entidad: polvo al caer, chispas… |
+| **Partículas** | Suelta unas partículas en el objeto: polvo al caer, chispas… |
 | **Avisar a los nodos** | Lanza el evento [Aviso de una animación](../referencia/nodos.md#evento-al_evento_animacion) con un nombre |
 | **Diálogo** | Enseña una frase abajo de la pantalla durante unos segundos |
 
-## Poner una animación en una entidad
+## Poner una animación en un objeto
 
 Hay tres maneras:
 
-- **Siempre**: añade el componente **Animador** a la entidad y elige la
+- **Siempre**: añade el componente **Animador** al objeto y elige la
   animación en **Animación**. Si está **En bucle**, se repite sin parar.
 - **Con una acción**: en una zona, un botón o un objeto que se usa con
-  <kbd>E</kbd>, elige la acción **Animar una entidad**, el nombre de la
-  entidad y la animación. **Al revés** la pone de atrás hacia delante: así
+  <kbd>E</kbd>, elige la acción **Animar un objeto**, el nombre de el
+  objeto y la animación. **Al revés** la pone de atrás hacia delante: así
   se cierra una puerta que se abrió con la misma animación.
 - **Con nodos o Lua**: los nodos de la categoría
   [Animación](../referencia/nodos.md#animación) o las funciones
@@ -134,11 +134,11 @@ La plantilla **Personaje animado** lo trae hecho:
    bisagra (ver [Personajes por piezas](personajes-piezas.md)).
 2. La animación **Abrir** gira la hoja de 0° a 100° en 1,2 s con la curva
    **Suave**, y toca un sonido al empezar.
-3. La entidad tiene un **Animador** y una **Zona**: **Al entrar**, *Animar
-   una entidad* con **Abrir**; **Al salir**, lo mismo con **Al revés**
+3. El objeto tiene un **Animador** y una **Zona**: **Al entrar**, *Animar
+   un objeto* con **Abrir**; **Al salir**, lo mismo con **Al revés**
    marcado.
 
-> <i class="fx fx-nota"></i> **Nota.** Mientras se mueve, una entidad
+> <i class="fx fx-nota"></i> **Nota.** Mientras se mueve, un objeto
 > animada no choca con el jugador. Quieta en su sitio, vuelve a ser sólida.
 
 ## Máquina de estados
@@ -164,7 +164,7 @@ animación** o con `motor.parametro_animacion(entidad, nombre, valor)`.
 
 ### Hacer la máquina de un personaje
 
-1. Elige la entidad y abre el panel **Estados**. Si no tiene Animador,
+1. Elige el objeto y abre el panel **Estados**. Si no tiene Animador,
    pulsa **Añadir un Animador**.
 2. Pulsa **Personaje**. Se crean los estados **quieto**, **andar**,
    **correr** y **saltar** con sus transiciones y, si no estaban, sus cuatro
@@ -185,7 +185,7 @@ animación** o con `motor.parametro_animacion(entidad, nombre, valor)`.
 | Elegir el estado del principio | Doble clic en su caja, o **Empieza aquí** |
 | Moverse por el lienzo | Arrastra el fondo; las cajas también se arrastran |
 
-Jugando, el estado en el que está la entidad se ve resaltado en el panel.
+Jugando, el estado en el que está el objeto se ve resaltado en el panel.
 
 > <i class="fx fx-consejo"></i> **Consejo.** Una animación puesta con una
 > acción o con `motor.animar` manda sobre la máquina hasta que termina.

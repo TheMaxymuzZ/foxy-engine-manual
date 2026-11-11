@@ -29,11 +29,11 @@ En el grupo **Variables** del panel, crea cuatro con
 | Nombre | Tipo | Ámbito | Valor inicial | Para qué |
 |---|---|---|---|---|
 | `inicio` | vector | del grafo | 0, 0, 0 | Dónde empieza la patrulla |
-| `patrulla` | vector | de la entidad | 8, 0, 0 | Hasta dónde va, contado desde el inicio |
+| `patrulla` | vector | del objeto | 8, 0, 0 | Hasta dónde va, contado desde el inicio |
 | `a_la_ida` | sí/no | del grafo | sí | Si va hacia el final o vuelve |
-| `vision` | número | de la entidad | 9 | A cuántos metros ve al jugador |
+| `vision` | número | del objeto | 9 | A cuántos metros ve al jugador |
 
-Como `patrulla` y `vision` son **de la entidad**, aparecen en el Inspector
+Como `patrulla` y `vision` son **del objeto**, aparecen en el Inspector
 del lobo. Así, si pones más lobos con el mismo grafo, cada uno puede
 patrullar un recorrido distinto.
 
@@ -41,8 +41,8 @@ patrullar un recorrido distinto.
 
 1. El grafo nuevo ya trae **Al empezar**. Pulsa **Poner** en la variable
    `inicio` y une la salida de ejecución de *Al empezar* con el nodo nuevo.
-2. Añade **Posición** (categoría *Entidades*). Deja su entrada *entidad*
-   vacía, que significa *esta entidad*, y une su salida *posición* con la
+2. Añade **Posición** (categoría *Objetos*). Deja su entrada *objeto*
+   vacía, que significa *este objeto*, y une su salida *posición* con la
    entrada *valor* de *Poner inicio*.
 
 ## 4. ¿Ve al jugador?
@@ -60,7 +60,7 @@ Desde la salida **sí** del *Si*:
 2. **Ir hacia**, con la misma *Posición del jugador* en *destino* y
    *metros por segundo* en `4`.
 3. Otro **Si**. Para su condición, añade **Distancia** con **El jugador**
-   en *a* y **Esta entidad** en *b*, y llévala a un **Comparar** con el
+   en *a* y **Este objeto** en *b*, y llévala a un **Comparar** con el
    operador *es menor que* y `1,4` en *b*.
 4. De la salida *sí* del segundo *Si*, añade una **Puerta** y, de la
    puerta, una **Secuencia** con tres salidas:
@@ -95,7 +95,7 @@ La vida es del jugador y debe valer en todas las escenas, así que va en el
 
 1. Crea la variable `vida`: tipo **número**, ámbito **del juego**, valor
    inicial `100`.
-2. Añade **Al recibir daño** y escribe `jugador` en su entrada *entidad*.
+2. Añade **Al recibir daño** y escribe `jugador` en su entrada *objeto*.
 3. Pulsa **Poner** en `vida`. Para su valor, encadena **Restar**
    (`vida` menos la salida *cantidad* del evento) y **Máximo** (con `0`),
    para que nunca baje de cero.

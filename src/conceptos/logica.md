@@ -2,7 +2,7 @@
 
 Foxy Engine ofrece tres maneras de decir qué pasa en el juego, de la más
 sencilla a la más potente. Se pueden mezclar en un mismo proyecto e incluso
-en una misma entidad.
+en una misma objeto.
 
 | | Acciones | Nodos | Lua |
 |---|---|---|---|
@@ -15,7 +15,7 @@ en una misma entidad.
 
 Una acción es algo que pasa en respuesta a un suceso: el jugador entra en
 una zona, pulsa un botón o usa un objeto. Se elige de una lista, como **Ir a
-otra escena**, **Abrir una interfaz**, **Mover una entidad** o **Tocar un
+otra escena**, **Abrir una interfaz**, **Mover un objeto** o **Tocar un
 sonido**. La lista completa está en [Acciones](../referencia/acciones.md).
 
 ## Nodos
@@ -23,7 +23,7 @@ sonido**. La lista completa está en [Acciones](../referencia/acciones.md).
 Un grafo de nodos describe un comportamiento con cajas: los **eventos**
 (*Al empezar*, *Cada fotograma*, *Al entrar en una zona*) dan la salida, y
 los cables llevan el flujo por **condiciones**, **bucles** y **acciones**.
-Los datos tienen tipo (número, texto, vector, entidad) y se ven en el color
+Los datos tienen tipo (número, texto, vector, objeto) y se ven en el color
 de cada cable. Un grafo puede ser del juego, de una escena o de un objeto,
 y se puede **depurar en vivo** viendo qué cables se encienden.
 
@@ -40,10 +40,10 @@ parada. Hay dos clases de guion:
 
 - El **guion del mundo** (`guiones/mundo.lua`): las reglas generales del
   juego.
-- Los **guiones de entidad**: el comportamiento de una entidad, con
+- Los **guiones de objeto**: el comportamiento de un objeto, con
   propiedades que se ajustan en el Inspector para cada copia.
 
-Los grafos de objeto y los guiones de entidad se ponen a los objetos como
+Los grafos de objeto y los guiones de objeto se ponen a los objetos como
 [comportamientos](../guia/comportamientos.md): uno o varios por objeto.
 
 Ver [Programar en Lua](../guia/programar-lua.md).
@@ -52,7 +52,7 @@ Ver [Programar en Lua](../guia/programar-lua.md).
 
 - Empieza con **acciones**: resuelven la mayoría de las interacciones de un
   nivel.
-- Pasa a **nodos** cuando una entidad tenga que decidir algo (perseguir al
+- Pasa a **nodos** cuando un objeto tenga que decidir algo (perseguir al
   jugador, contar, esperar).
 - Usa **Lua** para sistemas grandes (inventarios, diálogos, inteligencia
   artificial) o si ya sabes programar.

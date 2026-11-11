@@ -6,7 +6,7 @@ marcador y una bandera de meta. No hace falta escribir código. Se completa
 en unos veinte minutos.
 
 **Aprenderás a:** pintar con casillas y autocasillas, dibujar un sprite,
-crear entidades 2D, conectar una zona con una interfaz y probar el juego.
+crear objetos 2D, conectar una zona con una interfaz y probar el juego.
 
 ![El espacio 2D con un nivel de plataformas](../imagenes/capturas/editor-2d.png)
 
@@ -14,8 +14,8 @@ crear entidades 2D, conectar una zona con una interfaz y probar el juego.
 
 1. En la [pantalla de inicio](pantalla-de-inicio.md), pulsa
    <i class="fx fx-mas"></i> **Nuevo proyecto**.
-2. En **Tipo**, elige **2D pixel art**. En **Plantilla**, elige
-   **Vacío 2D**.
+2. En **¿Qué juego quieres hacer?**, elige **Vacío 2D** (en *Empezar de
+   cero*).
 3. En **Nombre**, escribe `Mi plataformas` y pulsa **Crear proyecto**.
 
 El proyecto se abre en el espacio **2D**: la escena en el centro, con un

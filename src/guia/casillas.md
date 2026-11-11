@@ -110,7 +110,7 @@ montañas).
 | Flechas | La pone más atrás o más delante |
 | <i class="fx fx-borrar"></i> | Borra la capa |
 
-La línea **aquí van las entidades** marca dónde se dibujan los personajes y
+La línea **aquí van los objetos** marca dónde se dibujan los personajes y
 los objetos: las capas de encima los tapan.
 
 Al elegir una capa se ven sus ajustes:
@@ -124,7 +124,7 @@ Al elegir una capa se ven sus ajustes:
 | **Paralaje** | Cuánto se mueve con la cámara: 0 se queda quieta (el cielo), 1 va con la escena y menos de 1 da sensación de lejanía |
 | **Opacidad** | De transparente a opaca |
 | **Choca** | Sus casillas chocan con el jugador y con los cuerpos |
-| **Entidades encima** | Las entidades se dibujan justo encima de esta capa |
+| **Objetos encima** | Los objetos se dibujan justo encima de esta capa |
 
 Debajo, el apartado **Escena 2D** tiene los
 [ajustes de la escena](juegos-2d.md#la-escena-2d).

@@ -72,7 +72,7 @@ mismo ni dentro de lo que lleva dentro: el editor no lo deja.
 
 ## Objetos vacíos
 
-El **Objeto vacío** (en *Colocar objetos* → *Entidades del motor*) es solo un
+El **Objeto vacío** (en *Colocar objetos* → *Objetos del motor*) es solo un
 punto: no se ve al jugar. Sirve para:
 
 - **agrupar**: mete varios objetos dentro y mueve el grupo entero de una vez;
@@ -108,5 +108,5 @@ convierten solos al abrirlos, con una copia de seguridad en
 ## Véase también
 
 - [Ordenar la escena](carpetas.md)
-- [Entidades y componentes](entidades.md)
+- [Objetos y componentes](entidades.md)
 - [Colisión](../referencia/componentes/colision.md)

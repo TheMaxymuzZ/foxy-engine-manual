@@ -23,7 +23,7 @@ En esa ventana:
 - Cada **salida de datos** enseña, en una etiqueta de su color, el último
   valor que ha salido por ella.
 
-Si un grafo de entidad lo llevan varias entidades, la ventana junta lo que
+Si un grafo de objeto lo llevan varias objetos, la ventana junta lo que
 hacen todas.
 
 ## Puntos de parada
@@ -79,7 +79,7 @@ Si un grafo de objeto ha crecido tanto que prefieres seguir escribiéndolo a
 mano, pulsa **📜 Copiar a un guion nuevo**:
 
 1. El motor escribe un guion nuevo en `guiones/` que se comporta igual que
-   el grafo, con sus variables *de la entidad* como
+   el grafo, con sus variables *del objeto* como
    [propiedades](guiones-entidad.md#propiedades).
 2. Si el objeto elegido usaba el grafo, el grafo se **apaga** en él y el
    guion se añade como [comportamiento](comportamientos.md) con los mismos

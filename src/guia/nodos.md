@@ -2,7 +2,7 @@
 
 Los **nodos** permiten programar el juego sin escribir código. Cada nodo es
 una caja que hace una sola cosa (esperar un evento, calcular un valor,
-mover una entidad) y los **cables** que los unen deciden el orden y llevan
+mover un objeto) y los **cables** que los unen deciden el orden y llevan
 los datos de un nodo a otro. Al jugar, el motor convierte cada grafo en Lua,
 así que los nodos pueden hacer lo mismo que un [guion](guiones.md).
 
@@ -17,7 +17,7 @@ sección profundizan en cada parte:
   mientras juegas, detener el juego en un nodo y leer o copiar el Lua que
   sale.
 - [Comportamientos](comportamientos.md): dar a un objeto uno o varios
-  grafos, y los diez que ya trae el motor.
+  grafos, y los once que ya trae el motor.
 - [Tutorial: un enemigo que persigue](tutorial-enemigo.md): un juego
   completo con vida, barra de vida y pantalla de derrota, sin código.
 - [Referencia de nodos](../referencia/nodos.md): todos los nodos del motor.
@@ -36,9 +36,9 @@ lo que abarcan:
 | **De objeto** | `grafos/<nombre>.nodos.ron` | Una copia por cada objeto que lo lleva como [comportamiento](comportamientos.md) |
 
 Los grafos de objeto son los más útiles para dar comportamiento: el mismo
-grafo *enemigo* puede ir en diez entidades y cada una patrulla por su
-cuenta, con sus propias variables. Dentro de ellos, **Esta entidad** es la
-entidad que lleva el grafo.
+grafo *enemigo* puede ir en diez objetos y cada uno patrulla por su
+cuenta, con sus propias variables. Dentro de ellos, **Este objeto** es el
+objeto que lleva el grafo.
 
 ## El panel Nodos
 
@@ -81,15 +81,15 @@ derecha, salidas. Hay dos clases de cable:
 | **sí/no** | Verdadero o falso | la salida de *Comparar* |
 | **vector** | Tres números: x, y, z, en metros | una posición |
 | **color** | Un color | `#d65c26` |
-| **entidad** | Una entidad de la escena o el jugador | *Esta entidad* |
+| **objeto** | Un objeto de la escena o el jugador | *Este objeto* |
 | **recurso** | El nombre de un sonido, una interfaz o una escena | `has_perdido` |
-| **lista** | Varios valores seguidos | las entidades que se llaman «Moneda» |
+| **lista** | Varios valores seguidos | los objetos que se llaman «Moneda» |
 | **cualquiera** | Acepta cualquier tipo | la entrada de *Decir* |
 
 Un cable solo se conecta si los tipos encajan. Algunas conversiones se hacen
-solas porque tienen sentido: un número, un sí/no, un vector o una entidad se
-pueden llevar a una entrada de **texto** (una entidad se convierte en su
-nombre), y una **entidad** se puede llevar a una entrada de **vector** (se
+solas porque tienen sentido: un número, un sí/no, un vector o un objeto se
+pueden llevar a una entrada de **texto** (un objeto se convierte en su
+nombre), y una **objeto** se puede llevar a una entrada de **vector** (se
 usa su posición).
 
 Una entrada de datos sin cable usa el valor escrito en el propio nodo. Por
@@ -139,7 +139,7 @@ elige su nombre, su tipo, su valor inicial y su ámbito.
 | Ámbito | Dónde vive | Para qué sirve |
 |---|---|---|
 | **Del grafo** | En cada copia del grafo, solo para él | Datos internos: «voy de ida» |
-| **De la entidad** | En la entidad; otros grafos pueden leerla con *Variable de una entidad* | Datos que se ajustan por entidad: la velocidad, el alcance de visión |
+| **De el objeto** | En el objeto; otros grafos pueden leerla con *Variable de un objeto* | Datos que se ajustan por objeto: la velocidad, el alcance de visión |
 | **Del juego** | En la partida; se guarda con ella | La vida del jugador, las monedas, la puntuación |
 
 Una variable del juego conserva su valor al cargar una partida y vuelve a
@@ -148,8 +148,8 @@ su valor inicial al empezar una partida nueva.
 Los botones **Leer** y **Poner** de cada variable añaden al lienzo el nodo
 que la lee o la cambia.
 
-Las variables **de la entidad** de un grafo aparecen en el Inspector de cada
-entidad que lo lleva, para darle a cada una su valor. Así, dos enemigos con
+Las variables **del objeto** de un grafo aparecen en el Inspector de cada
+objeto que lo lleva, para darle a cada una su valor. Así, dos enemigos con
 el mismo grafo pueden tener distinta visión.
 
 Las variables **del juego** son también [valores del juego](interfaces.md#textos-que-cambian):

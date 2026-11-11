@@ -2,7 +2,7 @@
 
 Foxy Engine hace juegos 2D de dos clases: de **pixel art**, con sprites y
 mapas de casillas, y de **cubitos vistos de lado**, con la cámara sin
-perspectiva. Los dos usan las mismas entidades, componentes, guiones y
+perspectiva. Los dos usan las mismas objetos, componentes, guiones y
 nodos que los juegos 3D.
 
 ![El espacio 2D con la plantilla Plataformas 2D](../imagenes/capturas/editor-2d.png)
@@ -14,8 +14,9 @@ nodos que los juegos 3D.
 ## Empezar un juego 2D
 
 1. En la pantalla de inicio, pulsa **Nuevo proyecto**.
-2. En **Tipo**, elige **2D pixel art** o **2D con vóxeles**.
-3. Elige una plantilla y pulsa **Crear proyecto**.
+2. En **¿Qué juego quieres hacer?**, elige una plantilla 2D: Vacío 2D,
+   Plataformas 2D, Plataformas vóxel o Aventura cenital.
+3. Pulsa **Crear proyecto**.
 
 | Plantilla | Qué incluye |
 |---|---|
@@ -31,7 +32,7 @@ Los proyectos 2D se abren en el espacio **2D**: el panel **Proyecto** y
 
 ## La escena 2D
 
-Una escena 2D se mide en **casillas**. La posición de cada entidad va en
+Una escena 2D se mide en **casillas**. La posición de cada objeto va en
 casillas, con `y` hacia arriba, y la escena se dibuja con la cámara
 **pixel perfect**: cada píxel del juego ocupa siempre un número entero de
 píxeles de la pantalla, así que el pixel art se ve nítido.
@@ -54,7 +55,7 @@ La vista 2D tiene una barra de herramientas arriba a la izquierda.
 
 | Herramienta | Qué hace |
 |---|---|
-| **Elegir** | Elige una entidad para verla en el Inspector. Arrástrala para moverla (<kbd>Mayús</kbd>: de media en media casilla) |
+| **Elegir** | Elige un objeto para verlo en el Inspector. Arrástralo para moverlo (<kbd>Mayús</kbd>: de media en media casilla) |
 | **Pincel** | Pinta la casilla o la autocasilla elegida en el panel **Casillas**. El botón derecho borra |
 | **Goma** | Borra casillas de la capa activa |
 | **Relleno** | Llena el hueco del mismo tipo que hay bajo el ratón |
@@ -68,12 +69,12 @@ oscuridad** de la escena y **volver a centrar la cámara**.
 - Mueve la vista con el **botón del medio**, con <kbd>Espacio</kbd> y
   arrastrar, o con el botón derecho en **Elegir**.
 
-## Entidades 2D
+## Objetos 2D
 
-Las entidades nuevas se ponen con el menú **Crear**, en el centro de la
+Los objetos nuevas se ponen con el menú **Crear**, en el centro de la
 vista.
 
-| Entidad | Qué es |
+| Objeto | Qué es |
 |---|---|
 | **Personaje** | El jugador: salta (o anda, en vista cenital) y la cámara lo sigue |
 | **Moneda** | Se recoge al tocarla y suma 1 al valor `monedas` |
@@ -82,12 +83,12 @@ vista.
 | **Luz** | Alumbra a su alrededor cuando la luz ambiente es baja |
 | **Partículas** | Polvo, chispas, lluvia, nieve, humo u hojas |
 
-Cada entidad se ve con su [Sprite](../referencia/componentes/sprite.md). Las
+Cada objeto se ve con su [Sprite](../referencia/componentes/sprite.md). Las
 que no tienen sprite se muestran con su nombre en el editor.
 
 ## El jugador
 
-El jugador es la entidad con
+El jugador es el objeto con
 [Controlador de jugador](../referencia/componentes/controlador.md). En 2D
 hay dos tipos:
 
@@ -122,7 +123,7 @@ da la vuelta solo.
 
 ## Recoger cosas
 
-Una entidad con [Recogible](../referencia/componentes/recogible.md)
+Un objeto con [Recogible](../referencia/componentes/recogible.md)
 desaparece al tocarla, suena y suma a un valor del juego. Una interfaz
 enseña ese valor escribiendo su nombre entre llaves en un texto, como
 `Monedas: {monedas}`. El evento **Al recoger** avisa a los guiones y a los
@@ -132,7 +133,7 @@ nodos.
 
 - El componente [Partículas](../referencia/componentes/particulas.md) suelta
   polvo, chispas, lluvia, nieve, humo u hojas. Funciona igual en 3D.
-- Con la **luz ambiente** por debajo de 1, las entidades con
+- Con la **luz ambiente** por debajo de 1, los objetos con
   [Luz](../referencia/componentes/luz.md) alumbran a su alrededor. En 2D el
   alcance va en casillas.
 
@@ -168,5 +169,5 @@ Los detalles de cada una están en la
 
 - [Sprites](sprites.md)
 - [Mapas de casillas](casillas.md)
-- [Entidades y componentes](entidades.md)
+- [Objetos y componentes](entidades.md)
 - [Pixel art](pixel-art.md)

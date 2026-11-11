@@ -97,7 +97,7 @@ end
    ```
 
 4. Guarda con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>. La consola dice
-   «guiones/enemigo.lua recargado en 1 entidad».
+   «guiones/enemigo.lua recargado en 1 objeto».
 
 ![El autocompletado de la API](../imagenes/capturas/codigo-autocompletar.png)
 
@@ -127,6 +127,6 @@ end
 
 ## Véase también
 
-- [Guiones de entidad](guiones-entidad.md)
+- [Guiones de objeto](guiones-entidad.md)
 - [Recargar, consola y depurador](lua-depurar.md)
 - [Tutorial: un enemigo que persigue](tutorial-enemigo.md), con nodos

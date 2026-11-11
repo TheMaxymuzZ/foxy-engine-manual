@@ -120,6 +120,6 @@ dentro en `hijos`. En la escena, la copia dice de cuál es
 
 ## Véase también
 
-- [Entidades y componentes](entidades.md)
+- [Objetos y componentes](entidades.md)
 - [Objetos libres y jerarquía](objetos-libres.md)
 - [Comportamientos](comportamientos.md)

@@ -15,8 +15,8 @@ La columna de la izquierda agrupa la pantalla en cuatro secciones:
 | Sección | Contenido |
 |---|---|
 | **Proyectos** | Los proyectos recientes y los de la carpeta de proyectos |
-| **Plantillas** | Los puntos de partida disponibles para un proyecto nuevo |
-| **Aprender** | Accesos directos a las páginas principales de este manual |
+| **Plantillas** | Los puntos de partida para un proyecto nuevo, agrupados por tipo de juego. Ver [Crear un proyecto](crear-proyecto.md#las-plantillas) |
+| **Aprender** | Accesos directos a las páginas principales de este manual, como [Tu primer juego](../tu-primer-juego/index.md) |
 | **Novedades** | Lo nuevo en la versión instalada del motor |
 
 En la parte inferior están el acceso al **Manual** y la versión del motor.

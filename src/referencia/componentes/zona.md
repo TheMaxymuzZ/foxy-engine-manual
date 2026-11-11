@@ -10,7 +10,7 @@ de ella, se ejecuta una [acción](../acciones.md).
 
 | Propiedad | Campo | De fábrica | Descripción |
 |---|---|---|---|
-| Tamaño | `tamano` | 3 × 2,5 × 3 m | Ancho, alto y fondo, centrado en la base de la entidad. |
+| Tamaño | `tamano` | 3 × 2,5 × 3 m | Ancho, alto y fondo, centrado en la base del objeto. |
 | Al entrar | `al_entrar` | Nada | Acción que se ejecuta cuando el jugador entra. |
 | Al salir | `al_salir` | Nada | Acción que se ejecuta cuando el jugador sale. |
 

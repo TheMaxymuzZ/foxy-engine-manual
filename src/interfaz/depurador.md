@@ -13,7 +13,7 @@ llegado ahí y el valor de todas las variables.
 | 4 | **Locales** | Las variables de la función |
 | 5 | **De fuera de la función** | Las variables `local` del guion que usa la función |
 | 6 | **Del guion** | Las variables propias del guion, como `yo` |
-| 7 | **Propiedades** | Los valores de la tabla `propiedades` para esta entidad |
+| 7 | **Propiedades** | Los valores de la tabla `propiedades` para este objeto |
 
 Está en el espacio **Programar**, en *Ventana → Depurador* y, jugando, en la
 ventana **Código** (<kbd>F7</kbd>), que se abre sola al pararse.

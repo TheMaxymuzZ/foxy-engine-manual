@@ -1,6 +1,6 @@
 # Sprites
 
-Un sprite es la imagen con la que se ve una entidad 2D. Puede ser una
+Un sprite es la imagen con la que se ve un objeto 2D. Puede ser una
 imagen suelta o una **hoja de sprites**: una imagen con varios fotogramas
 que se cortan y se juntan en animaciones. El panel **Sprites** sirve para
 cortar la hoja, poner su punto de apoyo y montar las animaciones.
@@ -15,7 +15,7 @@ cortar la hoja, poner su punto de apoyo y montar las animaciones.
 | **Retocar** | Abre la imagen en [Pixel art](pixel-art.md), con la rejilla de los fotogramas |
 | **Es** | **Imagen suelta**, **Hoja de sprites** o **Juego de casillas** (ver [Mapas de casillas](casillas.md)) |
 | **Corte** | Cómo se corta la hoja en fotogramas |
-| **Punto de anclaje** | El punto del fotograma que se pone en la posición de la entidad |
+| **Punto de anclaje** | El punto del fotograma que se pone en la posición del objeto |
 | **Animaciones** | La lista de animaciones de la hoja |
 | Vista previa | La animación elegida, moviéndose, con su punto de anclaje en rojo |
 | Fotogramas | Todos los fotogramas, numerados desde 0. Los de la animación elegida salen en amarillo |
@@ -38,10 +38,10 @@ la imagen.
 ## El punto de anclaje
 
 El punto de anclaje dice qué punto de cada fotograma va en la posición de
-la entidad. Se mide de 0 a 1: `x` de izquierda a derecha e `y` de arriba
+el objeto. Se mide de 0 a 1: `x` de izquierda a derecha e `y` de arriba
 abajo.
 
-- **Pies** (0,5 × 1) pone la entidad de pie sobre su posición. Es lo normal
+- **Pies** (0,5 × 1) pone el objeto de pie sobre su posición. Es lo normal
   en los personajes.
 - **Centro** (0,5 × 0,5) la centra. Va bien en monedas, gemas y partículas.
 
@@ -83,9 +83,9 @@ todavía no tiene.
 > una sola imagen, uno al lado del otro y del mismo tamaño. Así basta con
 > el corte **En rejilla**.
 
-## Poner un sprite a una entidad
+## Poner un sprite a un objeto
 
-1. Elige la entidad en la vista o en **En la escena**.
+1. Elige el objeto en la vista o en **En la escena**.
 2. En el Inspector, añade el componente **Sprite** si no lo tiene.
 3. Elige la **Imagen** y, si es una hoja, la **Animación** con la que
    empieza o el **Fotograma** fijo.
