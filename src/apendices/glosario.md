@@ -10,6 +10,7 @@
 | **Autocasilla** | Un terreno de casillas que pone solo sus bordes y esquinas al pintar. Ver [Mapas de casillas](../guia/casillas.md#autocasillas). |
 | **Bloque** | Un cubo de 1 m, hecho de 2 × 2 × 2 cubitos. |
 | **Cable** | La unión entre dos nodos. Los de ejecución marcan el orden y los de datos llevan un valor. Ver [Nodos](../guia/nodos.md#cables-y-tipos). |
+| **Calidad (de los gráficos)** | Bajo, Medio, Alto, Ultra o Cine: lo finas que son las sombras y cuántas luces hay a la vez. Ver [Gráficos](../guia/graficos.md#calidad). |
 | **Capa** | En una escena 2D, cada plano de casillas o de imagen que se dibuja uno encima de otro. Ver [Capas](../guia/casillas.md#capas). |
 | **Casilla** | En 2D, cada cuadrito de un mapa de casillas, y la medida de las escenas 2D. Ver [Mapas de casillas](../guia/casillas.md). |
 | **Cinemática** | Una escena corta que el jugador mira sin manejar, con la cámara y frases. Ver [Cinemáticas](../guia/cinematicas.md). |
@@ -25,6 +26,7 @@
 | **Escena inicial** | La escena donde empiezan las partidas nuevas (<i class="fx fx-estrella"></i>). |
 | **Espacio (de trabajo)** | Un reparto de paneles para un trabajo: Construir, 2D, Programar, Pixel art, Animar o uno propio. Ver [Personalizar el espacio de trabajo](../editor/espacio-de-trabajo.md). |
 | **Evento** | El nodo con el que empieza una cadena: al empezar, cada fotograma, al chocar… Ver [Eventos y flujo](../guia/nodos-flujo.md). |
+| **Exposición** | Cuánta luz deja pasar el motor a la imagen, como en una cámara: +1 es el doble. Ver [Gráficos](../guia/graficos.md#exposición). |
 | **Fotogramas por segundo (fps)** | Cuántas imágenes dibuja el motor cada segundo. Con 60 o más va suave; por debajo de 30 se notan tirones. |
 | **Función (de nodos)** | Un grupo de nodos guardado en `funciones/` que se usa como un nodo más. Ver [Funciones](../guia/nodos-funciones.md). |
 | **Generador** | Lo que crea el terreno de cubitos de una escena: vacío, plano, colinas, cuevas, islas o una imagen de alturas. Ver [El terreno de cubitos](../guia/generadores.md). |
@@ -32,6 +34,7 @@
 | **Grafo** | Un conjunto de nodos unidos con cables: del juego, de una escena o de un objeto. Ver [Nodos](../guia/nodos.md). |
 | **Guion** | Un archivo de código Lua en `guiones/`. El guion del mundo es `mundo.lua`; los guiones de objeto son comportamientos de un objeto. Ver [Programar en Lua](../guia/programar-lua.md). |
 | **Guion de objeto** | Un guion que lleva un objeto como comportamiento. Cada objeto tiene su propia copia. Ver [Guiones de objeto](../guia/guiones-entidad.md). |
+| **HDR (luz de verdad)** | El motor calcula la luz sin límite (el sol puede ser mil veces más fuerte que una vela) y al final la pasa a colores de pantalla con el tono. |
 | **Hoja de sprites** | Una imagen con varios fotogramas que se cortan para hacer animaciones. Ver [Sprites](../guia/sprites.md). |
 | **Inspector** | El [panel](../interfaz/inspector.md) del editor con las opciones de la herramienta y de lo que tengas elegido. |
 | **Interfaz** | Algo que se dibuja encima del juego: un menú, un marcador, un cartel. |
@@ -63,6 +66,7 @@
 | **Paquete (del juego)** | El archivo `juego.foxy` que va con un juego publicado: los archivos del proyecto que el juego usa, comprimidos. |
 | **Paralaje** | Cuánto se mueve una capa con la cámara. Las capas lejanas se mueven menos y dan sensación de profundidad. |
 | **Partículas** | Puntos pequeños que salen de un objeto: polvo, chispas, lluvia, nieve, humo u hojas. |
+| **PBR (materiales)** | Materiales que imitan los de verdad: color, relieve, rugosidad, metal, oclusión y brillo. Los mismos que Blender. Ver [Gráficos](../guia/graficos.md#materiales-de-los-modelos-pbr). |
 | **Perfilador** | La pestaña *Qué gasta más* de la ventana Rendimiento: cuánto tiempo de cada fotograma se va en cada parte del motor y en cada objeto. Ver [Rendimiento](../guia/rendimiento.md#qué-gasta-más-el-perfilador). |
 | **Pieza** | Una caja de cubitos de un objeto que se anima por separado, con su punto de giro. Ver [Personajes por piezas](../guia/personajes-piezas.md). |
 | **Pincel** | La forma (cubo o esfera) y el tamaño con los que se ponen, quitan o pintan bloques. |
@@ -80,6 +84,7 @@
 | **Sprite** | La imagen con la que se ve un objeto 2D. Ver [Sprites](../guia/sprites.md). |
 | **Suceso** | Algo que pasa en un segundo de una animación: un sonido, partículas, un aviso a los nodos o una frase. |
 | **Terreno de cubitos** | El objeto que lleva el suelo de cubitos de una escena y su generador. Una escena lleva uno o ninguno. Ver [El terreno de cubitos](../guia/generadores.md). |
+| **Tono** | La curva que pasa la luz a los colores de la pantalla: Cine, Como Blender, Neutro o Ninguno. Ver [Gráficos](../guia/graficos.md#tono). |
 | **Trozo** | Un pedazo del mundo de 32 × 32 × 32 cubitos. El motor dibuja y actualiza el mundo por trozos. |
 | **Tutorial guiado** | Los pasos que enseñan el editor la primera vez que se abre un proyecto. Se repite en **Ayuda › Tutorial guiado**. |
 | **Valor** | Un dato con nombre que pone el guion (`motor.poner_valor`) y que se guarda con la partida. |

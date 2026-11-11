@@ -117,6 +117,8 @@ En el menú **Opciones**:
 
 - Sensibilidad del ratón y del mando.
 - Invertir arriba/abajo.
+- Calidad de los gráficos (empieza con la de los
+  [ajustes del proyecto](graficos.md#calidad)).
 - Campo de visión.
 - Balanceo al caminar.
 - Mostrar los fotogramas por segundo.

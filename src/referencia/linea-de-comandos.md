@@ -78,7 +78,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto) o `plataformas-2d`, `aventura-cenital`, `vacio-2d`, `plataformas-voxel`, `tercera-persona` y `puzle` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) o `modelos` (los modelos 3D de ejemplo junto a una farola de cubitos) |
+| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto), `ajustes-graficos` (en su página Gráficos) o `plataformas-2d`, `aventura-cenital`, `vacio-2d`, `plataformas-voxel`, `tercera-persona` y `puzle` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) o `modelos` (los modelos 3D de ejemplo junto a una farola de cubitos) |
 | `--plantilla <nombre>` | Sin `--editor`: dibuja el mundo de una plantilla (`vacio-3d`, `isla-voxel`, `isla-de-ejemplo` o `plataformas-voxel`) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto`; en 2D, `choques` o `autocasillas` abren ese modo del panel Casillas |
 | `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |
@@ -101,6 +101,18 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | `--paleta <texto>` | Con la paleta de comandos abierta y eso escrito |
 | `--tema-claro` | Con el tema claro |
 
+### Gráficos de la captura
+
+Valen para cualquier captura, con o sin `--editor`. Ver
+[Gráficos](../guia/graficos.md).
+
+| Opción | Qué hace |
+|---|---|
+| `--calidad <nivel>` | `bajo`, `medio`, `alto`, `ultra` o `cine` |
+| `--tono <curva>` | `cine`, `blender`, `neutro` o `ninguno` |
+| `--exposicion <n>` | Exposición en pasos, por ejemplo `-1` o `0.5` |
+| `--corazon <dibujante>` | `nuevo` o `clasico` |
+
 Los paneles son `vista`, `proyecto`, `escena`, `inspector`, `codigo`,
 `nodos`, `archivos`, `materiales`, `pixel` y `registro`. Las capturas
 empiezan siempre por los espacios de serie y no cambian los que guardaste.
@@ -109,7 +121,7 @@ empiezan siempre por los espacios de serie y no cambian los que guardaste.
 
 | Opción | Qué hace |
 |---|---|
-| `--juego --menu <pantalla>` | `inicio`, `jugando`, `pausa`, `opciones`, `controles` (cambiando una tecla), `guardar`, `cargar`, `menu-propio` o `cartel` |
+| `--juego --menu <pantalla>` | `inicio`, `jugando`, `pausa`, `opciones`, `opciones-graficos` (su página Gráficos), `controles` (cambiando una tecla), `guardar`, `cargar`, `menu-propio` o `cartel` |
 | `--hablar` | El jugador hablando con el primer vecino |
 | `--splash` | La pantalla *Powered by Foxy Engine* |
 
@@ -123,7 +135,7 @@ lento ni cambia la imagen sin querer. Las usa GitHub Actions en cada cambio.
 
 ### Escenas de prueba enormes
 
-El motor fabrica solo tres escenas para medirse al límite. Salen siempre
+El motor fabrica solo cuatro escenas para medirse al límite. Salen siempre
 iguales:
 
 | Nombre | Qué tiene |
@@ -131,6 +143,7 @@ iguales:
 | `miles-de-objetos` | 4.096 objetos sobre un llano; uno de cada cuatro gira o flota con un comportamiento |
 | `mundo-grande` | Colinas con cuevas de 768 × 768 m |
 | `muchas-luces` | 400 farolas encendidas de noche |
+| `cueva-con-antorchas` | Una sala de piedra con columnas y seis antorchas que hacen sombra |
 
 Para verlas: `--captura x.png --enorme <nombre>`. Para verlas en el editor y
 jugando, con el perfilador:
