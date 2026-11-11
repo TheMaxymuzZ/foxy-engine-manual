@@ -89,6 +89,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | `--romper <x,y,z>` | Jugando, rompe el bloque de ese punto, en metros. Se puede repetir |
 | `--esperar <s>` | Jugando, segundos que pasan antes de la captura (de 0 a 60) |
 | `--rendimiento` | Con la ventana [Rendimiento](../guia/rendimiento.md) abierta (mide unos fotogramas de verdad) |
+| `--memoria` | Con la ventana Rendimiento abierta en su pestaña *Memoria* |
 | `--sin-lejos` | Dibuja todo con todo el detalle, sin el [detalle de lejos](../guia/rendimiento.md#detalle-de-lejos) |
 | `--espacio <nombre>` | El espacio de trabajo: `construir`, `programar`, `pixel-art` o `2d` |
 | `--abrir <panel>` | Abre también ese panel. Se puede repetir |
@@ -114,6 +115,67 @@ empiezan siempre por los espacios de serie y no cambian los que guardaste.
 
 `--editor`, `--raton`, `--elegir`, `--jugar` y `--menu` solo valen con
 `--captura`.
+
+## Medir el motor
+
+Estas órdenes sirven para comprobar que ningún cambio en el motor lo hace más
+lento ni cambia la imagen sin querer. Las usa GitHub Actions en cada cambio.
+
+### Escenas de prueba enormes
+
+El motor fabrica solo tres escenas para medirse al límite. Salen siempre
+iguales:
+
+| Nombre | Qué tiene |
+|---|---|
+| `miles-de-objetos` | 4.096 objetos sobre un llano; uno de cada cuatro gira o flota con un comportamiento |
+| `mundo-grande` | Colinas con cuevas de 768 × 768 m |
+| `muchas-luces` | 400 farolas encendidas de noche |
+
+Para verlas: `--captura x.png --enorme <nombre>`. Para verlas en el editor y
+jugando, con el perfilador:
+`--captura x.png --editor --pestana perfilador --jugar --rendimiento`.
+
+### Pruebas de rendimiento
+
+```sh
+cargo run --release -- --medir ver
+cargo run --release -- --medir comprobar
+cargo run --release -- --medir guardar
+```
+
+Mide cada escena enorme sin ventana: lo que cuesta fabricarla, hacer sus
+mallas, preparar y dibujar un fotograma, lo que tarda la tarjeta y, jugando,
+cada parte del motor. También cuenta trozos, triángulos, llamadas de dibujo,
+luces y memoria.
+
+- `ver` enseña las medidas.
+- `comprobar` las compara con las guardadas en `pruebas/rendimiento.ron` y
+  falla si las cuentas cambian más de un 5 % o si algo tarda más del doble.
+  Como cada ordenador va a su ritmo, antes mide una tarea fija (la *vara de
+  medir*) y compara en esa medida.
+- `guardar` las deja como referencia nueva (cuando un cambio es a propósito).
+
+Con `--escena <nombre>` mide solo esa escena y con `--salida <carpeta>` deja
+las medidas en `medidas.ron`.
+
+### Capturas de referencia
+
+```sh
+cargo run --release -- --referencias comprobar
+cargo run --release -- --referencias guardar
+```
+
+Hace unas cuantas capturas (el mundo de día y de noche, las escenas
+enormes, el editor, la pantalla de inicio, el 2D y el menú del juego) y las
+compara con las guardadas en `pruebas/referencias/`. Si una cambia más del
+0,5 % de sus píxeles, falla y deja al lado una imagen
+`<nombre>-diferencias.png` con lo que ha cambiado pintado en rojo. Las
+diferencias pequeñas de color, que dependen de la tarjeta gráfica, no
+cuentan.
+
+Con `--escena <nombre>` hace solo esa captura y con `--salida <carpeta>`
+elige dónde dejar las de hoy (por defecto, `capturas/referencias`).
 
 ## Gráficos
 

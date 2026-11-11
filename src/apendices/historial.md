@@ -5,6 +5,21 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase H: Medir de verdad
+
+- **Perfilador** en la ventana [Rendimiento](../guia/rendimiento.md): una
+  gráfica con lo que gasta cada parte del motor en cada fotograma
+  (comportamientos, físicas, animación, partículas, sonido, dibujo,
+  paneles...), los **objetos que más gastan** y lo que tarda la **tarjeta
+  gráfica** en cada pasada.
+- Pestaña **Memoria**: lo que ocupan texturas, mallas, sonidos y mundo, con
+  la lista de lo más pesado.
+- **Escenas de prueba enormes** que el motor fabrica solo: miles de objetos,
+  un mundo grande y muchas luces.
+- **Pruebas de rendimiento** y **capturas de referencia** automáticas: si un
+  cambio hace el motor más lento o cambia la imagen sin querer, la prueba
+  falla. Ver [Medir el motor](../referencia/linea-de-comandos.md#medir-el-motor).
+
 ## 0.0.1-PR39: Plantillas y principiantes
 
 - **Plantillas por tipo de juego**: el asistente pregunta **¿Qué juego

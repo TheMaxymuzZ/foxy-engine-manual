@@ -63,6 +63,7 @@
 | **Paquete (del juego)** | El archivo `juego.foxy` que va con un juego publicado: los archivos del proyecto que el juego usa, comprimidos. |
 | **Paralaje** | Cuánto se mueve una capa con la cámara. Las capas lejanas se mueven menos y dan sensación de profundidad. |
 | **Partículas** | Puntos pequeños que salen de un objeto: polvo, chispas, lluvia, nieve, humo u hojas. |
+| **Perfilador** | La pestaña *Qué gasta más* de la ventana Rendimiento: cuánto tiempo de cada fotograma se va en cada parte del motor y en cada objeto. Ver [Rendimiento](../guia/rendimiento.md#qué-gasta-más-el-perfilador). |
 | **Pieza** | Una caja de cubitos de un objeto que se anima por separado, con su punto de giro. Ver [Personajes por piezas](../guia/personajes-piezas.md). |
 | **Pincel** | La forma (cubo o esfera) y el tamaño con los que se ponen, quitan o pintan bloques. |
 | **Pista** | En una animación, la fila que cambia una propiedad de una cosa (el giro de la hoja, la posición de la cámara…). |
