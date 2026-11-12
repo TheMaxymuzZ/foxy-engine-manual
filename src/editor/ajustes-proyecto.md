@@ -66,15 +66,16 @@ Cómo se ve el juego. Los cambios se ven al momento en la escena.
 | **Exposición** | Más luz (+) o menos (−), como en una cámara: +1 es el doble |
 | **Tono** | Cómo pasa la luz a colores: **Cine (ACES)**, **Como Blender (AgX)**, **Neutro** o **Ninguno** |
 | **Calidad del juego** | La calidad con la que empieza el juego. Cada jugador la cambia en **Opciones → Gráficos** |
+| **Luz y atmósfera** | Luz que rebota, rincones más oscuros, agua de verdad, cielo físico, destello, desenfoque, suavizado temporal, escala del dibujo y color. **Realista** las enciende todas y **Apagar todo** las quita |
 | **Piezas del dibujo** | Apaga sombras, luces, cielo, niebla, agua o transparentes |
 
 **Volver a como venía** deja la página como al principio. Todo se explica en
-[Gráficos: luz, sombras y calidad](../guia/graficos.md).
+[Gráficos: luz, sombras y atmósfera](../guia/graficos.md).
 
 ## Véase también
 
 - [Archivos del proyecto: proyecto.ron](../referencia/archivos.md#proyecto)
 - [Módulos](../referencia/modulos/index.md)
 - [Escenas](../guia/escenas.md)
-- [Gráficos: luz, sombras y calidad](../guia/graficos.md)
+- [Gráficos: luz, sombras y atmósfera](../guia/graficos.md)
 - [Pixel art](../guia/pixel-art.md)

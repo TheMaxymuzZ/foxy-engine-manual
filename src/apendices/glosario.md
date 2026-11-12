@@ -42,6 +42,7 @@
 | **Juego publicado** | Una aplicación hecha con **Proyecto › Publicar…** que se abre con doble clic, sin el motor instalado. Ver [Publicar tu juego](../publicar/publicar.md). |
 | **Llano** | Un terreno de hierba completamente plano, sin isla ni mar a la vista. Es el de un proyecto vacío. |
 | **Luz del sol** | El componente que pone la hora del sol, su fuerza y su color. Ver [Luz del sol](../referencia/componentes/sol.md). |
+| **Luz que rebota** | La luz del sol que rebota en el terreno y aclara lo que está a la sombra; también deja a oscuras las cuevas cerradas. Ver [Gráficos](../guia/graficos.md#luz-y-atmósfera). |
 | **Máquina de estados** | Estados con su animación y flechas con condiciones que eligen la animación sola. Ver [Máquina de estados](../guia/animacion.md#máquina-de-estados). |
 | **Marcador** | Una interfaz que está siempre a la vista mientras se juega. |
 | **Material** | De qué está hecho un cubito: hierba, piedra, madera… |
@@ -51,11 +52,13 @@
 | **Modo Sencillo** | El modo del editor para empezar: solo la escena, el panel Proyecto, la lista de la escena y el inspector. Ver [Modo Sencillo y Avanzado](../empezar/modo-sencillo.md). |
 | **Módulo** | Una parte del motor que el proyecto activa o desactiva. Ver [Módulos](../referencia/modulos/index.md). |
 | **Módulo (de Lua)** | Un guion que devuelve funciones para otros guiones, que lo cargan con `require`. |
+| **Niebla** | El componente que llena la escena de niebla. Donde le da el sol salen rayos de luz. Ver [Niebla](../referencia/componentes/niebla.md). |
 | **Nine-slice (estirar en nueve partes)** | Forma de estirar una imagen sin deformar sus esquinas. |
 | **Nodo** | Una caja de un grafo que hace una sola cosa. Ver la [Referencia de nodos](../referencia/nodos.md). |
 | **OBJ** | Un formato sencillo de modelos 3D: el `.obj` con la forma y el `.mtl` con los materiales. Ver [Modelos 3D](../guia/modelos-3d.md). |
 | **Objeto** | Cualquier cosa colocada en una escena, con nombre, posición, giro, un modelo opcional, componentes y comportamientos. En versiones antiguas del manual se llamaba *entidad*. Ver [Conceptos básicos](../conceptos/basicos.md). |
 | **Objeto propio** | Un objeto hecho con el creador de objetos, guardado en `objetos/`. |
+| **Oclusión ambiental** | Que los rincones y las juntas reciban menos luz. En los ajustes se llama «Rincones más oscuros». |
 | **Ortográfica (cámara)** | Una cámara sin perspectiva: lo lejano se ve igual de grande que lo cercano. |
 | **Paleta** | Una lista de colores para dibujar en pixel art. |
 | **Paleta de comandos** | La búsqueda de <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd>: escribe lo que quieres hacer o abrir. |
@@ -82,6 +85,7 @@
 | **Reutilizable (objeto)** | Un objeto guardado, con lo que lleva dentro, para colocarlo muchas veces. Sus copias siguen al original salvo lo cambiado a mano en cada una; sus **partes** son lo que lleva dentro. Ver [Objetos reutilizables](../guia/reutilizables.md). |
 | **RON** | El formato de texto de los archivos `.ron` de Foxy Engine. |
 | **Sprite** | La imagen con la que se ve un objeto 2D. Ver [Sprites](../guia/sprites.md). |
+| **Suavizado temporal** | Quitar los dientes de sierra de los bordes mezclando cada fotograma con el anterior. |
 | **Suceso** | Algo que pasa en un segundo de una animación: un sonido, partículas, un aviso a los nodos o una frase. |
 | **Terreno de cubitos** | El objeto que lleva el suelo de cubitos de una escena y su generador. Una escena lleva uno o ninguno. Ver [El terreno de cubitos](../guia/generadores.md). |
 | **Tono** | La curva que pasa la luz a los colores de la pantalla: Cine, Como Blender, Neutro o Ninguno. Ver [Gráficos](../guia/graficos.md#tono). |

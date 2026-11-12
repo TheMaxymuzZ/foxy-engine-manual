@@ -47,7 +47,7 @@
 - [Ajustes del proyecto](editor/ajustes-proyecto.md)
 - [Preferencias y teclas](guia/preferencias.md)
 - [Probar el juego](guia/jugar.md)
-- [Gráficos: luz, sombras y calidad](guia/graficos.md)
+- [Gráficos: luz, sombras y atmósfera](guia/graficos.md)
 - [Rendimiento](guia/rendimiento.md)
 
 # Conceptos
@@ -118,6 +118,7 @@
     - [Partículas](referencia/componentes/particulas.md)
     - [Terreno de cubitos](referencia/componentes/terreno.md)
     - [Luz del sol](referencia/componentes/sol.md)
+    - [Niebla](referencia/componentes/niebla.md)
 - [Módulos](referencia/modulos/index.md)
     - [Día y noche](referencia/modulos/dia-y-noche.md)
     - [Clima](referencia/modulos/clima.md)

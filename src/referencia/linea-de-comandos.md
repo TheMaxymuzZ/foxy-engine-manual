@@ -112,6 +112,7 @@ Valen para cualquier captura, con o sin `--editor`. Ver
 | `--tono <curva>` | `cine`, `blender`, `neutro` o `ninguno` |
 | `--exposicion <n>` | Exposición en pasos, por ejemplo `-1` o `0.5` |
 | `--corazon <dibujante>` | `nuevo` o `clasico` |
+| `--atmosfera <piezas>` | `realista`, `nada` o una lista separada por comas con `luz`, `oclusion`, `agua`, `cielo`, `destello`, `desenfoque`, `color` y `temporal` |
 
 Los paneles son `vista`, `proyecto`, `escena`, `inspector`, `codigo`,
 `nodos`, `archivos`, `materiales`, `pixel` y `registro`. Las capturas
@@ -135,7 +136,7 @@ lento ni cambia la imagen sin querer. Las usa GitHub Actions en cada cambio.
 
 ### Escenas de prueba enormes
 
-El motor fabrica solo cuatro escenas para medirse al límite. Salen siempre
+El motor fabrica solo cinco escenas para medirse al límite. Salen siempre
 iguales:
 
 | Nombre | Qué tiene |
@@ -144,6 +145,7 @@ iguales:
 | `mundo-grande` | Colinas con cuevas de 768 × 768 m |
 | `muchas-luces` | 400 farolas encendidas de noche |
 | `cueva-con-antorchas` | Una sala de piedra con columnas y seis antorchas que hacen sombra |
+| `rayos-de-sol` | Una sala con tres agujeros en el techo, sol de mañana y niebla: salen rayos de luz |
 
 Para verlas: `--captura x.png --enorme <nombre>`. Para verlas en el editor y
 jugando, con el perfilador:
