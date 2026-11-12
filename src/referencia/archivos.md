@@ -58,7 +58,9 @@ Archivo: `proyecto.ron`
     icono: "",                       // imagen de imagenes/ sin .png; vacío = el del motor
     cubito: 0.5,                     // tamaño del cubito: 1.0, 0.5 o 0.25 m
     modulos: (clima: true, vecinos: false, ...),   // ver Módulos
-    formato: 6,                      // versión del formato del proyecto
+    graficos: (optimizar: (lod: true), ...),       // ver Gráficos y Optimizar
+    rendimiento: (activo: true, equipo: 2, fps: 60),  // el objetivo de rendimiento
+    formato: 14,                     // versión del formato del proyecto
 )
 ```
 

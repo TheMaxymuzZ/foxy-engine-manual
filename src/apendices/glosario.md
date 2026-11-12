@@ -7,6 +7,7 @@
 | **Ancla** | El punto de la pantalla al que está pegado un elemento de una interfaz. |
 | **Animación** | Lo que cambia con el tiempo en un objeto: posición, giro, escala, color, luz o fotograma. Se guarda en `animaciones/`. Ver [Animación](../guia/animacion.md). |
 | **Animador** | El componente que dice qué animaciones usa un objeto, con su máquina de estados. Ver [Animador](../referencia/componentes/animador.md). |
+| **Atlas** | Una imagen con varias texturas puestas una al lado de otra, para dibujar de una vez lo que usaba varias. El motor los hace solo al [juntar materiales](../guia/optimizar.md#optimizar-modelos-y-objetos). |
 | **Autocasilla** | Un terreno de casillas que pone solo sus bordes y esquinas al pintar. Ver [Mapas de casillas](../guia/casillas.md#autocasillas). |
 | **Bloque** | Un cubo de 1 m, hecho de 2 × 2 × 2 cubitos. |
 | **Cable** | La unión entre dos nodos. Los de ejecución marcan el orden y los de datos llevan un valor. Ver [Nodos](../guia/nodos.md#cables-y-tipos). |
@@ -21,6 +22,7 @@
 | **Cubito** | La pieza más pequeña del mundo. Mide 50 cm salvo que el proyecto elija otra [rejilla](../editor/ajustes-proyecto.md#rejilla-y-materiales). |
 | **Curva** | Cómo se va de una clave a la siguiente: suave, lineal, rebotando, de golpe… Ver [Las curvas](../guia/animacion.md#las-curvas). |
 | **Detalle de lejos** | Los trozos lejanos se dibujan con una forma más sencilla (cada casilla junta 2 × 2 × 2 cubitos) para que todo vaya más rápido. Ver [Rendimiento](../guia/rendimiento.md). |
+| **Doctor de rendimiento** | La ventana **Herramientas → Revisar rendimiento**: avisa en claro de lo que hará ir lento el juego y casi todo lo arregla con un botón. Ver [Optimizar tu juego](../guia/optimizar.md). |
 | **Entrada (punto de)** | Un punto con nombre por donde se llega a una escena desde otra. |
 | **Escena** | Un mundo dentro de un proyecto (la isla, una cueva…). Se guarda en `mundos/`. |
 | **Escena inicial** | La escena donde empiezan las partidas nuevas (<i class="fx fx-estrella"></i>). |
@@ -41,6 +43,7 @@
 | **Juego de casillas** | Una imagen con todas las casillas con las que se pinta un mapa 2D. |
 | **Juego publicado** | Una aplicación hecha con **Proyecto › Publicar…** que se abre con doble clic, sin el motor instalado. Ver [Publicar tu juego](../publicar/publicar.md). |
 | **Llano** | Un terreno de hierba completamente plano, sin isla ni mar a la vista. Es el de un proyecto vacío. |
+| **LOD (menos detalle de lejos)** | Versiones más sencillas de un objeto o modelo que se dibujan cuando se ve pequeño. Ver [Optimizar tu juego](../guia/optimizar.md#optimizar-modelos-y-objetos). |
 | **Luz del sol** | El componente que pone la hora del sol, su fuerza y su color. Ver [Luz del sol](../referencia/componentes/sol.md). |
 | **Luz que rebota** | La luz del sol que rebota en el terreno y aclara lo que está a la sombra; también deja a oscuras las cuevas cerradas. Ver [Gráficos](../guia/graficos.md#luz-y-atmósfera). |
 | **Máquina de estados** | Estados con su animación y flechas con condiciones que eligen la animación sola. Ver [Máquina de estados](../guia/animacion.md#máquina-de-estados). |
@@ -56,6 +59,7 @@
 | **Nine-slice (estirar en nueve partes)** | Forma de estirar una imagen sin deformar sus esquinas. |
 | **Nodo** | Una caja de un grafo que hace una sola cosa. Ver la [Referencia de nodos](../referencia/nodos.md). |
 | **OBJ** | Un formato sencillo de modelos 3D: el `.obj` con la forma y el `.mtl` con los materiales. Ver [Modelos 3D](../guia/modelos-3d.md). |
+| **Objetivo de rendimiento** | A cuántos fps y en qué ordenador debe ir bien el juego. Lo usa el doctor de rendimiento. Ver [Optimizar tu juego](../guia/optimizar.md#el-objetivo-de-rendimiento). |
 | **Objeto** | Cualquier cosa colocada en una escena, con nombre, posición, giro, un modelo opcional, componentes y comportamientos. En versiones antiguas del manual se llamaba *entidad*. Ver [Conceptos básicos](../conceptos/basicos.md). |
 | **Objeto propio** | Un objeto hecho con el creador de objetos, guardado en `objetos/`. |
 | **Oclusión ambiental** | Que los rincones y las juntas reciban menos luz. En los ajustes se llama «Rincones más oscuros». |

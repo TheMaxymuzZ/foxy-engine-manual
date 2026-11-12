@@ -78,7 +78,7 @@ cargo run --release -- --captura hablar.png --juego --hablar --estacion otono --
 | Opción | Qué hace |
 |---|---|
 | `--editor` | Dibuja también los paneles del editor |
-| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto), `ajustes-graficos` (en su página Gráficos) o `plataformas-2d`, `aventura-cenital`, `vacio-2d`, `plataformas-voxel`, `tercera-persona` y `puzle` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) o `modelos` (los modelos 3D de ejemplo junto a una farola de cubitos) |
+| `--pestana <nombre>` | `mundo`, `guion`, `nodos` (el grafo de un enemigo), `nodos-depurar` (el mismo grafo con sus cables encendidos), `objeto`, `pixel`, `imagen`, `texturas`, `interfaz`, `proyecto` (un proyecto con escenas e interfaces), `vacio` (un proyecto vacío recién creado), `materiales`, `archivos`, `importar`, `importado`, `inicio`, `plantillas`, `aprender`, `novedades` (la pantalla de inicio con proyectos de ejemplo), `nuevo` (el asistente de proyecto nuevo), `ajustes` (los ajustes del proyecto), `ajustes-graficos` (en su página Gráficos), `ajustes-rendimiento` (en su página Rendimiento), `doctor` (un proyecto pesado con la ventana **Revisar rendimiento**) o `plataformas-2d`, `aventura-cenital`, `vacio-2d`, `plataformas-voxel`, `tercera-persona` y `puzle` (un proyecto de esa plantilla) o `publicar` (la plantilla Plataformas 2D publicada, con la ventana **Publicar** abierta) o `modelos` (los modelos 3D de ejemplo junto a una farola de cubitos) |
 | `--plantilla <nombre>` | Sin `--editor`: dibuja el mundo de una plantilla (`vacio-3d`, `isla-voxel`, `isla-de-ejemplo` o `plataformas-voxel`) |
 | `--herramienta <nombre>` | `cursor`, `elegir`, `poner`, `quitar`, `pintar`, `extruir` u `objeto`; en 2D, `choques` o `autocasillas` abren ese modo del panel Casillas |
 | `--simetria <ejes>` | Simetría puesta: `x`, `y`, `z` o varios juntos (`xz`) |
@@ -132,6 +132,13 @@ empiezan siempre por los espacios de serie y no cambian los que guardaste.
 
 `--editor`, `--raton`, `--elegir`, `--jugar` y `--menu` solo valen con
 `--captura`.
+
+## El doctor de rendimiento
+
+| Orden | Qué hace |
+|---|---|
+| `foxy-engine --doctor <carpeta>` | Revisa el proyecto de esa carpeta (y su escena de inicio) y escribe los avisos del [doctor de rendimiento](../guia/optimizar.md) |
+| `foxy-engine --doctor <carpeta> --arreglar` | Además, hace los arreglos que se hacen solos y guarda el proyecto y la escena |
 
 ## Medir el motor
 

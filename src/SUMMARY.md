@@ -53,6 +53,7 @@
     - [Efectos y estilos](guia/efectos.md)
 - [Rendimiento](guia/rendimiento.md)
     - [Mundos enormes](guia/mundos-enormes.md)
+    - [Optimizar tu juego](guia/optimizar.md)
 
 # Conceptos
 

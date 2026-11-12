@@ -1,9 +1,9 @@
 # Ajustes del proyecto
 
 La ventana **Ajustes del proyecto** reúne lo que es común a todo el juego.
-Se abre con **Proyecto → Ajustes del proyecto…** y tiene seis páginas:
+Se abre con **Proyecto → Ajustes del proyecto…** y tiene siete páginas:
 **General**, **Rejilla y materiales**, **Módulos**, **Acciones de
-entrada**, **Gráficos** y **Físicas**.
+entrada**, **Gráficos**, **Físicas** y **Rendimiento**.
 
 ![La ventana Ajustes del proyecto sobre el editor](../imagenes/capturas/ajustes-proyecto.png)
 
@@ -79,6 +79,14 @@ Enciende las **físicas precisas** (vienen apagadas) y ajusta la gravedad,
 los pasos por segundo, la precisión, el modo determinista y los nombres de
 las capas de choque. Ver [Físicas precisas](../guia/fisicas.md).
 
+## Rendimiento
+
+El **objetivo de rendimiento** del juego (a cuántos fps y en qué ordenador
+debe ir bien), si se avisa en la barra de abajo cuando lo que se ve se
+pasa, y los interruptores de **Optimizar**: menos detalle de lejos,
+comprimir texturas y juntar materiales (vienen apagados). También
+**Publicar la versión optimizada**. Ver [Optimizar tu juego](../guia/optimizar.md).
+
 ## Véase también
 
 - [Archivos del proyecto: proyecto.ron](../referencia/archivos.md#proyecto)
@@ -86,4 +94,5 @@ las capas de choque. Ver [Físicas precisas](../guia/fisicas.md).
 - [Escenas](../guia/escenas.md)
 - [Gráficos: luz, sombras y atmósfera](../guia/graficos.md)
 - [Mundos enormes](../guia/mundos-enormes.md)
+- [Optimizar tu juego](../guia/optimizar.md)
 - [Pixel art](../guia/pixel-art.md)

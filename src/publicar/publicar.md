@@ -49,7 +49,8 @@ del título.
 | | **Empezar a pantalla completa** | El jugador lo puede cambiar en **Opciones › Gráficos** |
 | **Sistema** | **Mac**, **Windows**, **Linux** | Para qué sistema se hace. Para otro que no es el tuyo, pide el Foxy Engine de ese sistema ([Mac, Windows y Linux](sistemas.md)) |
 | **Contenido** | | Cuántos archivos van en el juego y cuáles se quedan fuera (**ver**) |
-| | **Incluir todas las imágenes y sonidos** | Mete también los que nada nombra |
+| | **Incluir todas las imágenes, sonidos y modelos** | Mete también los que nada nombra |
+| | **Versión optimizada** | Las texturas de los modelos ya a su tamaño y lo que ya viene comprimido guardado tal cual: pesa menos y carga antes. Ver [Optimizar tu juego](../guia/optimizar.md#al-publicar) |
 | **Destino** | **Elegir…** | La carpeta donde se deja el juego. Por defecto, `Documentos/Foxy Engine/Juegos publicados` |
 | | **Hacer también un .zip** | Además de la aplicación, un `.zip` listo para compartir |
 
@@ -62,12 +63,12 @@ proyecto no se puede abrir ni cambiar desde el juego publicado.
 | Va en el juego | Se queda fuera |
 |---|---|
 | `proyecto.ron`, escenas, objetos, prefabricados, guiones, nodos, interfaces, animaciones, cinemáticas, materiales y acciones | Lo del editor: `.foxy` (miniatura, espacio de trabajo, copias), papelera, paletas y `.luarc.json` |
-| Las imágenes y los sonidos que algún archivo del juego nombra, más el icono y la pantalla de carga | Las partidas guardadas al probar (`partidas/`) |
-| | Las imágenes y los sonidos que nada nombra |
+| Las imágenes, los sonidos y los modelos 3D que algún archivo del juego nombra (los modelos, con sus texturas), más el icono y la pantalla de carga | Las partidas guardadas al probar (`partidas/`) |
+| | Las imágenes, los sonidos y los modelos 3D que nada nombra |
 
 > <i class="fx fx-aviso"></i> **Importante.** Si un guion forma el nombre
 > de una imagen o un sonido por partes (por ejemplo `"moneda_" .. n`), el
-> motor no ve que se usa. Marca **Incluir todas las imágenes y sonidos** o
+> motor no ve que se usa. Marca **Incluir todas las imágenes, sonidos y modelos** o
 > pulsa **ver** en **Contenido** para comprobar qué se queda fuera.
 
 ## El menú de opciones del juego
