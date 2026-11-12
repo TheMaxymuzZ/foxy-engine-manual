@@ -115,6 +115,8 @@ Valen para cualquier captura, con o sin `--editor`. Ver
 | `--atmosfera <piezas>` | `realista`, `nada` o una lista separada por comas con `luz`, `oclusion`, `agua`, `cielo`, `destello`, `desenfoque`, `color` y `temporal` |
 | `--ambiente <nombre>` | `ninguno`, `realista`, `dibujo`, `neon`, `acuarela` o `pixel` |
 | `--estilo <piezas>` | `nada` o una lista separada por comas con `contorno`, `bandas`, `acuarela`, `pixel`, `paleta`, `lluvia`, `mojado` y `neon` |
+| `--mundo-enorme` | Enciende todo lo de [Mundos enormes](../guia/mundos-enormes.md) |
+| `--mundo-piezas <piezas>` | `todo`, `nada` o una lista separada por comas con `zonas`, `ocultos`, `objetos` y `coordenadas` |
 
 Los paneles son `vista`, `proyecto`, `escena`, `inspector`, `codigo`,
 `nodos`, `archivos`, `materiales`, `pixel` y `registro`. Las capturas
@@ -138,7 +140,7 @@ lento ni cambia la imagen sin querer. Las usa GitHub Actions en cada cambio.
 
 ### Escenas de prueba enormes
 
-El motor fabrica solo cinco escenas para medirse al límite. Salen siempre
+El motor fabrica solo siete escenas para medirse al límite. Salen siempre
 iguales:
 
 | Nombre | Qué tiene |
@@ -148,6 +150,8 @@ iguales:
 | `muchas-luces` | 400 farolas encendidas de noche |
 | `cueva-con-antorchas` | Una sala de piedra con columnas y seis antorchas que hacen sombra |
 | `rayos-de-sol` | Una sala con tres agujeros en el techo, sol de mañana y niebla: salen rayos de luz |
+| `cueva-con-efectos` | La sala de los rayos de sol con una hoguera, ascuas, una cascada y destellos |
+| `mundo-de-kilometros` | Colinas de 4 × 4 km con 4.096 árboles y rocas. Se mide y se captura con todo lo de [Mundos enormes](../guia/mundos-enormes.md) encendido |
 
 Para verlas: `--captura x.png --enorme <nombre>`. Para verlas en el editor y
 jugando, con el perfilador:

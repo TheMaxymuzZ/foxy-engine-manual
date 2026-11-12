@@ -56,9 +56,4 @@ el muelle, en primera persona:
 Es un proyecto como cualquier otro: cambia lo que quieras o
 [publícalo](../publicar/publicar.md) para jugarlo fuera del editor.
 
-> <i class="fx fx-consejo"></i> **Si ves líneas de puntos blancos** en las
-> laderas lejanas, quita **Detalle de lejos** en las
-> [Preferencias](../guia/preferencias.md). Con cubitos de 25 cm, lo de lejos
-> todavía deja alguna rendija; se arreglará en una fase próxima.
-
 ![El muelle de noche](../imagenes/capturas/demo-tecnica-noche.png)

@@ -51,6 +51,7 @@
 - [Gráficos: luz, sombras y atmósfera](guia/graficos.md)
     - [Efectos y estilos](guia/efectos.md)
 - [Rendimiento](guia/rendimiento.md)
+    - [Mundos enormes](guia/mundos-enormes.md)
 
 # Conceptos
 

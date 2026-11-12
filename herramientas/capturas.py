@@ -180,7 +180,10 @@ LISTA: dict[str, str] = {
     "isla": f"{JUEGO} {ISLA}",
     # Gráficos (Fase I)
     "ajustes-graficos": f"{ED} --pestana ajustes-graficos",
-    "panel-ajustes-graficos": "@recorte ajustes-graficos 476,104,964,758",
+    "panel-ajustes-graficos": "@recorte ajustes-graficos 476,80,964,782",
+    # La página Gráficos sin desplazar (más alta), para ver «Mundo enorme».
+    "ajustes-graficos-alto": f"--ancho {ANCHO} --alto 1300 --editor --pestana ajustes-graficos",
+    "ajustes-mundo-enorme": "@recorte ajustes-graficos-alto 478,1000,962,1150",
     "juego-opciones-graficos": f"{JUEGO} --juego --menu opciones-graficos",
     "cueva-antorchas": f"{JUEGO} --enorme cueva-con-antorchas",
     "modelos-pbr": f"{ED} --pestana modelos --camara 49.6,6.6,50.6 --mirar 47.8,5.2,46 --hora 21 --recortar vista",
@@ -194,6 +197,7 @@ LISTA: dict[str, str] = {
     "isla-realista": f"--ancho 720 --alto 430 {ISLA} --hora 17.2 --atmosfera realista",
     # Efectos, partículas y estilos (Fase K)
     "cueva-efectos": f"{JUEGO} --enorme cueva-con-efectos",
+    "mundo-de-kilometros": f"{JUEGO} --enorme mundo-de-kilometros --mundo-enorme",
     "ambiente-dibujo": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente dibujo",
     "ambiente-neon": f"--ancho 720 --alto 430 {PLAZA} --camara 118,26,142 --mirar 96,17,118 --hora 22 --ambiente neon",
     "ambiente-acuarela": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente acuarela",

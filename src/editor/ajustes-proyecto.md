@@ -68,6 +68,7 @@ Cómo se ve el juego. Los cambios se ven al momento en la escena.
 | **Calidad del juego** | La calidad con la que empieza el juego. Cada jugador la cambia en **Opciones → Gráficos** |
 | **Luz y atmósfera** | Luz que rebota, rincones más oscuros, agua de verdad, cielo físico, destello, desenfoque, suavizado temporal, escala del dibujo y color. **Realista** las enciende todas y **Apagar todo** las quita |
 | **Piezas del dibujo** | Apaga sombras, luces, cielo, niebla, agua o transparentes |
+| **Mundo enorme** | Carga por zonas, no dibujar lo tapado, objetos de lejos y coordenadas grandes, para mundos de kilómetros. Vienen apagados; **Encender todo** los pone todos. Ver [Mundos enormes](../guia/mundos-enormes.md) |
 
 **Volver a como venía** deja la página como al principio. Todo se explica en
 [Gráficos: luz, sombras y atmósfera](../guia/graficos.md).
@@ -78,4 +79,5 @@ Cómo se ve el juego. Los cambios se ven al momento en la escena.
 - [Módulos](../referencia/modulos/index.md)
 - [Escenas](../guia/escenas.md)
 - [Gráficos: luz, sombras y atmósfera](../guia/graficos.md)
+- [Mundos enormes](../guia/mundos-enormes.md)
 - [Pixel art](../guia/pixel-art.md)
