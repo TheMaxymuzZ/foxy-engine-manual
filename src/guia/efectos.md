@@ -36,6 +36,19 @@ todo en **Proyecto → Ajustes del proyecto → Gráficos**. Ninguno viene puest
 Un ambiente solo cambia los ajustes: después puedes tocarlos uno a uno. Si
 los cambias, pone **Ajustado a mano** y ningún botón queda marcado.
 
+### Cambiar de ambiente mientras se juega
+
+Un guion puede poner otro ambiente en mitad de la partida, por ejemplo al
+entrar en un sueño o al pulsar una tecla:
+
+```lua
+motor.ambiente("acuarela")   -- dibujo, neon, acuarela, pixel, realista o ninguno
+motor.ambiente("proyecto")   -- vuelve al de los ajustes del proyecto
+```
+
+Con nodos es **Poner un ambiente**. La demostración [La cueva](../demos/cueva.md)
+lo usa en las teclas del 1 al 6 (ver la [Galería de estilos](../demos/estilos.md)).
+
 ## Las piezas del estilo
 
 En la sección **Estilo**, debajo de **Luz y atmósfera**. Se pueden mezclar
@@ -108,3 +121,4 @@ Las capturas aceptan `--ambiente` y `--estilo`. Ver
 - [Partículas](../referencia/componentes/particulas.md)
 - [En la mano](../referencia/componentes/mano.md)
 - [Efectos de material](efectos-de-material.md)
+- [Galería de estilos](../demos/estilos.md): la misma cueva en todos los ambientes

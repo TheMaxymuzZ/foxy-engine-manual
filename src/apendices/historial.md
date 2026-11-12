@@ -5,6 +5,24 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase P: Demostraciones y manual
+
+- **[La cueva](../demos/cueva.md)**: la imagen de referencia del motor
+  hecha con el motor, con un recorrido al empezar, una antorcha en la mano
+  y seis estilos en las teclas del 1 al 6. Y cómo hacerla
+  [paso a paso](../demos/cueva-paso-a-paso.md) desde un proyecto vacío.
+- **[Valle enorme con físicas](../demos/valle-enorme.md)**: dos kilómetros de
+  colinas con el laboratorio de físicas en el centro.
+- **[Juego de píxeles](../demos/juego-de-pixeles.md)**: plataformas de pixel
+  art en una cueva oscura con luces.
+- Una [tabla de rendimiento](../demos/rendimiento.md) de las demostraciones.
+- Lua y los nodos cambian el **estilo mientras se juega**
+  (`motor.ambiente("acuarela")`, nodo **Poner un ambiente**).
+- Arreglos: un rectángulo negro que podía crecer con el destello y el
+  suavizado temporal encendidos; un guion que movía al jugador 2D al tocar
+  algo no lo movía; las zonas que abren una interfaz ya cuentan como «La
+  abre» (la interfaz no avisa de que nada la abre).
+
 ## Fase Q: Lo que pidió el templo
 
 - **Reflejos en lo pulido**: el mármol, el oro y los suelos brillantes

@@ -55,6 +55,9 @@ ANCHO, ALTO = 1440, 860
 ED = f"--ancho {ANCHO} --alto {ALTO} --editor"
 JUEGO = f"--ancho {ANCHO} --alto {ALTO}"
 
+# La cueva: «Jugar aquí» desde el mirador, mirando a la cascada.
+CUEVA_MIRADOR = "--camara 41,34,78 --mirar 44.5,20,72.4"
+
 # Un modelo de MagicaVoxel para «Importar modelos» (lo hace ejemplos/hacer-seta.py).
 SETA = RAIZ / "herramientas" / "ejemplos" / "seta.vox"
 
@@ -215,6 +218,20 @@ LISTA: dict[str, str] = {
     # Lo que pidió el templo (Fase Q)
     "paisaje-mar": f"--ancho 720 --alto 430 --camara 120,14,160 --mirar 60,9,230 --hora 17.2 --atmosfera realista --paisaje todo",
     "sembrar": f"{ED} --herramienta sembrar",
+    # Demostraciones (Fase P)
+    "cueva": f"{ED} --pestana cueva --maximizar vista --camara 43,27,74 --mirar 74,20,18",
+    "cueva-recorrido": f"{JUEGO} --editor --pestana cueva --jugar --esperar 6",
+    "cueva-jugando": f"{JUEGO} --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR}",
+    "estilo-cueva-realista": f"--ancho 720 --alto 430 --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR}",
+    "estilo-cueva-dibujo": f"--ancho 720 --alto 430 --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR} --ambiente dibujo",
+    "estilo-cueva-neon": f"--ancho 720 --alto 430 --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR} --ambiente neon",
+    "estilo-cueva-acuarela": f"--ancho 720 --alto 430 --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR} --ambiente acuarela",
+    "estilo-cueva-pixel": f"--ancho 720 --alto 430 --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR} --ambiente pixel",
+    "estilo-cueva-ninguno": f"--ancho 720 --alto 430 --editor --pestana cueva --jugar --esperar 28 {CUEVA_MIRADOR} --ambiente ninguno",
+    "valle-enorme": f"{ED} --pestana valle-enorme --maximizar vista",
+    "valle-enorme-aire": f"{ED} --pestana valle-enorme --maximizar vista --camara 1180,200,1240 --mirar 1024,41,984",
+    "juego-de-pixeles": f"{JUEGO} --editor --pestana juego-de-pixeles --jugar --esperar 3",
+    "juego-de-pixeles-editor": f"{ED} --pestana juego-de-pixeles",
     # Marca
     "marca-splash": f"{JUEGO} --splash",
     "marca-carga-editor": f"{JUEGO} --editor --splash",

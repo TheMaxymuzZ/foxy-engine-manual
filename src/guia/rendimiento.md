@@ -159,3 +159,9 @@ Las [texturas](pixel-art.md) de los bloques llevan copias cada vez más
 pequeñas (se llaman *mipmaps*). De cerca se ven los píxeles del pixel art y
 de lejos los colores se mezclan, así que las caras lejanas **no parpadean**
 al moverse. No hay que hacer nada: el motor las prepara solo.
+
+## Véase también
+
+- [Tabla de rendimiento](../demos/rendimiento.md): cómo van las demostraciones en distintos ordenadores
+- [Optimizar tu juego](optimizar.md)
+- [Mundos enormes](mundos-enormes.md)

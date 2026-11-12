@@ -203,6 +203,7 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.luz_color(entidad: objeto, color: texto)` | — | Cambia el color de la luz del objeto mientras se juega ("#rrggbb"). |
 | `motor.luz_fuerza(entidad: objeto, fuerza: número)` | — | Cambia cuánto alumbra la luz del objeto: 0 la apaga, 4 es lo máximo. |
 | `motor.luz_alcance(entidad: objeto, alcance: número)` | — | Cambia hasta dónde llega la luz del objeto, en metros. |
+| `motor.ambiente(nombre: texto)` | — | Cambia el aspecto del juego mientras se juega: realista, dibujo, neon, acuarela, pixel o ninguno. «proyecto» vuelve al de los ajustes del proyecto. |
 
 ## Otros
 

@@ -131,3 +131,8 @@ foxy-engine --doctor "Documentos/Foxy Engine/proyectos/Mi juego" --arreglar
 La primera escribe los avisos de la escena de inicio; la segunda, además,
 hace los arreglos que se hacen solos y guarda el proyecto. Ver
 [Línea de comandos](../referencia/linea-de-comandos.md).
+
+## Véase también
+
+- [Rendimiento](rendimiento.md)
+- [Tabla de rendimiento](../demos/rendimiento.md): las demostraciones, medidas
