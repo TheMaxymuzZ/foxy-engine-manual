@@ -5,7 +5,7 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
-## 0.0.1-PR46: Mundos enormes
+## Fase L: Mundos enormes
 
 - Grupo nuevo **Mundo enorme** en **Ajustes del proyecto → Gráficos**, para
   mundos de kilómetros: **carga por zonas** sin tirones (en todos los
