@@ -205,6 +205,13 @@ LISTA: dict[str, str] = {
     "ambiente-ninguno": f"--ancho 720 --alto 430 {ISLA} --hora 15",
     "efecto-material": f"{ED} --pestana efecto",
     "panel-efecto": "@recorte efecto-material 270,170,1170,690",
+    # Modo profesional (Fase O)
+    "manipulador-mover": f"{ED} {PLAZA} --elegir 2 --camara 100,25,138 --mirar 87,18,119 --herramienta mover --esquema blender",
+    "manipulador-girar": f"{ED} {PLAZA} --elegir 2 --camara 100,25,138 --mirar 87,18,119 --herramienta girar",
+    "manipulador-escalar": f"{ED} {PLAZA} --elegir 2 --camara 100,25,138 --mirar 87,18,119 --herramienta escalar --local",
+    "preferencias-esquema": f"{ED} --pestana preferencias --esquema blender",
+    "paneles-propios": f"{ED} --pestana herramientas --flotante propios",
+    "ajustes-extensiones": f"{ED} --pestana ajustes-extensiones",
     # Marca
     "marca-splash": f"{JUEGO} --splash",
     "marca-carga-editor": f"{JUEGO} --editor --splash",

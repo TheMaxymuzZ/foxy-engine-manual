@@ -3,7 +3,7 @@
 La ventana **Ajustes del proyecto** reúne lo que es común a todo el juego.
 Se abre con **Proyecto → Ajustes del proyecto…** y tiene siete páginas:
 **General**, **Rejilla y materiales**, **Módulos**, **Acciones de
-entrada**, **Gráficos**, **Físicas** y **Rendimiento**.
+entrada**, **Gráficos**, **Físicas**, **Rendimiento** y **Extensiones**.
 
 ![La ventana Ajustes del proyecto sobre el editor](../imagenes/capturas/ajustes-proyecto.png)
 
@@ -86,6 +86,12 @@ debe ir bien), si se avisa en la barra de abajo cuando lo que se ve se
 pasa, y los interruptores de **Optimizar**: menos detalle de lejos,
 comprimir texturas y juntar materiales (vienen apagados). También
 **Publicar la versión optimizada**. Ver [Optimizar tu juego](../guia/optimizar.md).
+
+## Extensiones
+
+Permitir las **extensiones en Rust** del proyecto (vienen apagadas), ver
+las que hay y sus funciones, crear una nueva y compilarlas. Ver
+[Extensiones en Rust](../guia/extensiones-rust.md).
 
 ## Véase también
 

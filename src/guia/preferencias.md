@@ -7,6 +7,9 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
 
 ## General
 
+- **Esquema de atajos y cámara**: *Foxy*, *Como Blender* o *Como Unity*.
+  Cambia las teclas y cómo se mueve la cámara con el ratón. Ver
+  [Si vienes de Blender o de Unity](blender-unity.md).
 - **Modo**: *Sencillo* (solo lo necesario para empezar) o *Avanzado* (todos
   los paneles). Ver [Modo Sencillo y tutorial guiado](../empezar/modo-sencillo.md).
 - **Enseñar el tutorial guiado al abrir un proyecto**: márcalo para volver a
@@ -47,14 +50,16 @@ el menú *Opciones* del juego.
 
 ## Teclas
 
-Cada acción tiene una o dos teclas, y las puedes cambiar:
+Arriba se elige el **esquema** (Foxy, Como Blender o Como Unity), que pone
+todas las teclas de una vez. Después, cada acción tiene una o dos teclas, y
+las puedes cambiar:
 
 1. Haz clic en la tecla que quieres cambiar (o en el **+** de al lado para
    añadir una segunda).
 2. Pulsa la tecla nueva. <kbd>Esc</kbd> cancela.
 
 - **Clic derecho** en una tecla la quita.
-- **↺** vuelve a la tecla de siempre.
+- **↺** vuelve a la tecla del esquema.
 - Si una tecla ya la usa otra acción que se usa a la vez, sale un aviso
   <i class="fx fx-aviso"></i>.
 

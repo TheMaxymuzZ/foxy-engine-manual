@@ -5,6 +5,27 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase O: Modo profesional
+
+- **Esquemas de atajos y cámara** *Como Blender* y *Como Unity* (además
+  del de Foxy), en Preferencias: <kbd>G</kbd>/<kbd>R</kbd>/<kbd>S</kbd> o
+  <kbd>W</kbd>/<kbd>E</kbd>/<kbd>R</kbd>, girar alrededor con la rueda
+  apretada o <kbd>Alt</kbd>, trackpad, vistas y vista ortográfica. Ver
+  [Si vienes de Blender o de Unity](../guia/blender-unity.md).
+- **Manipuladores** para mover, girar y escalar con flechas, anillos y
+  cubitos, con ejes del mundo o del objeto, y el modo de Blender
+  (<kbd>G</kbd> <kbd>Z</kbd> <kbd>2</kbd> <kbd>Intro</kbd>).
+- **Lua más rápido**: llamar a los guiones de 2000 objetos en cada
+  fotograma pasa de 8,6 a 3,1 ms y las cuentas largas van unas 4 veces más
+  rápido. Los bucles sin fin se siguen parando.
+- **Paneles y herramientas propias**: guiones Lua en `herramientas/` que
+  añaden paneles y órdenes al editor. Ver
+  [Paneles y herramientas propias](../guia/herramientas-propias.md).
+- **Extensiones en Rust** para lo que tiene que ir muy deprisa (vienen
+  apagadas). Ver [Extensiones en Rust](../guia/extensiones-rust.md).
+- La [Referencia de la API de Lua](../referencia/api-lua.md) incluye las
+  extensiones y la API de las herramientas.
+
 ## Demo técnica: el templo del zorro
 
 - La plantilla [Demo técnica](../tu-primer-juego/demo-tecnica.md) es

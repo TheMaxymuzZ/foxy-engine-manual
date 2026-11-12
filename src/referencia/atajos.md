@@ -16,7 +16,9 @@ En Mac se usa <kbd>Cmd</kbd>; en Windows y Linux, <kbd>Ctrl</kbd>.
 
 Las teclas de moverse, de las herramientas y de jugar se pueden cambiar en
 [Preferencias → Teclas](../guia/preferencias.md#teclas). Las de esta página
-son las que vienen.
+son las del esquema **Foxy**, el que viene. Con los esquemas **Como
+Blender** y **Como Unity** cambian las del mundo: ver
+[Si vienes de Blender o de Unity](../guia/blender-unity.md).
 
 **Ayuda → <i class="fx fx-teclado"></i> Teclas y ratón…** enseña dentro del
 editor las teclas principales.
@@ -44,6 +46,20 @@ editor las teclas principales.
 | <kbd>Supr</kbd> o <kbd>Retroceso</kbd> | Borrar el objeto elegido |
 | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>D</kbd> | Duplicar el objeto elegido |
 | <kbd>Esc</kbd> | Dejar de elegirlo |
+
+## Mundo: manipuladores
+
+| Tecla | Foxy | Como Blender | Como Unity |
+|---|---|---|---|
+| Mover (flechas) | <kbd>1</kbd> | <kbd>G</kbd> | <kbd>W</kbd> |
+| Girar (anillos) | <kbd>2</kbd> | <kbd>R</kbd> | <kbd>E</kbd> |
+| Escalar (cubitos) | <kbd>3</kbd> | <kbd>S</kbd> | <kbd>R</kbd> |
+| Ejes del objeto o del mundo | <kbd>L</kbd> | Eje dos veces (<kbd>G</kbd> <kbd>X</kbd> <kbd>X</kbd>) | <kbd>X</kbd> |
+| Herramienta Mano (desplazar la vista) | <kbd>H</kbd> | (no) | <kbd>Q</kbd> |
+| Vista de frente / de lado / desde arriba | (no) | <kbd>1</kbd> / <kbd>3</kbd> / <kbd>7</kbd> | (no) |
+| Perspectiva u ortográfica | (no) | <kbd>5</kbd> | (no) |
+
+Mientras arrastras un manipulador, <kbd>Ctrl</kbd> invierte el imán.
 
 ## Mundo: cámara
 
