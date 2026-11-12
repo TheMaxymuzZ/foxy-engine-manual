@@ -1,9 +1,9 @@
 # Ajustes del proyecto
 
 La ventana **Ajustes del proyecto** reúne lo que es común a todo el juego.
-Se abre con **Proyecto → Ajustes del proyecto…** y tiene cinco páginas:
+Se abre con **Proyecto → Ajustes del proyecto…** y tiene seis páginas:
 **General**, **Rejilla y materiales**, **Módulos**, **Acciones de
-entrada** y **Gráficos**.
+entrada**, **Gráficos** y **Físicas**.
 
 ![La ventana Ajustes del proyecto sobre el editor](../imagenes/capturas/ajustes-proyecto.png)
 
@@ -72,6 +72,12 @@ Cómo se ve el juego. Los cambios se ven al momento en la escena.
 
 **Volver a como venía** deja la página como al principio. Todo se explica en
 [Gráficos: luz, sombras y atmósfera](../guia/graficos.md).
+
+## Físicas
+
+Enciende las **físicas precisas** (vienen apagadas) y ajusta la gravedad,
+los pasos por segundo, la precisión, el modo determinista y los nombres de
+las capas de choque. Ver [Físicas precisas](../guia/fisicas.md).
 
 ## Véase también
 

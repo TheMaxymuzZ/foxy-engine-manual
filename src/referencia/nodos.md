@@ -328,6 +328,32 @@ Cuando el reloj llega a esa hora en punto.
 
 En Lua: `function al_cambiar_hora() ... end`
 
+### Al romperse {#evento-al_romperse}
+
+*Evento* · `evento.al_romperse`
+
+Cuando un objeto rompible se rompe en pedazos (por un golpe o con «Romper»). Vacío = este objeto (o cualquiera en el grafo del juego). Necesita las físicas precisas.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
+| Salida | lo roto | objeto | — |
+
+En Lua: `function al_romperse(entidad) ... end`
+
+### Al soltarse una articulación {#evento-al_soltarse}
+
+*Evento* · `evento.al_soltarse`
+
+Cuando una articulación del objeto se rompe por la fuerza o se suelta con «Soltar las articulaciones». Necesita las físicas precisas.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto (se escribe en el nodo) |
+| Salida | objeto | objeto | — |
+
+En Lua: `function al_soltarse(entidad) ... end`
+
 ## Flujo
 
 ### Si {#control-si}
@@ -1869,6 +1895,182 @@ En Lua: `motor.cinematica(nombre)`
 Termina la cinemática que se esté viendo y devuelve la cámara al jugador.
 
 En Lua: `motor.terminar_cinematica()`
+
+## Física
+
+### Empujar un cuerpo {#motor-empujar}
+
+*Acción* · `motor.empujar`
+
+Da un empujón a un cuerpo físico: le suma esa velocidad (metros por segundo) de golpe. Pesado o ligero, sale igual de rápido.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | cambio de velocidad | vector | (0, 0, 0) |
+
+En Lua: `motor.empujar(entidad, fuerza)`
+
+### Velocidad de un cuerpo {#motor-velocidad}
+
+*Valor* · `motor.velocidad`
+
+Hacia dónde y cuánto se mueve un cuerpo físico, en metros por segundo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | velocidad | vector | — |
+
+En Lua: `local v = motor.velocidad(entidad)`
+
+### Poner la velocidad {#motor-poner_velocidad}
+
+*Acción* · `motor.poner_velocidad`
+
+Cambia de golpe la velocidad de un cuerpo físico (en metros por segundo).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | velocidad | vector | (0, 0, 0) |
+
+En Lua: `motor.poner_velocidad(entidad, v)`
+
+### Hacer girar un cuerpo {#motor-girar_cuerpo}
+
+*Acción* · `motor.girar_cuerpo`
+
+Pone a girar un cuerpo físico alrededor de cada eje (en vueltas por segundo).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | vueltas por segundo | vector | (0, 0, 0) |
+
+En Lua: `motor.girar_cuerpo(entidad, giro)`
+
+### Cambiar el tipo de cuerpo {#motor-tipo_cuerpo}
+
+*Acción* · `motor.tipo_cuerpo`
+
+Dinámico: cae y choca. Cinemático: lo mueven los guiones y las animaciones y empuja a los demás. Fijo: no se mueve nunca.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | tipo | texto | «dinamico» |
+
+En Lua: `motor.tipo_cuerpo(entidad, tipo)`
+
+### Masa de un cuerpo {#motor-masa}
+
+*Valor* · `motor.masa`
+
+Cuánto pesa un cuerpo físico, en kilos.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | kilos | número | — |
+
+En Lua: `local masa = motor.masa(entidad)`
+
+### ¿Está quieto? {#motor-dormido}
+
+*Valor* · `motor.dormido`
+
+Sí cuando el cuerpo lleva un rato sin moverse y la física lo ha dejado dormir.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | quieto | sí/no | — |
+
+En Lua: `local quieto = motor.dormido(entidad)`
+
+### Lanzar un rayo {#motor-rayo}
+
+*Valor* · `motor.rayo`
+
+Una línea invisible desde un punto hacia una dirección: el primer cuerpo físico que toca, a qué distancia y en qué punto (nada si no toca ninguno).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | desde | vector | (0, 0, 0) |
+| Entrada | dirección | vector | (0, 0, 0) |
+| Entrada | alcance | número | 50 |
+| Salida | objeto tocado | objeto | — |
+| Salida | distancia | número | — |
+| Salida | punto | vector | — |
+
+En Lua: `local entidad, distancia, punto = motor.rayo(desde, hacia, alcance)`
+
+### Mover una articulación {#motor-motor_union}
+
+*Acción* · `motor.motor_union`
+
+Enciende el motor de las articulaciones del objeto: en las bisagras, grados por segundo; en las deslizaderas, metros por segundo. Velocidad 0 = frena.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | velocidad | número | 90 |
+| Entrada | fuerza | número | 100 |
+
+En Lua: `motor.motor_union(entidad, velocidad, fuerza)`
+
+### Soltar las articulaciones {#motor-soltar_union}
+
+*Acción* · `motor.soltar_union`
+
+Rompe todas las articulaciones del objeto: se suelta y cae.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.soltar_union(entidad)`
+
+### Romper un objeto {#motor-romper}
+
+*Acción* · `motor.romper`
+
+Rompe en pedazos un objeto con cuerpo físico, como si le hubieran dado un golpe enorme.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.romper(entidad)`
+
+### Conducir un vehículo {#motor-conducir}
+
+*Acción* · `motor.conducir`
+
+Mueve un vehículo que conduce un guion: acelerar 1 = adelante, -1 = atrás; girar 1 = a la derecha. Se queda así hasta que se cambie.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | vehículo | objeto | este objeto |
+| Entrada | acelerar (-1 a 1) | número | 1 |
+| Entrada | girar (-1 a 1) | número | 0 |
+| Entrada | frenar | sí/no | no |
+
+En Lua: `motor.conducir(entidad, acelerar, girar, frenar)`
+
+### Velocidad del vehículo {#motor-velocidad_vehiculo}
+
+*Valor* · `motor.velocidad_vehiculo`
+
+Lo rápido que va un vehículo, en kilómetros por hora.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | vehículo | objeto | este objeto |
+| Salida | km/h | número | — |
+
+En Lua: `local v = motor.velocidad_vehiculo(entidad)`
 
 ## 2D
 

@@ -25,6 +25,8 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Luz del sol](sol.md) | `Sol` | La luz de la escena: la hora del sol, su fuerza y su color. |
 | [Niebla](niebla.md) | `Niebla` | Niebla en toda la escena: donde entra el sol salen rayos de luz, y las luces hacen halo. |
 | [En la mano](mano.md) | `Mano` | Se lleva en la mano en primera persona: va delante de la cámara y nunca atraviesa las paredes. |
+| [Articulaciones](articulaciones.md) | `Articulaciones` | Lo une con otros objetos: bisagras, rótulas, muelles, cuerdas… (con las físicas precisas). |
+| [Vehículo](vehiculo.md) | `Vehiculo` | Un coche con ruedas que se conduce con las teclas de andar (con las físicas precisas). |
 
 <!-- fin -->
 
