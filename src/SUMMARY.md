@@ -20,6 +20,7 @@
 - [Tercera persona](tu-primer-juego/tercera-persona.md)
 - [Puzle](tu-primer-juego/puzle.md)
 - [Mundo de cubitos](tu-primer-juego/mundo-de-cubitos.md)
+- [Demo técnica](tu-primer-juego/demo-tecnica.md)
 
 # Manual del editor
 

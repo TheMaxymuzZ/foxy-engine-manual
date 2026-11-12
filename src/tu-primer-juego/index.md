@@ -24,6 +24,7 @@ No hace falta escribir código en ninguna. Todas se pueden seguir en el
 | Un juego 3D con el personaje visto por detrás | Aventura en tercera persona | [Tercera persona](tercera-persona.md) |
 | Un juego de pensar | Puzle de botones | [Puzle](puzle.md) |
 | Un mundo para construir y romper | Isla vóxel o Isla de ejemplo | [Mundo de cubitos](mundo-de-cubitos.md) |
+| Ver de qué es capaz el motor con un aspecto realista | Demo técnica | [Demo técnica](demo-tecnica.md) |
 
 > <i class="fx fx-consejo"></i> **Consejo.** Si algo se rompe mientras
 > pruebas, <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> deshace el último

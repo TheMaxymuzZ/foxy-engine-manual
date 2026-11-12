@@ -25,6 +25,7 @@ Cada plantilla es un proyecto completo con el que empezar. Las animaciones
 están hechas con el propio motor.
 
 <div class="escaparate">
+  <figure><img src="imagenes/escaparate/demo-tecnica.webp" alt="Un templo de mármol en una isla, en un lago entre pinos" loading="lazy"><figcaption><strong>Demo técnica</strong>Un valle realista al atardecer: luz física, fuego que hace sombra, mármol, oro y agua.</figcaption></figure>
   <figure><img src="imagenes/escaparate/isla-voxel.webp" alt="Una isla de cubitos con árboles y playa, vista dando una vuelta" loading="lazy"><figcaption><strong>Isla vóxel</strong>Una isla generada con colinas, playa y árboles, lista para construir encima.</figcaption></figure>
   <figure><img src="imagenes/escaparate/isla-de-ejemplo.webp" alt="Un pueblo de cubitos con casas, mercado y vecinos" loading="lazy"><figcaption><strong>Isla de ejemplo</strong>Un pueblo con mercado, vecinos que hablan, día y noche, clima y estaciones.</figcaption></figure>
   <figure><img src="imagenes/escaparate/personaje-animado.webp" alt="La cinemática de presentación de un personaje animado" loading="lazy"><figcaption><strong>Personaje animado</strong>Un personaje por piezas que anda, corre y salta, una puerta animada y una cinemática.</figcaption></figure>
