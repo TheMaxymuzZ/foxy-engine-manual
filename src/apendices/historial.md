@@ -5,6 +5,22 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase N: Herramientas para optimizar
+
+- **Objetivo de rendimiento** (Ajustes del proyecto, página
+  **Rendimiento**): a cuántos fps y en qué ordenador debe ir el juego. La
+  barra de abajo avisa si lo que se ve se pasa.
+- **Doctor de rendimiento** (**Herramientas → Revisar rendimiento**):
+  revisa el proyecto y la escena y avisa en claro de texturas enormes,
+  demasiadas luces con sombra, demasiados triángulos, modelos con muchos
+  materiales y más, con botón **Arreglar** (se puede deshacer). También
+  `foxy-engine --doctor`.
+- **Optimizar** (vienen apagados): menos detalle de lejos (LOD) hecho
+  solo, texturas comprimidas en la tarjeta y materiales juntos en un atlas.
+- **Publicar la versión optimizada**: los modelos que no se usan fuera, las
+  texturas a su tamaño y carga más rápida.
+- Ver [Optimizar tu juego](../guia/optimizar.md).
+
 ## Fase M: Físicas de precisión
 
 - **Físicas precisas** para cualquier objeto (Ajustes del proyecto, página

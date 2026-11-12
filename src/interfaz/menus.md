@@ -26,7 +26,7 @@ acaba de pasar.
 | **Ver** | La cámara del editor: hora del día, velocidad y el contador de rendimiento |
 | **Ventana** | Abrir cualquier panel, **Maximizar el panel** (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>M</kbd>) y gestionar los espacios: guardar uno nuevo, restablecer o borrar |
 | **Proyecto** | **Ajustes del proyecto…**, **Mapa de escenas…**, **Publicar…**, los archivos del proyecto y mostrar su carpeta |
-| **Herramientas** | Las herramientas de la escena y los paneles Materiales, Pixel art, Nodos, Código y Rendimiento |
+| **Herramientas** | Las herramientas de la escena, los paneles Materiales, Pixel art, Nodos, Código y Rendimiento, y **Revisar rendimiento** (el [doctor de rendimiento](../guia/optimizar.md#el-doctor-de-rendimiento)) |
 | **Ayuda** | Este manual, **Teclas y ratón…**, **Cambiar las teclas…** y la versión del motor |
 
 > <i class="fx fx-consejo"></i> **Consejo.** Cualquier orden de los menús
@@ -43,6 +43,7 @@ La barra de estado ocupa la parte de abajo de la ventana.
 | Izquierda | El último mensaje del editor: lo guardado, lo importado, el último error. Un clic abre el panel [Registro](registro.md) |
 | **⛔ n** | Cuántos errores hay en los guiones y en el editor. Un clic los muestra |
 | Centro | El progreso de las tareas largas, como preparar el mundo |
+| **⚠ 42 fps en un portátil normal** | Sale si lo que se ve pasaría de tu [objetivo de rendimiento](../guia/optimizar.md#el-objetivo-de-rendimiento). Un clic abre el doctor de rendimiento |
 | Derecha | Los fotogramas por segundo (se quitan en Preferencias) y la posición de la cámara |
 
 ## Véase también
