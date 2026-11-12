@@ -5,6 +5,26 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase M: Físicas de precisión
+
+- **Físicas precisas** para cualquier objeto (Ajustes del proyecto, página
+  **Físicas**; vienen apagadas): cuerpos dinámicos, cinemáticos o fijos con
+  masa, rozamiento y rebote; formas de caja, esfera, cápsula, envolvente,
+  malla y cubitos. Ver [Físicas precisas](../guia/fisicas.md).
+- Componentes nuevos [Articulaciones](../referencia/componentes/articulaciones.md)
+  (bisagra, rótula, deslizadera, muelle, cuerda y fija, con límites, motor y
+  rotura) y [Vehículo](../referencia/componentes/vehiculo.md) (se sube con
+  **Usar**).
+- Precisión ajustable: pasos, vueltas por paso, detección continua y
+  **modo determinista**. Ocho **capas de choque** con nombre.
+- Objetos **rompibles** que se parten en pedazos, y golpes que rompen el
+  terreno.
+- **Ver → Formas de física**, nodos de la categoría **Física** y sus
+  funciones de Lua (`motor.empujar`, `motor.rayo`, `motor.conducir`…).
+- Plantilla nueva [Laboratorio de físicas](../tu-primer-juego/laboratorio-fisicas.md):
+  un puente colgante, un coche, una bola de demolición y un muñeco de trapo
+  hechos sin código.
+
 ## Fase L: Mundos enormes
 
 - Grupo nuevo **Mundo enorme** en **Ajustes del proyecto → Gráficos**, para

@@ -21,6 +21,7 @@
 - [Puzle](tu-primer-juego/puzle.md)
 - [Mundo de cubitos](tu-primer-juego/mundo-de-cubitos.md)
 - [Demo técnica](tu-primer-juego/demo-tecnica.md)
+- [Laboratorio de físicas](tu-primer-juego/laboratorio-fisicas.md)
 
 # Manual del editor
 
@@ -79,6 +80,7 @@
     - [Objetos libres y jerarquía](guia/objetos-libres.md)
     - [Modelos 3D (glTF y OBJ)](guia/modelos-3d.md)
     - [Objetos reutilizables](guia/reutilizables.md)
+- [Físicas precisas](guia/fisicas.md)
 - [Comportamientos](guia/comportamientos.md)
     - [Objetos que se hablan](guia/objetos-que-se-hablan.md)
 - [Juegos 2D](guia/juegos-2d.md)
@@ -111,6 +113,8 @@
 - [Componentes](referencia/componentes/index.md)
     - [Colisión](referencia/componentes/colision.md)
     - [Cuerpo físico](referencia/componentes/cuerpo-fisico.md)
+    - [Articulaciones](referencia/componentes/articulaciones.md)
+    - [Vehículo](referencia/componentes/vehiculo.md)
     - [Controlador de jugador](referencia/componentes/controlador.md)
     - [Cámara](referencia/componentes/camara.md)
     - [Luz](referencia/componentes/luz.md)

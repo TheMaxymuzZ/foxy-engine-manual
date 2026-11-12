@@ -23,6 +23,8 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `al_salir_zona(quien)` | Cuando el jugador sale de la zona del objeto (en el guion del mundo: objeto, quien). |
 | `al_entrar_objeto_zona(quien)` | Cuando otro objeto (no el jugador) entra en la zona del objeto (en el guion del mundo: objeto, quien). |
 | `al_salir_objeto_zona(quien)` | Cuando otro objeto (no el jugador) sale de la zona del objeto (en el guion del mundo: objeto, quien). |
+| `al_romperse()` | Cuando el objeto se rompe en pedazos, con las físicas precisas (en el guion del mundo: objeto). |
+| `al_soltarse()` | Cuando se rompe o se suelta una articulación del objeto (en el guion del mundo: objeto). |
 | `al_recibir_dano(cantidad, de)` | Cuando algo le hace daño con motor.danar (en el guion del mundo: objeto, cantidad, de). |
 | `al_recibir(evento, valor, de)` | Un mensaje enviado con motor.emitir, motor.emitir_a o motor.emitir_etiqueta (solo en guiones de objeto). |
 | `al_pulsar(accion)` | Al pulsar una acción del mapa de acciones del proyecto. |
@@ -170,6 +172,24 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.parametro_animacion(entidad: objeto, nombre: texto, valor: número)` | — | Cambia un parámetro de su máquina de estados (sí = 1, no = 0). Los de velocidad, en el suelo y en el agua los pone el motor. |
 | `motor.cinematica(nombre: texto)` | — | Pone una cinemática de cinematicas/: mueve la cámara y los objetos y enseña sus frases. El jugador la salta con Espacio. |
 | `motor.terminar_cinematica()` | — | Termina la cinemática que se esté viendo y devuelve la cámara al jugador. |
+
+## Física
+
+| Función | Devuelve | Qué hace |
+|---|---|---|
+| `motor.empujar(entidad: objeto, fuerza: vector)` | — | Da un empujón a un cuerpo físico: le suma esa velocidad (metros por segundo) de golpe. Pesado o ligero, sale igual de rápido. |
+| `motor.velocidad(entidad: objeto)` | v (vector) | Hacia dónde y cuánto se mueve un cuerpo físico, en metros por segundo. |
+| `motor.poner_velocidad(entidad: objeto, v: vector)` | — | Cambia de golpe la velocidad de un cuerpo físico (en metros por segundo). |
+| `motor.girar_cuerpo(entidad: objeto, giro: vector)` | — | Pone a girar un cuerpo físico alrededor de cada eje (en vueltas por segundo). |
+| `motor.tipo_cuerpo(entidad: objeto, tipo: texto)` | — | Dinámico: cae y choca. Cinemático: lo mueven los guiones y las animaciones y empuja a los demás. Fijo: no se mueve nunca. |
+| `motor.masa(entidad: objeto)` | masa (número) | Cuánto pesa un cuerpo físico, en kilos. |
+| `motor.dormido(entidad: objeto)` | quieto (sí/no) | Sí cuando el cuerpo lleva un rato sin moverse y la física lo ha dejado dormir. |
+| `motor.rayo(desde: vector, hacia: vector, alcance: número)` | entidad (objeto), distancia (número), punto (vector) | Una línea invisible desde un punto hacia una dirección: el primer cuerpo físico que toca, a qué distancia y en qué punto (nada si no toca ninguno). |
+| `motor.motor_union(entidad: objeto, velocidad: número, fuerza: número)` | — | Enciende el motor de las articulaciones del objeto: en las bisagras, grados por segundo; en las deslizaderas, metros por segundo. Velocidad 0 = frena. |
+| `motor.soltar_union(entidad: objeto)` | — | Rompe todas las articulaciones del objeto: se suelta y cae. |
+| `motor.romper(entidad: objeto)` | — | Rompe en pedazos un objeto con cuerpo físico, como si le hubieran dado un golpe enorme. |
+| `motor.conducir(entidad: objeto, acelerar: número, girar: número, frenar: sí/no)` | — | Mueve un vehículo que conduce un guion: acelerar 1 = adelante, -1 = atrás; girar 1 = a la derecha. Se queda así hasta que se cambie. |
+| `motor.velocidad_vehiculo(entidad: objeto)` | v (número) | Lo rápido que va un vehículo, en kilómetros por hora. |
 
 ## 2D
 
