@@ -107,3 +107,4 @@ Las capturas aceptan `--ambiente` y `--estilo`. Ver
 - [Gráficos: luz, sombras y atmósfera](graficos.md)
 - [Partículas](../referencia/componentes/particulas.md)
 - [En la mano](../referencia/componentes/mano.md)
+- [Efectos de material](efectos-de-material.md)

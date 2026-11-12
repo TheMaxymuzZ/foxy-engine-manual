@@ -72,6 +72,7 @@
     - [Crear objetos propios](guia/creador.md)
     - [Importar modelos](guia/importar.md)
     - [Materiales](guia/materiales.md)
+        - [Efectos de material](guia/efectos-de-material.md)
     - [La vida del mundo](guia/vida.md)
 - [Objetos y componentes](guia/entidades.md)
     - [Objetos libres y jerarquía](guia/objetos-libres.md)

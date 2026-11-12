@@ -18,6 +18,10 @@ del motor con el número del último cambio (*pull request*) incorporado.
   **Crear → Efecto**.
 - Componente **En la mano**: lo que llevas en primera persona no atraviesa
   las paredes.
+- **Efectos de material** con nodos (o código WGSL): lava, luz que late,
+  rayas, destellos... Ver [Efectos de material](../guia/efectos-de-material.md).
+- **Cubitos finos**: musgo y raíces de cubitos cuatro veces más pequeños,
+  que no cuestan de lejos.
 
 ## Demo técnica
 

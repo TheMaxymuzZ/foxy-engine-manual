@@ -199,6 +199,8 @@ LISTA: dict[str, str] = {
     "ambiente-acuarela": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente acuarela",
     "ambiente-pixel": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente pixel",
     "ambiente-ninguno": f"--ancho 720 --alto 430 {ISLA} --hora 15",
+    "efecto-material": f"{ED} --pestana efecto",
+    "panel-efecto": "@recorte efecto-material 270,170,1170,690",
     # Marca
     "marca-splash": f"{JUEGO} --splash",
     "marca-carga-editor": f"{JUEGO} --editor --splash",
