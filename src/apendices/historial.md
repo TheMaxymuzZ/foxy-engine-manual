@@ -5,6 +5,19 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase L: Mundos enormes
+
+- Grupo nuevo **Mundo enorme** en **Ajustes del proyecto → Gráficos**, para
+  mundos de kilómetros: **carga por zonas** sin tirones (en todos los
+  núcleos, con menos detalle cuanto más lejos), **no dibujar lo tapado**,
+  **objetos de lejos** que no se ven y **coordenadas grandes** que no
+  tiemblan. Viene apagado. Ver [Mundos enormes](../guia/mundos-enormes.md).
+- **Sin rendijas de lejos**: se acabaron las líneas de puntos blancos en las
+  montañas de la [Demo técnica](../tu-primer-juego/demo-tecnica.md).
+- El terreno ocupa menos memoria (la roca maciza y las columnas iguales se
+  guardan juntas) y los generadores de relieve usan todos los núcleos.
+- Escena de prueba nueva, `mundo-de-kilometros` (4 × 4 km).
+
 ## Fase K: Efectos, partículas y estilos
 
 - **Ambientes** de un clic: Realista, Dibujo animado, Neón nocturno,
