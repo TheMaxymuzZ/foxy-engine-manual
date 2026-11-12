@@ -46,7 +46,7 @@ para cada una.
 | **Mundo de cubitos** | **Isla vóxel** | Una isla generada con colinas, playa, árboles y muelle, sin construcciones | [Mundo de cubitos](../tu-primer-juego/mundo-de-cubitos.md) |
 | | **Isla de ejemplo** | Una isla con pueblo, mercado, vecinos, pelotas y un guion de ejemplo | [Mundo de cubitos](../tu-primer-juego/mundo-de-cubitos.md) |
 | **Más ejemplos** | **Personaje animado** | Un personaje que anda, corre y salta, una puerta que se abre sola y una cinemática | [Animación](../guia/animacion.md) |
-| | **Demo técnica** | Un valle realista al atardecer con lago, templo, fuego que hace sombra, cientos de pinos y una cinemática | [Demo técnica](../tu-primer-juego/demo-tecnica.md) |
+| | **Demo técnica** | El templo del zorro en la cumbre de un monte junto al mar, con una ciudad griega, un puerto y una cinemática | [Demo técnica](../tu-primer-juego/demo-tecnica.md) |
 
 Cada plantilla trae **solo lo que usa**: los objetos, los comportamientos y
 los módulos de su juego. El motor no añade nada más, así que un proyecto

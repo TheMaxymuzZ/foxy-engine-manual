@@ -5,6 +5,18 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Demo técnica: el templo del zorro
+
+- La plantilla [Demo técnica](../tu-primer-juego/demo-tecnica.md) es
+  ahora el templo del zorro: un templo de mármol en la cumbre de un monte
+  junto al mar, con una estatua sentada de oro y marfil, una escalera con
+  antorchas, una ciudad griega con su plaza, su teatro y su puerto, y unos
+  6.000 objetos en un mundo de 2 km.
+- Enseña la luz y la atmósfera (rayos de sol en la niebla, luz que rebota,
+  agua que refleja), las partículas y los efectos, y la carga por zonas
+  para ver hasta el horizonte.
+- Lo que el motor todavía no sabe hacer quedó apuntado en la hoja de ruta.
+
 ## Fase N: Herramientas para optimizar
 
 - **Objetivo de rendimiento** (Ajustes del proyecto, página
