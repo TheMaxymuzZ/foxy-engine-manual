@@ -80,6 +80,12 @@ end
 > [Registro](../interfaz/registro.md), con el archivo y la línea. El motor
 > también corta los bucles que no terminan («el guion tarda demasiado»).
 
+Para lo que tiene que ir muy deprisa (generar mundos, cuentas enormes), un
+programador puede escribir funciones en Rust y llamarlas desde Lua: ver
+[Extensiones en Rust](extensiones-rust.md). Y con Lua también puedes
+añadir tus [paneles y herramientas propias](herramientas-propias.md) al
+editor.
+
 ## Véase también
 
 - [Guion del mundo](guiones.md)

@@ -125,7 +125,10 @@ interfaz, mira [Cómo se abre en el juego](../guia/interfaces.md#cómo-se-abre-e
 ## «El guion tarda demasiado»
 
 Hay un bucle que no termina nunca (un `while true do` sin `break`, por
-ejemplo). El motor lo corta para que el juego no se cuelgue.
+ejemplo), o una cuenta que tarda más de 0,3 segundos de una vez. El motor
+la corta para que el juego no se cuelgue. Si de verdad necesitas una
+cuenta tan larga, pártela en trozos con `esperar()` o llévala a una
+[extensión en Rust](../guia/extensiones-rust.md).
 
 ## Un valor del guion sale vacío en una interfaz
 

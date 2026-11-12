@@ -27,6 +27,10 @@ primero.
   | <i class="fx fx-pintar"></i> | Pintar | <kbd>P</kbd> |
   | <i class="fx fx-colocar"></i> | Colocar objetos | <kbd>O</kbd> |
 
+- Con un objeto elegido, debajo de la tira salen los botones de los
+  **manipuladores** (mover, girar y escalar) y el de **ejes del mundo o
+  del objeto**. Ver
+  [Manipuladores](../guia/blender-unity.md#manipuladores-mover-girar-y-escalar).
 - Arriba a la izquierda, una línea que recuerda qué hace la herramienta.
 - Arriba a la derecha, la **hora** del editor y la **velocidad** de la
   cámara.

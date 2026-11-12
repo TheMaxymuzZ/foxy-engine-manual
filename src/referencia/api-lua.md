@@ -210,3 +210,35 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.emitir(evento, valor, de)` | — | Envía un mensaje a todos: lo reciben los nodos «Al recibir un mensaje» y la función al_recibir de los guiones de entidad. |
 | `motor.emitir_a(entidad, evento, valor, de)` | — | Como motor.emitir, pero solo para los comportamientos de esa entidad. |
 | `motor.emitir_etiqueta(etiqueta, evento, valor, de)` | — | Como motor.emitir, pero solo para las entidades que llevan esa etiqueta. |
+
+## Extensiones en Rust
+
+Si el proyecto las permite (Ajustes del proyecto › Extensiones), cada extensión compilada de `extensiones/` sale en la tabla `extensiones`: `extensiones.<nombre>.<función>(…)`. Reciben y devuelven números, textos, sí/no, vectores y nil. Ver [Extensiones en Rust](../guia/extensiones-rust.md).
+
+## Herramientas del editor
+
+Los guiones de la carpeta `herramientas/` no son del juego: corren en el editor y tienen su propia API. Ver [Paneles y herramientas propias](../guia/herramientas-propias.md).
+
+| Función | Qué hace |
+|---|---|
+| `panel(nombre, function(ui) … end)` | Añade un panel a «Paneles propios». La función dibuja el panel en cada fotograma. |
+| `herramienta(nombre, function() … end, ayuda)` | Añade una orden al menú Herramientas (la ayuda sale al pasar el ratón). |
+| `editor.objetos()` | La lista de objetos de la escena: cada uno con id, nombre, tipo, posicion, giro, escala y etiquetas. |
+| `editor.elegido()` | El objeto elegido, o nil. |
+| `editor.tipos()` | Los tipos de objeto que se pueden crear. |
+| `editor.crear(tipo, x, y, z, nombre)` | Crea un objeto (el nombre es opcional). |
+| `editor.mover(objeto, x, y, z)` | Lleva un objeto a esa posición (también con un vector). |
+| `editor.girar(objeto, x, y, z)` | Cambia el giro, en grados. |
+| `editor.escalar(objeto, cuanto)` | Cambia el tamaño: un número para todo, o x, y, z. |
+| `editor.borrar(objeto)` | Borra un objeto. |
+| `editor.nombrar(objeto, nombre)` | Le cambia el nombre. |
+| `editor.etiquetar(objeto, etiqueta)` | Le pone una etiqueta. |
+| `editor.elegir(objeto)` | Lo elige en el editor (nil para no elegir nada). |
+| `editor.aviso(texto)` | Escribe en la barra de abajo. |
+| `ui.titulo(texto) · ui.texto(texto) · ui.nota(texto) · ui.separador()` | Textos y separadores. |
+| `ui.boton(texto)` | Un botón: devuelve true el fotograma en que se pulsa. |
+| `ui.casilla(texto, valor)` | Una casilla: devuelve el valor nuevo. |
+| `ui.deslizador(texto, valor, min, max)` | Un deslizador: devuelve el valor nuevo. |
+| `ui.numero(texto, valor) · ui.campo(texto, valor)` | Un número o un texto que se escribe: devuelven el valor nuevo. |
+| `ui.lista(texto, opciones, valor)` | Una lista desplegable: devuelve la opción elegida. |
+| `ui.fila(function() … end)` | Pone lo de dentro en una fila. |
