@@ -5,6 +5,14 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Demo técnica
+
+- Plantilla nueva **Demo técnica** (en *Más ejemplos*): un valle de montaña
+  al atardecer con cubitos de 25 cm, un lago, un templo de mármol y oro con
+  un fuego que hace sombra, un muelle con faroles, cientos de pinos y una
+  cinemática. Hecha solo con el motor. Ver
+  [Demo técnica](../tu-primer-juego/demo-tecnica.md).
+
 ## Fase J: Luz y atmósfera
 
 - **Rayos de luz**: con un sol, un agujero en el techo y el componente nuevo
