@@ -26,6 +26,9 @@ No hace falta escribir código en ninguna. Todas se pueden seguir en el
 | Un mundo para construir y romper | Isla vóxel o Isla de ejemplo | [Mundo de cubitos](mundo-de-cubitos.md) |
 | Ver de qué es capaz el motor con un aspecto realista | Demo técnica | [Demo técnica](demo-tecnica.md) |
 | Probar puentes, coches y cosas que se rompen, sin código | Laboratorio de físicas | [Laboratorio de físicas](laboratorio-fisicas.md) |
+| Ver en cinco minutos lo que sabe hacer el motor | La cueva | [La cueva](../demos/cueva.md) |
+| Un mundo de dos kilómetros con físicas | Valle enorme con físicas | [Valle enorme con físicas](../demos/valle-enorme.md) |
+| Un juego de plataformas de pixel art con luces | Juego de píxeles | [Juego de píxeles](../demos/juego-de-pixeles.md) |
 
 > <i class="fx fx-consejo"></i> **Consejo.** Si algo se rompe mientras
 > pruebas, <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd> deshace el último

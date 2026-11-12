@@ -23,6 +23,16 @@
 - [Demo técnica](tu-primer-juego/demo-tecnica.md)
 - [Laboratorio de físicas](tu-primer-juego/laboratorio-fisicas.md)
 
+# Demostraciones
+
+- [Las demostraciones](demos/index.md)
+- [La cueva](demos/cueva.md)
+    - [La cueva paso a paso](demos/cueva-paso-a-paso.md)
+    - [Galería de estilos](demos/estilos.md)
+- [Valle enorme con físicas](demos/valle-enorme.md)
+- [Juego de píxeles](demos/juego-de-pixeles.md)
+- [Tabla de rendimiento](demos/rendimiento.md)
+
 # Manual del editor
 
 - [La interfaz del editor](empezar/editor.md)

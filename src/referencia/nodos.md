@@ -2183,6 +2183,18 @@ Cambia hasta dónde llega la luz del objeto, en metros.
 
 En Lua: `motor.luz_alcance(entidad, alcance)`
 
+### Poner un ambiente {#motor-ambiente}
+
+*Acción* · `motor.ambiente`
+
+Cambia el aspecto del juego mientras se juega: realista, dibujo, neon, acuarela, pixel o ninguno. «proyecto» vuelve al de los ajustes del proyecto.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | ambiente | texto | «acuarela» |
+
+En Lua: `motor.ambiente(nombre)`
+
 ### Soltar partículas {#motor-soltar_particulas}
 
 *Acción* · `motor.soltar_particulas`

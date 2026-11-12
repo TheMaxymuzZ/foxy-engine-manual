@@ -121,3 +121,4 @@ los paneles, incluidos los [paneles propios](herramientas-propias.md). Ver
 - [Preferencias y teclas](preferencias.md)
 - [Atajos de teclado](../referencia/atajos.md)
 - [Objetos libres y jerarquía](objetos-libres.md)
+- [Demostraciones](../demos/index.md): proyectos de ejemplo grandes para practicar la navegación

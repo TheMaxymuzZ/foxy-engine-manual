@@ -186,3 +186,4 @@ cuéntalo para que se pueda arreglar.
 - [Luz](../referencia/componentes/luz.md)
 - [Niebla](../referencia/componentes/niebla.md)
 - [Efectos y estilos](efectos.md)
+- [La cueva](../demos/cueva.md): rayos de sol en la bruma, luz que rebota y antorchas con sombra, todo junto
