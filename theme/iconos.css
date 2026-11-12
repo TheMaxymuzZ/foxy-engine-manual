@@ -19,8 +19,9 @@
 .fx-poner { --fx: url("../imagenes/iconos/poner.svg"); }
 .fx-quitar { --fx: url("../imagenes/iconos/quitar.svg"); }
 .fx-pintar { --fx: url("../imagenes/iconos/pintar.svg"); }
-.fx-extruir { --fx: url("../imagenes/iconos/extruir.svg"); }
-.fx-simetria { --fx: url("../imagenes/iconos/simetria.svg"); }
+.fx-pintar-suelo { --fx: url("../imagenes/iconos/pintar-suelo.svg"); }
+.fx-suavizar { --fx: url("../imagenes/iconos/suavizar.svg"); }
+.fx-sembrar { --fx: url("../imagenes/iconos/sembrar.svg"); }
 .fx-colocar { --fx: url("../imagenes/iconos/colocar.svg"); }
 .fx-vecino { --fx: url("../imagenes/iconos/vecino.svg"); }
 .fx-zona { --fx: url("../imagenes/iconos/zona.svg"); }
@@ -77,7 +78,6 @@
 .chapter a[href$="guia/vida.html"]::before { --fx: url("../imagenes/iconos/vida.svg"); }
 .chapter a[href$="guia/guiones.html"]::before { --fx: url("../imagenes/iconos/guion.svg"); }
 .chapter a[href$="guia/jugar.html"]::before { --fx: url("../imagenes/iconos/mando.svg"); }
-.chapter a[href$="guia/rendimiento.html"]::before { --fx: url("../imagenes/iconos/chip.svg"); }
 .chapter a[href$="referencia/atajos.html"]::before { --fx: url("../imagenes/iconos/teclado.svg"); }
 .chapter a[href$="referencia/lua.html"]::before { --fx: url("../imagenes/iconos/guion.svg"); }
 .chapter a[href$="referencia/acciones.html"]::before { --fx: url("../imagenes/iconos/usar.svg"); }

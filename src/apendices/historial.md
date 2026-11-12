@@ -5,6 +5,25 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase Q: Lo que pidió el templo
+
+- **Reflejos en lo pulido**: el mármol, el oro y los suelos brillantes
+  reflejan lo que tienen delante, no solo el cielo.
+- **Mar hasta el horizonte**, con **olas**, espuma en las crestas y oleaje
+  en la orilla, y **viento** que mece árboles y velas. Ver
+  [Mar, viento y reflejos](../guia/graficos.md#mar-viento-y-reflejos).
+- La **luz que rebota** también rebota en los objetos.
+- **Objetos de hasta 256 cubitos de lado**: una estatua o un teatro de una
+  pieza. Las texturas se ven bien en objetos de cualquier tamaño.
+- **Suelo de varios materiales** en el generador (arena en la orilla, roca
+  en las cuestas y en lo alto) y pinceles nuevos:
+  [Pintar el suelo, Suavizar y Sembrar](../guia/mundo.md#pintar-el-suelo).
+- Lua y los nodos cambian el **color, la fuerza y el alcance de una luz**
+  (`motor.luz_color`, `motor.luz_fuerza`, `motor.luz_alcance`).
+- Las escenas con **miles de objetos se abren mucho más deprisa**.
+- La [Demo técnica](../tu-primer-juego/demo-tecnica.md) lo usa todo, y
+  tiene gente paseando por la plaza.
+
 ## Fase O: Modo profesional
 
 - **Esquemas de atajos y cámara** *Como Blender* y *Como Unity* (además

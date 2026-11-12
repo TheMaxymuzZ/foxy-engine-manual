@@ -29,6 +29,16 @@ Luz((color: "#80c0ff", intensidad: 2.0, alcance: 12.0, altura: 3.0))
 Luz((color: "#ff9a3c", intensidad: 3.0, alcance: 12.0, altura: 1.7, sombras: true))
 ```
 
+## Cambiarla mientras se juega
+
+Un guion o un grafo de nodos puede cambiar la luz de un objeto: su color
+(`motor.luz_color("Farol", "#ff3020")`), su fuerza, de 0 (apagada) a 4
+(`motor.luz_fuerza("Farol", 3)`), y su alcance en metros
+(`motor.luz_alcance("Farol", 20)`). En los nodos son **Color de una luz**,
+**Fuerza de una luz** y **Alcance de una luz**. Sirve para una alarma que
+parpadea en rojo, una hoguera que se apaga o un faro que se enciende al
+anochecer.
+
 ## Véase también
 
 - [Componentes](index.md)

@@ -2144,6 +2144,45 @@ Enciende o apaga el componente Partículas del objeto (también en 3D).
 
 En Lua: `motor.particulas(entidad, encendidas)`
 
+### Color de una luz {#motor-luz_color}
+
+*Acción* · `motor.luz_color`
+
+Cambia el color de la luz del objeto mientras se juega ("#rrggbb").
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | color | color | #ffd27a |
+
+En Lua: `motor.luz_color(entidad, color)`
+
+### Fuerza de una luz {#motor-luz_fuerza}
+
+*Acción* · `motor.luz_fuerza`
+
+Cambia cuánto alumbra la luz del objeto: 0 la apaga, 4 es lo máximo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | fuerza | número | 1 |
+
+En Lua: `motor.luz_fuerza(entidad, fuerza)`
+
+### Alcance de una luz {#motor-luz_alcance}
+
+*Acción* · `motor.luz_alcance`
+
+Cambia hasta dónde llega la luz del objeto, en metros.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | metros | número | 8 |
+
+En Lua: `motor.luz_alcance(entidad, alcance)`
+
 ### Soltar partículas {#motor-soltar_particulas}
 
 *Acción* · `motor.soltar_particulas`

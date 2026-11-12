@@ -88,6 +88,30 @@ suaviza entre píxel y píxel.
 Los materiales de cada capa se eligen entre los del proyecto. Un proyecto
 vacío usa sus propios materiales (*Suelo*, *Tierra* y *Roca*).
 
+## Suelo de varios materiales
+
+En la naturaleza el suelo no es igual en todas partes. Con **Suelo de
+varios materiales** encendido (en Islas, Colinas, Cuevas e Imagen), el
+generador pone:
+
+| Capa | Dónde | Por defecto |
+|---|---|---|
+| **Orilla** | Hasta unos metros por encima del agua | Arena, hasta 1,5 m |
+| **Cuestas** | Donde el terreno es empinado, desde la pendiente que elijas (45° = 1) | Piedra, desde 45° |
+| **Cumbres** | Por encima de la altura que elijas (o nunca) | Grava, nunca |
+
+Lo demás (los valles y los llanos) lleva la **Superficie** de siempre. Los
+bordes entre capas se mezclan con un poco de ruido, para que no sean rayas
+rectas. Después puedes retocar a mano con el pincel
+[Pintar el suelo](mundo.md#pintar-el-suelo).
+
+En el archivo es el campo `capas`:
+
+```ron
+capas: Some((orilla: Arena, orilla_alto: 1.5, cuesta: Piedra, cuesta_desde: 1.0,
+    cumbre: Grava, cumbre_desde: 30.0)),
+```
+
 ## En el archivo
 
 El terreno es un objeto de tipo `terreno` con el componente
