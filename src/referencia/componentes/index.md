@@ -20,10 +20,11 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Sprite](sprite.md) | `Sprite` | Una imagen o un fotograma de una hoja de sprites (en 2D). |
 | [Animador](animador.md) | `Animador` | Sus animaciones: un clip o una máquina de estados (quieto, andar, correr…). |
 | [Recogible](recogible.md) | `Recogible` | Se recoge al tocarlo: suma monedas (o lo que digas), suena y desaparece. |
-| [Partículas](particulas.md) | `Particulas` | Polvo, chispas, lluvia, nieve, humo u hojas que salen de aquí. |
+| [Partículas](particulas.md) | `Particulas` | Fuego, chispas, ascuas, humo, polvo, lluvia, nieve, hojas o una cascada que salen de aquí. |
 | [Terreno de cubitos](terreno.md) | `Terreno` | El suelo de cubitos de la escena: plano, islas, colinas, cuevas o una imagen. |
 | [Luz del sol](sol.md) | `Sol` | La luz de la escena: la hora del sol, su fuerza y su color. |
 | [Niebla](niebla.md) | `Niebla` | Niebla en toda la escena: donde entra el sol salen rayos de luz, y las luces hacen halo. |
+| [En la mano](mano.md) | `Mano` | Se lleva en la mano en primera persona: va delante de la cámara y nunca atraviesa las paredes. |
 
 <!-- fin -->
 

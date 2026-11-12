@@ -113,6 +113,8 @@ Valen para cualquier captura, con o sin `--editor`. Ver
 | `--exposicion <n>` | Exposición en pasos, por ejemplo `-1` o `0.5` |
 | `--corazon <dibujante>` | `nuevo` o `clasico` |
 | `--atmosfera <piezas>` | `realista`, `nada` o una lista separada por comas con `luz`, `oclusion`, `agua`, `cielo`, `destello`, `desenfoque`, `color` y `temporal` |
+| `--ambiente <nombre>` | `ninguno`, `realista`, `dibujo`, `neon`, `acuarela` o `pixel` |
+| `--estilo <piezas>` | `nada` o una lista separada por comas con `contorno`, `bandas`, `acuarela`, `pixel`, `paleta`, `lluvia`, `mojado` y `neon` |
 
 Los paneles son `vista`, `proyecto`, `escena`, `inspector`, `codigo`,
 `nodos`, `archivos`, `materiales`, `pixel` y `registro`. Las capturas

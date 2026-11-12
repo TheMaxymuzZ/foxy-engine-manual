@@ -5,6 +5,20 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase K: Efectos, partículas y estilos
+
+- **Ambientes** de un clic: Realista, Dibujo animado, Neón nocturno,
+  Acuarela y Píxel retro. Ninguno viene puesto. Ver
+  [Efectos y estilos](../guia/efectos.md).
+- **Piezas de estilo** que se mezclan: contorno de tinta, luz por bandas,
+  acuarela, píxel perfecto con paleta corta, lluvia, suelo mojado y neones.
+- **Partículas nuevas**: fuego, ascuas, cascada y destellos; las que brillan
+  suman luz y las demás se iluminan con lo de alrededor. En el inspector,
+  botones por tipo, vista previa y colores, brillo, gravedad y viento. Menú
+  **Crear → Efecto**.
+- Componente **En la mano**: lo que llevas en primera persona no atraviesa
+  las paredes.
+
 ## Demo técnica
 
 - Plantilla nueva **Demo técnica** (en *Más ejemplos*): un valle de montaña

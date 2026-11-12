@@ -165,3 +165,4 @@ cuéntalo para que se pueda arreglar.
 - [Rendimiento](rendimiento.md)
 - [Luz](../referencia/componentes/luz.md)
 - [Niebla](../referencia/componentes/niebla.md)
+- [Efectos y estilos](efectos.md)
