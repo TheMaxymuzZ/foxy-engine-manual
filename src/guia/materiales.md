@@ -65,6 +65,27 @@ se derrumba.
 En la paleta, un **punto amarillo** marca los materiales que brillan, una
 **raya** los metálicos y unos **cuadros** los transparentes.
 
+## Efecto
+
+Un efecto hace que el material **se mueva, brille o cambie**: lava que
+fluye, una luz que se enciende y se apaga, rayas que suben, puntitos que
+brillan. Se hace con nodos y se explica en
+[Efectos de material](efectos-de-material.md).
+
+## Cubitos finos
+
+Con **Musgo** o **Raíces**, el material deja de ser un cubito entero y se
+dibuja con cubitos cuatro veces más pequeños pegados a lo que tiene
+alrededor:
+
+- **Musgo**: pinta el material junto al suelo, una pared o el techo y crece
+  una alfombra irregular pegada a ellos.
+- **Raíces**: pinta el material bajo un techo y cuelgan hilos finos. Si
+  pintas varios uno debajo de otro, los hilos siguen hacia abajo.
+
+Se atraviesan, no hacen sombra y de lejos no se dibujan, así que apenas
+cuestan. Ver [Efectos de material](efectos-de-material.md#cubitos-finos).
+
 ## Volver atrás y borrar
 
 - **Como venía**: un material del motor vuelve a como viene; uno propio

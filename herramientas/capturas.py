@@ -192,6 +192,15 @@ LISTA: dict[str, str] = {
     "rayos-de-sol": f"{JUEGO} --enorme rayos-de-sol",
     "rayos-de-sol-realista": f"{JUEGO} --enorme rayos-de-sol --atmosfera realista",
     "isla-realista": f"--ancho 720 --alto 430 {ISLA} --hora 17.2 --atmosfera realista",
+    # Efectos, partículas y estilos (Fase K)
+    "cueva-efectos": f"{JUEGO} --enorme cueva-con-efectos",
+    "ambiente-dibujo": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente dibujo",
+    "ambiente-neon": f"--ancho 720 --alto 430 {PLAZA} --camara 118,26,142 --mirar 96,17,118 --hora 22 --ambiente neon",
+    "ambiente-acuarela": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente acuarela",
+    "ambiente-pixel": f"--ancho 720 --alto 430 {ISLA} --hora 15 --ambiente pixel",
+    "ambiente-ninguno": f"--ancho 720 --alto 430 {ISLA} --hora 15",
+    "efecto-material": f"{ED} --pestana efecto",
+    "panel-efecto": "@recorte efecto-material 270,170,1170,690",
     # Marca
     "marca-splash": f"{JUEGO} --splash",
     "marca-carga-editor": f"{JUEGO} --editor --splash",

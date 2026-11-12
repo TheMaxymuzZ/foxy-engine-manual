@@ -58,3 +58,5 @@ cada valor va dentro de `Some(...)`:
 | `atravesable` | `true` / `false` | No choca al caminar |
 | `golpes` | número | Golpes que aguanta (0 = no se rompe) |
 | `peso` | kg/m³ | Cuánto pesa |
+| `detalle` | `Musgo` o `Raices` | Se dibuja con cubitos finos (ver [Cubitos finos](../guia/efectos-de-material.md#cubitos-finos)) |
+| `efecto` | nodos o código | Su efecto (ver [Efectos de material](../guia/efectos-de-material.md)) |

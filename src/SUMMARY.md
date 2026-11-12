@@ -49,6 +49,7 @@
 - [Preferencias y teclas](guia/preferencias.md)
 - [Probar el juego](guia/jugar.md)
 - [Gráficos: luz, sombras y atmósfera](guia/graficos.md)
+    - [Efectos y estilos](guia/efectos.md)
 - [Rendimiento](guia/rendimiento.md)
 
 # Conceptos
@@ -71,6 +72,7 @@
     - [Crear objetos propios](guia/creador.md)
     - [Importar modelos](guia/importar.md)
     - [Materiales](guia/materiales.md)
+        - [Efectos de material](guia/efectos-de-material.md)
     - [La vida del mundo](guia/vida.md)
 - [Objetos y componentes](guia/entidades.md)
     - [Objetos libres y jerarquía](guia/objetos-libres.md)
@@ -117,6 +119,7 @@
     - [Animador](referencia/componentes/animador.md)
     - [Recogible](referencia/componentes/recogible.md)
     - [Partículas](referencia/componentes/particulas.md)
+    - [En la mano](referencia/componentes/mano.md)
     - [Terreno de cubitos](referencia/componentes/terreno.md)
     - [Luz del sol](referencia/componentes/sol.md)
     - [Niebla](referencia/componentes/niebla.md)
