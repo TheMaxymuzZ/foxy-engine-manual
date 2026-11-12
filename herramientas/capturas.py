@@ -212,6 +212,9 @@ LISTA: dict[str, str] = {
     "preferencias-esquema": f"{ED} --pestana preferencias --esquema blender",
     "paneles-propios": f"{ED} --pestana herramientas --flotante propios",
     "ajustes-extensiones": f"{ED} --pestana ajustes-extensiones",
+    # Lo que pidió el templo (Fase Q)
+    "paisaje-mar": f"--ancho 720 --alto 430 --camara 120,14,160 --mirar 60,9,230 --hora 17.2 --atmosfera realista --paisaje todo",
+    "sembrar": f"{ED} --herramienta sembrar",
     # Marca
     "marca-splash": f"{JUEGO} --splash",
     "marca-carga-editor": f"{JUEGO} --editor --splash",

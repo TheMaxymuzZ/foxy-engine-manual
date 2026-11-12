@@ -141,6 +141,26 @@ En el inspector de la niebla se cambian su **Densidad**, la fuerza de los
 > detalle. Si el juego va lento, baja la **Calidad** o la **Escala del
 > dibujo** antes de apagar piezas.
 
+## Mar, viento y reflejos
+
+En la misma página, la sección **Mar, viento y reflejos** añade lo que hace
+que un paisaje parezca de verdad. También viene **apagada**; **Encender
+todo** la pone con unos valores que quedan bien.
+
+| Ajuste | Qué hace |
+|---|---|
+| **Reflejos en lo pulido** | El mármol pulido, el oro y los suelos brillantes reflejan lo que tienen delante (las columnas, una estatua, una persona), no solo el cielo. Funciona con los materiales que tienen **Pulido** alto o son metálicos |
+| **Mar hasta el horizonte** | El mar no se acaba en el borde del mundo: sigue hasta donde se pierde la vista |
+| **Olas** | Altura de las olas, en metros. Las crestas hacen espuma y el oleaje llega a la orilla |
+| **Viento** | Cuánto se mecen los árboles, la hierba, las velas y las banderas. Lo de abajo (el tronco, el casco) se queda quieto |
+| **Sopla hacia** | Hacia dónde va el viento, y con él las olas |
+
+El viento mueve los árboles del motor y los [objetos propios](creador.md)
+que tengan **Viento** en el creador. Todo esto solo funciona con el
+dibujante nuevo.
+
+![El mar hasta el horizonte, con olas y espuma en la orilla](../imagenes/capturas/paisaje-mar.png)
+
 ## Piezas del dibujo
 
 Cada parte del dibujo se puede apagar: **Sombras del sol**, **Sombras de las

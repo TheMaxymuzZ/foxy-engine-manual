@@ -31,8 +31,9 @@ peana no es parte del objeto), y sus opciones:
 | Opción | Qué hace |
 |---|---|
 | **Nombre** | El que se ve en *Mis objetos* |
-| **Tamaño** | Ancho, alto y fondo de la caja del objeto, hasta 64 cubitos (32 m) por lado |
-| **Pincel** | Poner, quitar, pintar o [extruir](mundo.md#extruir), igual que en el mundo |
+| **Tamaño** | Ancho, alto y fondo de la caja del objeto, hasta 256 cubitos por lado (128 m con cubitos de medio metro): una estatua, un teatro o un barco caben de una pieza |
+| **Pincel** | Poner, quitar, pintar, [extruir](mundo.md#extruir) o [suavizar](mundo.md#suavizar), igual que en el mundo |
+| **Viento** | Cuánto se mece con el viento: 0 nada, un árbol 0,5, una vela o una bandera 1. Lo de abajo se queda quieto. Se ve con el viento encendido en los [gráficos](graficos.md#mar-viento-y-reflejos) |
 | <i class="fx fx-simetria"></i> **Simetría** | X, Y y Z. El espejo está siempre en el centro del objeto: ideal para personajes, barcos o muebles |
 | **Material** | Cualquier material del motor |
 | <i class="fx fx-guardar"></i> **Guardar objeto** | <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd> |
@@ -42,6 +43,14 @@ peana no es parte del objeto), y sus opciones:
 La vista se gira con el **botón derecho** o con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>
 + ratón, y la rueda acerca y aleja. <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd>
 deshace.
+
+### Esculpir
+
+Para formas redondeadas (una roca, una cabeza, una estatua), pon un bloque
+grande con el pincel en forma de **esfera** y pasa **Suavizar**
+(<kbd>M</kbd>) por las esquinas: lo que sobresale se lima y los huecos se
+rellenan, pasada a pasada. Con la simetría encendida se esculpen los dos
+lados a la vez.
 
 > <i class="fx fx-consejo"></i> **Consejo.** Si ya tienes modelos hechos en
 > MagicaVoxel o Qubicle, [impórtalos](importar.md) y sigue trabajándolos

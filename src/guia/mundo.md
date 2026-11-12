@@ -16,6 +16,8 @@ tecla:
 | <i class="fx fx-quitar"></i> | **Quitar bloques** | <kbd>E</kbd> | Clic o arrastra para cavar. Bajo el nivel del mar el hueco se llena de agua |
 | <i class="fx fx-pintar"></i> | **Pintar** | <kbd>P</kbd> | Cambia el material de lo que ya hay, sin añadir ni quitar |
 | <i class="fx fx-extruir"></i> | **Extruir** | <kbd>X</kbd> | Clic en una cara para sacar una capa más de toda esa cara (o meterla) |
+| <i class="fx fx-pintar-suelo"></i> | **Pintar el suelo** | <kbd>N</kbd> | Pinta la superficie del terreno en grande, con el borde mezclado |
+| <i class="fx fx-suavizar"></i> | **Suavizar** | <kbd>M</kbd> | Lima lo que sobresale y rellena los huecos: formas redondeadas |
 | <i class="fx fx-colocar"></i> | **Colocar objetos** | <kbd>O</kbd> | Pone casas, árboles, vecinos, pelotas… |
 
 Las opciones de cada herramienta salen en el **inspector**, a la derecha.
@@ -52,6 +54,33 @@ En el inspector se elige **Hacia fuera** (añade una capa) o **Hacia dentro**
 (quita la capa de la cara). Cada clic es una capa: al arrastrar no se sigue
 extruyendo.
 
+## Pintar el suelo
+
+<i class="fx fx-pintar-suelo"></i> **Pintar el suelo** (<kbd>N</kbd>) cambia
+el material de la **superficie** del terreno en un círculo grande: arena en
+una playa, roca en un cortado, hierba en un prado o tierra en un camino. No
+añade ni quita nada: solo pinta lo de arriba (y el cubito de debajo, para
+que en los escalones no asome el material de antes). El **borde se
+deshilacha**: unos cubitos sí y otros no, así dos suelos se mezclan sin una
+raya recta.
+
+El tamaño va de 1 a 24, como el del pincel, pero el círculo es cuatro veces
+más ancho: con cubitos de medio metro, de 2 a 48 m. Antes de hacer clic se
+ve una losa verde del ancho del círculo.
+
+> <i class="fx fx-consejo"></i> **Consejo.** Para un terreno natural, empieza
+> con el [suelo de varios materiales](generadores.md#suelo-de-varios-materiales)
+> del generador y retoca después con este pincel.
+
+## Suavizar
+
+<i class="fx fx-suavizar"></i> **Suavizar** (<kbd>M</kbd>) redondea lo que
+tocas: el cubito que está casi solo (asomando de una pared, en una esquina)
+se quita, y el hueco rodeado de cubitos se rellena con el material que más
+hay alrededor. Pasa el pincel varias veces para redondear más. Con la forma
+**esfera** queda más suave. Sirve en el mundo (rocas, colinas, cuevas) y en
+el [creador de objetos](creador.md), para esculpir.
+
 ## Simetría
 
 En las opciones del pincel (también al extruir) está la
@@ -84,6 +113,28 @@ tiene tres partes:
   cambio. Todos están en [Objetos del motor](../referencia/objetos.md).
 - **Mis objetos**: los que has hecho con el
   [creador de objetos](creador.md).
+
+### Sembrar
+
+En las opciones de **Colocar objetos** está
+<i class="fx fx-sembrar"></i> **Sembrar (muchos de una vez)**. Encendido, un
+clic pone **varios** del objeto elegido en un círculo del suelo, cada uno
+girado hacia un lado y de un tamaño un poco distinto, y arrastrando se
+siembra por donde pasas. Es la forma de hacer un bosque, un pedregal o un
+campo de flores en un momento. Se ajusta:
+
+- **Círculo**: el radio, en metros. Se ve como una losa verde.
+- **Cuántos**: los que pone en cada clic, como mucho.
+- **Separación**: la distancia mínima entre dos. Tampoco se ponen encima de
+  los objetos que ya hay, así que pasar dos veces no los amontona.
+- **Tamaños**: cuánto puede cambiar el tamaño de cada uno.
+- **Cada uno mirando hacia un lado**: si no, todos miran como el giro
+  elegido.
+
+No se siembra en el agua ni encima de hojas o troncos. Cada tanda se
+deshace de una vez con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Z</kbd>.
+
+![Sembrar árboles](../imagenes/capturas/sembrar.png)
 
 El menú **Crear** también pone al momento una
 <i class="fx fx-zona"></i> *Zona de cambio*, un

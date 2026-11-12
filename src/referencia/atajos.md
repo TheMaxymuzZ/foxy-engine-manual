@@ -33,6 +33,8 @@ editor las teclas principales.
 | <kbd>E</kbd> | Quitar bloques |
 | <kbd>P</kbd> | Pintar |
 | <kbd>X</kbd> | Extruir |
+| <kbd>N</kbd> | Pintar el suelo |
+| <kbd>M</kbd> | Suavizar |
 | <kbd>O</kbd> | Colocar objetos |
 | <kbd>[</kbd> / <kbd>]</kbd> | Pincel más pequeño / más grande |
 

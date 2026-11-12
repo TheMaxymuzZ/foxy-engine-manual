@@ -200,6 +200,9 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.casilla(x: número, y: número, capa: texto)` | casilla (número) | El número de la casilla que hay en ese sitio de la capa (nada si está vacía). Capa vacía = la primera que choca. |
 | `motor.poner_casilla(x: número, y: número, casilla: número, capa: texto)` | — | Cambia una casilla del mapa mientras se juega (para romper bloques, abrir pasos...). |
 | `motor.particulas(entidad: objeto, encendidas: sí/no)` | — | Enciende o apaga el componente Partículas del objeto (también en 3D). |
+| `motor.luz_color(entidad: objeto, color: texto)` | — | Cambia el color de la luz del objeto mientras se juega ("#rrggbb"). |
+| `motor.luz_fuerza(entidad: objeto, fuerza: número)` | — | Cambia cuánto alumbra la luz del objeto: 0 la apaga, 4 es lo máximo. |
+| `motor.luz_alcance(entidad: objeto, alcance: número)` | — | Cambia hasta dónde llega la luz del objeto, en metros. |
 
 ## Otros
 

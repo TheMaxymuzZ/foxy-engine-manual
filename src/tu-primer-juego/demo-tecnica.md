@@ -57,27 +57,28 @@ persona, mirando a la estatua:
 | **El templo** | Está hecho con cubitos del propio terreno (como si se hubiera hecho con el pincel), por eso la luz que rebota lo ve y dentro queda en penumbra. Las columnas y la estatua sí son objetos. |
 | **Mármol, oro y marfil** | En [Materiales](../guia/materiales.md): el mármol es **pulido**, el oro y el bronce son **metálicos**, y el fuego, las ventanas y el orbe de la estatua tienen **luz**. El orbe lleva además el efecto **Latido**. |
 | **Texturas** | En [Pixel art](../interfaz/pixel-art.md), las imágenes `demo_marmol`, `demo_losas`, `demo_adoquin`... de 32 × 32 píxeles, que cubren un metro. |
-| **La estatua, las casas y los barcos** | En *Objetos propios* del panel Proyecto. Los más grandes (la estatua, las columnas, la stoa, el teatro, el faro y los trirremes) van en varias piezas, porque un objeto no puede pasar de 64 cubitos de lado. |
+| **La estatua, las casas y los barcos** | En *Objetos propios* del panel Proyecto. Todos van de una pieza, también la estatua y el teatro: un objeto puede medir hasta 256 cubitos de lado. Los árboles, la hierba y las velas tienen **Viento** y se mecen. |
+| **La gente** | Catorce [vecinos](../referencia/modulos/vecinos.md) pasean por la plaza; acércate y pulsa <kbd>E</kbd> para hablar con ellos. |
+| **La playa** | El terreno tiene [suelo de varios materiales](../guia/generadores.md#suelo-de-varios-materiales): arena en la orilla y roca en los cortados. |
 | **Los fuegos** | Los objetos **Fuego del trípode** llevan una [Luz](../referencia/componentes/luz.md) con **Sombras**, partículas y un Animador con la animación **llama**. |
 | **La niebla y los rayos de sol** | El objeto **Niebla del mar** lleva el componente Niebla, con **rayos**. El objeto **Sol** pone la hora de la tarde. |
 | **La cinemática** | En el panel [Animación](../guia/cinematicas.md), la cinemática **presentacion**. La pone el guion del mundo al empezar. |
-| **Los gráficos** | En **Ajustes del proyecto → Gráficos**: calidad Ultra, atmósfera realista (luz que rebota, rayos, agua que refleja) y mundo enorme (carga por zonas, se ve hasta 2,4 km). Ver [Gráficos](../guia/graficos.md). |
+| **Los gráficos** | En **Ajustes del proyecto → Gráficos**: calidad Ultra, atmósfera realista (luz que rebota, rayos, agua que refleja), mundo enorme (carga por zonas, se ve hasta 2,4 km) y [mar, viento y reflejos](../guia/graficos.md#mar-viento-y-reflejos) (el mármol refleja las columnas y el mar llega al horizonte con olas). Ver [Gráficos](../guia/graficos.md). |
 
 Es un proyecto como cualquier otro: cambia lo que quieras o
 [publícalo](../publicar/publicar.md) para jugarlo fuera del editor.
 
 ![El puerto y la ciudad de noche: las ventanas se reflejan en el agua](../imagenes/capturas/demo-tecnica-noche.png)
 
-## Lo que todavía no se puede hacer
+## Lo que añadió esta versión
 
-La demo usa solo lo que el motor sabe hacer hoy. Lo que le faltó está
-apuntado en la hoja de ruta:
+Al hacer la demo faltaban cosas en el motor. Ya están todas, y la demo las
+usa: reflejos en el mármol, objetos grandes de una pieza, luz que rebota
+también en los objetos, arena en la playa, mar hasta el horizonte con olas,
+viento, gente por la plaza y pinceles para
+[pintar el suelo, suavizar y sembrar](../guia/mundo.md#pintar-el-suelo).
+Además, la escena se abre mucho más deprisa.
 
-- El mármol pulido refleja el cielo, pero no las columnas: los reflejos de
-  lo que hay en pantalla solo salen en el agua.
-- Los objetos no pueden pasar de 64 cubitos de lado.
-- El terreno pone un solo material arriba: no hay arena en la orilla ni un
-  pincel para pintar el terreno de otro material.
-- El mar acaba en el borde del mundo y no tiene olas.
-- No hay pincel para sembrar árboles y rocas, ni para esculpir formas
-  suaves en el creador de objetos.
+| El suelo pulido refleja la estatua | Gente en la plaza |
+|---|---|
+| ![Dentro del templo: el oro de la estatua se refleja en el suelo pulido](../imagenes/capturas/demo-tecnica-reflejos.png) | ![La plaza con el mercado, la stoa y vecinos paseando](../imagenes/capturas/demo-tecnica-plaza.png) |
