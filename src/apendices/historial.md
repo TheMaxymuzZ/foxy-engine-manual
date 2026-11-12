@@ -5,6 +5,21 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase J: Luz y atmósfera
+
+- **Rayos de luz**: con un sol, un agujero en el techo y el componente nuevo
+  [Niebla](../referencia/componentes/niebla.md), salen los rayos sin tocar
+  ningún ajuste técnico. Las antorchas hacen halo en la niebla.
+- **Luz que rebota**: las cuevas cerradas se quedan a oscuras, y la luz que
+  entra por un agujero rebota y aclara la sala.
+- **Rincones más oscuros**, **agua de verdad** (fondo, reflejos y espuma),
+  **cielo físico**, **destello**, **desenfoque**, **corrección de color** y
+  **suavizado temporal** con **escala del dibujo**, en la sección
+  **Luz y atmósfera** de los ajustes del proyecto. El botón **Realista** lo
+  enciende todo. Ver [Gráficos](../guia/graficos.md#luz-y-atmósfera).
+- Todo viene apagado: un proyecto se ve igual que antes hasta que tú lo
+  enciendes.
+
 ## Fase I: Corazón gráfico nuevo
 
 - **Luz de verdad (HDR)** con **exposición** y **tono** (Cine, Como Blender,

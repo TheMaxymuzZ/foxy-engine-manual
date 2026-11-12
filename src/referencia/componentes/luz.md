@@ -32,5 +32,5 @@ Luz((color: "#ff9a3c", intensidad: 3.0, alcance: 12.0, altura: 1.7, sombras: tru
 ## Véase también
 
 - [Componentes](index.md)
-- [Gráficos: luz, sombras y calidad](../../guia/graficos.md)
+- [Gráficos: luz, sombras y atmósfera](../../guia/graficos.md)
 - [Entidades y componentes](../../guia/entidades.md)

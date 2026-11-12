@@ -23,6 +23,7 @@ Referencia de los componentes que se pueden añadir a una entidad. Ver
 | [Partículas](particulas.md) | `Particulas` | Polvo, chispas, lluvia, nieve, humo u hojas que salen de aquí. |
 | [Terreno de cubitos](terreno.md) | `Terreno` | El suelo de cubitos de la escena: plano, islas, colinas, cuevas o una imagen. |
 | [Luz del sol](sol.md) | `Sol` | La luz de la escena: la hora del sol, su fuerza y su color. |
+| [Niebla](niebla.md) | `Niebla` | Niebla en toda la escena: donde entra el sol salen rayos de luz, y las luces hacen halo. |
 
 <!-- fin -->
 

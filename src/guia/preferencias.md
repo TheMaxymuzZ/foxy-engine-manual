@@ -37,7 +37,7 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
   materiales completos) o el **Clásico**, el de antes. Usa el clásico solo si
   el nuevo da problemas en tu ordenador.
 
-Ver [Gráficos: luz, sombras y calidad](graficos.md).
+Ver [Gráficos: luz, sombras y atmósfera](graficos.md).
 
 ## Cámara
 
