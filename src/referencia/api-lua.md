@@ -82,7 +82,8 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.nombre(entidad: objeto)` | nombre (texto) | Su nombre en la escena. |
 | `motor.posicion(entidad: objeto)` | posicion (vector) | Dónde está ahora el objeto (sus pies), en metros. |
 | `motor.poner_posicion(entidad: objeto, posicion: vector)` | — | Lleva el objeto a ese sitio de golpe. Con el jugador, lo teletransporta. |
-| `motor.mover_hacia(entidad: objeto, destino: vector, velocidad: número)` | llegado (sí/no) | Da un paso hacia el destino, a esa velocidad. Úsalo en «Cada fotograma» para que vaya andando. |
+| `motor.mover_hacia(entidad: objeto, destino: vector, velocidad: número)` | llegado (sí/no) | Da un paso en línea recta hacia el destino, a esa velocidad, atravesando lo que haya (para lo que vuela o flota). Para personajes que pisan el suelo usa «Andar hacia». |
+| `motor.andar_hacia(entidad: objeto, destino: vector, velocidad: número)` | llegado (sí/no) | Anda por el suelo hacia el destino: cae si no hay suelo, sube escalones, salta un bordillo y rodea las paredes. Para enemigos, animales y personajes. Úsalo en «Cada fotograma». «Ha llegado» también es sí cuando no puede acercarse más. |
 | `motor.mirar_hacia(entidad: objeto, punto: vector)` | — | Gira el objeto para que mire a ese punto. |
 | `motor.mover(entidad: objeto, x: número, y: número, z: número, segundos: número)` | — | La lleva poco a poco a su sitio del editor más esos metros (puertas, plataformas...). |
 | `motor.ocultar(entidad: objeto)` | — | El objeto deja de verse y de chocar. |
