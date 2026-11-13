@@ -95,6 +95,7 @@
 - [Físicas precisas](guia/fisicas.md)
 - [Comportamientos](guia/comportamientos.md)
     - [Objetos que se hablan](guia/objetos-que-se-hablan.md)
+    - [Personajes que andan](guia/personajes-que-andan.md)
 - [Juegos 2D](guia/juegos-2d.md)
     - [Sprites](guia/sprites.md)
     - [Mapas de casillas](guia/casillas.md)

@@ -5,6 +5,16 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Personajes que andan
+
+- **[Andar hacia](../guia/personajes-que-andan.md)**: un nodo nuevo y
+  `motor.andar_hacia` en Lua. El objeto pisa el suelo, cae, sube escalones,
+  salta bordillos y rodea las paredes buscando un camino. Antes, los
+  enemigos y los personajes iban en línea recta y lo atravesaban todo.
+- Los comportamientos ya hechos **Seguir al jugador** y **Patrullar** andan
+  así. Con su valor nuevo `volando` van en línea recta, como antes.
+- **Ir hacia** sigue igual, para lo que vuela o flota.
+
 ## Fase P: Demostraciones y manual
 
 - **[La cueva](../demos/cueva.md)**: la imagen de referencia del motor

@@ -54,7 +54,7 @@ function cada_fotograma(segundos)
   local p = propiedades
   if motor.ve(yo, "jugador", p.vision) then
     motor.mirar_hacia(yo, "jugador")
-    local cerca = motor.mover_hacia(yo, "jugador", p.velocidad_persiguiendo)
+    local cerca = motor.andar_hacia(yo, "jugador", p.velocidad_persiguiendo)
     if cerca or motor.distancia(yo, "jugador") < 1.2 then
       espera = espera - segundos
       if espera <= 0 then
@@ -66,7 +66,7 @@ function cada_fotograma(segundos)
   end
   local destino = a_la_ida and inicio + p.patrulla or inicio
   motor.mirar_hacia(yo, destino)
-  if motor.mover_hacia(yo, destino, p.velocidad) then
+  if motor.andar_hacia(yo, destino, p.velocidad) then
     a_la_ida = not a_la_ida
   end
 end
@@ -104,7 +104,7 @@ end
 ## 5. Arreglar un error jugando
 
 1. En `cada_fotograma`, cambia `p.velocidad` por `rapidez` en la última
-   llamada a `motor.mover_hacia` y guarda.
+   llamada a `motor.andar_hacia` y guarda.
 2. La consola enseña en rojo un error como «guiones/enemigo.lua:37: attempt
    to perform arithmetic on a nil value (global 'rapidez')», con el archivo
    y la línea. El lobo se queda quieto, pero el juego sigue.

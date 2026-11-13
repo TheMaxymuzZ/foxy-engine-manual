@@ -1226,7 +1226,7 @@ En Lua: `motor.poner_posicion(entidad, posicion)`
 
 *Acción* · `motor.mover_hacia`
 
-Da un paso hacia el destino, a esa velocidad. Úsalo en «Cada fotograma» para que vaya andando.
+Da un paso en línea recta hacia el destino, a esa velocidad, atravesando lo que haya (para lo que vuela o flota). Para personajes que pisan el suelo usa «Andar hacia».
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -1236,6 +1236,21 @@ Da un paso hacia el destino, a esa velocidad. Úsalo en «Cada fotograma» para 
 | Salida | ha llegado | sí/no | — |
 
 En Lua: `local llegado = motor.mover_hacia(entidad, destino, velocidad)`
+
+### Andar hacia {#motor-andar_hacia}
+
+*Acción* · `motor.andar_hacia`
+
+Anda por el suelo hacia el destino: cae si no hay suelo, sube escalones, salta un bordillo y rodea las paredes. Para enemigos, animales y personajes. Úsalo en «Cada fotograma». «Ha llegado» también es sí cuando no puede acercarse más.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | destino | vector | (0, 0, 0) |
+| Entrada | metros por segundo | número | 3 |
+| Salida | ha llegado | sí/no | — |
+
+En Lua: `local llegado = motor.andar_hacia(entidad, destino, velocidad)`
 
 ### Mirar hacia {#motor-mirar_hacia}
 

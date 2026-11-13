@@ -57,7 +57,7 @@ patrullar un recorrido distinto.
 Desde la salida **sí** del *Si*:
 
 1. **Mirar hacia**, con **Posición del jugador** en su entrada *punto*.
-2. **Ir hacia**, con la misma *Posición del jugador* en *destino* y
+2. **Andar hacia**, con la misma *Posición del jugador* en *destino* y
    *metros por segundo* en `4`.
 3. Otro **Si**. Para su condición, añade **Distancia** con **El jugador**
    en *a* y **Este objeto** en *b*, y llévala a un **Comparar** con el
@@ -71,6 +71,9 @@ Desde la salida **sí** del *Si*:
 La puerta hace que el lobo golpee como mucho una vez por segundo, aunque la
 cadena pase 60 veces por segundo.
 
+> **Nota.** **Andar hacia** lleva al lobo por el suelo y rodeando las
+> paredes. Ver [Personajes que andan](personajes-que-andan.md).
+
 ## 6. Patrullar
 
 Desde la salida **no** del primer *Si*:
@@ -80,8 +83,8 @@ Desde la salida **no** del primer *Si*:
    las tres cosas a un **Uno u otro**: *si* ← `a_la_ida`, *entonces* ← la
    suma, *si no* ← `inicio`.
 2. **Mirar hacia** con ese destino en *punto*.
-3. **Ir hacia** con el mismo destino y *metros por segundo* en `2`.
-4. Un **Si** con la salida *ha llegado* de *Ir hacia* como condición. De su
+3. **Andar hacia** con el mismo destino y *metros por segundo* en `2`.
+4. Un **Si** con la salida *ha llegado* de *Andar hacia* como condición. De su
    salida *sí*, **Poner a_la_ida** con un **No** de `a_la_ida` como valor:
    al llegar a un extremo, da la vuelta.
 

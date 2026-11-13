@@ -98,7 +98,8 @@ Sonidos de ejemplo: `paso`, `salto`, `caida`, `patada`, `hablar`, `trueno`,
 | `motor.nombre(e)` | El nombre de un objeto |
 | `motor.posicion(e)` | Dónde está, como vector |
 | `motor.poner_posicion(e, v)` | La pone en ese sitio al momento |
-| `motor.mover_hacia(e, destino, velocidad)` | La acerca al destino a esa velocidad (metros por segundo; por defecto 3). Úsala en `cada_fotograma`. Devuelve `true` al llegar |
+| `motor.andar_hacia(e, destino, velocidad)` | La lleva andando por el suelo hacia el destino (metros por segundo; por defecto 3): cae, sube escalones, salta un bordillo y rodea las paredes. Úsala en `cada_fotograma`. Devuelve `true` al llegar o cuando no puede acercarse más. Ver [Personajes que andan](../guia/personajes-que-andan.md) |
+| `motor.mover_hacia(e, destino, velocidad)` | La acerca al destino en línea recta, atravesando lo que haya (para lo que vuela o flota). Úsala en `cada_fotograma`. Devuelve `true` al llegar |
 | `motor.mirar_hacia(e, punto)` | La gira para que mire hacia ese punto |
 | `motor.ve(e, objetivo, alcance)` | `true` si el objetivo (por defecto, el jugador) está a menos de `alcance` metros (por defecto 8) y no está oculto |
 | `motor.mover(nombre, x, y, z, segundos)` | Desplaza el objeto desde su sitio del editor. Con `0, 0, 0` vuelve a su sitio |

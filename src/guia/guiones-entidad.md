@@ -94,7 +94,7 @@ duran toda la partida. Sirven para recordar cosas entre fotogramas:
 local a_la_ida = true
 
 function cada_fotograma(segundos)
-  if motor.mover_hacia(yo, destino, propiedades.velocidad) then
+  if motor.andar_hacia(yo, destino, propiedades.velocidad) then
     a_la_ida = not a_la_ida
   end
 end

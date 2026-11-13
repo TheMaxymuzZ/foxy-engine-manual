@@ -85,8 +85,8 @@ grafo. Al añadir uno se copia a `grafos/` del proyecto (si no estaba ya).
 | Comportamiento | Qué hace | Valores |
 |---|---|---|
 | ⌨ **Moverse con teclas** | Se mueve con las acciones Adelante, Atrás, Izquierda y Derecha. Con `vertical`, Adelante sube (2D visto desde arriba) | `velocidad`, `vertical` |
-| 🐾 **Seguir al jugador** | Va hacia el jugador cuando está a menos de `alcance` y se para a `distancia` de él | `velocidad`, `distancia`, `alcance` |
-| ↔ **Patrullar** | Va y viene entre su sitio y su sitio más `recorrido` | `recorrido`, `velocidad` |
+| 🐾 **Seguir al jugador** | Va andando hacia el jugador cuando está a menos de `alcance` y se para a `distancia` de él. Pisa el suelo y rodea las paredes; con `volando` va en línea recta | `velocidad`, `distancia`, `alcance`, `volando` |
+| ↔ **Patrullar** | Va y viene andando entre su sitio y su sitio más `recorrido`. Pisa el suelo y rodea lo que haya en medio; con `volando` va en línea recta | `recorrido`, `velocidad`, `volando` |
 | ⟳ **Girar** | Da vueltas sobre sí mismo | `grados_por_segundo` |
 | 🎈 **Flotar** | Sube y baja despacio | `altura`, `segundos_por_vuelta` |
 | 🪙 **Recoger** | Al tocarlo el jugador, suma `cantidad` al valor `valor` (monedas, gemas…), suena y desaparece | `valor`, `cantidad`, `sonido` |
