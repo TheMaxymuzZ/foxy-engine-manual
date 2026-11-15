@@ -161,6 +161,38 @@ dibujante nuevo.
 
 ![El mar hasta el horizonte, con olas y espuma en la orilla](../imagenes/capturas/paisaje-mar.png)
 
+## Cielo, niebla, mar y fuego de verdad
+
+La sección **Cielo, niebla, mar y fuego de verdad** sube el techo de
+calidad del motor. Viene **apagada**; **Encender todo** lo pone todo de
+una vez.
+
+| Ajuste | Qué hace |
+|---|---|
+| **Nubes con volumen** | Las nubes dejan de ser un dibujo plano: tienen cuerpo, el sol las ilumina por un lado, dan sombra al suelo y se reflejan en el agua. Cuántas hay lo decide el clima |
+| **Niebla realista** | La niebla se posa en lo bajo (el mar, los valles) y se aclara al subir, con el color del sol. La niebla con rayos forma bancos que se mueven con el viento |
+| **Mar con detalle** | Rizado fino sobre las olas, destellos del sol, luz que atraviesa las crestas, encaje de espuma, arena mojada en la orilla y reflejos de luz bajo el agua |
+| **Relieve de las texturas** | Las juntas de las piedras, las tejas y las vetas cogen luz y sombra como si tuvieran bulto |
+| **Fuego y partículas de verdad** | Las partículas de **Fuego** son lenguas de llama que suben y el **Humo** tiene cuerpo y le da la luz. Además, las partículas se funden con el suelo en vez de cortarse |
+| **Nitidez** | Afila un poco la imagen final |
+
+Con esta sección, las partículas de fuego piden tamaños grandes: una
+antorcha queda bien con un **Tamaño** de 30 (son centímetros) y una
+hoguera con 70 o más. Para una hoguera completa, pon tres objetos juntos:
+uno con partículas de **Fuego**, otro de **Ascuas** y otro de **Humo** un
+poco más arriba.
+
+Todo esto solo funciona con el dibujante nuevo.
+
+![El altar del templo con su hoguera, las ascuas y el humo](../imagenes/capturas/demo-tecnica-fuego.png)
+
+### Texturas con más detalle
+
+Las texturas de los materiales ya no tienen que ser de 32 puntos. Si
+alguna imagen usada como textura mide más (hasta 256 de lado), el motor
+las dibuja todas con ese detalle y las suaviza de cerca. Con texturas de
+32 puntos todo sigue como siempre, con sus puntos bien marcados.
+
 ## Piezas del dibujo
 
 Cada parte del dibujo se puede apagar: **Sombras del sol**, **Sombras de las
