@@ -74,6 +74,13 @@ También puedes **arrastrar la carpeta del proyecto** desde el Finder o el
 Explorador de archivos y soltarla sobre la ventana del motor. Una vez
 abierto, el proyecto se añade a la lista.
 
+## Mientras se abre
+
+Abrir o crear un proyecto grande puede tardar unos segundos. Mientras,
+verás una pantalla de carga con el nombre del proyecto, una barra y lo que
+está haciendo. El programa sigue funcionando: no se ha colgado. Si algo
+falla, vuelves a la pantalla de inicio con el motivo.
+
 ## Volver a la pantalla de inicio
 
 Desde el editor, elige **Archivo → Cerrar proyecto**. Si hay cambios sin
