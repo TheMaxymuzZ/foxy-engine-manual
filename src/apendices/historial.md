@@ -5,6 +5,18 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase R: cielo, niebla, mar y fuego de verdad
+
+- Una sección nueva en los gráficos,
+  **[Cielo, niebla, mar y fuego de verdad](../guia/graficos.md#cielo-niebla-mar-y-fuego-de-verdad)**:
+  nubes con volumen que dan sombra y se reflejan, bruma que se posa en lo
+  bajo, mar con rizado, destellos y espuma, relieve en las texturas, llamas
+  y humo nuevos y nitidez. Viene apagada.
+- Las texturas de los materiales pueden medir hasta 256 puntos de lado.
+- La [demo técnica](../tu-primer-juego/demo-tecnica.md) lo enciende todo y
+  estrena texturas finas, hogueras con ascuas y humo, una vía sagrada de
+  losas pulidas ante el templo y una plaza con retícula de mármol.
+
 ## Personajes que andan
 
 - **[Andar hacia](../guia/personajes-que-andan.md)**: un nodo nuevo y
