@@ -100,6 +100,7 @@
     - [El Estudio 2D](guia/estudio-2d.md)
     - [Programar con bloques](guia/bloques.md)
     - [Ratón, copias, lápiz y más](guia/bloques-escenario.md)
+    - [Disfraces, fondos y sonidos](guia/disfraces-fondos-sonidos.md)
     - [Sprites](guia/sprites.md)
     - [Mapas de casillas](guia/casillas.md)
     - [Pixel art](guia/pixel-art.md)

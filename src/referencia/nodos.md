@@ -1824,6 +1824,50 @@ Toca un sonido del proyecto (de sonidos/) o uno de ejemplo: paso, salto, campana
 
 En Lua: `motor.sonar(sonido)`
 
+### Sonar hasta que acabe {#motor-sonar_hasta_acabar}
+
+*Acción* · `motor.sonar_hasta_acabar`
+
+Toca un sonido y espera a que termine antes de seguir con el bloque de abajo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | sonido | recurso | «campana» |
+
+En Lua: `motor.sonar_hasta_acabar(sonido)`
+
+### Parar todos los sonidos {#motor-parar_sonidos}
+
+*Acción* · `motor.parar_sonidos`
+
+Calla todos los sonidos que estén sonando (la música sigue).
+
+En Lua: `motor.parar_sonidos()`
+
+### Fijar el volumen {#motor-volumen_sonidos}
+
+*Acción* · `motor.volumen_sonidos`
+
+El volumen de los sonidos que toquen los guiones: 100 = normal, 50 = la mitad, 0 = nada.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | % | número | 100 |
+
+En Lua: `motor.volumen_sonidos(por_ciento)`
+
+### Fijar el tono {#motor-tono_sonidos}
+
+*Acción* · `motor.tono_sonidos`
+
+Los sonidos que toquen los guiones suenan más agudos (números positivos) o más graves (negativos). 0 = normal, 12 = el doble de agudo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | tono | número | 0 |
+
+En Lua: `motor.tono_sonidos(semitonos)`
+
 ## Valores del juego
 
 ### Valor del juego {#motor-valor}
@@ -2969,6 +3013,50 @@ Deja de enseñar la variable en pantalla.
 | Entrada | variable | texto | «puntos» |
 
 En Lua: `motor.esconder_variable(nombre)`
+
+### Cambiar el fondo a {#motor-cambiar_fondo}
+
+*Acción* · `motor.cambiar_fondo`
+
+Pone otro fondo del escenario (por su nombre o su número, o «siguiente» o «anterior»).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | fondo | recurso | «siguiente» |
+
+En Lua: `motor.cambiar_fondo(fondo)`
+
+### Siguiente fondo {#motor-siguiente_fondo}
+
+*Acción* · `motor.siguiente_fondo`
+
+Pasa al fondo siguiente del escenario (después del último vuelve al primero).
+
+En Lua: `motor.siguiente_fondo()`
+
+### Nombre del fondo {#motor-fondo}
+
+*Valor* · `motor.fondo`
+
+El nombre del fondo que está puesto («día», «noche»…).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | fondo | texto | — |
+
+En Lua: `local nombre = motor.fondo()`
+
+### Número del fondo {#motor-numero_fondo}
+
+*Valor* · `motor.numero_fondo`
+
+El número del fondo que está puesto (el primero es el 1).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | número | número | — |
+
+En Lua: `local numero = motor.numero_fondo()`
 
 ## Otros
 
