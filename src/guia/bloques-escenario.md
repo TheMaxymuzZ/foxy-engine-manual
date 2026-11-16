@@ -121,7 +121,7 @@ Por ejemplo, esto dibuja una estrella:
 
 ## Ejemplo: Atrapa manzanas
 
-La plantilla **Atrapa manzanas** (en **Más ejemplos**) es un juego hecho
+La plantilla **Atrapa manzanas** (en **Juego 2D**) es un juego hecho
 solo con bloques. Las manzanas caen desde arriba, el zorro sigue al ratón
 por abajo y cada manzana atrapada suma un punto. A los 30 segundos se
 acaba.

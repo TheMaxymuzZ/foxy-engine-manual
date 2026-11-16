@@ -67,4 +67,6 @@ el comportamiento **Girar**.
 - [Juegos 2D](../guia/juegos-2d.md), [Sprites](../guia/sprites.md) y
   [Mapas de casillas](../guia/casillas.md).
 - [Pixel art](../guia/pixel-art.md): dibuja tus propias monedas.
-- [Tutorial: tu primer juego 2D](../empezar/primer-juego-2d.md).
+- [Tutorial: un plataformas con casillas](../empezar/primer-juego-2d-casillas.md).
+- [Zorro saltarín](../guia/ejemplos-2d.md#zorro-saltarín): este nivel con
+  bloques.

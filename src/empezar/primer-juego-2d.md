@@ -1,115 +1,111 @@
 # Tutorial: tu primer juego 2D
 
-Este tutorial crea un juego de plataformas de pixel art desde la plantilla
-**Vacío 2D**: un nivel pintado con casillas, monedas dibujadas a mano, un
-marcador y una bandera de meta. No hace falta escribir código. Se completa
-en unos veinte minutos.
+El tutorial del Estudio 2D lleva **del zorro quieto a un juego con puntos**
+en unos diez minutos, sin escribir código: el zorro saluda, anda con las
+flechas y atrapa una manzana que cae, y los puntos se ven en la pantalla.
+Sale solo la primera vez que creas un proyecto con la plantilla **Estudio
+en blanco**, y esta página cuenta lo mismo, paso a paso.
 
-**Aprenderás a:** pintar con casillas y autocasillas, dibujar un sprite,
-crear objetos 2D, conectar una zona con una interfaz y probar el juego.
+**Aprenderás a:** elegir y mover personajes, encajar bloques, usar
+eventos, movimiento, aspecto, control, sensores y variables, y probar el
+juego.
 
-![El Estudio 2D con un nivel de plataformas](../imagenes/capturas/editor-2d.png)
+![Un paso del tutorial del Estudio](../imagenes/capturas/estudio-tutorial-bloque.png)
+
+## Cómo funciona
+
+Cada paso enmarca en naranja la parte del Estudio de la que habla y dice
+qué hacer. La tarjeta se pone a un lado, para que no tape lo que hay que
+usar. **Cuando lo haces, el paso se marca solo**: sale **¡Bien hecho!** y
+el botón **Siguiente** se vuelve naranja. Si prefieres no hacerlo, pulsa
+**Saltar este paso**.
+
+Para verlo otra vez, elige **Ayuda → Tutorial guiado** con un proyecto 2D
+abierto. Con un proyecto 3D, el mismo menú enseña el
+[tutorial del editor](modo-sencillo.md#el-tutorial-guiado).
 
 ## 1. Crear el proyecto
 
-1. En la [pantalla de inicio](pantalla-de-inicio.md), pulsa
-   <i class="fx fx-mas"></i> **Nuevo proyecto**.
-2. En **¿Qué juego quieres hacer?**, elige **Vacío 2D** (en *Empezar de
-   cero*).
-3. En **Nombre**, escribe `Mi plataformas` y pulsa **Crear proyecto**.
+1. En la [pantalla de inicio](pantalla-de-inicio.md), pulsa **Nuevo
+   proyecto**.
+2. En **¿Qué juego quieres hacer?**, elige **Estudio en blanco**, la
+   primera de **Juego 2D** (ya viene elegida).
+3. Escribe un nombre y pulsa **Crear proyecto**.
 
-El proyecto se abre en el [Estudio 2D](../guia/estudio-2d.md): el escenario
-en el centro, con un suelo de hierba, el cielo y un zorro, y los personajes
-en el reparto de la izquierda. Para pintar casillas, pasa al modo
-**Avanzado**: el Estudio añade los paneles
-[Casillas](../interfaz/casillas.md) y [Capas](../interfaz/capas.md).
+El proyecto se abre en el [Estudio 2D](../guia/estudio-2d.md) y el
+tutorial empieza.
 
-Pulsa <i class="fx fx-jugar"></i> **Jugar** (<kbd>F5</kbd>) para
-probarlo: el zorro corre con <kbd>A</kbd> y <kbd>D</kbd> y salta con
-<kbd>Espacio</kbd>. Pulsa <kbd>F5</kbd> otra vez para volver.
+## 2. Elegir y mover al zorro
 
-## 2. Moverse por la escena
+![El paso «Tu reparto»](../imagenes/capturas/estudio-tutorial-reparto.png)
 
-| Acción | Control |
-|---|---|
-| Mover la vista | Botón del medio, o <kbd>Espacio</kbd> y arrastrar |
-| Acercar y alejar | Rueda del ratón |
-| Volver a centrar | El botón de centrar, arriba en la vista |
+1. **Tu reparto.** En el panel **Reparto**, haz clic en la tarjeta del
+   **Zorro**.
+2. **El escenario.** Arrastra al zorro con el ratón y suéltalo donde
+   quieras. Lo que se ve en el escenario es lo que verá quien juegue.
 
-## 3. Pintar el nivel
+## 3. Que hable
 
-1. En el panel **Capas**, elige la capa **Suelo**.
-2. En el panel **Casillas**, debajo de las casillas, haz clic en la
-   autocasilla **Hierba**.
-3. En la barra de herramientas de la vista, elige **Rectángulo** y arrastra
-   a la derecha del suelo para alargarlo unas veinte casillas.
-4. Con el **Pincel**, pinta dos o tres plataformas en el aire, a unas tres
-   casillas de altura, con un hueco entre ellas.
+1. **Tu primer bloque.** En el **Taller**, en la familia **Eventos**
+   (amarilla), coge **al pulsar ▶ Jugar** y suéltalo en el lienzo.
+2. **Que hable.** En **Aspecto** (morada), arrastra **decir ¡Hola! durante
+   2 s** justo debajo, hasta que encaje. Haz clic en el texto para
+   cambiarlo.
+3. **Pruébalo.** Pulsa **Jugar**: el zorro dice lo que has escrito. Pulsa
+   **Parar** (o <kbd>Esc</kbd>) para volver.
 
-La autocasilla pone sola los bordes de hierba y las esquinas. El botón
-derecho borra. Ver [Mapas de casillas](../guia/casillas.md).
+## 4. Que se mueva
 
-> <i class="fx fx-consejo"></i> **Consejo.** Para un hueco que haga daño,
-> pinta casillas de pinchos y márcalas como **Peligro** en el modo
-> **Choques** del panel Casillas.
+**Que se mueva.** Saca otro **al pulsar la tecla…** de Eventos y elige la
+**flecha derecha**. Debajo, encaja **mover 10 pasos** de **Movimiento**
+(azul). Haz lo mismo con la flecha izquierda y **mover -10 pasos**.
 
-## 4. Dibujar una moneda
+## 5. Algo que atrapar y los puntos
 
-1. Cambia al espacio **Pixel art** (arriba en el centro).
-2. En el apartado **Imágenes** del panel Pixel art, en **Nueva**, escribe
-   `Moneda`, elige el tamaño **16 × 16** y el uso **Sprite** y pulsa
-   **+ Crear y abrir**.
-3. Con el **Círculo** (<kbd>O</kbd>) y un amarillo, dibuja una moneda
-   rellena. Añade un borde más oscuro con el **Lápiz** (<kbd>B</kbd>).
-4. Guarda la imagen (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>) y vuelve
-   al **Estudio 2D**.
+![El paso «Los puntos»](../imagenes/capturas/estudio-tutorial-puntos.png)
 
-Ver [Pixel art](../guia/pixel-art.md).
+1. **Algo que atrapar.** Pulsa **Personaje nuevo** y elige la **manzana**
+   en la biblioteca de Foxy (o cualquier otro).
+2. **Los puntos.** En **Variables del juego**, pulsa **Variable**, escribe
+   `puntos` y pulsa **Crear**. Marca **en pantalla** para que se vea al
+   jugar.
 
-## 5. Colocar las monedas
+## 6. Que caiga y se pueda atrapar
 
-1. En el centro de la vista, abre el menú **Crear** y elige **Moneda**.
-2. Con **Elegir**, arrastra la moneda encima de una plataforma.
-3. Repite hasta tener cinco monedas repartidas por el nivel.
+Con la manzana elegida en el reparto:
 
-Cada moneda lleva los componentes **Sprite** (con la imagen `moneda`) y
-**Recogible**: al tocarla desaparece y suma 1 al valor `monedas`. La
-plantilla ya trae la interfaz **Marcador**, que muestra `Monedas:
-{monedas}` arriba a la derecha.
+1. **Que caiga.** Pon **al pulsar ▶ Jugar** y, debajo, **siempre**
+   (Control, naranja). Dentro de **siempre**, encaja **sumar -3 a y**
+   (Movimiento): la manzana baja sin parar.
+2. **Atrapar.** Dentro de **siempre**, debajo de lo anterior, pon **si …
+   entonces** y mete en su hueco **¿tocando Zorro?** (Sensores). Dentro
+   del **si**, pon **sumar 1 a puntos** (Variables) e **ir a x 0 y 130**,
+   para que vuelva a caer desde arriba.
 
-> <i class="fx fx-nota"></i> **Nota.** Si una moneda se ve con su nombre en
-> lugar del dibujo, elígela y, en el componente **Sprite** del Inspector,
-> elige la imagen **moneda**.
+Los bloques de la manzana quedan así:
 
-## 6. Poner la meta
+```text
+al pulsar ▶ Jugar
+siempre
+    sumar -3 a y
+    si ¿tocando Zorro? entonces
+        sumar 1 a puntos
+        ir a x 0 y 130
+```
 
-1. En el panel [Proyecto](../interfaz/proyecto.md), pulsa el
-   <i class="fx fx-mas"></i> del grupo **Interfaces**. Escribe `Meta`, elige
-   la plantilla **Cartel** y acepta.
-2. En el lienzo de la interfaz, cambia el mensaje por
-   `¡Nivel superado con {monedas} monedas!` y guárdala.
-3. Vuelve a la escena. En el menú **Crear** de la vista, elige **Zona** y
-   arrástrala al final del nivel.
-4. En el Inspector, en el componente **Zona**, elige en **Al entrar** la
-   acción **Abrir una interfaz** y la interfaz **Meta**.
+## 7. A jugar
 
-## 7. Probar el juego
-
-1. Pulsa <i class="fx fx-jugar"></i> **Jugar** (<kbd>F5</kbd>).
-2. Recorre el nivel, recoge las monedas y entra en la zona de la meta.
-3. El cartel muestra cuántas monedas has cogido.
-
-![Jugando a un nivel de plataformas 2D](../imagenes/capturas/juego-plataformas-2d.png)
-
-Guarda con <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>.
+Pulsa **Jugar** y atrapa la manzana con las flechas. Los puntos suben en
+la esquina de la pantalla.
 
 ## Para ir más lejos
 
-- La plantilla **Plataformas 2D** tiene un nivel completo con escaleras,
-  agua, pinchos y una caja que se empuja: ábrela para ver cómo está hecho.
-- Las animaciones del zorro (`quieto`, `correr`, `saltar`…) están en el
-  panel [Sprites](../interfaz/sprites.md). El motor elige la que toca según
-  lo que hace el personaje; ver [Juegos 2D](../guia/juegos-2d.md#animaciones-del-jugador).
-- Para comportamientos propios (un enemigo que patrulla, una plataforma que
-  se mueve), sigue el [tutorial del enemigo](../guia/tutorial-enemigo.md).
-- Cuando el juego esté listo, [publícalo](../publicar/publicar.md).
+- Que la manzana salga por un sitio distinto cada vez: en **ir a x … y
+  130**, mete **número al azar entre -220 y 220** en el hueco de la x.
+- Un sonido al atraparla: **tocar el sonido** (Sonido), con uno de la
+  biblioteca.
+- Un tiempo límite: **cuando el cronómetro pase de 30** (Eventos).
+- Los [tres juegos de ejemplo](../guia/ejemplos-2d.md) enseñan diálogos,
+  preguntas, copias, el ratón y un plataformas completo.
+- Para un nivel pintado con casillas, sigue
+  [Tutorial: un plataformas con casillas](primer-juego-2d-casillas.md).

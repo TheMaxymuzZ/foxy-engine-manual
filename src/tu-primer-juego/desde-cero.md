@@ -26,8 +26,11 @@ vacía, sin código:
 
 - [Tutorial: tu primer juego 3D](../empezar/primer-proyecto.md): un camino,
   tres gemas, un marcador y una puerta de meta. Unos veinte minutos.
-- [Tutorial: tu primer juego 2D](../empezar/primer-juego-2d.md): un nivel
-  de plataformas con monedas dibujadas por ti.
+- [Tutorial: tu primer juego 2D](../empezar/primer-juego-2d.md): en el
+  Estudio 2D, del zorro quieto a un juego con puntos, con bloques. Unos diez
+  minutos.
+- [Tutorial: un plataformas con casillas](../empezar/primer-juego-2d-casillas.md):
+  un nivel pintado con casillas y monedas dibujadas por ti.
 
 ## Lo primero que conviene saber
 

@@ -114,7 +114,7 @@ En Lua: `function al_hacer_clic(entidad) ... end`
 
 *Evento* · `evento.al_recoger`
 
-Cuando el jugador recoge un objeto con el componente Recogible (vacío = cualquiera).
+Cuando el jugador recoge un objeto con el componente Recogible. En el guion del juego (o del escenario), cualquiera; en el de un objeto, cuando lo recogen a él (o al que se elija).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -196,6 +196,14 @@ Cuando algo hace daño al objeto con «Hacer daño». Pon «jugador» para el ju
 | Salida | de quién | objeto | — |
 
 En Lua: `function al_recibir_dano(entidad, cantidad, de) ... end`
+
+### Al tocar un peligro {#evento-al_tocar_peligro}
+
+*Evento* · `evento.al_tocar_peligro`
+
+En 2D, cuando el jugador toca pinchos, lava o cualquier casilla de peligro (el motor lo devuelve al último sitio seguro).
+
+En Lua: `function al_tocar_peligro() ... end`
 
 ### Al recibir un mensaje {#evento-al_recibir}
 
