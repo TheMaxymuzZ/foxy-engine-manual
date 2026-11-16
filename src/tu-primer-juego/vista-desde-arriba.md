@@ -15,7 +15,7 @@ plantilla es **Aventura cenital**.
 
 ## 2. Jugarlo
 
-Pulsa **Jugar aquí** (<kbd>F5</kbd>). El héroe anda en las cuatro
+Pulsa **Jugar** (<kbd>F5</kbd>). El héroe anda en las cuatro
 direcciones con <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>. Acércate
 a la **Vecina**: te pide que busques cuatro gemas que se le han caído por el
 prado. El marcador cuenta las que llevas.

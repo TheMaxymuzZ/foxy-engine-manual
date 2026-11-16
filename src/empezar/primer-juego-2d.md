@@ -8,7 +8,7 @@ en unos veinte minutos.
 **Aprenderás a:** pintar con casillas y autocasillas, dibujar un sprite,
 crear objetos 2D, conectar una zona con una interfaz y probar el juego.
 
-![El espacio 2D con un nivel de plataformas](../imagenes/capturas/editor-2d.png)
+![El Estudio 2D con un nivel de plataformas](../imagenes/capturas/editor-2d.png)
 
 ## 1. Crear el proyecto
 
@@ -18,12 +18,13 @@ crear objetos 2D, conectar una zona con una interfaz y probar el juego.
    cero*).
 3. En **Nombre**, escribe `Mi plataformas` y pulsa **Crear proyecto**.
 
-El proyecto se abre en el espacio **2D**: la escena en el centro, con un
-suelo de hierba, el cielo y un zorro, y a la derecha los paneles
-[Casillas](../interfaz/casillas.md), [Capas](../interfaz/capas.md),
-[Sprites](../interfaz/sprites.md) e **Inspector**.
+El proyecto se abre en el [Estudio 2D](../guia/estudio-2d.md): el escenario
+en el centro, con un suelo de hierba, el cielo y un zorro, y los personajes
+en el reparto de la izquierda. Para pintar casillas, pasa al modo
+**Avanzado**: el Estudio añade los paneles
+[Casillas](../interfaz/casillas.md) y [Capas](../interfaz/capas.md).
 
-Pulsa <i class="fx fx-jugar"></i> **Jugar aquí** (<kbd>F5</kbd>) para
+Pulsa <i class="fx fx-jugar"></i> **Jugar** (<kbd>F5</kbd>) para
 probarlo: el zorro corre con <kbd>A</kbd> y <kbd>D</kbd> y salta con
 <kbd>Espacio</kbd>. Pulsa <kbd>F5</kbd> otra vez para volver.
 
@@ -61,7 +62,7 @@ derecho borra. Ver [Mapas de casillas](../guia/casillas.md).
 3. Con el **Círculo** (<kbd>O</kbd>) y un amarillo, dibuja una moneda
    rellena. Añade un borde más oscuro con el **Lápiz** (<kbd>B</kbd>).
 4. Guarda la imagen (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>S</kbd>) y vuelve
-   al espacio **2D**.
+   al **Estudio 2D**.
 
 Ver [Pixel art](../guia/pixel-art.md).
 
@@ -94,7 +95,7 @@ plantilla ya trae la interfaz **Marcador**, que muestra `Monedas:
 
 ## 7. Probar el juego
 
-1. Pulsa <i class="fx fx-jugar"></i> **Jugar aquí** (<kbd>F5</kbd>).
+1. Pulsa <i class="fx fx-jugar"></i> **Jugar** (<kbd>F5</kbd>).
 2. Recorre el nivel, recoge las monedas y entra en la zona de la meta.
 3. El cartel muestra cuántas monedas has cogido.
 

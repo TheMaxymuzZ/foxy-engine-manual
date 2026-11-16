@@ -5,6 +5,16 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase 2D-1: el Estudio
+
+- Los proyectos 2D se abren en el **[Estudio 2D](../guia/estudio-2d.md)**:
+  reparto de personajes, escenario, taller, propiedades y variables.
+- Plantilla nueva **Estudio en blanco**: un escenario libre de 480 × 270
+  píxeles, sin casillas, con el zorro en el centro.
+- Las posiciones se ven en píxeles con el 0, 0 en el centro, y los
+  personajes giran (dirección en grados), cambian de tamaño, se hacen
+  transparentes y se esconden.
+
 ## Fase R: cielo, niebla, mar y fuego de verdad
 
 - Una sección nueva en los gráficos,
