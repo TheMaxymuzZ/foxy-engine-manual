@@ -146,6 +146,10 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | Función | Devuelve | Qué hace |
 |---|---|---|
 | `motor.sonar(sonido: texto)` | — | Toca un sonido del proyecto (de sonidos/) o uno de ejemplo: paso, salto, campana... |
+| `motor.sonar_hasta_acabar(sonido: texto)` | — | Toca un sonido y espera a que termine antes de seguir con el bloque de abajo. |
+| `motor.parar_sonidos()` | — | Calla todos los sonidos que estén sonando (la música sigue). |
+| `motor.volumen_sonidos(por_ciento: número)` | — | El volumen de los sonidos que toquen los guiones: 100 = normal, 50 = la mitad, 0 = nada. |
+| `motor.tono_sonidos(semitonos: número)` | — | Los sonidos que toquen los guiones suenan más agudos (números positivos) o más graves (negativos). 0 = normal, 12 = el doble de agudo. |
 
 ## Valores del juego
 
@@ -258,6 +262,10 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.arrastrable(entidad: objeto, si: texto)` | — | Si el jugador lo puede mover arrastrándolo con el ratón. |
 | `motor.mostrar_variable(nombre: texto)` | — | Enseña una variable del juego en pantalla (arriba a la izquierda), con su valor. |
 | `motor.esconder_variable(nombre: texto)` | — | Deja de enseñar la variable en pantalla. |
+| `motor.cambiar_fondo(fondo: texto)` | — | Pone otro fondo del escenario (por su nombre o su número, o «siguiente» o «anterior»). |
+| `motor.siguiente_fondo()` | — | Pasa al fondo siguiente del escenario (después del último vuelve al primero). |
+| `motor.fondo()` | nombre (texto) | El nombre del fondo que está puesto («día», «noche»…). |
+| `motor.numero_fondo()` | numero (número) | El número del fondo que está puesto (el primero es el 1). |
 
 ## Otros
 
