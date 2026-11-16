@@ -37,6 +37,7 @@ para cada una.
 | Tipo de juego | Plantilla | Qué incluye | Tutorial |
 |---|---|---|---|
 | **Empezar de cero** | **Vacío 3D** | Un llano de 96 × 96 m y el punto de inicio. Nada más | [Desde cero](../tu-primer-juego/desde-cero.md) |
+| | **Estudio en blanco** | Un escenario 2D libre, sin casillas, con un zorro en el centro | [El Estudio 2D](../guia/estudio-2d.md) |
 | | **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta | [Tu primer juego 2D](primer-juego-2d.md) |
 | **Plataformas** | **Plataformas 2D** | Un nivel de pixel art con monedas que flotan, escaleras, pinchos, agua y una bandera de meta | [Plataformas](../tu-primer-juego/plataformas.md) |
 | | **Plataformas vóxel** | Un nivel de cubitos visto de lado, con cámara fija y monedas que giran | [Plataformas](../tu-primer-juego/plataformas.md) |

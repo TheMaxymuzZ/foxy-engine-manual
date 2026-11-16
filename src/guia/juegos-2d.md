@@ -5,7 +5,7 @@ mapas de casillas, y de **cubitos vistos de lado**, con la cámara sin
 perspectiva. Los dos usan las mismas objetos, componentes, guiones y
 nodos que los juegos 3D.
 
-![El espacio 2D con la plantilla Plataformas 2D](../imagenes/capturas/editor-2d.png)
+![El Estudio 2D con la plantilla Plataformas 2D](../imagenes/capturas/editor-2d.png)
 
 | Jugando a Plataformas 2D | Jugando a Plataformas vóxel |
 |---|---|
@@ -14,21 +14,23 @@ nodos que los juegos 3D.
 ## Empezar un juego 2D
 
 1. En la pantalla de inicio, pulsa **Nuevo proyecto**.
-2. En **¿Qué juego quieres hacer?**, elige una plantilla 2D: Vacío 2D,
-   Plataformas 2D, Plataformas vóxel o Aventura cenital.
+2. En **¿Qué juego quieres hacer?**, elige una plantilla 2D: Estudio en
+   blanco, Vacío 2D, Plataformas 2D, Plataformas vóxel o Aventura cenital.
 3. Pulsa **Crear proyecto**.
 
 | Plantilla | Qué incluye |
 |---|---|
+| **Estudio en blanco** | Un escenario libre de 480 × 270 píxeles, sin casillas, con el zorro en el centro |
 | **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta |
 | **Plataformas 2D** | Un nivel con monedas, escaleras, pinchos, agua, una caja que se empuja y una bandera de meta |
 | **Aventura cenital** | Un prado visto desde arriba, con camino, lago, una vecina, antorchas y gemas que buscar |
 | **Plataformas vóxel** | Un nivel de cubitos visto de lado, con cámara fija y monedas en el camino |
 
-Los proyectos 2D se abren en el espacio **2D**: el panel **Proyecto** y
-**En la escena** a la izquierda, la vista en el centro, y
-[Casillas](casillas.md), [Capas](casillas.md#capas),
-[Sprites](sprites.md) e **Inspector** a la derecha.
+Los proyectos 2D se abren en el [Estudio 2D](estudio-2d.md): el reparto de
+personajes a la izquierda, el escenario en el centro y sus propiedades y
+variables a la derecha. En el modo Avanzado añade
+[Casillas](casillas.md), [Capas](casillas.md#capas) e **Inspector**, y el
+espacio **2D** de antes sigue en la lista de espacios.
 
 ## La escena 2D
 

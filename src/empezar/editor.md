@@ -41,7 +41,7 @@ un clic arriba en el centro:
 | ![Programar](../imagenes/capturas/espacio-programar.png) | ![Pixel art](../imagenes/capturas/espacio-pixel-art.png) |
 
 Cada espacio **recuerda cómo lo dejaste** en cada proyecto. Los proyectos 2D
-se abren en el espacio **2D**.
+se abren en el [Estudio 2D](../guia/estudio-2d.md).
 
 ## Los paneles
 

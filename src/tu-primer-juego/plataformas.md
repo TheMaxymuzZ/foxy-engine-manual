@@ -19,7 +19,7 @@ coge monedas y llega a la meta. Hay dos plantillas con la misma idea:
 
 ## 2. Jugarlo
 
-Pulsa **Jugar aquí** (<kbd>F5</kbd>). El zorro corre con <kbd>A</kbd> y
+Pulsa **Jugar** (<kbd>F5</kbd>; en Plataformas vóxel, **Jugar aquí**). El zorro corre con <kbd>A</kbd> y
 <kbd>D</kbd> y salta con <kbd>Espacio</kbd>. Coge las monedas, sube por las
 escaleras, esquiva los pinchos y llega a la bandera. El marcador de arriba
 cuenta las monedas. Pulsa <kbd>F5</kbd> otra vez para volver al editor.
