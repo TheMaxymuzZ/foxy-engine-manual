@@ -46,7 +46,8 @@ para cada una.
 | **Puzle** | **Puzle de botones** | Tres botones de colores y tres puertas que hay que abrir a la vez | [Puzle](../tu-primer-juego/puzle.md) |
 | **Mundo de cubitos** | **Isla vóxel** | Una isla generada con colinas, playa, árboles y muelle, sin construcciones | [Mundo de cubitos](../tu-primer-juego/mundo-de-cubitos.md) |
 | | **Isla de ejemplo** | Una isla con pueblo, mercado, vecinos, pelotas y un guion de ejemplo | [Mundo de cubitos](../tu-primer-juego/mundo-de-cubitos.md) |
-| **Más ejemplos** | **Personaje animado** | Un personaje que anda, corre y salta, una puerta que se abre sola y una cinemática | [Animación](../guia/animacion.md) |
+| **Más ejemplos** | **Atrapa manzanas** | Un juego del Estudio 2D hecho solo con bloques: las manzanas caen, el zorro sigue al ratón y los puntos se ven en pantalla | [Ratón, copias, lápiz y más](../guia/bloques-escenario.md#ejemplo-atrapa-manzanas) |
+| | **Personaje animado** | Un personaje que anda, corre y salta, una puerta que se abre sola y una cinemática | [Animación](../guia/animacion.md) |
 | | **Demo técnica** | El templo del zorro en la cumbre de un monte junto al mar, con una ciudad griega, un puerto y una cinemática | [Demo técnica](../tu-primer-juego/demo-tecnica.md) |
 
 Cada plantilla trae **solo lo que usa**: los objetos, los comportamientos y
@@ -56,8 +57,9 @@ proyecto y se puede cambiar o borrar.
 
 ### Qué clase de proyecto crea cada una
 
-Las plantillas 3D crean un proyecto **3D vóxel**; Vacío 2D, Plataformas 2D
-y Aventura cenital, uno **2D pixel art**, y Plataformas vóxel, uno **2D con
+Las plantillas 3D crean un proyecto **3D vóxel**; Estudio en blanco, Vacío
+2D, Plataformas 2D, Aventura cenital y Atrapa manzanas, uno **2D pixel
+art**, y Plataformas vóxel, uno **2D con
 vóxeles** (cubitos vistos de lado). La clase sale en la esquina de cada
 fila del asistente. Los juegos 2D se explican en
 [Juegos 2D](../guia/juegos-2d.md).

@@ -27,22 +27,26 @@ juego entero (lo que no es de ningún personaje).
 
 | Familia | Color | Para qué |
 |---|---|---|
-| **Eventos** | amarillo | Cuándo empieza un guion: al pulsar Jugar, al pulsar una tecla, cada cierto tiempo, al recibir un mensaje. |
-| **Movimiento** | azul | Mover, girar, ir a un punto, apuntar hacia otro personaje. |
-| **Aspecto** | morado | Decir algo, cambiar de disfraz, de tamaño o de transparencia, esconderse y mostrarse. |
+| **Eventos** | amarillo | Cuándo empieza un guion: al pulsar Jugar, al pulsar una tecla, al hacer clic en el personaje, al empezar como copia, cada cierto tiempo, cuando el cronómetro pasa de un número, al recibir un mensaje. |
+| **Movimiento** | azul | Mover, girar, ir a un punto, al ratón o a otro personaje, deslizar, rebotar en los bordes. |
+| **Aspecto** | morado | Bocadillos de decir y pensar, cambiar de disfraz, de tamaño o de transparencia, esconderse y mostrarse, y el lápiz. |
 | **Sonido** | rosa | Tocar sonidos. |
-| **Control** | naranja | Esperar, repetir, siempre, si… entonces. |
-| **Sensores** | turquesa | Preguntas como «¿se pulsa Derecha?» y el tiempo que se lleva jugando. |
+| **Control** | naranja | Esperar, repetir, siempre, si… entonces, y las copias. |
+| **Sensores** | turquesa | Preguntas como «¿se pulsa Derecha?» o «¿tocando…?», el ratón, las teclas, preguntar y esperar la respuesta, y el cronómetro. |
 | **Operaciones** | verde | Cuentas, comparaciones, azar y textos. |
-| **Variables** | rojo | Leer y cambiar variables y listas. **Crear una variable** abre una ventana para darle nombre y elegir si es para todos o solo para este personaje. |
+| **Variables** | rojo | Leer y cambiar variables y listas, y enseñarlas en pantalla. **Crear una variable** abre una ventana para darle nombre y elegir si es para todos o solo para este personaje. |
 | **Mis bloques** | gris azulado | Las funciones hechas con nodos y los nodos escritos en Lua del proyecto. |
 
 Cada nodo nuevo lleva también el color de su familia en el panel Nodos.
+Los bloques del ratón, las copias, el lápiz, los bocadillos y los demás
+del escenario se explican en [Ratón, copias, lápiz y más](bloques-escenario.md).
 
 ## Las formas de los bloques
 
 - **Sombrero** (redondeado arriba): un evento. Empieza un guion y no se
   puede poner nada encima.
+- **Tapa**: acaba un guion y no se puede poner nada debajo, como **borrar
+  esta copia**.
 - **Pieza**: una orden. Encaja debajo de otra.
 - **Abrazo** (forma de C): «siempre», «repetir», «si… entonces». Lo que
   va dentro se repite o se hace solo si se cumple la condición.
@@ -76,7 +80,8 @@ nuevo con el primer bloque que le pongas.
 1. Crea un proyecto con la plantilla **Estudio en blanco** y elige el zorro
    en el reparto.
 2. En **Eventos**, arrastra **al pulsar ▶ Jugar** al lienzo.
-3. En **Aspecto**, encaja debajo **decir** y escribe `¡Vamos!`.
+3. En **Aspecto**, encaja debajo **mensaje abajo** y escribe `¡Vamos!`
+   (o **decir**, para que salga en un bocadillo).
 4. En **Movimiento**, encaja **forma de girar** y elige
    `izquierda-derecha`, para que se dé la vuelta sin ponerse boca abajo.
 5. En **Control**, encaja **siempre**.

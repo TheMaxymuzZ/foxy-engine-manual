@@ -226,6 +226,38 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.sumar_tamano(entidad: objeto, por_ciento: número)` | — | Lo hace más grande (o más pequeño, con un número negativo), en tanto por ciento. |
 | `motor.tamano(entidad: objeto)` | por_ciento (número) | Su tamaño en tanto por ciento (100 = el de su dibujo). |
 | `motor.poner_transparencia(entidad: objeto, por_ciento: número)` | — | 0 = se ve del todo, 100 = invisible. |
+| `motor.ir_a_sitio(entidad: objeto, destino: texto)` | — | Se pone en el ratón, en una posición al azar de la pantalla o donde está otro personaje. |
+| `motor.apuntar_a_sitio(entidad: objeto, destino: texto)` | — | Mira hacia el ratón o hacia otro personaje. |
+| `motor.deslizar_xy(entidad: objeto, segundos: número, x: número, y: número)` | — | Va poco a poco hasta ese punto (en píxeles) y tarda esos segundos. El guion espera a que llegue. |
+| `motor.deslizar_a(entidad: objeto, segundos: número, destino: texto)` | — | Va poco a poco hasta el ratón, una posición al azar o otro personaje, en esos segundos. |
+| `motor.rebotar_borde(entidad: objeto)` | — | Si se sale por un borde de la pantalla, vuelve a entrar y da la vuelta, como una pelota. |
+| `motor.bocadillo(entidad: objeto, texto: texto)` | — | Le sale un bocadillo con ese texto encima (vacío = lo quita). |
+| `motor.bocadillo_durante(entidad: objeto, texto: texto, segundos: número)` | — | Dice algo en un bocadillo esos segundos y luego lo quita. El guion espera. |
+| `motor.pensar(entidad: objeto, texto: texto)` | — | Le sale una nube de pensar con ese texto encima (vacío = la quita). |
+| `motor.pensar_durante(entidad: objeto, texto: texto, segundos: número)` | — | Piensa algo esos segundos y luego quita la nube. El guion espera. |
+| `motor.bajar_lapiz(entidad: objeto)` | — | Desde ahora, al moverse va dibujando una raya por donde pasa. |
+| `motor.subir_lapiz(entidad: objeto)` | — | Deja de dibujar al moverse. |
+| `motor.color_lapiz(entidad: objeto, color: texto)` | — | El color de la raya que dibuja. |
+| `motor.grosor_lapiz(entidad: objeto, grosor: número)` | — | Lo gruesa que es la raya, en píxeles. |
+| `motor.sellar(entidad: objeto)` | — | Deja una copia quieta de su dibujo donde está, en la capa del lápiz. |
+| `motor.borrar_dibujos()` | — | Quita las rayas y los dibujos estampados. |
+| `motor.crear_copia(de: objeto)` | — | Hace una copia del personaje mientras se juega, en su mismo sitio. La copia hace lo de «al empezar como copia». |
+| `motor.borrar_copia(entidad: objeto)` | — | La copia desaparece y sus guiones se paran. En el original no hace nada. |
+| `motor.es_copia(entidad: objeto)` | si (sí/no) | Sí si es una copia hecha jugando. |
+| `motor.tocando(entidad: objeto, otro: texto)` | si (sí/no) | Sí si su dibujo toca el borde de la pantalla, el ratón u otro personaje (o cualquiera de sus copias). |
+| `motor.tocando_color(entidad: objeto, color: texto)` | si (sí/no) | Sí si su dibujo está encima de algo de ese color (un fondo, una casilla, otro personaje o una raya del lápiz). |
+| `motor.distancia_a(entidad: objeto, destino: texto)` | pixeles (número) | Cuántos píxeles hay hasta el ratón o hasta otro personaje. |
+| `motor.preguntar(entidad: objeto, texto: texto)` | — | Hace una pregunta y espera a que el jugador escriba la respuesta y pulse Intro. Lo escrito queda en «respuesta». |
+| `motor.respuesta()` | texto (texto) | Lo último que respondió el jugador a «preguntar». |
+| `motor.tecla(nombre: texto)` | si (sí/no) | Sí mientras esa tecla esté apretada («cualquiera» = alguna). |
+| `motor.raton_pulsado()` | si (sí/no) | Sí mientras el botón del ratón esté apretado. |
+| `motor.raton_x()` | x (número) | Dónde está el ratón, en píxeles (0 = el centro de la pantalla). |
+| `motor.raton_y()` | y (número) | Dónde está el ratón, en píxeles (0 = el centro de la pantalla). |
+| `motor.cronometro()` | segundos (número) | Los segundos desde que empezó el juego o desde que se reinició. |
+| `motor.reiniciar_cronometro()` | — | Pone el cronómetro a cero. |
+| `motor.arrastrable(entidad: objeto, si: texto)` | — | Si el jugador lo puede mover arrastrándolo con el ratón. |
+| `motor.mostrar_variable(nombre: texto)` | — | Enseña una variable del juego en pantalla (arriba a la izquierda), con su valor. |
+| `motor.esconder_variable(nombre: texto)` | — | Deja de enseñar la variable en pantalla. |
 
 ## Otros
 
