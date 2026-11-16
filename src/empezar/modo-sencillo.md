@@ -61,7 +61,20 @@ y explica para qué sirve.
 Pulsa **Siguiente** para avanzar, **Atrás** para volver o **Saltar el
 tutorial** para cerrarlo. Una vez visto o saltado, no vuelve a salir solo.
 
-Para verlo otra vez, elige **Ayuda → Tutorial guiado**. Para que salga de
+### El tutorial del Estudio 2D
+
+En el [Estudio 2D](../guia/estudio-2d.md) sale otro tutorial, más largo y
+práctico: trece pasos que llevan del zorro quieto a un juego con puntos.
+Cada paso pide hacer algo (elegir al zorro, encajar un bloque, pulsar
+**Jugar**…) y **se marca solo** cuando está hecho. Sale la primera vez que
+creas un **Estudio en blanco**, no en los ejemplos que ya traen bloques.
+Está contado paso a paso en
+[Tutorial: tu primer juego 2D](primer-juego-2d.md).
+
+![Un paso del tutorial del Estudio](../imagenes/capturas/estudio-tutorial-bloque.png)
+
+Para ver cualquiera de los dos otra vez, elige **Ayuda → Tutorial guiado**:
+con un proyecto 2D abierto sale el del Estudio. Para que salga de
 nuevo al abrir un proyecto, marca **Enseñar el tutorial guiado al abrir un
 proyecto** en **Editar → Preferencias… → General**.
 

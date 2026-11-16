@@ -1,36 +1,54 @@
 # Juegos 2D
 
-Foxy Engine hace juegos 2D de dos clases: de **pixel art**, con sprites y
-mapas de casillas, y de **cubitos vistos de lado**, con la cámara sin
-perspectiva. Los dos usan las mismas objetos, componentes, guiones y
-nodos que los juegos 3D.
+Los juegos 2D se hacen en el **[Estudio 2D](estudio-2d.md)**: un escenario,
+un reparto de personajes y, para cada uno, sus bloques, sus disfraces y sus
+sonidos. Se programa juntando [bloques de colores](bloques.md), sin
+escribir código, y por debajo está todo el motor: los mismos objetos,
+componentes, nodos y guiones que en 3D, el jugador de plataformas, las
+casillas, la física 2D y las luces.
 
-![El Estudio 2D con la plantilla Plataformas 2D](../imagenes/capturas/editor-2d.png)
+![El Estudio 2D con El cuento de la gema](../imagenes/capturas/ejemplo-cuento.png)
 
-| Jugando a Plataformas 2D | Jugando a Plataformas vóxel |
-|---|---|
-| ![Un zorro en un nivel de plataformas de pixel art](../imagenes/capturas/juego-plataformas-2d.png) | ![Un personaje de cubitos visto de lado](../imagenes/capturas/juego-plataformas-voxel.png) |
+Foxy hace juegos 2D de dos clases: de **pixel art**, con sprites y, si se
+quiere, mapas de casillas, y de **cubitos vistos de lado**, con la cámara
+sin perspectiva.
 
 ## Empezar un juego 2D
 
-1. En la pantalla de inicio, pulsa **Nuevo proyecto**.
-2. En **¿Qué juego quieres hacer?**, elige una plantilla 2D: Estudio en
-   blanco, Vacío 2D, Plataformas 2D, Plataformas vóxel o Aventura cenital.
-3. Pulsa **Crear proyecto**.
+1. En la pantalla de inicio, pulsa **Nuevo proyecto**. La primera clase de
+   juego, **Juego 2D**, ya viene elegida con el **Estudio en blanco**.
+2. Escribe un nombre y pulsa **Crear proyecto**.
+3. La primera vez, el [tutorial del Estudio](../empezar/primer-juego-2d.md)
+   te lleva paso a paso del zorro quieto a un juego con puntos.
+
+![Las plantillas de Juego 2D](../imagenes/capturas/inicio-plantillas.png)
 
 | Plantilla | Qué incluye |
 |---|---|
-| **Estudio en blanco** | Un escenario libre de 480 × 270 píxeles, sin casillas, con el zorro en el centro |
-| **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta |
-| **Plataformas 2D** | Un nivel con monedas, escaleras, pinchos, agua, una caja que se empuja y una bandera de meta |
-| **Aventura cenital** | Un prado visto desde arriba, con camino, lago, una vecina, antorchas y gemas que buscar |
-| **Plataformas vóxel** | Un nivel de cubitos visto de lado, con cámara fija y monedas en el camino |
+| **Estudio en blanco** | Un escenario libre de 480 × 270 píxeles, sin casillas, con el zorro. Empieza con el tutorial |
+| **Atrapa manzanas** | Un juego hecho con bloques: copias, ratón, cronómetro y puntos en pantalla. Ver [el ejemplo](bloques-escenario.md#ejemplo-atrapa-manzanas) |
+| **El cuento de la gema** | Una historia con diálogos, preguntas y dos fondos. Ver [el ejemplo](ejemplos-2d.md#el-cuento-de-la-gema) |
+| **Zorro saltarín** | Un plataformas con vidas, monedas y sonidos hechos con bloques. Ver [el ejemplo](ejemplos-2d.md#zorro-saltarín) |
+| **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta (en *Empezar de cero*) |
+| **Plataformas 2D** | Un nivel con monedas, escaleras, pinchos, agua, una caja que se empuja y una bandera de meta (en *Plataformas*) |
+| **Aventura cenital** | Un prado visto desde arriba, con camino, lago, una vecina, antorchas y gemas que buscar (en *Vista desde arriba*) |
+| **Plataformas vóxel** | Un nivel de cubitos visto de lado, con cámara fija y monedas en el camino (en *Plataformas*) |
 
-Los proyectos 2D se abren en el [Estudio 2D](estudio-2d.md): el reparto de
-personajes a la izquierda, el escenario en el centro y sus propiedades y
-variables a la derecha. En el modo Avanzado añade
-[Casillas](casillas.md), [Capas](casillas.md#capas) e **Inspector**, y el
-espacio **2D** de antes sigue en la lista de espacios.
+## Por dónde seguir
+
+| Para | Lee |
+|---|---|
+| Conocer los paneles del Estudio | [El Estudio 2D](estudio-2d.md) |
+| Programar con bloques | [Programar con bloques](bloques.md) y [Ratón, copias, lápiz y más](bloques-escenario.md) |
+| Dibujar personajes y fondos, y poner sonidos | [Disfraces, fondos y sonidos](disfraces-fondos-sonidos.md) |
+| Ver juegos hechos de principio a fin | [Tres juegos de ejemplo](ejemplos-2d.md) |
+| Pintar niveles con casillas (modo Avanzado) | [Mapas de casillas](casillas.md) y [Tutorial: un plataformas con casillas](../empezar/primer-juego-2d-casillas.md) |
+
+En el modo Avanzado, el Estudio añade [Casillas](casillas.md),
+[Capas](casillas.md#capas) e **Inspector**, y el espacio **2D** de antes
+sigue en la lista de espacios. El resto de esta página explica lo que hay
+debajo: la escena 2D, la vista con sus herramientas de casillas, los
+objetos 2D y el jugador.
 
 ## La escena 2D
 

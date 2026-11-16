@@ -20,7 +20,10 @@ elige qué juego vas a hacer, el nombre y la carpeta donde se guarda.
 
 El editor abre el proyecto nuevo y lo añade a la lista de proyectos. La
 primera vez, el [tutorial guiado](modo-sencillo.md#el-tutorial-guiado)
-enseña las partes del editor en ocho pasos cortos.
+enseña las partes del editor en ocho pasos cortos; en un juego 2D (el
+**Estudio en blanco**, que viene elegido), el
+[tutorial del Estudio](primer-juego-2d.md) lleva hasta un juego con
+puntos.
 
 ![El asistente, en detalle](../imagenes/capturas/panel-asistente.png)
 
@@ -36,9 +39,12 @@ para cada una.
 
 | Tipo de juego | Plantilla | Qué incluye | Tutorial |
 |---|---|---|---|
+| **Juego 2D** | **Estudio en blanco** | Un escenario 2D libre, sin casillas, con un zorro. La primera vez, el tutorial del Estudio lleva hasta un juego con puntos | [Tu primer juego 2D](primer-juego-2d.md) |
+| | **Atrapa manzanas** | Un juego hecho solo con bloques: las manzanas caen, el zorro sigue al ratón y los puntos se ven en pantalla | [Ratón, copias, lápiz y más](../guia/bloques-escenario.md#ejemplo-atrapa-manzanas) |
+| | **El cuento de la gema** | Una historia con diálogos, una pregunta, mensajes entre personajes y dos fondos, hecha con bloques | [Tres juegos de ejemplo](../guia/ejemplos-2d.md#el-cuento-de-la-gema) |
+| | **Zorro saltarín** | El nivel de plataformas de siempre con vidas, monedas en pantalla y sonidos hechos con bloques | [Tres juegos de ejemplo](../guia/ejemplos-2d.md#zorro-saltarín) |
 | **Empezar de cero** | **Vacío 3D** | Un llano de 96 × 96 m y el punto de inicio. Nada más | [Desde cero](../tu-primer-juego/desde-cero.md) |
-| | **Estudio en blanco** | Un escenario 2D libre, sin casillas, con un zorro en el centro | [El Estudio 2D](../guia/estudio-2d.md) |
-| | **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta | [Tu primer juego 2D](primer-juego-2d.md) |
+| | **Vacío 2D** | Un suelo de casillas, el cielo y un zorro que salta | [Un plataformas con casillas](primer-juego-2d-casillas.md) |
 | **Plataformas** | **Plataformas 2D** | Un nivel de pixel art con monedas que flotan, escaleras, pinchos, agua y una bandera de meta | [Plataformas](../tu-primer-juego/plataformas.md) |
 | | **Plataformas vóxel** | Un nivel de cubitos visto de lado, con cámara fija y monedas que giran | [Plataformas](../tu-primer-juego/plataformas.md) |
 | **Vista desde arriba** | **Aventura cenital** | Un prado visto desde arriba con camino, lago, una vecina y gemas que buscar | [Vista desde arriba](../tu-primer-juego/vista-desde-arriba.md) |
@@ -46,8 +52,7 @@ para cada una.
 | **Puzle** | **Puzle de botones** | Tres botones de colores y tres puertas que hay que abrir a la vez | [Puzle](../tu-primer-juego/puzle.md) |
 | **Mundo de cubitos** | **Isla vóxel** | Una isla generada con colinas, playa, árboles y muelle, sin construcciones | [Mundo de cubitos](../tu-primer-juego/mundo-de-cubitos.md) |
 | | **Isla de ejemplo** | Una isla con pueblo, mercado, vecinos, pelotas y un guion de ejemplo | [Mundo de cubitos](../tu-primer-juego/mundo-de-cubitos.md) |
-| **Más ejemplos** | **Atrapa manzanas** | Un juego del Estudio 2D hecho solo con bloques: las manzanas caen, el zorro sigue al ratón y los puntos se ven en pantalla | [Ratón, copias, lápiz y más](../guia/bloques-escenario.md#ejemplo-atrapa-manzanas) |
-| | **Personaje animado** | Un personaje que anda, corre y salta, una puerta que se abre sola y una cinemática | [Animación](../guia/animacion.md) |
+| **Más ejemplos** | **Personaje animado** | Un personaje que anda, corre y salta, una puerta que se abre sola y una cinemática | [Animación](../guia/animacion.md) |
 | | **Demo técnica** | El templo del zorro en la cumbre de un monte junto al mar, con una ciudad griega, un puerto y una cinemática | [Demo técnica](../tu-primer-juego/demo-tecnica.md) |
 
 Cada plantilla trae **solo lo que usa**: los objetos, los comportamientos y
@@ -57,9 +62,8 @@ proyecto y se puede cambiar o borrar.
 
 ### Qué clase de proyecto crea cada una
 
-Las plantillas 3D crean un proyecto **3D vóxel**; Estudio en blanco, Vacío
-2D, Plataformas 2D, Aventura cenital y Atrapa manzanas, uno **2D pixel
-art**, y Plataformas vóxel, uno **2D con
+Las plantillas 3D crean un proyecto **3D vóxel**; las de **Juego 2D**,
+Vacío 2D, Plataformas 2D y Aventura cenital, uno **2D pixel art**, y Plataformas vóxel, uno **2D con
 vóxeles** (cubitos vistos de lado). La clase sale en la esquina de cada
 fila del asistente. Los juegos 2D se explican en
 [Juegos 2D](../guia/juegos-2d.md).

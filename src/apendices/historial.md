@@ -5,6 +5,36 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase 2D-5: aprender jugando
+
+- **Tutorial del Estudio**: la primera vez que creas un **Estudio en
+  blanco**, trece pasos llevan del zorro quieto a un juego con puntos. Cada
+  paso se marca solo al hacerlo. Ver
+  [Tutorial: tu primer juego 2D](../empezar/primer-juego-2d.md).
+- Dos ejemplos nuevos hechos solo con bloques:
+  **[El cuento de la gema](../guia/ejemplos-2d.md#el-cuento-de-la-gema)**
+  y **[Zorro saltarín](../guia/ejemplos-2d.md#zorro-saltarín)**.
+- La pantalla de inicio empieza por **Juego 2D**, con el Estudio en blanco
+  y los tres ejemplos; **Nuevo proyecto** trae el Estudio en blanco
+  elegido.
+- Bloques nuevos: **al tocar un peligro** y **volver a empezar la
+  partida**.
+- El capítulo [Juegos 2D](../guia/juegos-2d.md) empieza ahora por el
+  Estudio, y el tutorial de casillas pasa a
+  [Un plataformas con casillas](../empezar/primer-juego-2d-casillas.md).
+
+## Fase 2D-4: disfraces, fondos y sonidos
+
+- Las pestañas **Disfraces**, **Fondos** y **Sonidos** del Taller, a lo
+  ancho, con el pixel art y el retoque de sonidos dentro, y la
+  **[biblioteca de Foxy](../guia/disfraces-fondos-sonidos.md)**.
+
+## Fase 2D-3: ratón, copias, lápiz y más
+
+- Bocadillos, ratón, teclas sueltas, tocar, copias, preguntar, cronómetro,
+  variables en pantalla, deslizar, rebotar y el lápiz. Ver
+  [Ratón, copias, lápiz y más](../guia/bloques-escenario.md).
+
 ## Fase 2D-2: bloques
 
 - La pestaña **Bloques** del Taller programa con

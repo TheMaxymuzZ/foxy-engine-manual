@@ -151,8 +151,8 @@ está a salvo.
 
 ## Siguientes pasos
 
-- [Tutorial: tu primer juego 2D](primer-juego-2d.md): lo mismo, con sprites
-  y casillas.
+- [Tutorial: tu primer juego 2D](primer-juego-2d.md): un juego con puntos
+  en el Estudio 2D, con bloques.
 - [Tutorial: un enemigo que persigue](../guia/tutorial-enemigo.md): dar
   comportamiento con nodos.
 - [Publicar tu juego](../publicar/publicar.md): convertir el proyecto en una

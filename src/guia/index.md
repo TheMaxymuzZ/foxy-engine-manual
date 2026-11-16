@@ -13,7 +13,8 @@ hacerlos en este orden:
 | Tutorial | Qué se aprende | Duración |
 |---|---|---|
 | [Tu primer juego 3D](../empezar/primer-proyecto.md) | Construir, colocar objetos, modelar, componentes e interfaces | 20 min |
-| [Tu primer juego 2D](../empezar/primer-juego-2d.md) | Casillas, sprites, objetos 2D y zonas | 20 min |
+| [Tu primer juego 2D](../empezar/primer-juego-2d.md) | El Estudio 2D y los bloques: eventos, movimiento, sensores y variables | 10 min |
+| [Un plataformas con casillas](../empezar/primer-juego-2d-casillas.md) | Casillas, sprites, objetos 2D y zonas | 20 min |
 | [Un enemigo que persigue](tutorial-enemigo.md) | Nodos: eventos, condiciones, variables y depuración | 30 min |
 | [El mismo enemigo en Lua](tutorial-enemigo-lua.md) | Guiones de objeto, propiedades y depurador | 20 min |
 
