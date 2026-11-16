@@ -5,6 +5,18 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase 2D-2: bloques
+
+- La pestaña **Bloques** del Taller programa con
+  **[bloques que encajan](../guia/bloques.md)**, de colores y por familias,
+  sin cables: arrastrar, encajar, escribir en los huecos, borrar
+  arrastrando a la paleta, deshacer, copiar, pegar y ordenar.
+- Los bloques son los mismos nodos: se ven como **Nodos** o como **Lua**
+  cuando se quiera, y en Preferencias se puede programar siempre con nodos.
+- Nodos nuevos en píxeles y grados: mover pasos, girar, apuntar, ir a x y,
+  sumar a x o y, disfraces, tamaño y transparencia, y los bucles
+  **siempre**, **repetir hasta que** y **esperar hasta que**.
+
 ## Fase 2D-1: el Estudio
 
 - Los proyectos 2D se abren en el **[Estudio 2D](../guia/estudio-2d.md)**:

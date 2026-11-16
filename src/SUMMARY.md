@@ -98,6 +98,7 @@
     - [Personajes que andan](guia/personajes-que-andan.md)
 - [Juegos 2D](guia/juegos-2d.md)
     - [El Estudio 2D](guia/estudio-2d.md)
+    - [Programar con bloques](guia/bloques.md)
     - [Sprites](guia/sprites.md)
     - [Mapas de casillas](guia/casillas.md)
     - [Pixel art](guia/pixel-art.md)

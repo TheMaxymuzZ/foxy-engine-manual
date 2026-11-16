@@ -205,6 +205,27 @@ Se escriben en el guion; todas son opcionales. En un guion de entidad, las de ch
 | `motor.luz_fuerza(entidad: objeto, fuerza: número)` | — | Cambia cuánto alumbra la luz del objeto: 0 la apaga, 4 es lo máximo. |
 | `motor.luz_alcance(entidad: objeto, alcance: número)` | — | Cambia hasta dónde llega la luz del objeto, en metros. |
 | `motor.ambiente(nombre: texto)` | — | Cambia el aspecto del juego mientras se juega: realista, dibujo, neon, acuarela, pixel o ninguno. «proyecto» vuelve al de los ajustes del proyecto. |
+| `motor.mover_pasos(entidad: objeto, pasos: número)` | — | Avanza hacia donde mira, tantos píxeles (con un número negativo, hacia atrás). |
+| `motor.girar(entidad: objeto, grados: número)` | — | Gira hacia la derecha tantos grados (con un número negativo, hacia la izquierda). |
+| `motor.apuntar(entidad: objeto, grados: número)` | — | Mira hacia esa dirección: 90 = derecha, -90 = izquierda, 0 = arriba, 180 = abajo. |
+| `motor.apuntar_hacia(entidad: objeto, otro: objeto)` | — | Mira hacia otro personaje. |
+| `motor.ir_a_xy(entidad: objeto, x: número, y: número)` | — | Se pone en ese punto de la pantalla, en píxeles: (0, 0) es el centro, la x crece hacia la derecha y la y hacia arriba. |
+| `motor.ir_a(entidad: objeto, otro: objeto)` | — | Se pone donde está otro personaje. |
+| `motor.sumar_x(entidad: objeto, x: número)` | — | Se mueve a la derecha tantos píxeles (con un número negativo, a la izquierda). |
+| `motor.poner_x(entidad: objeto, x: número)` | — | Pone su x (en píxeles, 0 = el centro de la pantalla). |
+| `motor.sumar_y(entidad: objeto, y: número)` | — | Sube tantos píxeles (con un número negativo, baja). |
+| `motor.poner_y(entidad: objeto, y: número)` | — | Pone su y (en píxeles, 0 = el centro de la pantalla). |
+| `motor.x(entidad: objeto)` | x (número) | Su x, en píxeles (0 = el centro de la pantalla). |
+| `motor.y(entidad: objeto)` | y (número) | Su y, en píxeles (0 = el centro de la pantalla). |
+| `motor.direccion(entidad: objeto)` | grados (número) | Hacia dónde mira, en grados (90 = a la derecha). |
+| `motor.forma_girar(entidad: objeto, forma: texto)` | — | Cómo se ve la dirección: girando todo el dibujo, solo mirando a la izquierda o a la derecha (se le da la vuelta) o sin girar. |
+| `motor.poner_disfraz(entidad: objeto, disfraz: número)` | — | Se pone ese disfraz (el primero es el 1). Para la animación que llevara. |
+| `motor.siguiente_disfraz(entidad: objeto)` | — | Pasa al disfraz siguiente (después del último vuelve al primero). |
+| `motor.disfraz(entidad: objeto)` | disfraz (número) | El número del disfraz que lleva (el primero es el 1). |
+| `motor.poner_tamano(entidad: objeto, por_ciento: número)` | — | Su tamaño en tanto por ciento: 100 = el de su dibujo, 200 = el doble. |
+| `motor.sumar_tamano(entidad: objeto, por_ciento: número)` | — | Lo hace más grande (o más pequeño, con un número negativo), en tanto por ciento. |
+| `motor.tamano(entidad: objeto)` | por_ciento (número) | Su tamaño en tanto por ciento (100 = el de su dibujo). |
+| `motor.poner_transparencia(entidad: objeto, por_ciento: número)` | — | 0 = se ve del todo, 100 = invisible. |
 
 ## Otros
 

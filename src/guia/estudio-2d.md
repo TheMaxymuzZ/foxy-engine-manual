@@ -29,8 +29,8 @@ de casillas se siguen pintando desde la barra del escenario y el panel
 |---|---|
 | **Reparto** | El escenario y una tarjeta por cada personaje, con su dibujo, cuántos disfraces y guiones tiene, y un ojo para esconderlo. Las copias de un mismo personaje (por ejemplo, veinte monedas) van juntas en una tarjeta con «× 20». |
 | **Escenario** | La pantalla del juego. Lo que queda fuera se ve más oscuro. Arriba tiene la barra con **Mover**, **Girar**, **Rejilla** y, si hay mapa de casillas, los pinceles. A la derecha de la barra se ven las coordenadas del ratón. |
-| **Taller** | Lo del personaje elegido, en tres pestañas: **Bloques** (sus comportamientos), **Disfraces** (sus dibujos; en el escenario se llaman **Fondos**) y **Sonidos**. |
-| **Propiedades** | Su nombre, dónde está, su tamaño, hacia dónde mira y si se ve. Con el escenario elegido: el tamaño de la pantalla, el color de fondo y la cámara. |
+| **Taller** | Lo del personaje elegido, en tres pestañas: **Bloques** (lo que hace, con [bloques que encajan](bloques.md)), **Disfraces** (sus dibujos; en el escenario se llaman **Fondos**) y **Sonidos**. |
+| **Propiedades** | Su nombre, dónde está, su tamaño, hacia dónde mira, si se ve y sus comportamientos «Ya hechos». Con el escenario elegido: el tamaño de la pantalla, el color de fondo y la cámara. |
 | **Variables** | Las variables del juego (puntos, vidas…), que ven todos, y las del personaje elegido. Se crean con **Variable** y se cambia el valor con el que empiezan. |
 
 En el modo **Avanzado** el Estudio añade, en pestañas, los paneles técnicos:
