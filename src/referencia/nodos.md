@@ -101,7 +101,7 @@ En Lua: `function al_chocar_objeto(entidad, otro) ... end`
 
 *Evento* · `evento.al_hacer_clic`
 
-Cuando el jugador hace clic (o pulsa «Golpear») mirando al objeto, en 3D. Vacío = este objeto (o cualquiera en el grafo del juego).
+Cuando el jugador hace clic en el objeto: en 2D, con el ratón encima de su dibujo; en 3D, mirándolo (o pulsando «Golpear»). Vacío = este objeto (o cualquiera en el grafo del juego).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
@@ -353,6 +353,43 @@ Cuando una articulación del objeto se rompe por la fuerza o se suelta con «Sol
 | Salida | objeto | objeto | — |
 
 En Lua: `function al_soltarse(entidad) ... end`
+
+### Al pulsar una tecla {#evento-al_pulsar_tecla}
+
+*Evento* · `evento.al_pulsar_tecla`
+
+Al pulsar esa tecla del teclado (espacio, una flecha, una letra o un número). «cualquiera» = la que sea.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | tecla | recurso | «espacio» (se escribe en el nodo) |
+| Salida | tecla | texto | — |
+
+En Lua: `function al_pulsar_tecla(tecla) ... end`
+
+### Al empezar como copia {#evento-al_empezar_copia}
+
+*Evento* · `evento.al_empezar_copia`
+
+Cuando se crea una copia de este personaje: lo hace la copia nueva (el original no).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | la copia | objeto | — |
+
+En Lua: `function al_empezar_como_copia(entidad) ... end`
+
+### Cuando el cronómetro pase de {#evento-al_pasar_cronometro}
+
+*Evento* · `evento.al_pasar_cronometro`
+
+Una vez, cuando el cronómetro llega a esos segundos (vuelve a pasar si se reinicia).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | segundos | número | 10 (se escribe en el nodo) |
+
+En Lua: `if motor.cronometro() > segundos then ... end`
 
 ## Flujo
 
@@ -2531,6 +2568,407 @@ En Lua: `local por_ciento = motor.tamano(entidad)`
 | Entrada | % | número | 50 |
 
 En Lua: `motor.poner_transparencia(entidad, por_ciento)`
+
+### Ir a (ratón, al azar…) {#motor-ir_a_sitio}
+
+*Acción* · `motor.ir_a_sitio`
+
+Se pone en el ratón, en una posición al azar de la pantalla o donde está otro personaje.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | a | recurso | «posición al azar» |
+
+En Lua: `motor.ir_a_sitio(entidad, destino)`
+
+### Apuntar hacia (ratón…) {#motor-apuntar_a_sitio}
+
+*Acción* · `motor.apuntar_a_sitio`
+
+Mira hacia el ratón o hacia otro personaje.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | hacia | recurso | «ratón» |
+
+En Lua: `motor.apuntar_a_sitio(entidad, destino)`
+
+### Deslizar a x … y … {#motor-deslizar_xy}
+
+*Acción* · `motor.deslizar_xy`
+
+Va poco a poco hasta ese punto (en píxeles) y tarda esos segundos. El guion espera a que llegue.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | segundos | número | 1 |
+| Entrada | x | número | 0 |
+| Entrada | y | número | 0 |
+
+En Lua: `motor.deslizar_xy(entidad, segundos, x, y)`
+
+### Deslizar a (ratón, al azar…) {#motor-deslizar_a}
+
+*Acción* · `motor.deslizar_a`
+
+Va poco a poco hasta el ratón, una posición al azar o otro personaje, en esos segundos.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | segundos | número | 1 |
+| Entrada | a | recurso | «posición al azar» |
+
+En Lua: `motor.deslizar_a(entidad, segundos, destino)`
+
+### Rebotar si toca un borde {#motor-rebotar_borde}
+
+*Acción* · `motor.rebotar_borde`
+
+Si se sale por un borde de la pantalla, vuelve a entrar y da la vuelta, como una pelota.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.rebotar_borde(entidad)`
+
+### Decir (bocadillo) {#motor-bocadillo}
+
+*Acción* · `motor.bocadillo`
+
+Le sale un bocadillo con ese texto encima (vacío = lo quita).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | texto | texto | «¡Hola!» |
+
+En Lua: `motor.bocadillo(entidad, texto)`
+
+### Decir durante {#motor-bocadillo_durante}
+
+*Acción* · `motor.bocadillo_durante`
+
+Dice algo en un bocadillo esos segundos y luego lo quita. El guion espera.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | texto | texto | «¡Hola!» |
+| Entrada | segundos | número | 2 |
+
+En Lua: `motor.bocadillo_durante(entidad, texto, segundos)`
+
+### Pensar {#motor-pensar}
+
+*Acción* · `motor.pensar`
+
+Le sale una nube de pensar con ese texto encima (vacío = la quita).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | texto | texto | «Mmm…» |
+
+En Lua: `motor.pensar(entidad, texto)`
+
+### Pensar durante {#motor-pensar_durante}
+
+*Acción* · `motor.pensar_durante`
+
+Piensa algo esos segundos y luego quita la nube. El guion espera.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | texto | texto | «Mmm…» |
+| Entrada | segundos | número | 2 |
+
+En Lua: `motor.pensar_durante(entidad, texto, segundos)`
+
+### Bajar el lápiz {#motor-bajar_lapiz}
+
+*Acción* · `motor.bajar_lapiz`
+
+Desde ahora, al moverse va dibujando una raya por donde pasa.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.bajar_lapiz(entidad)`
+
+### Subir el lápiz {#motor-subir_lapiz}
+
+*Acción* · `motor.subir_lapiz`
+
+Deja de dibujar al moverse.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.subir_lapiz(entidad)`
+
+### Color del lápiz {#motor-color_lapiz}
+
+*Acción* · `motor.color_lapiz`
+
+El color de la raya que dibuja.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | color | color | #e8553a |
+
+En Lua: `motor.color_lapiz(entidad, color)`
+
+### Grosor del lápiz {#motor-grosor_lapiz}
+
+*Acción* · `motor.grosor_lapiz`
+
+Lo gruesa que es la raya, en píxeles.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | píxeles | número | 2 |
+
+En Lua: `motor.grosor_lapiz(entidad, grosor)`
+
+### Estampar {#motor-sellar}
+
+*Acción* · `motor.sellar`
+
+Deja una copia quieta de su dibujo donde está, en la capa del lápiz.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.sellar(entidad)`
+
+### Borrar todo lo dibujado {#motor-borrar_dibujos}
+
+*Acción* · `motor.borrar_dibujos`
+
+Quita las rayas y los dibujos estampados.
+
+En Lua: `motor.borrar_dibujos()`
+
+### Crear una copia de {#motor-crear_copia}
+
+*Acción* · `motor.crear_copia`
+
+Hace una copia del personaje mientras se juega, en su mismo sitio. La copia hace lo de «al empezar como copia».
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | de | objeto | este objeto |
+
+En Lua: `motor.crear_copia(de)`
+
+### Borrar esta copia {#motor-borrar_copia}
+
+*Acción* · `motor.borrar_copia`
+
+La copia desaparece y sus guiones se paran. En el original no hace nada.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.borrar_copia(entidad)`
+
+### ¿Es una copia? {#motor-es_copia}
+
+*Valor* · `motor.es_copia`
+
+Sí si es una copia hecha jugando.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | es copia | sí/no | — |
+
+En Lua: `local si = motor.es_copia(entidad)`
+
+### ¿Tocando…? {#motor-tocando}
+
+*Valor* · `motor.tocando`
+
+Sí si su dibujo toca el borde de la pantalla, el ratón u otro personaje (o cualquiera de sus copias).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | a | recurso | «borde» |
+| Salida | tocando | sí/no | — |
+
+En Lua: `local si = motor.tocando(entidad, otro)`
+
+### ¿Tocando el color…? {#motor-tocando_color}
+
+*Valor* · `motor.tocando_color`
+
+Sí si su dibujo está encima de algo de ese color (un fondo, una casilla, otro personaje o una raya del lápiz).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | color | color | #e8553a |
+| Salida | tocando | sí/no | — |
+
+En Lua: `local si = motor.tocando_color(entidad, color)`
+
+### Distancia a {#motor-distancia_a}
+
+*Valor* · `motor.distancia_a`
+
+Cuántos píxeles hay hasta el ratón o hasta otro personaje.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | a | recurso | «ratón» |
+| Salida | píxeles | número | — |
+
+En Lua: `local pixeles = motor.distancia_a(entidad, destino)`
+
+### Preguntar y esperar {#motor-preguntar}
+
+*Acción* · `motor.preguntar`
+
+Hace una pregunta y espera a que el jugador escriba la respuesta y pulse Intro. Lo escrito queda en «respuesta».
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | pregunta | texto | «¿Cómo te llamas?» |
+
+En Lua: `motor.preguntar(entidad, texto)`
+
+### Respuesta {#motor-respuesta}
+
+*Valor* · `motor.respuesta`
+
+Lo último que respondió el jugador a «preguntar».
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | respuesta | texto | — |
+
+En Lua: `local texto = motor.respuesta()`
+
+### ¿Tecla pulsada? {#motor-tecla}
+
+*Valor* · `motor.tecla`
+
+Sí mientras esa tecla esté apretada («cualquiera» = alguna).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | tecla | recurso | «espacio» |
+| Salida | pulsada | sí/no | — |
+
+En Lua: `local si = motor.tecla(nombre)`
+
+### ¿Ratón pulsado? {#motor-raton_pulsado}
+
+*Valor* · `motor.raton_pulsado`
+
+Sí mientras el botón del ratón esté apretado.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | pulsado | sí/no | — |
+
+En Lua: `local si = motor.raton_pulsado()`
+
+### x del ratón {#motor-raton_x}
+
+*Valor* · `motor.raton_x`
+
+Dónde está el ratón, en píxeles (0 = el centro de la pantalla).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | x | número | — |
+
+En Lua: `local x = motor.raton_x()`
+
+### y del ratón {#motor-raton_y}
+
+*Valor* · `motor.raton_y`
+
+Dónde está el ratón, en píxeles (0 = el centro de la pantalla).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | y | número | — |
+
+En Lua: `local y = motor.raton_y()`
+
+### Cronómetro {#motor-cronometro}
+
+*Valor* · `motor.cronometro`
+
+Los segundos desde que empezó el juego o desde que se reinició.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida | segundos | número | — |
+
+En Lua: `local segundos = motor.cronometro()`
+
+### Reiniciar el cronómetro {#motor-reiniciar_cronometro}
+
+*Acción* · `motor.reiniciar_cronometro`
+
+Pone el cronómetro a cero.
+
+En Lua: `motor.reiniciar_cronometro()`
+
+### Se puede arrastrar {#motor-arrastrable}
+
+*Acción* · `motor.arrastrable`
+
+Si el jugador lo puede mover arrastrándolo con el ratón.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | arrastrable | texto | «sí» |
+
+En Lua: `motor.arrastrable(entidad, si)`
+
+### Mostrar la variable {#motor-mostrar_variable}
+
+*Acción* · `motor.mostrar_variable`
+
+Enseña una variable del juego en pantalla (arriba a la izquierda), con su valor.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | variable | texto | «puntos» |
+
+En Lua: `motor.mostrar_variable(nombre)`
+
+### Esconder la variable {#motor-esconder_variable}
+
+*Acción* · `motor.esconder_variable`
+
+Deja de enseñar la variable en pantalla.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | variable | texto | «puntos» |
+
+En Lua: `motor.esconder_variable(nombre)`
 
 ## Otros
 
