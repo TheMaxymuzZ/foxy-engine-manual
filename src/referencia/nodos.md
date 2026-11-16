@@ -360,13 +360,14 @@ En Lua: `function al_soltarse(entidad) ... end`
 
 *Flujo* · `control.si`
 
-Sigue por «sí» o por «no» según la condición.
+Sigue por «sí» o por «no» según la condición; después, por «después» (si tiene cable).
 
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
 | Entrada | condición | sí/no | sí |
 | Salida de ejecución | sí | — | — |
 | Salida de ejecución | no | — | — |
+| Salida de ejecución | después | — | — |
 
 ### Elegir según {#control-elegir}
 
@@ -390,6 +391,7 @@ Hace lo de «cada vez» tantas veces y luego sigue.
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
 | Entrada | veces | número | 3 |
+| Entrada | una vuelta por fotograma | sí/no | no (se escribe en el nodo) |
 | Salida de ejecución | cada vez | — | — |
 | Salida de ejecución | al terminar | — | — |
 | Salida | vuelta (1, 2...) | número | — |
@@ -417,6 +419,7 @@ Repite mientras se cumpla la condición. Si nunca deja de cumplirse, el motor lo
 | Pin | Nombre | Tipo | Valor de partida |
 |---|---|---|---|
 | Entrada | condición | sí/no | no |
+| Entrada | una vuelta por fotograma | sí/no | no (se escribe en el nodo) |
 | Salida de ejecución | mientras se cumpla | — | — |
 | Salida de ejecución | al terminar | — | — |
 
@@ -480,6 +483,38 @@ Termina la cadena: no hace nada más.
 *Flujo* · `redireccion.flujo`
 
 Solo sirve para llevar el cable por otro sitio.
+
+### Siempre {#control-siempre}
+
+*Flujo* · `control.siempre`
+
+Repite lo de dentro sin parar, una vez en cada fotograma, mientras se juega.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Salida de ejecución | cada vez | — | — |
+
+### Repetir hasta que {#control-repetir_hasta}
+
+*Flujo* · `control.repetir_hasta`
+
+Repite lo de dentro (una vez en cada fotograma) hasta que se cumpla la condición, y luego sigue.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | condición | sí/no | no |
+| Salida de ejecución | cada vez | — | — |
+| Salida de ejecución | al terminar | — | — |
+
+### Esperar hasta que {#control-esperar_hasta}
+
+*Flujo* · `control.esperar_hasta`
+
+Espera, sin parar el juego, hasta que se cumpla la condición.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | condición | sí/no | no |
 
 ## Variables
 
@@ -2223,6 +2258,279 @@ Suelta de golpe partículas de un tipo: polvo, chispas, lluvia, nieve, humo u ho
 | Entrada | cuántas | número | 12 |
 
 En Lua: `motor.soltar_particulas(tipo, punto.x, punto.y, punto.z, cantidad)`
+
+### Mover … pasos {#motor-mover_pasos}
+
+*Acción* · `motor.mover_pasos`
+
+Avanza hacia donde mira, tantos píxeles (con un número negativo, hacia atrás).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | pasos | número | 10 |
+
+En Lua: `motor.mover_pasos(entidad, pasos)`
+
+### Girar … grados {#motor-girar}
+
+*Acción* · `motor.girar`
+
+Gira hacia la derecha tantos grados (con un número negativo, hacia la izquierda).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | grados | número | 15 |
+
+En Lua: `motor.girar(entidad, grados)`
+
+### Apuntar en dirección {#motor-apuntar}
+
+*Acción* · `motor.apuntar`
+
+Mira hacia esa dirección: 90 = derecha, -90 = izquierda, 0 = arriba, 180 = abajo.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | dirección | número | 90 |
+
+En Lua: `motor.apuntar(entidad, grados)`
+
+### Apuntar hacia {#motor-apuntar_hacia}
+
+*Acción* · `motor.apuntar_hacia`
+
+Mira hacia otro personaje.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | hacia | objeto | jugador |
+
+En Lua: `motor.apuntar_hacia(entidad, otro)`
+
+### Ir a x … y … {#motor-ir_a_xy}
+
+*Acción* · `motor.ir_a_xy`
+
+Se pone en ese punto de la pantalla, en píxeles: (0, 0) es el centro, la x crece hacia la derecha y la y hacia arriba.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | x | número | 0 |
+| Entrada | y | número | 0 |
+
+En Lua: `motor.ir_a_xy(entidad, x, y)`
+
+### Ir a otro personaje {#motor-ir_a}
+
+*Acción* · `motor.ir_a`
+
+Se pone donde está otro personaje.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | a | objeto | jugador |
+
+En Lua: `motor.ir_a(entidad, otro)`
+
+### Sumar a x {#motor-sumar_x}
+
+*Acción* · `motor.sumar_x`
+
+Se mueve a la derecha tantos píxeles (con un número negativo, a la izquierda).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | píxeles | número | 10 |
+
+En Lua: `motor.sumar_x(entidad, x)`
+
+### Dar a x el valor {#motor-poner_x}
+
+*Acción* · `motor.poner_x`
+
+Pone su x (en píxeles, 0 = el centro de la pantalla).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | x | número | 0 |
+
+En Lua: `motor.poner_x(entidad, x)`
+
+### Sumar a y {#motor-sumar_y}
+
+*Acción* · `motor.sumar_y`
+
+Sube tantos píxeles (con un número negativo, baja).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | píxeles | número | 10 |
+
+En Lua: `motor.sumar_y(entidad, y)`
+
+### Dar a y el valor {#motor-poner_y}
+
+*Acción* · `motor.poner_y`
+
+Pone su y (en píxeles, 0 = el centro de la pantalla).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | y | número | 0 |
+
+En Lua: `motor.poner_y(entidad, y)`
+
+### Posición x {#motor-x}
+
+*Valor* · `motor.x`
+
+Su x, en píxeles (0 = el centro de la pantalla).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | x | número | — |
+
+En Lua: `local x = motor.x(entidad)`
+
+### Posición y {#motor-y}
+
+*Valor* · `motor.y`
+
+Su y, en píxeles (0 = el centro de la pantalla).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | y | número | — |
+
+En Lua: `local y = motor.y(entidad)`
+
+### Dirección {#motor-direccion}
+
+*Valor* · `motor.direccion`
+
+Hacia dónde mira, en grados (90 = a la derecha).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | grados | número | — |
+
+En Lua: `local grados = motor.direccion(entidad)`
+
+### Forma de girar {#motor-forma_girar}
+
+*Acción* · `motor.forma_girar`
+
+Cómo se ve la dirección: girando todo el dibujo, solo mirando a la izquierda o a la derecha (se le da la vuelta) o sin girar.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | forma | texto | «izquierda-derecha» |
+
+En Lua: `motor.forma_girar(entidad, forma)`
+
+### Cambiar al disfraz {#motor-poner_disfraz}
+
+*Acción* · `motor.poner_disfraz`
+
+Se pone ese disfraz (el primero es el 1). Para la animación que llevara.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | disfraz | número | 1 |
+
+En Lua: `motor.poner_disfraz(entidad, disfraz)`
+
+### Siguiente disfraz {#motor-siguiente_disfraz}
+
+*Acción* · `motor.siguiente_disfraz`
+
+Pasa al disfraz siguiente (después del último vuelve al primero).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+
+En Lua: `motor.siguiente_disfraz(entidad)`
+
+### Número de disfraz {#motor-disfraz}
+
+*Valor* · `motor.disfraz`
+
+El número del disfraz que lleva (el primero es el 1).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | disfraz | número | — |
+
+En Lua: `local disfraz = motor.disfraz(entidad)`
+
+### Fijar el tamaño {#motor-poner_tamano}
+
+*Acción* · `motor.poner_tamano`
+
+Su tamaño en tanto por ciento: 100 = el de su dibujo, 200 = el doble.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | % | número | 100 |
+
+En Lua: `motor.poner_tamano(entidad, por_ciento)`
+
+### Cambiar el tamaño {#motor-sumar_tamano}
+
+*Acción* · `motor.sumar_tamano`
+
+Lo hace más grande (o más pequeño, con un número negativo), en tanto por ciento.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | % | número | 10 |
+
+En Lua: `motor.sumar_tamano(entidad, por_ciento)`
+
+### Tamaño {#motor-tamano}
+
+*Valor* · `motor.tamano`
+
+Su tamaño en tanto por ciento (100 = el de su dibujo).
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Salida | % | número | — |
+
+En Lua: `local por_ciento = motor.tamano(entidad)`
+
+### Fijar la transparencia {#motor-poner_transparencia}
+
+*Acción* · `motor.poner_transparencia`
+
+0 = se ve del todo, 100 = invisible.
+
+| Pin | Nombre | Tipo | Valor de partida |
+|---|---|---|---|
+| Entrada | objeto | objeto | este objeto |
+| Entrada | % | número | 50 |
+
+En Lua: `motor.poner_transparencia(entidad, por_ciento)`
 
 ## Otros
 

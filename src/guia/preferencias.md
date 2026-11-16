@@ -12,6 +12,9 @@ en `Documentos/Foxy Engine/preferencias.ron`. Se aplican al pulsar
   [Si vienes de Blender o de Unity](blender-unity.md).
 - **Modo**: *Sencillo* (solo lo necesario para empezar) o *Avanzado* (todos
   los paneles). Ver [Modo Sencillo y tutorial guiado](../empezar/modo-sencillo.md).
+- **Programar en el Estudio 2D con**: *Bloques* (piezas de colores que
+  encajan) o *Nodos* (con cables). Es el mismo guion visto de dos maneras.
+  Ver [Programar con bloques](bloques.md).
 - **Enseñar el tutorial guiado al abrir un proyecto**: márcalo para volver a
   ver el tutorial la próxima vez.
 - **Sincronía vertical (VSync)**: cada imagen sale justo cuando la pantalla

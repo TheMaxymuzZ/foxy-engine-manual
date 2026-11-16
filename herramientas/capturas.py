@@ -90,6 +90,10 @@ LISTA: dict[str, str] = {
     "espacio-animar": f"{ED} --pestana personaje-animado --espacio animar --animacion abrir --segundo 0.6",
     "editor-2d": f"{ED} --pestana plataformas-2d --espacio 2d --herramienta pintar",
     "editor-2d-cenital": f"{ED} --pestana aventura-cenital",
+    "estudio-bloques": f"{ED} --pestana estudio-2d --abrir taller --bloques bloques",
+    "estudio-bloques-nodos": f"{ED} --pestana estudio-2d --abrir taller --bloques nodos",
+    "estudio-bloques-lua": f"{ED} --pestana estudio-2d --abrir taller --bloques lua",
+    "estudio-bloques-sencillo": f"{ED} --pestana estudio-2d --sencillo --abrir taller --bloques bloques",
     "flotante": f"{ED} --pestana proyecto --flotante inspector",
     # Para principiantes (Fase G)
     "modo-sencillo": f"{ED} --pestana tercera-persona --sencillo",
