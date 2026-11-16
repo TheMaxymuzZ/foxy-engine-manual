@@ -24,7 +24,14 @@ hicieron con el editor.
 3. Escribe un nombre y pulsa **Crear proyecto**.
 
 Es un mundo grande (2 × 2 km y unos 6.000 objetos), así que tarda un poco
-más que los demás en abrirse.
+más que los demás en abrirse. Mientras, verás una pantalla de carga con una
+barra y lo que está haciendo (generar el terreno, colocar los objetos,
+preparar las zonas de cerca). El programa no se ha colgado: solo está
+cargando.
+
+Si el editor te va lento con la demo abierta, pulsa **Vista completa** en la
+barra de abajo para pasar a la **vista sencilla** (ver [Optimizar tu
+juego](../guia/optimizar.md#si-el-editor-o-el-juego-van-lentos)).
 
 ## 2. Jugarla
 

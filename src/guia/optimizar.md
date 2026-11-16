@@ -16,6 +16,32 @@ tres ayudas:
 Y al [publicar](../publicar/publicar.md), el juego sale en su **versión
 optimizada**.
 
+## Si el editor o el juego van lentos
+
+Antes de tocar nada, el motor ya hace dos cosas por ti:
+
+- **Resolución adaptable.** Si la tarjeta gráfica no llega a unos 30
+  fotogramas por segundo, el mundo se dibuja con algo menos de píxeles (hasta
+  el 60 %) y el suavizado los vuelve a juntar, así que casi no se nota.
+  Cuando vuelve a sobrar tiempo, sube otra vez. Los paneles y los textos van
+  siempre nítidos. Viene encendida: en el editor está en el menú **Ver**, y
+  en el juego en **Opciones → Gráficos → Resolución adaptable (mantener 30
+  fps)**.
+- **Las sombras de lo que no se mueve se guardan.** Aunque haya personajes
+  andando, el suelo, las casas y los árboles no vuelven a dibujar su sombra
+  en cada fotograma: solo la de lo que se mueve.
+
+Y en el editor tienes la **vista sencilla**, como el modo «sólido» de
+Blender: el mundo con la luz del sol, sus colores y sus formas, pero sin la
+luz que rebota, la niebla, las nubes ni los reflejos. Va mucho más ligera en
+escenas grandes. Se cambia con el botón **Vista completa / Vista sencilla**
+de la barra de abajo (si el editor va a menos de 20 fps, el botón dice
+**¿Va lento? Vista sencilla**) o en el menú **Ver**. Al pulsar **Jugar** se
+ve todo, como en el juego de verdad.
+
+> <i class="fx fx-nota"></i> **Nota.** La vista sencilla solo cambia cómo
+> ves el mundo mientras lo editas. No cambia los gráficos de tu proyecto.
+
 ## El objetivo de rendimiento
 
 En **Proyecto → Ajustes del proyecto → Rendimiento** marca **Mi juego tiene

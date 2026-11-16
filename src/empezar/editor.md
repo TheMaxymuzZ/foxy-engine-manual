@@ -79,7 +79,7 @@ Al lado de cada cosa está su tecla.
 | **Archivo** | *Proyecto nuevo…*, *Abrir proyecto…*, *Cerrar proyecto*, *Guardar* (<kbd>Cmd</kbd>+<kbd>S</kbd>), *Guardar todo*, *Volver a abrir lo guardado*, *Importar al proyecto…*, *Importar modelo…* (glTF, OBJ, .vox o .qb) y *Salir* |
 | **Editar** | *Deshacer*, *Rehacer*, *Duplicar*, *Ir a verlo*, *Borrar*, *Buscar una acción…* (<kbd>Cmd</kbd>+<kbd>K</kbd>) y *Preferencias…* |
 | **Crear** | *Escena nueva…*, *Interfaz nueva…*, *Objeto nuevo*, *Imagen de pixel art…*, *Material…*, *Importar modelo…*; y en la escena abierta *Zona de cambio*, *Punto de entrada* y *Vecino* |
-| **Ver** | La hora y la velocidad de la cámara, *Rendimiento* y los fotogramas por segundo |
+| **Ver** | La hora y la velocidad de la cámara, *Rendimiento*, los fotogramas por segundo, la vista *Completa* o *Sencilla* y la *Resolución adaptable* (ver [Optimizar tu juego](../guia/optimizar.md#si-el-editor-o-el-juego-van-lentos)) |
 | **Ventana** | Abrir cada panel, *Maximizar el panel*, los espacios, *Guardar como espacio nuevo…*, *Restablecer este espacio* y borrar los espacios propios |
 | **Proyecto** | *Ajustes del proyecto…*, *Mapa de escenas…*, *Archivos del proyecto* y *Mostrar la carpeta del proyecto* |
 | **Herramientas** | Las herramientas de la escena, y *Materiales*, *Pixel art*, *Nodos*, *Código* y *Rendimiento* |
