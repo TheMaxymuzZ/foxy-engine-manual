@@ -23,7 +23,7 @@ del título.
    carga.
 3. En **Ventana**, elige el tamaño con el que se abre y si empieza a
    pantalla completa.
-4. En **Sistema**, elige **Mac**, **Windows** o **Linux**. El tuyo sale
+4. En **Sistema**, elige **Mac**, **Windows**, **Linux** o **Android**. El tuyo sale
    marcado como *(este)*.
 5. En **Destino**, elige la carpeta. Deja marcada **Hacer también un .zip**
    para tener un solo archivo que compartir.
@@ -47,7 +47,7 @@ del título.
 | | **Pantalla de carga** | Una imagen de `imagenes/` que se ve al abrir el juego, ajustada a la ventana. Vacío = ninguna |
 | **Ventana** | **Tamaño al abrir** | 960 × 540, 1280 × 720, 1600 × 900, 1920 × 1080 o 1024 × 768 |
 | | **Empezar a pantalla completa** | El jugador lo puede cambiar en **Opciones › Gráficos** |
-| **Sistema** | **Mac**, **Windows**, **Linux** | Para qué sistema se hace. Para otro que no es el tuyo, pide el Foxy Engine de ese sistema ([Mac, Windows y Linux](sistemas.md)) |
+| **Sistema** | **Mac**, **Windows**, **Linux**, **Android** | Para qué sistema se hace. Para otro que no es el tuyo, pide el Foxy Engine de ese sistema ([Mac, Windows y Linux](sistemas.md), [Android](android.md)) |
 | **Contenido** | | Cuántos archivos van en el juego y cuáles se quedan fuera (**ver**) |
 | | **Incluir todas las imágenes, sonidos y modelos** | Mete también los que nada nombra |
 | | **Versión optimizada** | Las texturas de los modelos ya a su tamaño y lo que ya viene comprimido guardado tal cual: pesa menos y carga antes. Ver [Optimizar tu juego](../guia/optimizar.md#al-publicar) |
@@ -119,6 +119,7 @@ Las opciones están en [Línea de comandos](../referencia/linea-de-comandos.md#p
 ## Véase también
 
 - [Mac, Windows y Linux](sistemas.md)
+- [Android](android.md)
 - [Ajustes del proyecto](../editor/ajustes-proyecto.md)
 - [Acciones de entrada](../guia/acciones-entrada.md)
 - [Probar el juego](../guia/jugar.md)

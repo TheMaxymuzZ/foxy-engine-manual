@@ -127,6 +127,7 @@
 - [Archivos del proyecto](guia/archivos.md)
 - [Publicar tu juego](publicar/publicar.md)
     - [Mac, Windows y Linux](publicar/sistemas.md)
+    - [Android](publicar/android.md)
 
 # Referencia
 
