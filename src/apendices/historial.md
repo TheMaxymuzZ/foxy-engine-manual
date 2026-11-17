@@ -5,6 +5,19 @@ Foxy Engine se construye por fases. Cada fase deja el motor funcionando.
 La versión que sale al abrir el editor, como `0.0.1-PR15`, junta la versión
 del motor con el número del último cambio (*pull request*) incorporado.
 
+## Fase 2D-6: publicar en Android
+
+- **Android** en la ventana **Publicar**: sale un **APK** para instalarlo
+  en un móvil o un **AAB** para Google Play, ya firmado. Ver
+  [Android](../publicar/android.md).
+- **Controles táctiles**: cruceta y botones que salen solos cuando el
+  juego los necesita, y tocar la pantalla hace de ratón. Se eligen en la
+  sección **Móvil**.
+- El juego se ajusta a cualquier pantalla de móvil, tumbado o de pie.
+- **Jugar como en un móvil** en el editor, con el ratón haciendo de dedo.
+- El motor de Android se prepara una vez con
+  `scripts/preparar-android.sh`.
+
 ## Fase 2D-5: aprender jugando
 
 - **Tutorial del Estudio**: la primera vez que creas un **Estudio en

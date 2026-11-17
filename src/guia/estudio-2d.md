@@ -101,3 +101,6 @@ Pulsa **Jugar** en el centro de la barra de arriba (o <kbd>F5</kbd>). El
 juego ocupa la ventana, con un botón **Parar** arriba para volver al
 Estudio. Si la ventana es estrecha, **Jugar** pasa a la barra del
 escenario.
+
+Para llevar el juego a un móvil Android, mira [Android](../publicar/android.md):
+allí se eligen la cruceta y los botones que salen en la pantalla.
